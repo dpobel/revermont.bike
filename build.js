@@ -5,9 +5,13 @@ var metalsmith = require('metalsmith'),
     templates = require('metalsmith-templates'),
     permalinks = require('metalsmith-permalinks'),
     metadata = require('metalsmith-metadata'),
-    collections = require('metalsmith-collections');
+    collections = require('metalsmith-collections'),
+    pjson = require('./package.json'),
+    conf = require('./build.json');
 
+console.log('Starting to build ' + pjson.name + '...');
 metalsmith(__dirname)
+    .source(conf.source)
     .use(markdown())
     .use(permalinks())
     .use(collections({
@@ -22,5 +26,14 @@ metalsmith(__dirname)
         config: 'config.json',
     }))
     .use(templates('swig'))
-    .destination('./web')
-    .build();
+    .destination(conf.destination)
+    .build(function (error, res) {
+        if ( error ) {
+            console.error("Build failed");
+            return;
+        }
+        console.log('Build successful in ' + conf.destination + ', wrote:');
+        Object.keys(res).forEach(function (key) {
+            console.log('- ' + key);
+        });
+    });

@@ -32,7 +32,7 @@ metalsmith(__dirname)
     .destination(conf.destination)
     .build(function (error, res) {
         if ( error ) {
-            console.error("Build failed");
+            console.error("Build failed: " + error.message);
             return;
         }
         console.log('Build successful in ' + conf.destination + ', wrote:');

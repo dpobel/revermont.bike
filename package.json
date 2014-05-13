@@ -9,6 +9,9 @@
   "author": "Damien Pobel",
   "license": "MIT",
   "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-shell": "^0.7.0",
     "metalsmith": "^0.8.0",
     "metalsmith-collections": "^0.4.1",
     "metalsmith-ignore": "^0.1.2",

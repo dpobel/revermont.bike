@@ -33,7 +33,7 @@ metalsmith(__dirname)
     .build(function (error, res) {
         if ( error ) {
             console.error("Build failed: " + error.message);
-            return;
+            process.exit(1);
         }
         console.log('Build successful in ' + conf.destination + ', wrote:');
         Object.keys(res).forEach(function (key) {

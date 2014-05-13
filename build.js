@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 var metalsmith = require('metalsmith'),
     markdown = require('metalsmith-markdown'),
     templates = require('metalsmith-templates'),

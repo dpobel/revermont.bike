@@ -6,6 +6,8 @@ var metalsmith = require('metalsmith'),
     permalinks = require('metalsmith-permalinks'),
     metadata = require('metalsmith-metadata'),
     collections = require('metalsmith-collections'),
+    ignore = require('metalsmith-ignore'),
+
     pjson = require('./package.json'),
     conf = require('./build.json');
 
@@ -26,6 +28,7 @@ metalsmith(__dirname)
         config: 'config.json',
     }))
     .use(templates('swig'))
+    .use(ignore('**/*.json'))
     .destination(conf.destination)
     .build(function (error, res) {
         if ( error ) {

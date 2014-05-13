@@ -2,7 +2,7 @@
 
 {% block title %}{{ title }} &mdash; {% parent %}{% endblock %}
 
-{% block menu %}{% set section = 'tracks' %}{% parent %}{% endblock %}
+{% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
 {% block content %}
     <h1>{{ title }}</h1>

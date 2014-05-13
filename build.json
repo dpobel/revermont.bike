@@ -1,4 +1,12 @@
 {
     "destination": "web",
-    "source": "src"
+    "source": "src",
+    "sections": {
+        "default": "standard",
+        "rules": [
+            {"pattern": "tracks/**", "section": "tracks"},
+            {"pattern": "posts/**", "section": "blog"},
+            {"pattern": "pages/a-propos/*", "section": "a-propos"}
+        ]
+    }
 }

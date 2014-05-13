@@ -1,6 +1,6 @@
 {% extends "layout.swig" %}
 
-{% block menu %}{% set section = 'a-propos' %}{% parent %}{% endblock %}
+{% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
 {% block title %}{{ title }} &mdash; {% parent %}{% endblock %}
 

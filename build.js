@@ -18,20 +18,11 @@ metalsmith(__dirname)
     .source(conf.source)
     .use(markdown())
     .use(permalinks())
-    .use(collections({
-        tracks: {
-            pattern: 'tracks/*/index.html'
-        },
-        posts: {
-            pattern: 'posts/*/index.html'
-        }
-    }))
+    .use(collections(conf.collections))
     .use(fileMetadata(conf.fileMetadata.default, conf.fileMetadata.rules))
-    .use(metadata({
-        config: 'config.json',
-    }))
-    .use(templates('swig'))
-    .use(ignore('**/*.json'))
+    .use(metadata(conf.metadata))
+    .use(templates(conf.templateEngine))
+    .use(ignore(conf.ignore))
     .destination(conf.destination)
     .build(function (error, res) {
         if ( error ) {

@@ -1,6 +1,19 @@
 {
     "destination": "web",
     "source": "src",
+    "ignore": "**/*.json",
+    "metadata": {
+        "config": "config.json"
+    },
+    "collections": {
+        "tracks": {
+            "pattern": "tracks/*/index.html"
+        },
+        "posts": {
+            "pattern": "posts/*/index.html"
+        }
+    },
+    "templateEngine": "swig",
     "fileMetadata": {
         "default": {
             "section": "standard"

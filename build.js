@@ -8,7 +8,7 @@ var metalsmith = require('metalsmith'),
     collections = require('metalsmith-collections'),
     ignore = require('metalsmith-ignore'),
 
-    section = require('./lib/metalsmith/section'),
+    fileMetadata = require('./lib/metalsmith/file-metadata'),
 
     pjson = require('./package.json'),
     conf = require('./build.json');
@@ -26,7 +26,7 @@ metalsmith(__dirname)
             pattern: 'posts/*/index.html'
         }
     }))
-    .use(section(conf.sections))
+    .use(fileMetadata(conf.fileMetadata.default, conf.fileMetadata.rules))
     .use(metadata({
         config: 'config.json',
     }))

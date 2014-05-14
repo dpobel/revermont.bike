@@ -14,25 +14,20 @@
         }
     },
     "templateEngine": "swig",
-    "fileMetadata": {
-        "default": {
-            "section": "standard"
+    "fileMetadata": [{
+        "metadata": {
+            "section": "tracks"
         },
-        "rules": [{
-            "metadata": {
-                "section": "tracks"
-            },
-            "pattern": "tracks/**"
-        }, {
-            "metadata": {
-                "section": "blog"
-            },
-            "pattern": "posts/**"
-        }, {
-            "metadata": {
-                "section": "a-propos"
-            },
-            "pattern": "pages/a-propos/*"
-        }]
-    }
+        "pattern": "tracks/**"
+    }, {
+        "metadata": {
+            "section": "blog"
+        },
+        "pattern": "posts/**"
+    }, {
+        "metadata": {
+            "section": "a-propos"
+        },
+        "pattern": "pages/a-propos/*"
+    }]
 }

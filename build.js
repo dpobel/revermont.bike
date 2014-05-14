@@ -7,8 +7,7 @@ var metalsmith = require('metalsmith'),
     metadata = require('metalsmith-metadata'),
     collections = require('metalsmith-collections'),
     ignore = require('metalsmith-ignore'),
-
-    fileMetadata = require('./lib/metalsmith/file-metadata'),
+    fileMetadata = require('metalsmith-filemetadata'),
 
     pjson = require('./package.json'),
     conf = require('./build.json');
@@ -19,7 +18,7 @@ metalsmith(__dirname)
     .use(markdown())
     .use(permalinks())
     .use(collections(conf.collections))
-    .use(fileMetadata(conf.fileMetadata.default, conf.fileMetadata.rules))
+    .use(fileMetadata(conf.fileMetadata))
     .use(metadata(conf.metadata))
     .use(templates(conf.templateEngine))
     .use(ignore(conf.ignore))

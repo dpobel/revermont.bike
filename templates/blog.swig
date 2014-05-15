@@ -15,5 +15,8 @@
     {% endfor %}
     </ul>
 
+    <aside>
+        {{ sidebar|safe }}
+    </aside>
 
 {% endblock %}

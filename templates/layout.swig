@@ -7,6 +7,7 @@
     <!--[if lt IE 9]>
     <script>(function(){var tags=['header','article','footer','nav', 'time', 'section', 'figure', 'abbr'];for(var i=0;i!=tags.length;i++) document.createElement(tags[i]);})();</script>
     <![endif]-->
+    {% block meta %}{% endblock %}
 </head>
 <body>
     {% block menu %}

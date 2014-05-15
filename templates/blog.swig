@@ -10,7 +10,7 @@
     <ul>
     {% for post in collections.posts %}
         <li>
-            <a href="/{{ post.path }}">{{ post.title }}</a>
+            <a href="{{ post.path|url }}">{{ post.title }}</a>
         </li>
     {% endfor %}
     </ul>

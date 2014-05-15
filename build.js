@@ -13,6 +13,12 @@ var metalsmith = require('metalsmith'),
     pjson = require('./package.json'),
     conf = require('./build.json');
 
+console.log('Preparing the environment');
+
+console.log(' - Adding the custom Swig filters');
+require('./lib/swig/filters')(require('swig'));
+
+console.log();
 console.log('Starting to build ' + pjson.name + '...');
 metalsmith(__dirname)
     .source(conf.source)

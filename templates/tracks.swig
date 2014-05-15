@@ -10,7 +10,7 @@
     <ul>
     {% for track in collections.tracks %}
         <li>
-            <a href="/{{ track.path }}">{{ track.title }}</a>
+            <a href="{{ track.path|url }}">{{ track.title }}</a>
         </li>
     {% endfor %}
     </ul>

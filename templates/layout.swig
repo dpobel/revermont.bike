@@ -14,9 +14,9 @@
         <nav class="pure-menu pure-menu-open pure-menu-horizontal">
             <a href="/" class="pure-menu-heading">{{ config.shortTitle }}</a>
             <ul>
-                <li{% if selected == 'tracks' %} class="pure-menu-selected"{% endif %}><a href="/tracks/">Les traces</a></li>
-                <li{% if selected == 'blog' %} class="pure-menu-selected"{% endif %}><a href="/posts/">Le blog</a></li>
-                <li{% if selected == 'a-propos' %} class="pure-menu-selected"{% endif %}><a href="/pages/a-propos/">À propos</a></li>
+                {% for item in menu %}
+                <li{% if selected == item.section %} class="pure-menu-selected"{% endif %}><a href="/{{ item.path }}/">{{ item.title }}</a></li>
+                {% endfor %}
             </ul>
         </nav>
     {% endblock %}

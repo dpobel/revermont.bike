@@ -11,6 +11,11 @@
         },
         "posts": {
             "pattern": "posts/*/index.html"
+        },
+        "menu": {
+            "pattern": "*/index.html",
+            "sortBy": "priority",
+            "reverse": true
         }
     },
     "templateEngine": "swig",

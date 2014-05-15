@@ -16,11 +16,11 @@ var metalsmith = require('metalsmith'),
 console.log('Starting to build ' + pjson.name + '...');
 metalsmith(__dirname)
     .source(conf.source)
+    .use(fileMetadata(conf.fileMetadata))
     .use(markdown())
     .use(include())
     .use(permalinks())
     .use(collections(conf.collections))
-    .use(fileMetadata(conf.fileMetadata))
     .use(metadata(conf.metadata))
     .use(templates(conf.templateEngine))
     .use(ignore(conf.ignore))

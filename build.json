@@ -1,7 +1,9 @@
 {
     "destination": "web",
     "source": "src",
-    "ignore": "**/*.json",
+    "ignore": [
+        "**/*.json"
+    ],
     "metadata": {
         "config": "config.json"
     },
@@ -26,7 +28,10 @@
         "pattern": "tracks/**"
     }, {
         "metadata": {
-            "section": "blog"
+            "section": "blog",
+            "include": {
+                "sidebar": "include/postsidebar.html"
+            }
         },
         "pattern": "posts/**"
     }, {

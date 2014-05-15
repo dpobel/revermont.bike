@@ -8,4 +8,8 @@
     <h1>{{ title }}</h1>
 
     {{ contents|raw }}
+
+    <aside>
+        {{ sidebar|safe }}
+    </aside>
 {% endblock %}

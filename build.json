@@ -9,16 +9,19 @@
     },
     "collections": {
         "tracks": {
-            "pattern": "tracks/*/index.html"
+            "pattern": "tracks/*.html"
         },
         "posts": {
-            "pattern": "posts/*/index.html"
+            "pattern": "posts/*.html"
         },
         "menu": {
-            "pattern": "*/index.html",
             "sortBy": "priority",
             "reverse": true
         }
+    },
+    "paginate": {
+        "perPage": 10,
+        "pageSeparator": "/"
     },
     "templateEngine": "swig",
     "fileMetadata": [{

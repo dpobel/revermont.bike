@@ -9,6 +9,7 @@ var metalsmith = require('metalsmith'),
     ignore = require('metalsmith-ignore'),
     fileMetadata = require('metalsmith-filemetadata'),
     include = require('metalsmith-include'),
+    paginate = require('metalsmith-paginate'),
 
     pjson = require('./package.json'),
     conf = require('./build.json');
@@ -25,8 +26,9 @@ metalsmith(__dirname)
     .use(fileMetadata(conf.fileMetadata))
     .use(markdown())
     .use(include())
-    .use(permalinks())
     .use(collections(conf.collections))
+    .use(paginate(conf.paginate))
+    .use(permalinks())
     .use(metadata(conf.metadata))
     .use(templates(conf.templateEngine))
     .use(ignore(conf.ignore))

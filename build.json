@@ -1,4 +1,5 @@
 {
+    "lang": "fr",
     "destination": "web",
     "source": "src",
     "ignore": [
@@ -7,6 +8,7 @@
     "metadata": {
         "config": "config.json"
     },
+    "date": ["created", "updated"],
     "collections": {
         "tracks": {
             "pattern": "tracks/*.html"

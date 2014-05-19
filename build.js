@@ -11,10 +11,14 @@ var metalsmith = require('metalsmith'),
     include = require('metalsmith-include'),
     paginate = require('metalsmith-paginate'),
 
+    date = require('./lib/metalsmith/date'),
+
     pjson = require('./package.json'),
     conf = require('./build.json');
 
 console.log('Preparing the environment');
+console.log(' - Configuring moment.js');
+require('moment').lang(conf.lang);
 
 console.log(' - Adding the custom Swig filters');
 require('./lib/swig/filters')(require('swig'));
@@ -30,6 +34,7 @@ metalsmith(__dirname)
     .use(paginate(conf.paginate))
     .use(permalinks())
     .use(metadata(conf.metadata))
+    .use(date(conf.date))
     .use(templates(conf.templateEngine))
     .use(ignore(conf.ignore))
     .destination(conf.destination)

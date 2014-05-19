@@ -1,4 +1,5 @@
 {
     "title": "Revermont.bike, Traces VTT dans le Revermont",
-    "shortTitle": "Revermont.bike"
+    "shortTitle": "Revermont.bike",
+    "dateFormat": "LLL"
 }

@@ -1,0 +1,17 @@
+{
+  "name": "Revermont.bike",
+  "version": "0.0.1",
+  "homepage": "https://github.com/dpobel/revermont.bike",
+  "authors": [
+    "Damien Pobel <damien@pobel.fr>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "*"
+  ],
+  "dependencies": {
+    "pure": "~0.4.2"
+  }
+}

@@ -1,4 +1,6 @@
 module.exports = function(grunt) {
+    var build = require('./build.json');
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         shell: {
@@ -9,6 +11,15 @@ module.exports = function(grunt) {
                     stderr: true,
                     failOnError: true
                 }
+            },
+        },
+        bower: {
+            install: {
+                options: {
+                    targetDir: build.destination + '/' + build.assets,
+                    layout: 'byType',
+                    verbose: true,
+                },
             },
         },
         watch: {
@@ -37,8 +48,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-mocha-test');
+    grunt.loadNpmTasks('grunt-bower-task');
 
-    grunt.registerTask('build', ['shell:build']);
+    grunt.registerTask('build', ['shell:build', 'bower']);
     grunt.registerTask('test', ['mochaTest']);
     grunt.registerTask('default', ['build']);
 };

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>{% block title %}{{ config.title }}{% endblock %}</title>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
+    <link rel="stylesheet" href="{{ "pure/pure.css"|asset() }}">
     <!--[if lt IE 9]>
     <script>(function(){var tags=['header','article','footer','nav', 'time', 'section', 'figure', 'abbr'];for(var i=0;i!=tags.length;i++) document.createElement(tags[i]);})();</script>
     <![endif]-->

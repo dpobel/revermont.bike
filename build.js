@@ -21,7 +21,7 @@ console.log(' - Configuring moment.js');
 require('moment').lang(conf.lang);
 
 console.log(' - Adding the custom Swig filters');
-require('./lib/swig/filters')(require('swig'));
+require('./lib/swig/filters')(require('swig'), conf);
 
 console.log();
 console.log('Starting to build ' + pjson.name + '...');

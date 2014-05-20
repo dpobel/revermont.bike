@@ -5,13 +5,16 @@
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
 {% block content %}
-    <h1>{{ title }}</h1>
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-3-4">
+            <h1>{{ title }}</h1>
 
-    <time>{{ created.format(config.dateFormat) }} &mdash; {{ updated.format(config.dateFormat) }}</time>
+            <time>{{ created.format(config.dateFormat) }} &mdash; {{ updated.format(config.dateFormat) }}</time>
 
-    {{ contents|raw }}
-
-    <aside>
-        {{ sidebar|safe }}
-    </aside>
+            {{ contents|raw }}
+        </div>
+        <aside class="pure-u-1 pure-u-md-1-4">
+            {{ sidebar|safe }}
+        </aside>
+    </div>
 {% endblock %}

@@ -2,8 +2,16 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{{ config.title }}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ "pure/pure.css"|asset() }}">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="{{ "css/pure/pure.css"|asset() }}">
+    <link rel="stylesheet" href="{{ "css/pure/grids-responsive-old-ie.css"|asset() }}">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="{{ "css/pure/pure.css"|asset() }}">
+    <link rel="stylesheet" href="{{ "css/pure/grids-responsive.css"|asset() }}">
+    <!--<![endif]-->
     <!--[if lt IE 9]>
     <script>(function(){var tags=['header','article','footer','nav', 'time', 'section', 'figure', 'abbr'];for(var i=0;i!=tags.length;i++) document.createElement(tags[i]);})();</script>
     <![endif]-->

@@ -27,7 +27,7 @@ module.exports = function(grunt) {
                 atBegin: true
             },
             build: {
-                files: ['src/**', 'templates/**', 'build.*', 'lib/**'],
+                files: ['src/**', 'templates/**', 'build.*', 'bower.json', 'lib/**'],
                 tasks: ["build"]
             },
             test: {

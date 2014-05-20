@@ -1,4 +1,4 @@
-{% extends "layout.swig" %}
+{% extends "layouts/layout.swig" %}
 
 {% block title %}{{ title }} / Blog &mdash; {% parent %}{% endblock %}
 

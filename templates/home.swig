@@ -1,4 +1,4 @@
-{% extends "layout.swig" %}
+{% extends "layouts/layout.swig" %}
 
 {% block content %}
     {{ contents|raw }}

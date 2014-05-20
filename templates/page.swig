@@ -1,4 +1,4 @@
-{% extends "layout.swig" %}
+{% extends "layouts/layout.swig" %}
 
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 

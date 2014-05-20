@@ -1,6 +1,5 @@
 ---
 title: Revermont.bike
-template: home.swig
 ---
 
 # Hello world!

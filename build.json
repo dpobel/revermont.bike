@@ -29,21 +29,44 @@
     "templateEngine": "swig",
     "fileMetadata": [{
         "metadata": {
-            "section": "tracks"
+            "section": "tracks",
+            "template": "tracks.swig"
         },
-        "pattern": "tracks/**"
+        "pattern": "tracks.md"
+    }, {
+        "metadata": {
+            "template": "home.swig"
+        },
+        "pattern": "index.md"
+    }, {
+        "metadata": {
+            "section": "tracks",
+            "template": "track.swig"
+        },
+        "pattern": "tracks/*.md"
     }, {
         "metadata": {
             "section": "blog",
             "include": {
                 "sidebar": "include/postsidebar.html"
-            }
+            },
+            "template": "blog.swig"
         },
-        "pattern": "posts/**"
+        "pattern": "posts.md"
     }, {
         "metadata": {
-            "section": "a-propos"
+            "section": "blog",
+            "include": {
+                "sidebar": "include/postsidebar.html"
+            },
+            "template": "post.swig"
         },
-        "pattern": "pages/a-propos/*"
+        "pattern": "posts/*.md"
+    }, {
+        "metadata": {
+            "section": "a-propos",
+            "template": "page.swig"
+        },
+        "pattern": "a-propos.md"
     }]
 }

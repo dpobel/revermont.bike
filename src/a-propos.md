@@ -1,6 +1,5 @@
 ---
 title: À propos
-template: page.swig
 section: a-propos
 collection: menu
 priority: 0

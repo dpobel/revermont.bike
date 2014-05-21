@@ -12,13 +12,13 @@
     "date": ["created", "updated"],
     "collections": {
         "tracks": {
-            "pattern": "tracks/*.html"
+            "pattern": "traces/*.html"
         },
         "posts": {
             "pattern": "posts/*.html"
         },
         "lastTracks": {
-            "pattern": "tracks/*.html",
+            "pattern": "traces/*.html",
             "limit": 10
         },
         "lastPosts": {
@@ -40,7 +40,7 @@
             "section": "tracks",
             "template": "tracks.swig"
         },
-        "pattern": "tracks.md"
+        "pattern": "traces.md"
     }, {
         "metadata": {
             "template": "home.swig"
@@ -51,7 +51,7 @@
             "section": "tracks",
             "template": "track.swig"
         },
-        "pattern": "tracks/*.md"
+        "pattern": "traces/*.md"
     }, {
         "metadata": {
             "section": "blog",

@@ -11,7 +11,7 @@
                 <li><a href="{{ track.path|url }}">{{ track.title }}</a></li>
             {% endfor %}
             </ul>
-            <p><a href="{{ "tracks"|url }}">Toutes les traces</a></p>
+            <p><a href="{{ "traces"|url }}">Toutes les traces</a></p>
         </div>
         <div class="pure-u-1 pure-u-md-1-2">
             <h2>Derniers billets de blog</h2>

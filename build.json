@@ -12,13 +12,13 @@
     "date": ["created", "updated"],
     "collections": {
         "tracks": {
-            "pattern": "traces/*.html"
+            "pattern": "traces/**/index.html"
         },
         "posts": {
             "pattern": "posts/*.html"
         },
         "lastTracks": {
-            "pattern": "traces/*.html",
+            "pattern": "traces/**/index.html",
             "limit": 10
         },
         "lastPosts": {
@@ -51,7 +51,7 @@
             "section": "tracks",
             "template": "track.swig"
         },
-        "pattern": "traces/*.md"
+        "pattern": "traces/**/index.md"
     }, {
         "metadata": {
             "section": "blog",

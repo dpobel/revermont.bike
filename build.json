@@ -17,6 +17,14 @@
         "posts": {
             "pattern": "posts/*.html"
         },
+        "lastTracks": {
+            "pattern": "tracks/*.html",
+            "limit": 10
+        },
+        "lastPosts": {
+            "pattern": "posts/*.html",
+            "limit": 10
+        },
         "menu": {
             "sortBy": "priority",
             "reverse": true

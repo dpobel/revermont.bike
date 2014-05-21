@@ -14,7 +14,7 @@
             <p><a href="{{ "tracks"|url }}">Toutes les traces</a></p>
         </div>
         <div class="pure-u-1 pure-u-md-1-2">
-            <h2>Derniers billet de blog</h2>
+            <h2>Derniers billets de blog</h2>
             <ul>
             {% for post in collections.lastPosts %}
                 <li><a href="{{ post.path|url }}">{{ post.title }}</a></li>

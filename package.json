@@ -14,6 +14,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-mocha-test": "^0.10.2",
     "grunt-shell": "^0.7.0",
+    "libxmljs": "^0.9.0",
     "metalsmith": "^0.8.0",
     "metalsmith-collections": "https://github.com/dpobel/metalsmith-collections/tarball/limit_option",
     "metalsmith-filemetadata": "0.0.1",

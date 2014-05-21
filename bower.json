@@ -12,11 +12,23 @@
     "*"
   ],
   "dependencies": {
-    "pure": "~0.5.0"
+    "pure": "~0.5.0",
+    "yui3": "~3.17.0",
+    "leaflet": "http://leaflet-cdn.s3.amazonaws.com/build/leaflet-0.7.2.zip"
   },
   "exportsOverride": {
     "pure": {
-      "css": ["pure.css", "grids-responsive.css", "grids-responsive-old-ie.css"]
+      "css": [
+        "pure.css",
+        "grids-responsive.css",
+        "grids-responsive-old-ie.css"
+      ]
+    },
+    "yui3": {
+      "lib": "build"
+    },
+    "leaflet": {
+      "lib": "."
     }
   }
 }

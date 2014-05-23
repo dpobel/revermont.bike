@@ -10,6 +10,7 @@ var metalsmith = require('metalsmith'),
     fileMetadata = require('metalsmith-filemetadata'),
     include = require('metalsmith-include'),
     paginate = require('metalsmith-paginate'),
+    assets = require('metalsmith-assets'),
 
     date = require('./lib/metalsmith/date'),
     gpxparser = require('./lib/metalsmith/gpxparser'),
@@ -39,6 +40,10 @@ metalsmith(__dirname)
     .use(date(conf.date))
     .use(templates(conf.templateEngine))
     .use(ignore(conf.ignore))
+    .use(assets({
+        source: conf.assets,
+        destination: conf.assets
+    }))
     .destination(conf.destination)
     .build(function (error, res) {
         if ( error ) {

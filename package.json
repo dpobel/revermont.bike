@@ -18,6 +18,7 @@
     "grunt-shell": "^0.7.0",
     "libxmljs": "^0.9.0",
     "metalsmith": "^0.8.0",
+    "metalsmith-assets": "0.0.1",
     "metalsmith-collections": "https://github.com/dpobel/metalsmith-collections/tarball/limit_option",
     "metalsmith-filemetadata": "0.0.1",
     "metalsmith-ignore": "^0.1.2",

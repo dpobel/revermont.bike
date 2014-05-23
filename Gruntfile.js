@@ -43,14 +43,25 @@ module.exports = function(grunt) {
                 src: ['tests/*.js']
             },
         },
+        "mocha_istanbul": {
+            coverage: {
+                src: 'tests',
+                options: {
+                    mask: '*.js',
+                    reportFormats: ['text', 'html']
+                }
+            }
+        },
     });
 
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-mocha-test');
+    grunt.loadNpmTasks('grunt-mocha-istanbul');
     grunt.loadNpmTasks('grunt-bower-task');
 
     grunt.registerTask('build', ['shell:build', 'bower']);
     grunt.registerTask('test', ['mochaTest']);
+    grunt.registerTask('coverage', ['mocha_istanbul']);
     grunt.registerTask('default', ['build']);
 };

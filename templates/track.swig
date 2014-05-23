@@ -6,9 +6,16 @@
 
 {% block content %}
     <h1>{{ title }}</h1>
-    {{ path }}
+    <time>{{ created.format(config.dateFormat) }}</time>
+
+    {{ bounds|json }}
+
     <br>
-    {{ gpx }}
+    Loop: {{ loop }}
     <br>
+    Elevation: {{ elevation|json }}
+    <br>
+    Distance: {{ distance }}km
+
     {{ contents|raw }}
 {% endblock %}

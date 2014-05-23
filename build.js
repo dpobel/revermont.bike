@@ -12,6 +12,7 @@ var metalsmith = require('metalsmith'),
     paginate = require('metalsmith-paginate'),
 
     date = require('./lib/metalsmith/date'),
+    gpxparser = require('./lib/metalsmith/gpxparser'),
 
     pjson = require('./package.json'),
     conf = require('./build.json');
@@ -28,6 +29,7 @@ console.log('Starting to build ' + pjson.name + '...');
 metalsmith(__dirname)
     .source(conf.source)
     .use(fileMetadata(conf.fileMetadata))
+    .use(gpxparser())
     .use(markdown())
     .use(include())
     .use(collections(conf.collections))

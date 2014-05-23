@@ -1,5 +1,4 @@
 ---
-title: Journans - Croix de la Dent
 gpx: journans.gpx
 ---
 

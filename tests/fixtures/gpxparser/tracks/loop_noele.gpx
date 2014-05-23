@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="GPSBabel - http://www.gpsbabel.org" xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/GPX/1/0/gpx.xsd http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.topografix.com/GPX/Private/TopoGrafix/0/1 http://www.topografix.com/GPX/Private/TopoGrafix/0/1/topografix.xsd">
+    <metadata>
+        <name>Test 1</name>
+        <time>2014-05-23T07:53:00Z</time>
+        <bounds minlat="46.242022000" minlon="5.364807000" maxlat="46.315150000" maxlon="5.405417000"/>
+    </metadata>
+    <trk>
+        <name>Track name</name>
+        <trkseg>
+            <trkpt lat="46.250508000" lon="5.317694000">
+                <ele>200.1</ele>
+            </trkpt>
+            <trkpt lat="46.2505" lon="5.3176">
+                <ele>240.2</ele>
+            </trkpt>
+            <trkpt lat="47" lon="6">
+            </trkpt>
+        </trkseg>
+    </trk>
+</gpx>

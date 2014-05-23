@@ -1,5 +1,4 @@
 ---
-title: Treffort - Chapelle de Montfort - Lomont - Cabatane
 gpx: treffort.gpx
 ---
 

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:topografix="http://www.topografix.com/GPX/Private/TopoGrafix/0/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="Créé par Google Mes parcours sur Android" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.topografix.com/GPX/Private/TopoGrafix/0/1 http://www.topografix.com/GPX/Private/TopoGrafix/0/1/topografix.xsd">
 <metadata>
-<name><![CDATA[Meillonnas]]></name>
-<desc><![CDATA[]]></desc>
 </metadata>
 <trk>
-<name><![CDATA[Meillonnas]]></name>
-<desc><![CDATA[]]></desc>
-<type><![CDATA[cyclisme]]></type>
+<name>Meillonnas - Grillerin - Cabatane</name>
 <extensions><topografix:color>c0c0c0</topografix:color></extensions>
 <trkseg>
 <trkpt lat="46.245673" lon="5.351118">

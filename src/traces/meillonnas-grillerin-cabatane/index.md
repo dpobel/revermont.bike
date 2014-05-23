@@ -1,5 +1,4 @@
 ---
-title: Meillonnas - Grillerin - Cabatane
 gpx: meillonnas.gpx
 ---
 

@@ -31,7 +31,7 @@ module.exports = function(grunt) {
                 tasks: ["build"]
             },
             test: {
-                files: ['lib/**', 'tests/*'],
+                files: ['lib/**', 'tests/**'],
                 tasks: ["test"]
             },
         },

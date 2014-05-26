@@ -40,7 +40,8 @@
     "fileMetadata": [{
         "metadata": {
             "section": "tracks",
-            "template": "tracks.swig"
+            "template": "tracks.swig",
+            "icon": "tracks"
         },
         "pattern": "traces.md"
     }, {
@@ -58,6 +59,7 @@
     }, {
         "metadata": {
             "section": "blog",
+            "icon": "blog",
             "include": {
                 "sidebar": "include/postsidebar.html"
             },
@@ -76,7 +78,8 @@
     }, {
         "metadata": {
             "section": "a-propos",
-            "template": "page.swig"
+            "template": "page.swig",
+            "icon": "info"
         },
         "pattern": "a-propos.md"
     }]

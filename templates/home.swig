@@ -29,7 +29,7 @@
             {% endfor %}
             </table>
 
-            <p><a href="{{ "traces"|url }}" class="bubble">Toutes les traces</a></p>
+            <p><a href="{{ "traces"|url }}" class="icon-tracks bubble">Toutes les traces</a></p>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 last-posts">
             <h2>Derniers billets de blog</h2>
@@ -43,7 +43,7 @@
                 </li>
             {% endfor %}
             </ul>
-            <p><a href="{{ "posts"|url }}" class="bubble">Le blog</a></p>
+            <p><a href="{{ "posts"|url }}" class="icon-blog bubble">Le blog</a></p>
         </div>
     </div>
 {% endblock %}

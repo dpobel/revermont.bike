@@ -106,6 +106,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #ccc;
 }
 
+.site-header .pure-menu-selected a {
+    color: #fff;
+}
+
 .site-header li a:hover,
 .site-header li a:focus {
     background: #508d09;

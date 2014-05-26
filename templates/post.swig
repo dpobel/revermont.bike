@@ -13,7 +13,7 @@
 
             {{ contents|raw }}
         </div>
-        <aside class="pure-u-1 pure-u-md-1-4">
+        <aside class="pure-u-1 pure-u-md-1-4 sidebar">
             {{ sidebar|safe }}
         </aside>
     </div>

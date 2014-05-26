@@ -4,7 +4,7 @@
     <h1>{{ config.title }}</h1>
 
     <div class="pure-g">
-        <div class="pure-u-1 pure-u-md-1-2">
+        <div class="pure-u-1 pure-u-md-1-2 last-tracks">
             <h2>Dernières traces</h2>
             <table class="pure-table pure-table-bordered pure-table-striped">
             <thead>
@@ -22,16 +22,16 @@
             </tr>
             {% endfor %}
             </table>
-            <p><a href="{{ "traces"|url }}">Toutes les traces</a></p>
+            <p><a href="{{ "traces"|url }}" class="bubble">Toutes les traces</a></p>
         </div>
-        <div class="pure-u-1 pure-u-md-1-2">
+        <div class="pure-u-1 pure-u-md-1-2 last-posts">
             <h2>Derniers billets de blog</h2>
             <ul>
             {% for post in collections.lastPosts %}
                 <li><a href="{{ post.path|url }}">{{ post.title }}</a></li>
             {% endfor %}
             </ul>
-            <p><a href="{{ "posts"|url }}">Le blog</a></p>
+            <p><a href="{{ "posts"|url }}" class="bubble">Le blog</a></p>
         </div>
     </div>
 {% endblock %}

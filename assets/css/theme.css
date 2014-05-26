@@ -1,3 +1,58 @@
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+    font-family:'Open Sans', Tahoma, Arial, Helvetica, sans-serif;
+}
+
 a {
-    color: #00b;
+    color: #009;
+}
+
+.bubble {
+    text-decoration: none;
+    color: #fff;
+    background: #508d09;
+    padding: 0.4em 0.8em;
+    border-radius: 3px;
+}
+
+.bubble:hover {
+    background: #66aa17;
+}
+
+body {
+    color: #6A696C;
+    font-size:15px;
+    background: #f5f4f2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.site-menu .home {
+    text-transform: uppercase;
+}
+
+.site-menu .pure-menu-selected {
+    background: #6a686b;
+}
+
+.site-header, .site-header .site-menu {
+    background: #434244;
+}
+
+.site-header .site-menu li a {
+    color: #ccc;
+}
+
+.site-header li a:hover,
+.site-header li a:focus {
+    background: #508d09;
+    color: #fff;
+}
+
+.sidebar {
+    background: #e8e7e6;
 }

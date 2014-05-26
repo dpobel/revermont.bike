@@ -43,6 +43,7 @@
         "pattern": "traces.md"
     }, {
         "metadata": {
+            "section": "home",
             "template": "home.swig"
         },
         "pattern": "index.md"

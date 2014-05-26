@@ -1,0 +1,51 @@
+.site-menu {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.site-menu a {
+    padding: 0.8em 1.3em;
+}
+
+.site-main {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.last-posts, .last-tracks {
+    box-sizing: border-box;
+}
+
+.last-posts {
+    padding-left: 1em;
+}
+
+.last-posts ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.last-posts ul {
+    line-height: 1.8em;
+}
+
+.last-posts li {
+    margin: 1em 0;
+}
+
+.last-posts li a {
+    display: block;
+    padding: 0.15em 0 0.25em 0.7em;
+}
+
+.last-posts time {
+    float: right;
+}
+
+.last-tracks {
+    padding-right: 1em;
+}
+
+.tracks-full-list {
+    margin: 0 auto;
+}

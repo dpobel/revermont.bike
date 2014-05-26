@@ -1,8 +1,14 @@
 {% extends "layouts/layout.swig" %}
 
-{% block content %}
-    <h1>{{ config.title }}</h1>
+{% block pageTitle %}
+    <div class="home-title">
+        <h1>
+            <span class="title-text">{{ config.title }}</span>
+        </h1>
+    </div>
+{% endblock %}
 
+{% block content %}
     <div class="pure-g">
         <div class="pure-u-1 pure-u-md-1-2 last-tracks">
             <h2>Dernières traces</h2>
@@ -22,13 +28,19 @@
             </tr>
             {% endfor %}
             </table>
+
             <p><a href="{{ "traces"|url }}" class="bubble">Toutes les traces</a></p>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 last-posts">
             <h2>Derniers billets de blog</h2>
             <ul>
             {% for post in collections.lastPosts %}
-                <li><a href="{{ post.path|url }}">{{ post.title }}</a></li>
+                <li>
+                    <a href="{{ post.path|url }}">
+                        {{ post.title }}
+                        <time>{{ post.created.format(config.dateFormat) }}</time>
+                    </a>
+                </li>
             {% endfor %}
             </ul>
             <p><a href="{{ "posts"|url }}" class="bubble">Le blog</a></p>

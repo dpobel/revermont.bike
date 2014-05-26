@@ -22,13 +22,13 @@
     <![endif]-->
     {% block meta %}{% endblock %}
 </head>
-<body class="rb {{ section }}">
+<body class="rb section-{{ section }}">
     {% block menu %}
         <header class="site-header">
             <nav class="site-menu pure-menu pure-menu-open pure-menu-horizontal">
                 <ul>
                     <li>
-                        <a href="/" class="home">{{ config.shortTitle }}</a>
+                        <a href="/" class="back-home">{{ config.shortTitle }}</a>
                     </li>
                     {% for item in menu %}
                     <li{% if selected == item.section %} class="pure-menu-selected"{% endif %}><a href="{{ item.path|url }}">{{ item.title }}</a></li>
@@ -37,6 +37,9 @@
             </nav>
         </header>
     {% endblock %}
+
+    {% block pageTitle %}{% endblock %}
+
     <section class="site-main">
         {% block content %}{% endblock %}
     </section>

@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
 
-.site-menu .home {
+.site-menu .back-home {
     text-transform: uppercase;
 }
 
@@ -53,6 +53,43 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
 }
 
+.home-title {
+    margin: 0;
+    background: #c9d6c7;
+}
+
+.home-title h1 {
+    height: 200px;
+    background: url(/assets/img/home.jpg) no-repeat center top;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.home-title .title-text {
+    background: rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    padding: 0.2em;
+    font-size: 110%;
+    display: block;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+
 .sidebar {
     background: #e8e7e6;
+}
+
+.last-posts time {
+    color: #8A898C;
+    font-size: 90%;
+}
+
+.last-posts li a {
+    border-left: 5px solid #cbcbcb;
+}
+
+.last-posts li a:hover {
+    border-color: #508d09;
 }

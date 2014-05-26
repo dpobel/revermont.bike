@@ -27,8 +27,8 @@
         <header class="site-header">
             <nav class="site-menu pure-menu pure-menu-open pure-menu-horizontal">
                 <ul>
-                    <li>
-                        <a href="/" class="back-home">{{ config.shortTitle }}</a>
+                    <li{% if section == "home" %} class="pure-menu-selected"{% endif %}>
+                        <a href="/" class="back-home"><span class="mtb-markup">:</span>{{ config.shortTitle }}</a>
                     </li>
                     {% for item in menu %}
                     <li{% if selected == item.section %} class="pure-menu-selected"{% endif %}><a href="{{ item.path|url }}" class="icon-{{ item.icon }}">{{ item.title }}</a></li>

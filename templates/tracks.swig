@@ -7,7 +7,7 @@
 {% block content %}
     <h1>{{ title }}</h1>
 
-   <table class="tracks-full-list pure-table pure-table-bordered pure-table-stripped">
+   <table class="tracks-full-list pure-table pure-table-bordered pure-table-striped">
     <thead>
         <tr>
             <th>Titre</th>

@@ -19,11 +19,11 @@
         },
         "lastTracks": {
             "pattern": "traces/**/index.html",
-            "limit": 10
+            "limit": 5
         },
         "lastPosts": {
             "pattern": "posts/*.html",
-            "limit": 10
+            "limit": 5
         },
         "menu": {
             "sortBy": "priority",

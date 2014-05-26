@@ -23,7 +23,9 @@
         },
         "lastPosts": {
             "pattern": "posts/*.html",
-            "limit": 5
+            "limit": 5,
+            "sortBy": "created",
+            "reverse": true
         },
         "menu": {
             "sortBy": "priority",

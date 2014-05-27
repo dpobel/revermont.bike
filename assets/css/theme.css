@@ -43,7 +43,7 @@
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"],
 .pure-g-r [class *= "pure-u"] {
-    font-family:'Open Sans', Tahoma, Arial, Helvetica, sans-serif;
+    font-family:'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 a {

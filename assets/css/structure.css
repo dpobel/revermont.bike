@@ -3,8 +3,8 @@
     margin: 0 auto;
 }
 
-.site-menu a {
-    padding: 0.8em 1.3em;
+.site-menu li a {
+    padding: 0.4em 1em;
 }
 
 .site-main {

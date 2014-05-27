@@ -41,7 +41,9 @@
     {% block pageTitle %}{% endblock %}
 
     <section class="site-main">
+        <div class="site-main-content">
         {% block content %}{% endblock %}
+        </div>
     </section>
 
     {% block footer %}

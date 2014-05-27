@@ -7,13 +7,11 @@
     padding: 0.4em 1em;
 }
 
-.site-main {
+.site-main .site-main-content {
+    overflow: hidden;
     max-width: 1280px;
     margin: 0 auto;
-}
-
-.site-footer {
-    margin-top: 2em;
+    padding-bottom: 2em;
 }
 
 .site-footer-content {

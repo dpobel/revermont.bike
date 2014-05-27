@@ -43,6 +43,23 @@
     <section class="site-main">
         {% block content %}{% endblock %}
     </section>
-    {% block footer %}{% endblock %}
+
+    {% block footer %}
+    <footer class="site-footer">
+        <div class="site-footer-content pure-g">
+            <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 friends-link">
+                <h2>Quelques liens</h2>
+                {{ links|safe }}
+            </div>
+            <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 social-networks">
+                <h2>Réseaux sociaux</h2>
+
+            </div>
+            <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-3 copyright-notice">
+                {{ copyright|safe }}
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
 </body>
 </html>

@@ -82,5 +82,13 @@
             "icon": "info"
         },
         "pattern": "a-propos.md"
+    }, {
+        "metadata": {
+            "include": {
+                "copyright": "include/copyright.html",
+                "links": "include/links.html"
+            }
+        },
+        "pattern": "**"
     }]
 }

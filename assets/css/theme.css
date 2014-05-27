@@ -156,3 +156,22 @@ h1, h2, h3, h4, h5, h6 {
 .last-posts li a:hover {
     border-color: #508d09;
 }
+
+.site-footer {
+    border-top: 1px dotted #ccc;
+    background: #e8e7e6;
+}
+
+.site-footer h2 {
+    border-bottom: 1px solid #cdcdcd;
+    padding-bottom: 5px;
+    text-transform: none;
+}
+
+.site-footer a {
+}
+
+.friends-link ul {
+    list-style-type: square;
+    padding-left: 1em;
+}

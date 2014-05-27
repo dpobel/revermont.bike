@@ -60,18 +60,12 @@
         "metadata": {
             "section": "blog",
             "icon": "blog",
-            "include": {
-                "sidebar": "include/postsidebar.html"
-            },
             "template": "blog.swig"
         },
         "pattern": "posts.md"
     }, {
         "metadata": {
             "section": "blog",
-            "include": {
-                "sidebar": "include/postsidebar.html"
-            },
             "template": "post.swig"
         },
         "pattern": "posts/*.md"

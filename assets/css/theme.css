@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #ccc;
 }
 
-.site-header .pure-menu-selected a {
+.site-header .site-menu .pure-menu-selected a {
     color: #fff;
 }
 

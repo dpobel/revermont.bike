@@ -72,6 +72,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     text-transform: uppercase;
+    color: #222;
 }
 
 .mtb-markup {
@@ -157,6 +158,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .last-posts li a:hover {
     border-color: #508d09;
+}
+
+.last-posts h2, .last-tracks h2 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #cbcbcb;
 }
 
 .site-footer {

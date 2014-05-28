@@ -32,7 +32,7 @@
 
             <p><a href="{{ "traces"|url }}" class="icon-tracks bubble">Toutes les traces</a></p>
         </div>
-        <div class="pure-u-1 pure-u-md-1-2 last-posts">
+        <div class="pure-u-1 pure-u-md-1-2 last-posts posts-list">
             <h2>Derniers billets de blog</h2>
             <ul>
             {% for post in collections.lastPosts %}

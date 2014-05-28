@@ -151,21 +151,22 @@ h1, h2, h3, h4, h5, h6 {
     background: #f5f4f2;
 }
 
-.last-posts time {
+.posts-list time {
     color: #8A898C;
     font-size: 90%;
 }
 
-.last-posts li a {
+.posts-list li a {
     border-left: 5px solid #cbcbcb;
 }
 
-.last-posts li a:hover {
+.posts-list li a:hover {
     border-color: #508d09;
+    background: #fff;
 }
 
-.last-posts h2, .last-tracks h2 {
-    padding-bottom: 5px;
+.last-posts h2, .last-tracks h2, .simple-page-title {
+    padding-bottom: 10px;
     border-bottom: 1px solid #cbcbcb;
 }
 
@@ -178,9 +179,6 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 1px solid #cdcdcd;
     padding-bottom: 5px;
     text-transform: none;
-}
-
-.site-footer a {
 }
 
 .friends-link ul {

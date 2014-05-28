@@ -32,25 +32,25 @@
     padding-left: 1em;
 }
 
-.last-posts ul {
+.posts-list ul {
     list-style-type: none;
     padding: 0;
 }
 
-.last-posts ul {
+.posts-list ul {
     line-height: 1.8em;
 }
 
-.last-posts li {
+.posts-list li {
     margin: 1em 0;
 }
 
-.last-posts li a {
+.posts-list li a {
     display: block;
     padding: 0.15em 0 0.25em 0.7em;
 }
 
-.last-posts time {
+.posts-list time {
     float: right;
 }
 
@@ -60,4 +60,8 @@
 
 .tracks-full-list {
     margin: 0 auto;
+}
+
+.full-list {
+    font-size: 110%;
 }

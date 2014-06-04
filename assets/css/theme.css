@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .home-title h1 {
-    height: 200px;
+    height: 300px;
     background: url(/assets/img/home.jpg) no-repeat center top;
     max-width: 1920px;
     margin: 0 auto;

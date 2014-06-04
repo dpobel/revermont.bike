@@ -5,7 +5,16 @@
 {% block title %}{{ title }} &mdash; {% parent %}{% endblock %}
 
 {% block content %}
-    <h1 class="simple-page-title">{{ title }}</h1>
-
-    {{ contents|safe }}
+    <article>
+        <h1 class="simple-page-title">{{ title }}</h1>
+        <div class="content">{{ contents|safe }}</div>
+        {% if created %}
+        <footer class="content-meta">
+            Publié le <time>{{ created.format(config.dateFormat) }}</time>
+        {% if updated %}
+            &mdash; Dernière mise à jour le <time>{{ updated.format(config.dateFormat) }}</time>
+        {% endif %}
+        </footer>
+        {% endif %}
+    </article>
 {% endblock %}

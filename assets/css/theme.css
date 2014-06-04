@@ -151,8 +151,10 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
 }
 
-.sidebar {
+.content-meta {
     background: #e8e7e6;
+    padding: 0.5em 1em;
+    border-radius: 5px;
 }
 
 .site-main {

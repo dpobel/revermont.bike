@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{{ config.title }}{% endblock %}</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">-->
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="{{ "css/pure/pure.css"|asset() }}">
     <link rel="stylesheet" href="{{ "css/pure/grids-responsive-old-ie.css"|asset() }}">

@@ -5,15 +5,14 @@
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
 {% block content %}
-    <div class="pure-g">
-        <div class="pure-u-1 pure-u-md-3-4">
-            <h1 class="simple-page-title">{{ title }}</h1>
-
-            <time>{{ created.format(config.dateFormat) }} &mdash; {{ updated.format(config.dateFormat) }}</time>
-
-            {{ contents|raw }}
-        </div>
-        <aside class="pure-u-1 pure-u-md-1-4 sidebar">
-        </aside>
-    </div>
+    <article>
+        <h1 class="simple-page-title">{{ title }}</h1>
+        <div class="content">{{ contents|safe }}</div>
+        <footer class="content-meta">
+            Publié le <time>{{ created.format(config.dateFormat) }}</time>
+        {% if updated %}
+            &mdash; Dernière mise à jour le <time>{{ updated.format(config.dateFormat) }}</time>
+        {% endif %}
+        </footer>
+    </article>
 {% endblock %}

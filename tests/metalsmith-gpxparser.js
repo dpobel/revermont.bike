@@ -57,6 +57,22 @@ describe('Metalsmith gpx', function () {
         });
     });
 
+    describe('color', function () {
+        it('should generate a color', function (done) {
+            var files = {'tracks/test1.md': {'gpx': 'test1.gpx'}};
+
+            gpx()(files, ms, function (err) {
+                var file = files['tracks/test1.md'],
+                    color = file.color;
+
+                assert.ok(typeof err === 'undefined');
+                assert.ok(typeof color === 'string');
+                assert.ok(color.match(/^#[0-9A-F]{6}$/i));
+                done();
+            });
+        });
+    });
+
     describe('parsing', function () {
         it('should parse a complete gpx file', function (done) {
             var files = {'tracks/test1.md': {'gpx': 'test1.gpx'}},

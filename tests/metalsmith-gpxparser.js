@@ -242,4 +242,53 @@ describe('Metalsmith gpx', function () {
             });
         });
     });
+
+    describe('points', function () {
+        it('should provide the points with elevation', function (done) {
+            var files = {'tracks/test1.md': {'gpx': 'loop.gpx'}};
+
+            gpx()(files, ms, function (err) {
+                var file = files['tracks/test1.md'],
+                    points = file.points;
+
+                assert.ok(typeof err === 'undefined');
+                assert.ok(Array.isArray(points));
+
+                assert.equal(2, points.length);
+                assert.equal(46.250508, points[0].lat);
+                assert.equal(5.317694, points[0].lon);
+                assert.equal(200.1, points[0].ele);
+
+                assert.equal(46.2505, points[1].lat);
+                assert.equal(5.3176, points[1].lon);
+                assert.equal(240.2, points[1].ele);
+
+                done();
+            });
+        });
+
+        it('should ignore the points without elevation', function (done) {
+            var files = {'tracks/test1.md': {'gpx': 'loop_noele.gpx'}};
+
+            gpx()(files, ms, function (err) {
+                var file = files['tracks/test1.md'],
+                    points = file.points;
+
+                assert.ok(typeof err === 'undefined');
+                assert.ok(Array.isArray(points));
+
+                assert.equal(2, points.length);
+                assert.equal(46.250508, points[0].lat);
+                assert.equal(5.317694, points[0].lon);
+                assert.equal(200.1, points[0].ele);
+
+                assert.equal(46.2505, points[1].lat);
+                assert.equal(5.3176, points[1].lon);
+                assert.equal(240.2, points[1].ele);
+
+                done();
+            });
+        });
+
+    });
 });

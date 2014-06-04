@@ -7,7 +7,7 @@
 {% block content %}
     <div class="pure-g">
         <div class="pure-u-1 pure-u-md-3-4">
-            <h1>{{ title }}</h1>
+            <h1 class="simple-page-title">{{ title }}</h1>
 
             <time>{{ created.format(config.dateFormat) }} &mdash; {{ updated.format(config.dateFormat) }}</time>
 

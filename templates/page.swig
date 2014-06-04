@@ -5,11 +5,7 @@
 {% block title %}{{ title }} &mdash; {% parent %}{% endblock %}
 
 {% block content %}
-    <div class="pure-g">
-        <div class="pure-u-1">
-            <h1>{{ title }}</h1>
+    <h1 class="simple-page-title">{{ title }}</h1>
 
-            {{ contents|raw }}
-        </div>
-    </div>
+    {{ contents|safe }}
 {% endblock %}

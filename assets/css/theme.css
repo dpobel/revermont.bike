@@ -39,27 +39,35 @@
 .icon-tracks:before {
     content: "\e603";
 }
+.icon-map:before {
+    content: "\e605";
+}
+.icon-list:before {
+    content: "\e606";
+}
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"],
-.pure-g-r [class *= "pure-u"] {
+.pure-g-r [class *= "pure-u"],
+.leaflet-container{
     font-family:'Open Sans', Arial, Helvetica, sans-serif;
     line-height: 1.6em;
+    font-size: inherit;
 }
 
-a {
+a, .leaflet-container a {
     color: #009;
 }
 
-.bubble {
+.bubble, .leaflet-container a.bubble {
     text-decoration: none;
     color: #fff;
     background: #508d09;
-    padding: 0.4em 0.8em 0.6em 0.8em;
+    padding: 0.6em 0.8em 0.6em 0.8em;
     border-radius: 3px;
 }
 
-.bubble:hover {
+.bubble:hover, .leaflet-container a.bubble:hover {
     background: #66aa17;
 }
 
@@ -184,4 +192,8 @@ h1, h2, h3, h4, h5, h6 {
 .friends-link ul {
     list-style-type: square;
     padding-left: 1em;
+}
+
+.global-map .leaflet-popup h2 {
+    font-size: 1.2em;
 }

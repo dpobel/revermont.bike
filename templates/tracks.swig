@@ -4,10 +4,50 @@
 
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
-{% block content %}
-    <h1>{{ title }}</h1>
+{% block meta %}
+    <script src="{{ "lib/leaflet/leaflet.js"|asset() }}"></script>
+    <script src="{{ "js/global-map.js"|asset() }}"></script>
+{% endblock %}
 
-   <table class="tracks-full-list pure-table pure-table-bordered pure-table-striped">
+{% block content %}
+    <h1 class="simple-page-title">{{ title }}</h1>
+
+    <p class="tools"><a href="#maps" class="bubble icon-map show-map">Voir toutes les traces sur une carte</a></p>
+    <div class="global-map"><div class="map-tools"><a href="#" class="bubble icon-list back-list">Retour à la liste</a></div><div class="map-container"></div></div>
+
+    <script>
+    (function () {
+        RB.globalMap.init({
+            'ignApiKey': "{{ config.ignKey }}",
+            'selector': {
+                'showMap': '.show-map',
+                'hideMap': '.back-list',
+                'map': '.global-map',
+                'mapContainer': '.map-container',
+            },
+            'classes': {
+                'displayed': 'global-map-displayed'
+            },
+            'tracks': {
+            {% for track in tracks %}
+                "{{ track.title|e('js') }}": {
+                    'bounds': {{ track.bounds|json|safe }},
+                    'distance': {{ track.distance }},
+                    'elevation': {{ track.elevation|json|safe }},
+                    'color': "{{ track.color|e('js') }}",
+                    'description': {% filter json %}{% include "track_popup.swig" with track %}{% endfilter %},
+                    'points': {{ track.points|json|safe }} /* TODO limit the number of points, remove elevation */
+                },
+            {% endfor %}
+            },
+            'style': {
+                'pathOpacity': 1,
+                'weight': 8,
+            }
+        });
+    })();</script>
+
+    <table class="tracks-full-list pure-table pure-table-bordered pure-table-striped">
     <thead>
         <tr>
             <th>Titre</th>

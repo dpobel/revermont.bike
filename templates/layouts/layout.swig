@@ -8,14 +8,16 @@
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="{{ "css/pure/pure.css"|asset() }}">
     <link rel="stylesheet" href="{{ "css/pure/grids-responsive-old-ie.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "css/theme.css"|asset() }}">
+    <link rel="stylesheet" href="{{ "lib/leaflet/leaflet.css"|asset() }}">
     <link rel="stylesheet" href="{{ "css/structure.css"|asset() }}">
+    <link rel="stylesheet" href="{{ "css/theme.css"|asset() }}">
     <![endif]-->
     <!--[if gt IE 8]><!-->
     <link rel="stylesheet" href="{{ "css/pure/pure.css"|asset() }}">
     <link rel="stylesheet" href="{{ "css/pure/grids-responsive.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "css/theme.css"|asset() }}">
+    <link rel="stylesheet" href="{{ "lib/leaflet/leaflet.css"|asset() }}">
     <link rel="stylesheet" href="{{ "css/structure.css"|asset() }}">
+    <link rel="stylesheet" href="{{ "css/theme.css"|asset() }}">
     <!--<![endif]-->
     <!--[if lt IE 9]>
     <script>(function(){var tags=['header','article','footer','nav', 'time', 'section', 'figure', 'abbr'];for(var i=0;i!=tags.length;i++) document.createElement(tags[i]);})();</script>
@@ -63,5 +65,6 @@
         </div>
     </footer>
     {% endblock %}
+    <script src="{{ "js/enabled.js"|asset() }}"></script>
 </body>
 </html>

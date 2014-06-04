@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .site-menu {
     max-width: 1280px;
     margin: 0 auto;
@@ -60,8 +64,62 @@
 
 .tracks-full-list {
     margin: 0 auto;
+    width: 100%;
 }
 
-.full-list {
-    font-size: 110%;
+.tools {
+    display: none;
+}
+
+.js-enabled .tools {
+    display: block;
+}
+
+.global-map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+
+    -webkit-transform: translateX(100%);
+       -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+         -o-transform: translateX(100%);
+            transform: translateX(100%);
+
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+
+.global-map-displayed {
+    overflow: hidden;
+}
+
+.global-map-displayed .global-map {
+    -webkit-transform: translateX(0);
+       -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+         -o-transform: translateX(0);
+            transform: translateX(0);
+}
+
+.global-map .map-tools {
+    position:absolute;
+    top: 0;
+    right: 0;
+    z-index: 110;
+    padding: 1em;
+}
+
+.global-map .details {
+    text-align: center;
+}
+
+.global-map .leaflet-popup ul {
+    padding-left: 1em;
 }

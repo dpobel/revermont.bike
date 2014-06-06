@@ -45,6 +45,9 @@
 .icon-list:before {
     content: "\e606";
 }
+.icon-mtb:before {
+    content: "\e607";
+}
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"],
@@ -81,23 +84,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     text-transform: uppercase;
     color: #222;
-}
-
-.mtb-markup {
-    text-transform: none;
-    font-size: 1.4em;
-    font-weight: bold;
-    position: relative;
-    padding-right: 1.1em;
-}
-
-.mtb-markup:after {
-    font-weight: normal;
-    content: "‣";
-    font-size: 190%;
-    position: absolute;
-    top: 0.13em;
-    left: 0.05em;
 }
 
 .site-menu .back-home {

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.topografix.com/GPX/Private/TopoGrafix/0/1 http://www.topografix.com/GPX/Private/TopoGrafix/0/1/topografix.xsd">
+<metadata>
+    <name>Convolution</name>
+</metadata>
+<trk>
+    <trkseg>
+        <trkpt lat="46.324224" lon="5.386054">
+            <ele>290</ele>
+        </trkpt>
+        <trkpt lat="46.324222" lon="5.386101">
+            <ele>300</ele>
+        </trkpt>
+        <trkpt lat="46.324222" lon="5.386101">
+            <ele>290</ele>
+        </trkpt>
+        <trkpt lat="46.324222" lon="5.386101">
+            <ele>300</ele>
+        </trkpt>
+        <trkpt lat="46.324222" lon="5.386101">
+            <ele>297.0</ele>
+        </trkpt>
+        <trkpt lat="46.324222" lon="5.386101">
+            <ele>295.1</ele>
+        </trkpt>
+        <trkpt lat="46.324222" lon="5.386101">
+            <ele>296.3</ele>
+        </trkpt>
+        <trkpt lat="46.324222" lon="5.386101">
+            <ele>293.9</ele>
+        </trkpt>
+        <trkpt lat="46.324222" lon="5.386101">
+            <ele>290</ele>
+        </trkpt>
+        <trkpt lat="46.324222" lon="5.386101">
+            <ele>300</ele>
+        </trkpt>
+        <trkpt lat="46.324222" lon="5.386101">
+            <ele>290</ele>
+        </trkpt>
+        <trkpt lat="46.324222" lon="5.386101">
+            <ele>300</ele>
+        </trkpt>
+    </trkseg>
+</trk>
+</gpx>

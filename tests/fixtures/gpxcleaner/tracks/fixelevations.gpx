@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx
+version="1.1"
+creator="Créé par Google Mes parcours sur Android"
+xmlns="http://www.topografix.com/GPX/1/1"
+xmlns:topografix="http://www.topografix.com/GPX/Private/TopoGrafix/0/1"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.topografix.com/GPX/Private/TopoGrafix/0/1 http://www.topografix.com/GPX/Private/TopoGrafix/0/1/topografix.xsd">
+<metadata>
+    <name>Fix elevations</name>
+</metadata>
+<trk>
+    <trkseg>
+        <trkpt lat="46.324224" lon="5.386054">
+            <ele>400</ele>
+            <time>2014-05-31T12:30:58.061Z</time>
+        </trkpt>
+        <trkpt lat="46.324222" lon="5.386101">
+            <ele>400</ele>
+            <time>2014-05-31T12:30:59.063Z</time>
+        </trkpt>
+    </trkseg>
+</trk>
+</gpx>

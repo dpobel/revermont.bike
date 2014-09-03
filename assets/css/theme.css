@@ -143,6 +143,24 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 5px;
 }
 
+.content-meta .tags-list {
+    list-style-type: none;
+    display: inline;
+    padding: 0;
+}
+
+.content-meta .tag {
+    display: inline;
+}
+
+.content-meta .tag:after {
+    content: ", ";
+}
+
+.content-meta .tag:last-of-type:after {
+    content: "";
+}
+
 .site-main {
     background: #f5f4f2;
 }

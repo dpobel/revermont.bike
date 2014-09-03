@@ -11,6 +11,7 @@ var metalsmith = require('metalsmith'),
     include = require('metalsmith-include'),
     paginate = require('metalsmith-paginate'),
     assets = require('metalsmith-assets'),
+    tags = require('metalsmith-tags'),
 
     date = require('./lib/metalsmith/date'),
     gpxcleaner = require('./lib/metalsmith/gpxcleaner'),
@@ -30,6 +31,7 @@ console.log();
 console.log('Starting to build ' + pjson.name + '...');
 metalsmith(__dirname)
     .source(conf.source)
+    .use(tags(conf.tags))
     .use(fileMetadata(conf.fileMetadata))
     .use(gpxcleaner())
     .use(gpxparser())

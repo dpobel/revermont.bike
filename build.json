@@ -32,6 +32,13 @@
             "reverse": true
         }
     },
+    "tags": {
+        "handle": "tags",
+        "path": "tags",
+        "template": "tag.swig",
+        "sortBy": "date",
+        "reverse": true
+    },
     "paginate": {
         "perPage": 10,
         "pageSeparator": "/"

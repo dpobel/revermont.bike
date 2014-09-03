@@ -13,6 +13,14 @@
         {% if updated %}
             &mdash; Dernière mise à jour le <time>{{ updated.format(config.dateFormat) }}</time>
         {% endif %}
+        {% if tags %}
+            &mdash;
+            <ul class="tags-list">
+            {% for tag in tags %}
+                <li class="tag"><a href="{{ tagsList[tag].path|url }}">{{ tag }}</a></li>
+            {% endfor %}
+            </ul>
+        {% endif %}
         </footer>
     </article>
 {% endblock %}

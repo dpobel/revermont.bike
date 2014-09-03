@@ -21,7 +21,7 @@ var metalsmith = require('metalsmith'),
 
 console.log('Preparing the environment');
 console.log(' - Configuring moment.js');
-require('moment').lang(conf.lang);
+require('moment').locale(conf.lang);
 
 console.log(' - Adding the custom Swig filters');
 require('./lib/swig/filters')(require('swig'), conf);

@@ -36,7 +36,7 @@
                     'elevation': {{ track.elevation|json|safe }},
                     'color': "{{ track.color|e('js') }}",
                     'description': {% filter json %}{% include "track_popup.swig" with track %}{% endfilter %},
-                    'points': {{ track.points|json|safe }} /* TODO limit the number of points, remove elevation */
+                    'points': {{ track.points|filter_points(config.tracksListSteps)|json|safe }}
                 },
             {% endfor %}
             },

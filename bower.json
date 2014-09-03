@@ -12,8 +12,8 @@
     "*"
   ],
   "dependencies": {
-    "pure": "~0.5.0",
-    "leaflet": "http://leaflet-cdn.s3.amazonaws.com/build/leaflet-0.7.2.zip"
+    "pure": "0.5.0",
+    "leaflet": "http://leaflet-cdn.s3.amazonaws.com/build/leaflet-0.7.3.zip"
   },
   "exportsOverride": {
     "pure": {

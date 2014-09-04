@@ -57,7 +57,7 @@
             <th><abbr title="Altitude minimale">Alt. min</abbr></th>
         </tr>
     </thead>
-    {% for track in pagination.files %}
+    {% for track in tracks %}
     <tr>
         <td><a href="{{ track.path|url }}">{{ track.title }}</a></td>
         <td>{{ track.distance }}&nbsp;km</td>
@@ -67,6 +67,4 @@
     </tr>
     {% endfor %}
     </table>
-
-    {% include "pagination.swig" with pagination %}
 {% endblock %}

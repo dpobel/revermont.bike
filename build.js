@@ -16,6 +16,7 @@ var metalsmith = require('metalsmith'),
     date = require('./lib/metalsmith/date'),
     gpxcleaner = require('./lib/metalsmith/gpxcleaner'),
     gpxparser = require('./lib/metalsmith/gpxparser'),
+    paginateTag = require('./lib/metalsmith/paginate-tag.js');
 
     pjson = require('./package.json'),
     conf = require('./build.json');
@@ -39,6 +40,7 @@ metalsmith(__dirname)
     .use(include())
     .use(collections(conf.collections))
     .use(paginate(conf.paginate))
+    .use(paginateTag(conf.paginateTag))
     .use(permalinks({relative: false}))
     .use(metadata(conf.metadata))
     .use(date(conf.date))

@@ -3,11 +3,11 @@
 {% block title %}{{ tag }} &mdash; {% parent %}{% endblock %}
 
 {% block content %}
-    <h1 class="simple-page-title">{{ tag }}</h1>
+    <h1 class="simple-page-title">Pages tagguées &laquo;&nbsp;{{ tag }}&nbsp;&raquo;{% if pagination.num != 1 %} (Page {{ pagination.num }}){% endif %}</h1>
 
     <section class="posts-list full-list">
         <ul>
-        {% for post in posts %}
+        {% for post in pagination.files %}
             <li>
                 <a href="{{ post.path|url }}">
                     {{ post.title }}
@@ -18,4 +18,5 @@
         </ul>
     </section>
 
+    {% include "pagination.swig" with pagination %}
 {% endblock %}

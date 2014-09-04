@@ -43,6 +43,9 @@
         "perPage": 10,
         "pageSeparator": "/"
     },
+    "paginateTag": {
+        "perPage": 10
+    },
     "templateEngine": "swig",
     "fileMetadata": [{
         "metadata": {

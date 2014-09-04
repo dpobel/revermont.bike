@@ -123,3 +123,10 @@ body {
 .global-map .leaflet-popup ul {
     padding-left: 1em;
 }
+
+@media screen and (min-width: 48em) {
+    .blog-post-meta {
+        box-sizing: border-box;
+        padding-left: 2em;
+    }
+}

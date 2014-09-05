@@ -1,6 +1,6 @@
 ---
-title: Traces
+title: Sentiers
 section: tracks
 collection: menu
-priority: 20
+priority: 15
 ---

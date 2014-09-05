@@ -12,7 +12,7 @@
 {% block content %}
     <h1 class="simple-page-title">{{ title }}</h1>
 
-    <p class="tools"><a href="#maps" class="bubble icon-map show-map">Voir toutes les sentiers sur une carte</a></p>
+    <p class="tools"><a href="#maps" class="bubble icon-map show-map">Voir toutes les randonnées sur une carte</a></p>
     <div class="global-map"><div class="map-tools"><a href="#" class="bubble icon-list back-list">Retour à la liste</a></div><div class="map-container"></div></div>
 
     <script>
@@ -29,7 +29,7 @@
                 'displayed': 'global-map-displayed'
             },
             'tracks': {
-            {% for track in tracks %}
+            {% for track in treks %}
                 "{{ track.title|e('js') }}": {
                     'bounds': {{ track.bounds|json|safe }},
                     'distance': {{ track.distance }},
@@ -57,13 +57,13 @@
             <th><abbr title="Altitude minimale">Alt. min</abbr></th>
         </tr>
     </thead>
-    {% for track in tracks %}
+    {% for trek in treks %}
     <tr>
-        <td><a href="{{ track.path|url }}">{{ track.title }}</a></td>
-        <td>{{ track.distance }}&nbsp;km</td>
-        <td>{% if track.loop %}±{{ track.elevation.gain }}{% else %}+{{ track.elevation.gain }}/-{{ track.elevation.loss}}{% endif %}&nbsp;m
-        <td>{{ track.elevation.max }}&nbsp;m</td>
-        <td>{{ track.elevation.min }}&nbsp;m</td>
+        <td><a href="{{ trek.path|url }}">{{ trek.title }}</a></td>
+        <td>{{ trek.distance }}&nbsp;km</td>
+        <td>{% if trek.loop %}±{{ trek.elevation.gain }}{% else %}+{{ trek.elevation.gain }}/-{{ trek.elevation.loss}}{% endif %}&nbsp;m
+        <td>{{ trek.elevation.max }}&nbsp;m</td>
+        <td>{{ trek.elevation.min }}&nbsp;m</td>
     </tr>
     {% endfor %}
     </table>

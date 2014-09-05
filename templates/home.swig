@@ -11,8 +11,29 @@
 {% block content %}
     {{ contents|safe }}
     <div class="pure-g">
-        <div class="pure-u-1 pure-u-md-1-2 last-tracks">
-            <h2>Dernières traces</h2>
+        <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-2 last-tracks">
+            <h2>Dernières randonnées</h2>
+            <table class="pure-table pure-table-bordered pure-table-striped">
+            <thead>
+                <tr>
+                    <th>Titre</th>
+                    <th>Distance</th>
+                    <th>Dénivelé</th>
+                </tr>
+            </thead>
+            {% for trek in collections.lastTreks %}
+            <tr>
+                <td><a href="{{ trek.path|url }}">{{ trek.title }}</a></td>
+                <td>{{ trek.distance }}&nbsp;km</td>
+                <td>{% if trek.loop %}±{{ trek.elevation.gain }}{% else %}+{{ trek.elevation.gain }}/-{{ trek.elevation.loss}}{% endif %}&nbsp;m
+            </tr>
+            {% endfor %}
+            </table>
+
+            <p><a href="{{ "treks"|url }}" class="icon-treks bubble">Toutes les randonnées</a></p>
+        </div>
+        <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-2 last-tracks">
+            <h2>Derniers sentiers</h2>
             <table class="pure-table pure-table-bordered pure-table-striped">
             <thead>
                 <tr>
@@ -30,9 +51,9 @@
             {% endfor %}
             </table>
 
-            <p><a href="{{ "traces"|url }}" class="icon-tracks bubble">Toutes les traces</a></p>
+            <p><a href="{{ "tracks"|url }}" class="icon-tracks bubble">Tous les sentiers</a></p>
         </div>
-        <div class="pure-u-1 pure-u-md-1-2 last-posts posts-list">
+        <div class="pure-u-1 pure-u-sm-1 pure-u-md-1 last-posts posts-list">
             <h2>Derniers billets de blog</h2>
             <ul>
             {% for post in collections.lastPosts %}
@@ -44,6 +65,7 @@
                 </li>
             {% endfor %}
             </ul>
+
             <p><a href="{{ "posts"|url }}" class="icon-blog bubble">Le blog</a></p>
         </div>
     </div>

@@ -11,14 +11,21 @@
     },
     "date": ["created", "updated"],
     "collections": {
+        "treks": {
+            "pattern": "randonnees/**/index.html"
+        },
         "tracks": {
-            "pattern": "traces/**/index.html"
+            "pattern": "sentiers/**/index.html"
         },
         "posts": {
             "pattern": "posts/*.html"
         },
+        "lastTreks": {
+            "pattern": "randonnees/**/index.html",
+            "limit": 5
+        },
         "lastTracks": {
-            "pattern": "traces/**/index.html",
+            "pattern": "sentiers/**/index.html",
             "limit": 5
         },
         "lastPosts": {
@@ -49,11 +56,18 @@
     "templateEngine": "swig",
     "fileMetadata": [{
         "metadata": {
+            "section": "treks",
+            "template": "treks.swig",
+            "icon": "treks"
+        },
+        "pattern": "randonnees.md"
+    }, {
+        "metadata": {
             "section": "tracks",
             "template": "tracks.swig",
             "icon": "tracks"
         },
-        "pattern": "traces.md"
+        "pattern": "sentiers.md"
     }, {
         "metadata": {
             "section": "home",
@@ -62,10 +76,16 @@
         "pattern": "index.md"
     }, {
         "metadata": {
+            "section": "treks",
+            "template": "trek.swig"
+        },
+        "pattern": "randonnees/**/index.md"
+    }, {
+        "metadata": {
             "section": "tracks",
             "template": "track.swig"
         },
-        "pattern": "traces/**/index.md"
+        "pattern": "sentiers/**/index.md"
     }, {
         "metadata": {
             "section": "blog",

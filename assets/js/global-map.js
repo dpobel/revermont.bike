@@ -1,8 +1,9 @@
-/* global L */
-(function (global, doc) {
-    var config, map;
+/* global define */
+define(['domReady', 'L'], function (domReady, L) {
+    "use strict";
 
-    global.RB = global.RB || {};
+    var config, map,
+        doc = window.document;
 
     function _showMap(e) {
         doc.body.classList.add(config.classes.displayed);
@@ -77,10 +78,10 @@
         _initMap();
     }
 
-    global.RB.globalMap = {
+    return {
         init: function (conf) {
             config = conf;
-            doc.addEventListener('DOMContentLoaded', _init);
+            domReady(_init);
         },
     };
-})(this, document);
+});

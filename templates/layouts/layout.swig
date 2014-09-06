@@ -65,6 +65,17 @@
         </div>
     </footer>
     {% endblock %}
-    <script src="{{ "js/enabled.js"|asset() }}"></script>
+
+    <script data-main="{{ "js/enabled.js"|asset() }}" src="{{ "js/requirejs/require.js"|asset() }}"></script>
+    <script>
+    requirejs.config({
+        paths: {
+            "L": "{{ "lib/leaflet/leaflet"|asset() }}",
+            "domReady": "requirejs-domready/domReady",
+            "globalMap": "global-map",
+        },
+    });
+    {% block javascriptCode %}{% endblock %}
+    </script>
 </body>
 </html>

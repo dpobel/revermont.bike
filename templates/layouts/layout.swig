@@ -72,7 +72,7 @@
         paths: {
             "tracks": "{{ "sentiers/data"|url(true) }}",
             "treks": "{{ "randonnees/data"|url(true) }}",
-            "L": "{{ "lib/leaflet/leaflet"|asset() }}",
+            "leaflet": "{{ "lib/leaflet/leaflet"|asset() }}",
             "domReady": "requirejs-domready/domReady",
             "globalMap": "global-map",
         },

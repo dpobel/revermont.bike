@@ -1,5 +1,5 @@
 /* global define */
-define(['domReady', 'L'], function (domReady, L) {
+define(['domReady', 'leaflet'], function (domReady, L) {
     "use strict";
 
     var config, map, tracks,

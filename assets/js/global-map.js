@@ -2,7 +2,7 @@
 define(['domReady', 'L'], function (domReady, L) {
     "use strict";
 
-    var config, map,
+    var config, map, tracks,
         doc = window.document;
 
     function _showMap(e) {
@@ -16,8 +16,8 @@ define(['domReady', 'L'], function (domReady, L) {
     function _getBounds() {
         var minLat = 90, minLon = 90, maxLat = -90, maxLon = -90;
 
-        Object.keys(config.tracks).forEach(function (name) {
-            var bounds = config.tracks[name].bounds;
+        Object.keys(tracks).forEach(function (name) {
+            var bounds = tracks[name].bounds;
 
             minLat = Math.min(bounds.minlat, minLat);
             minLon = Math.min(bounds.minlon, minLon);
@@ -50,8 +50,8 @@ define(['domReady', 'L'], function (domReady, L) {
         map.fitBounds(_getBounds());
         L.control.layers(layers, {}, {position: 'topleft'}).addTo(map);
 
-        Object.keys(config.tracks).forEach(function (name) {
-            var track = config.tracks[name],
+        Object.keys(tracks).forEach(function (name) {
+            var track = tracks[name],
                 line = L.polyline(track.points, {
                     color: track.color,
                     opacity: config.style.pathOpacity,
@@ -79,7 +79,8 @@ define(['domReady', 'L'], function (domReady, L) {
     }
 
     return {
-        init: function (conf) {
+        init: function (data, conf) {
+            tracks = data;
             config = conf;
             domReady(_init);
         },

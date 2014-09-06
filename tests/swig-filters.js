@@ -109,6 +109,12 @@ describe('Swig filters', function () {
                 assert.equal(path + '/', urlFunc(path));
             });
 
+            it('should not add a trailing slash', function () {
+                var path = 'mont/myon';
+
+                assert.equal('/' + path, urlFunc(path, true));
+            });
+
             it('should keep the path intact', function () {
                 var path = '/mont/myon/';
 

@@ -33,8 +33,8 @@
 {% endblock %}
 
 {% block javascriptCode %}
-    require(['globalMap'], function (globalMap) {
-        globalMap.init({
+    require(['globalMap', 'treks'], function (globalMap, treks) {
+        globalMap.init(treks, {
             'ignApiKey': "{{ config.ignKey }}",
             'selector': {
                 'showMap': '.show-map',
@@ -44,18 +44,6 @@
             },
             'classes': {
                 'displayed': 'global-map-displayed'
-            },
-            'tracks': {
-            {% for track in treks %}
-                "{{ track.title|e('js') }}": {
-                    'bounds': {{ track.bounds|json|safe }},
-                    'distance': {{ track.distance }},
-                    'elevation': {{ track.elevation|json|safe }},
-                    'color': "{{ track.color|e('js') }}",
-                    'description': {% filter json %}{% include "track_popup.swig" with track %}{% endfilter %},
-                    'points': {{ track.points|filter_points(config.tracksListSteps)|json|safe }}
-                },
-            {% endfor %}
             },
             'style': {
                 'pathOpacity': 1,

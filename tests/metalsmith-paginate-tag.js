@@ -41,6 +41,7 @@ describe('Metalsmith tag', function () {
         assert.ok(Array.isArray(pagination.files), "The files tagged should be available");
         assert.strictEqual(undefined, pagination.prev, "The first page should not have a previous one");
         assert.equal(2, pagination.total, "The total number of page should be 2");
+        assert.equal(1, pagination.num, "The page number should 1");
         assert.equal(perPage, pagination.files.length, "The first page should get `perPage` documents");
         assert.equal(2, Object.keys(pagination.pages).length, "Two pages should be generated");
         assert.strictEqual(metadata.tagsList.awesomeTag, pagination.pages["1"], "Page 1 should refer to the tag page");
@@ -54,6 +55,7 @@ describe('Metalsmith tag', function () {
         assert.ok(Array.isArray(pagination2.files), "The page 2 should have some documents");
         assert.strictEqual(undefined, pagination2.next, "The page 2 should be the last");
         assert.equal(2, pagination2.total, "The total number of page should be 2");
+        assert.equal(2, pagination2.num, "The page number should 2");
         assert.equal(metadata.tagsList.awesomeTag.posts.length - perPage, pagination2.files.length, "The page 2 should have the remaining documents");
         assert.ok(pagination.pages === pagination2.pages, "The `pages` property is the same accross paginations object");
     }
@@ -71,6 +73,7 @@ describe('Metalsmith tag', function () {
             assert.strictEqual(undefined, pagination.prev, "The page should not have a previous one");
             assert.strictEqual(undefined, pagination.next, "The page should not have a next one");
             assert.equal(1, pagination.total, "The total number of page should be 1");
+            assert.equal(1, pagination.num, "The page number should be 1");
             assert.equal(metadata.tagsList.awesomeTag.posts.length, pagination.files.length, "All the post should be available in `files`");
             assert.equal(1, Object.keys(pagination.pages).length, "One page should be generated");
             assert.strictEqual(metadata.tagsList.awesomeTag, pagination.pages["1"], "Page 1 should refer to the tag page");

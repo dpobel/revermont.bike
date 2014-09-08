@@ -28,25 +28,28 @@
 }
 
 .icon-feed:before {
-    content: "\e600";
+    content: "\e607";
 }
 .icon-blog:before {
-    content: "\e601";
+    content: "\e60b";
 }
 .icon-info:before {
-    content: "\e602";
+    content: "\e608";
 }
 .icon-tracks:before {
+    content: "\e600";
+}
+.icon-treks:before {
     content: "\e603";
 }
 .icon-map:before {
-    content: "\e605";
+    content: "\e602";
 }
 .icon-list:before {
-    content: "\e606";
+    content: "\e60a";
 }
 .icon-mtb:before {
-    content: "\e607";
+    content: "\e611";
 }
 
 html, button, input, select, textarea,

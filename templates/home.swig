@@ -12,7 +12,7 @@
     {{ contents|safe }}
     <div class="pure-g">
         <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-2 last-tracks">
-            <h2>Dernières randonnées</h2>
+            <h2 class="icon-treks">Dernières randonnées</h2>
             <table class="pure-table pure-table-bordered pure-table-striped">
             <thead>
                 <tr>
@@ -33,7 +33,7 @@
             <p><a href="{{ "treks"|url }}" class="icon-treks bubble">Toutes les randonnées</a></p>
         </div>
         <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-2 last-tracks">
-            <h2>Derniers sentiers</h2>
+            <h2 class="icon-tracks">Derniers sentiers</h2>
             <table class="pure-table pure-table-bordered pure-table-striped">
             <thead>
                 <tr>
@@ -54,7 +54,7 @@
             <p><a href="{{ "tracks"|url }}" class="icon-tracks bubble">Tous les sentiers</a></p>
         </div>
         <div class="pure-u-1 pure-u-sm-1 pure-u-md-1 last-posts posts-list">
-            <h2>Derniers billets de blog</h2>
+            <h2 class="icon-blog">Derniers billets de blog</h2>
             <ul>
             {% for post in collections.lastPosts %}
                 <li>

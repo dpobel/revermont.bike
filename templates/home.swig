@@ -1,19 +1,19 @@
 {% extends "layouts/layout.swig" %}
 
 {% block pageTitle %}
-    <div class="home-title">
-        <h1>
-            <span class="title-text">{{ config.title }}</span>
+    <div class="home-banner">
+        <h1 class="home-banner-title">
+            <span class="home-banner-text">{{ config.title }}</span>
         </h1>
     </div>
 {% endblock %}
 
 {% block content %}
     {{ contents|safe }}
-    <div class="pure-g">
-        <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-2 last-tracks">
-            <h2 class="icon-treks">Dernières randonnées</h2>
-            <table class="pure-table pure-table-bordered pure-table-striped">
+    <div class="pure-g home-blocks">
+        <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-2 home-block home-block-treks">
+            <h2 class="icon-treks home-block-title">Dernières randonnées</h2>
+            <table class="pure-table pure-table-bordered pure-table-striped tracks-table">
             <thead>
                 <tr>
                     <th>Titre</th>
@@ -30,11 +30,11 @@
             {% endfor %}
             </table>
 
-            <p><a href="{{ "treks"|url }}" class="icon-treks bubble">Toutes les randonnées</a></p>
+            <p><a href="{{ "randonnees"|url }}" class="pure-button button-highlight icon-treks">Toutes les randonnées</a></p>
         </div>
-        <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-2 last-tracks">
-            <h2 class="icon-tracks">Derniers sentiers</h2>
-            <table class="pure-table pure-table-bordered pure-table-striped">
+        <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-2 home-block home-block-tracks">
+            <h2 class="icon-tracks home-block-title">Derniers sentiers</h2>
+            <table class="pure-table pure-table-bordered pure-table-striped tracks-table">
             <thead>
                 <tr>
                     <th>Titre</th>
@@ -51,22 +51,23 @@
             {% endfor %}
             </table>
 
-            <p><a href="{{ "tracks"|url }}" class="icon-tracks bubble">Tous les sentiers</a></p>
+            <p><a href="{{ "sentiers"|url }}" class="pure-button button-highlight icon-tracks">Tous les sentiers</a></p>
         </div>
-        <div class="pure-u-1 pure-u-sm-1 pure-u-md-1 last-posts posts-list">
-            <h2 class="icon-blog">Derniers billets de blog</h2>
-            <ul>
+        <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-2 home-block home-block-blog">
+            <h2 class="icon-blog home-block-title">Derniers billets de blog</h2>
+            <ul class="home-block-blog-list">
             {% for post in collections.lastPosts %}
-                <li>
-                    <a href="{{ post.path|url }}">
-                        {{ post.title }}
-                        <time>{{ post.created.format(config.dateFormat) }}</time>
-                    </a>
+                <li class="home-block-blog-item">
+                    <a class="home-block-blog-link" href="{{ post.path|url }}">{{ post.title }}</a>
                 </li>
             {% endfor %}
             </ul>
 
-            <p><a href="{{ "posts"|url }}" class="icon-blog bubble">Le blog</a></p>
+            <p><a href="{{ "posts"|url }}" class="pure-button button-highlight icon-blog">Le blog</a></p>
+        </div>
+        <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-2 home-block home-block-meteo">
+            <h2 class="icon-meteo home-block-title">Météo dans le Revermont</h2>
+
         </div>
     </div>
 {% endblock %}

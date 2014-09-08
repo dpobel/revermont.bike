@@ -5,7 +5,7 @@
 {% block title %}{{ title }} &mdash; {% parent %}{% endblock %}
 
 {% block content %}
-    <h1>{{ title }}</h1>
+    <h1 class="icon-tracks page-title">{{ title }}</h1>
     <time>{{ created.format(config.dateFormat) }}</time>
 
     {{ bounds|json }}

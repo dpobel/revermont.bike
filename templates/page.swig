@@ -6,10 +6,10 @@
 
 {% block content %}
     <article>
-        <h1 class="simple-page-title">{{ title }}</h1>
-        <div class="content">{{ contents|safe }}</div>
+        <h1 class="icon-{{ icon }} page-title">{{ title }}</h1>
+        <div>{{ contents|safe }}</div>
         {% if created %}
-        <footer class="content-meta">
+        <footer>
             Publié le <time>{{ created.format(config.dateFormat) }}</time>
         {% if updated %}
             &mdash; Dernière mise à jour le <time>{{ updated.format(config.dateFormat) }}</time>

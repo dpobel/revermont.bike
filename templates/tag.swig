@@ -1,17 +1,16 @@
 {% extends "layouts/layout.swig" %}
 
-{% block title %}{{ tag }} &mdash; {% parent %}{% endblock %}
+{% block title %}{{ tag }}{% if pagination.num != 1 %} (Page {{ pagination.num }}){% endif %} - {% parent %}{% endblock %}
 
 {% block content %}
-    <h1 class="simple-page-title">Pages tagguées &laquo;&nbsp;{{ tag }}&nbsp;&raquo;{% if pagination.num != 1 %} (Page {{ pagination.num }}){% endif %}</h1>
+    <h1 class="icon-tag page-title">Pages tagguées &laquo;&nbsp;{{ tag }}&nbsp;&raquo;{% if pagination.num != 1 %} (Page {{ pagination.num }}){% endif %}</h1>
 
-    <section class="posts-list full-list">
+    <section>
         <ul>
         {% for post in pagination.files %}
             <li>
                 <a href="{{ post.path|url }}">
                     {{ post.title }}
-                    <time>{{ post.created.format(config.dateFormat) }}</time>
                 </a>
             </li>
         {% endfor %}

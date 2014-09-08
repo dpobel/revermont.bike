@@ -5,12 +5,11 @@
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
 {% block content %}
-    <h1 class="simple-page-title">{{ title }}</h1>
+    <h1 class="icon-treks page-title">{{ title }}</h1>
 
-    <p class="tools"><a href="#maps" class="bubble icon-map show-map">Voir toutes les randonnées sur une carte</a></p>
-    <div class="global-map"><div class="map-tools"><a href="#" class="bubble icon-list back-list">Retour à la liste</a></div><div class="map-container"></div></div>
+    {% include "parts/map.swig" with {"label": "Voir toutes les randonnées sur une carte"} %}
 
-    <table class="tracks-full-list pure-table pure-table-bordered pure-table-striped">
+    <table class="pure-table pure-table-bordered pure-table-striped tracks-table">
     <thead>
         <tr>
             <th>Titre</th>

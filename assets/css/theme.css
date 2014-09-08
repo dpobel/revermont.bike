@@ -1,3 +1,14 @@
+body {
+    color: #333;
+    font-size: 15px;
+    background: #e8e7e6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    color: #222;
+}
+
 @font-face {
     font-family: 'icomoon';
     src:url('/assets/fonts/icomoon.eot?-1xzxcv');
@@ -51,6 +62,12 @@
 .icon-mtb:before {
     content: "\e611";
 }
+.icon-meteo:before {
+    content: "\e614";
+}
+.icon-tag:before {
+    content: "\e613";
+}
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"],
@@ -61,32 +78,16 @@ html, button, input, select, textarea,
     font-size: inherit;
 }
 
-a, .leaflet-container a {
-    color: #009;
+a {
+    color: #0078A8;
 }
 
-.bubble, .leaflet-container a.bubble {
+.button-highlight, .leaflet-container .button-highlight {
     text-decoration: none;
     color: #fff;
     background: #508d09;
     padding: 0.6em 0.8em 0.6em 0.8em;
     border-radius: 3px;
-}
-
-.bubble:hover, .leaflet-container a.bubble:hover {
-    background: #66aa17;
-}
-
-body {
-    color: #6A696C;
-    font-size:15px;
-    background: #e8e7e6;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
-    text-transform: uppercase;
-    color: #222;
 }
 
 .site-menu .back-home {
@@ -98,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-header, .site-header .site-menu {
-    background: #434244;
+    background: #222;
 }
 
 .site-header .site-menu li a {
@@ -115,56 +116,46 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
 }
 
-.home-title {
-    margin: 0;
+.page-title {
+    border-bottom: 1px solid #cbcbcb;
+    padding-bottom: 6px;
+}
+
+.home-banner {
     background: #c9d6c7;
 }
 
-.home-title h1 {
+.home-banner .home-banner-title {
     height: 300px;
     background: url(/assets/img/home.jpg) no-repeat center top;
-    max-width: 1920px;
-    margin: 0 auto;
-    position: relative;
 }
 
-.home-title .title-text {
+.home-banner .home-banner-text {
     background: rgba(0, 0, 0, 0.4);
-    box-sizing: border-box;
-    padding: 0.2em;
     font-size: 110%;
-    display: block;
     color: #fff;
-    position: absolute;
-    bottom: 0;
     line-height: 1.1;
 }
 
-.blog-post-meta .tags-list {
-    list-style-type: square;
+.blog-post-meta .blog-post-tags {
+    list-style-type: none;
 }
 
 .site-main {
-    background: #f5f4f2;
-}
-
-.posts-list time {
-    color: #8A898C;
-    font-size: 90%;
-}
-
-.posts-list li a {
-    border-left: 5px solid #cbcbcb;
-}
-
-.posts-list li a:hover {
-    border-color: #508d09;
     background: #fff;
 }
 
-.last-posts h2, .last-tracks h2, .simple-page-title {
-    padding-bottom: 10px;
+.home-blocks .home-block-title {
+    padding-bottom: 4px;
     border-bottom: 1px solid #cbcbcb;
+}
+
+.home-block-blog .home-block-blog-list {
+    list-style-type: square;
+    list-style-position: inside;
+    padding: 0 0 0 0.3em;
+    line-height: 2em;
+    font-size: 110%;
 }
 
 .site-footer {
@@ -172,17 +163,42 @@ h1, h2, h3, h4, h5, h6 {
     background: #e8e7e6;
 }
 
-.site-footer h2 {
+.site-footer .site-footer-part-title {
     border-bottom: 1px solid #cdcdcd;
     padding-bottom: 5px;
-    text-transform: none;
 }
 
 .friends-link ul {
     list-style-type: square;
-    padding-left: 1em;
 }
 
-.global-map .leaflet-popup h2 {
+.track-popup .track-popup-title {
     font-size: 1.2em;
+}
+
+.track-popup .track-popup-data {
+    list-style-type: square;
+}
+
+.global-map {
+    display: block;
+    -webkit-transform: translateX(100%);
+       -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+         -o-transform: translateX(100%);
+            transform: translateX(100%);
+
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+
+}
+.global-map-displayed .global-map {
+    -webkit-transform: translateX(0);
+       -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+         -o-transform: translateX(0);
+            transform: translateX(0);
 }

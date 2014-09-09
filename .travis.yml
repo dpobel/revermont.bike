@@ -1,5 +1,10 @@
 language: node_js
+branches:
+  only:
+    - master
 node_js:
   - "0.10"
 before_script:
+  - sudo apt-get update -qq
+  - sudo apt-get install gpsbabel
   - npm install -g grunt-cli

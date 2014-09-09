@@ -23,7 +23,7 @@
     <tr>
         <td><a href="{{ track.path|url }}">{{ track.title }}</a></td>
         <td>{{ track.distance }}&nbsp;km</td>
-        <td>{% if track.loop %}±{{ track.elevation.gain }}{% else %}+{{ track.elevation.gain }}/-{{ track.elevation.loss}}{% endif %}&nbsp;m
+        <td>{% if track.loop %}±{{ track.elevation.gain }}{% else %}+{{ track.elevation.gain }}/-{{ track.elevation.loss}}{% endif %}&nbsp;m</td>
         <td>{{ track.elevation.max }}&nbsp;m</td>
         <td>{{ track.elevation.min }}&nbsp;m</td>
     </tr>

@@ -1,11 +1,20 @@
 module.exports = function(grunt) {
-    var build = require('./build.json');
+    var build = require('./build.json'),
+        fnTest = 'tests/functional';
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         shell: {
             build: {
                 command: './build.js',
+                options: {
+                    stdout: true,
+                    stderr: true,
+                    failOnError: true
+                }
+            },
+            "build-test": {
+                command: './build.js --source ' + fnTest + '/src --destination ' + fnTest + '/web',
                 options: {
                     stdout: true,
                     stderr: true,
@@ -21,6 +30,13 @@ module.exports = function(grunt) {
                     verbose: true,
                 },
             },
+            test: {
+                options: {
+                    targetDir: fnTest + '/web/' + build.assets,
+                    layout: 'byType',
+                    verbose: true,
+                },
+            }
         },
         watch: {
             options: {
@@ -30,9 +46,13 @@ module.exports = function(grunt) {
                 files: ['src/**', 'templates/**', 'build.*', 'bower.json', 'lib/**', 'assets/**'],
                 tasks: ["build"]
             },
-            test: {
+            "unit-test": {
                 files: ['lib/**', 'tests/**'],
-                tasks: ["test"]
+                tasks: ["unit-test"]
+            },
+            "functional-test": {
+                files: [fnTest + '/src/**', 'templates/**', 'build.*', 'bower.json', 'lib/**', 'assets/**', 'tests/functional/*.js'],
+                tasks: ["functional-test"]
             },
         },
         mochaTest: {
@@ -52,6 +72,22 @@ module.exports = function(grunt) {
                 }
             }
         },
+        connect: {
+            server: {
+                options: {
+                    port: 9001,
+                    base: fnTest + '/web',
+                },
+            }
+        },
+        casper: {
+            options: {
+                test: true,
+            },
+            test: {
+                src: [fnTest + '/*.js']
+            }
+        },
     });
 
     grunt.loadNpmTasks('grunt-shell');
@@ -59,9 +95,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-mocha-istanbul');
     grunt.loadNpmTasks('grunt-bower-task');
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-casper');
 
-    grunt.registerTask('build', ['shell:build', 'bower']);
-    grunt.registerTask('test', ['mochaTest']);
+    grunt.registerTask('build', ['shell:build', 'bower:install']);
+    grunt.registerTask('build-test', ['shell:build-test', 'bower:test']);
+    grunt.registerTask('functional-test', ['build-test', 'connect', 'casper:test']);
+    grunt.registerTask('unit-test', ['mochaTest']);
+    grunt.registerTask('test', ['unit-test', 'functional-test']);
     grunt.registerTask('coverage', ['mocha_istanbul']);
     grunt.registerTask('default', ['build']);
 };

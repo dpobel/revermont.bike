@@ -1,6 +1,10 @@
 #! /usr/bin/env node
 
-var metalsmith = require('metalsmith'),
+var argv = require('minimist')(process.argv.slice(2), {
+        "string": ['destination', 'source'],
+        "boolean": ['help', 'h'],
+    }),
+    metalsmith = require('metalsmith'),
     markdown = require('metalsmith-markdown'),
     templates = require('metalsmith-templates'),
     permalinks = require('metalsmith-permalinks'),
@@ -16,10 +20,17 @@ var metalsmith = require('metalsmith'),
     date = require('./lib/metalsmith/date'),
     gpxcleaner = require('./lib/metalsmith/gpxcleaner'),
     gpxparser = require('./lib/metalsmith/gpxparser'),
-    paginateTag = require('./lib/metalsmith/paginate-tag.js');
+    paginateTag = require('./lib/metalsmith/paginate-tag.js'),
 
     pjson = require('./package.json'),
     conf = require('./build.json');
+
+if ( argv.help || argv.h ) {
+    console.log('build.js [--source srcDir] [--destination destDir]');
+    console.log('--source srcDir: override the source directory defined in build.json');
+    console.log('--destination destDir: override the destination directory defined in build.json');
+    process.exit(0);
+}
 
 console.log('Preparing the environment');
 console.log(' - Configuring moment.js');
@@ -31,7 +42,7 @@ require('./lib/swig/filters')(require('swig'), conf);
 console.log();
 console.log('Starting to build ' + pjson.name + '...');
 metalsmith(__dirname)
-    .source(conf.source)
+    .source(argv.source ? argv.source : conf.source)
     .use(tags(conf.tags))
     .use(fileMetadata(conf.fileMetadata))
     .use(gpxcleaner())
@@ -50,13 +61,13 @@ metalsmith(__dirname)
         source: conf.assets,
         destination: conf.assets
     }))
-    .destination(conf.destination)
+    .destination(argv.destination ? argv.destination : conf.destination)
     .build(function (error, res) {
         if ( error ) {
             console.error("Build failed: " + error.message);
             process.exit(1);
         }
-        console.log('Build successful in ' + conf.destination + ', wrote:');
+        console.log('Build successful in ' + (argv.destination ? argv.destination : conf.destination) + ', wrote:');
         Object.keys(res).forEach(function (key) {
             console.log('- ' + key);
         });

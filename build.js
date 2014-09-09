@@ -77,6 +77,7 @@ metalsmith(__dirname)
     .build(function (error, res) {
         if ( error ) {
             console.error("Build failed: " + error.message);
+            console.log(error.stack);
             process.exit(1);
         }
         console.log('Build successful in ' + destination + ', wrote:');

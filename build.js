@@ -4,6 +4,7 @@ var argv = require('minimist')(process.argv.slice(2), {
         "string": ['destination', 'source'],
         "boolean": ['help', 'h'],
     }),
+    source, destination,
     metalsmith = require('metalsmith'),
     markdown = require('metalsmith-markdown'),
     templates = require('metalsmith-templates'),
@@ -39,10 +40,21 @@ require('moment').locale(conf.lang);
 console.log(' - Adding the custom Swig filters');
 require('./lib/swig/filters')(require('swig'), conf);
 
+source = conf.source;
+destination = conf.destination;
+if ( argv.source ) {
+    source = argv.source;
+}
+if ( argv.destination ) {
+    destination = argv.destination;
+}
+
 console.log();
-console.log('Starting to build ' + pjson.name + '...');
+console.log('Starting to build ' + pjson.name);
+console.log('- Source: "' + __dirname + '/' + source + '"');
+console.log('- Destination: "' + __dirname + '/' + destination + '")');
 metalsmith(__dirname)
-    .source(argv.source ? argv.source : conf.source)
+    .source(source)
     .use(tags(conf.tags))
     .use(fileMetadata(conf.fileMetadata))
     .use(gpxcleaner())
@@ -61,13 +73,13 @@ metalsmith(__dirname)
         source: conf.assets,
         destination: conf.assets
     }))
-    .destination(argv.destination ? argv.destination : conf.destination)
+    .destination(destination)
     .build(function (error, res) {
         if ( error ) {
             console.error("Build failed: " + error.message);
             process.exit(1);
         }
-        console.log('Build successful in ' + (argv.destination ? argv.destination : conf.destination) + ', wrote:');
+        console.log('Build successful in ' + destination + ', wrote:');
         Object.keys(res).forEach(function (key) {
             console.log('- ' + key);
         });

@@ -17,6 +17,7 @@ var argv = require('minimist')(process.argv.slice(2), {
     paginate = require('metalsmith-paginate'),
     assets = require('metalsmith-assets'),
     tags = require('metalsmith-tags'),
+    buildDate = require('metalsmith-build-date'),
 
     date = require('./lib/metalsmith/date'),
     gpxcleaner = require('./lib/metalsmith/gpxcleaner'),
@@ -67,6 +68,7 @@ metalsmith(__dirname)
     .use(permalinks({relative: false}))
     .use(metadata(conf.metadata))
     .use(date(conf.date))
+    .use(buildDate())
     .use(templates(conf.templateEngine))
     .use(ignore(conf.ignore))
     .use(assets({

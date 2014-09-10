@@ -5,7 +5,8 @@ var sinon = require('sinon'),
     filter = require('../lib/swig/filters');
 
 describe('Swig filters', function () {
-    var config = {assets: '/assets/'};
+    var baseUri = 'http://vtt.revermont.bike',
+        config = {assets: '/assets/', baseUri: baseUri};
 
     describe('filter_points filter', function () {
         it('define the filter_points filter', function () {
@@ -123,6 +124,57 @@ describe('Swig filters', function () {
         });
     });
 
+    describe('ext_url filter', function () {
+        it('define the ext_url filter', function () {
+            var swig = {setFilter: function () {}},
+                spy = sinon.spy(swig, "setFilter");
+
+            spy.withArgs('ext_url');
+            filter(swig, config);
+
+            sassert.calledOnce(spy.withArgs('ext_url'));
+            sassert.calledWith(spy, 'ext_url', sinon.match.func);
+        });
+
+        describe('behavior', function () {
+            var extUrlFunc,
+                swig = {setFilter: function (name, func) {
+                    if ( name === 'ext_url' ) {
+                        extUrlFunc = func;
+                    }
+                }};
+
+            before(function () {
+                filter(swig, config);
+            });
+
+            it('should handle the baseUri trailing slashes', function () {
+                var path = '/mont/myon/';
+
+                config.baseUri = baseUri + '/////';
+                assert.equal(baseUri + path, extUrlFunc(path));
+            });
+
+            it('should add a trailing slash', function () {
+                var path = '/mont/myon';
+
+                assert.equal(baseUri + path + '/', extUrlFunc(path));
+            });
+
+            it('should not add a trailing slash', function () {
+                var path = '/mont/myon';
+
+                assert.equal(baseUri + path, extUrlFunc(path, true));
+            });
+
+            it('should add a slash between the baseUri and the path', function () {
+                var path = 'mont/myon/';
+
+                assert.equal(baseUri + '/' + path, extUrlFunc(path));
+            });
+        });
+    });
+
     describe('asset filter', function () {
         it('define the asset filter', function () {
             var swig = {setFilter: function () {}},
@@ -172,6 +224,67 @@ describe('Swig filters', function () {
 
                 filter(swig, config);
                 assert.equal('/assets/' + path, urlFunc(badPath));
+            });
+        });
+    });
+
+    describe('rssify', function () {
+        it('define the rssify filter', function () {
+            var swig = {setFilter: function () {}},
+                spy = sinon.spy(swig, "setFilter");
+
+            spy.withArgs('rssify');
+            filter(swig, config);
+
+            sassert.calledOnce(spy.withArgs('rssify'));
+            sassert.calledWith(spy, 'rssify', sinon.match.func);
+        });
+
+        describe('behavior', function () {
+            var rssifyFunc,
+                swig = {setFilter: function (name, func) {
+                    if ( name === 'rssify' ) {
+                        rssifyFunc = func;
+                    }
+                }};
+
+            before(function () {
+                filter(swig, config);
+            });
+
+            it('should transform the link', function () {
+                var html = '<a href="/mont/myon">Mont Myon</a>';
+
+                assert.equal(
+                    '<a href="' + baseUri + '/mont/myon">Mont Myon</a>',
+                    rssifyFunc(html)
+                );
+            });
+
+            it('should transform the image', function () {
+                var html = '<img src="/mont/myon.jpg">';
+
+                assert.equal(
+                    '<img src="' + baseUri + '/mont/myon.jpg">',
+                    rssifyFunc(html)
+                );
+            });
+
+            it('should handle the baseUri trailing slashes', function () {
+                var html = '<a href="/mont/myon">Mont Myon</a>';
+
+                config.baseUri += '//////';
+                assert.equal(
+                    '<a href="' + baseUri + '/mont/myon">Mont Myon</a>',
+                    rssifyFunc(html)
+                );
+            });
+
+            it('should handle multiple links and images', function () {
+                var html = '<a href="/mont/myon">Mont Myon</a><a href="/mont/myon">Mont Myon</a><a href="/mont/myon">Mont Myon</a><img src="/mont/myon.jpg"><img src="/mont/myon.jpg">',
+                    expected = '<a href="' + baseUri + '/mont/myon">Mont Myon</a><a href="' + baseUri + '/mont/myon">Mont Myon</a><a href="' + baseUri + '/mont/myon">Mont Myon</a><img src="' + baseUri + '/mont/myon.jpg"><img src="' + baseUri + '/mont/myon.jpg">';
+
+                assert.equal(expected, rssifyFunc(html));
             });
         });
     });

@@ -1,0 +1,7 @@
+---
+permalink: false
+template: rss.swig
+title: Les dernières randonnées sur Revermont.bike
+exportCollection: lastTreks
+path: randonnees.xml
+---

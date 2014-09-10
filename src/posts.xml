@@ -1,0 +1,7 @@
+---
+permalink: false
+template: rss.swig
+title: Les derniers posts sur Revermont.bike
+exportCollection: lastPosts
+path: posts.xml
+---

@@ -22,6 +22,9 @@
     <!--[if lt IE 9]>
     <script>(function(){var tags=['header','article','footer','nav', 'time', 'section', 'figure', 'abbr'];for(var i=0;i!=tags.length;i++) document.createElement(tags[i]);})();</script>
     <![endif]-->
+{% for feed in feeds %}
+    <link rel="alternate" type="application/rss+xml" href="{{ feed.path|url(true) }}" title="{{ feed.title }}">
+{% endfor %}
     {% block meta %}{% endblock %}
 </head>
 <body class="{{ section }}">

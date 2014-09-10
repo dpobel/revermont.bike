@@ -1,5 +1,6 @@
 {
     "lang": "fr",
+    "baseUri": "http://vtt.revermont.bike/",
     "destination": "web",
     "assets": "assets",
     "source": "src",
@@ -33,6 +34,9 @@
             "limit": 5,
             "sortBy": "created",
             "reverse": true
+        },
+        "feeds": {
+            "pattern": "*.xml"
         },
         "menu": {
             "sortBy": "priority",

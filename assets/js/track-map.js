@@ -46,21 +46,30 @@ define(['domReady', 'leaflet'], function (domReady, L) {
     }
 
     function _initMap() {
-        var layer, line,
+        var layers, line,
             start = {lat: track.points[0].lat, lon: track.points[0].lon};
 
-        layer = L.tileLayer("http://wxs.ign.fr/" + config.ignApiKey
+        layers = {
+            "IGN Scan express": L.tileLayer("http://wxs.ign.fr/" + config.ignApiKey
+                    + "/geoportail/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&"
+                    + "LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN-EXPRESS.CLASSIQUE&STYLE=normal&TILEMATRIXSET=PM&"
+                    + "TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&FORMAT=image%2Fjpeg", {
+                attribution: '&copy; <a href="http://www.ign.fr/">IGN</a>',
+            }),
+            "IGN Topo": L.tileLayer("http://wxs.ign.fr/" + config.ignApiKey
                     + "/geoportail/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&"
                     + "LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS&STYLE=normal&TILEMATRIXSET=PM&"
                     + "TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&FORMAT=image%2Fjpeg", {
-            attribution: '&copy; <a href="http://www.ign.fr/">IGN</a>',
-        });
+                attribution: '&copy; <a href="http://www.ign.fr/">IGN</a>',
+            }),
+        };
 
         map = L.map(doc.querySelector(config.map), {
-            layers: [layer],
+            layers: [layers["IGN Scan express"]],
         });
         map.fitBounds(_getBounds());
-        console.log(map.getZoom(), config.maxAutoZoom);
+        L.control.layers(layers, {}, {position: 'topleft'}).addTo(map);
+
         if ( map.getZoom() > config.maxAutoZoom ) {
             map.setZoom(config.maxAutoZoom, {animated: true});
         }

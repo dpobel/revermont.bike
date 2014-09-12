@@ -78,6 +78,7 @@
             "leaflet": "{{ "lib/leaflet/leaflet"|asset() }}",
             "domReady": "requirejs-domready/domReady",
             "globalMap": "global-map",
+            "trackMap": "track-map",
         },
     });
     {% block javascriptCode %}{% endblock %}

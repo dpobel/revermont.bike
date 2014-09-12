@@ -53,7 +53,7 @@ if ( argv.destination ) {
 console.log();
 console.log('Starting to build ' + pjson.name);
 console.log('- Source: "' + __dirname + '/' + source + '"');
-console.log('- Destination: "' + __dirname + '/' + destination + '")');
+console.log('- Destination: "' + __dirname + '/' + destination + '"');
 metalsmith(__dirname)
     .source(source)
     .use(tags(conf.tags))

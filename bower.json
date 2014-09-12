@@ -13,7 +13,7 @@
   ],
   "dependencies": {
     "pure": "0.5.0",
-    "leaflet": "http://leaflet-cdn.s3.amazonaws.com/build/leaflet-0.7.3.zip",
+    "leaflet": "0.7.3",
     "requirejs": null,
     "requirejs-domready": null
   },
@@ -26,13 +26,17 @@
       ]
     },
     "leaflet": {
-      "lib": "."
+      "lib": "dist"
     },
     "requirejs": {
-        "js": ["require.js"]
+      "js": [
+        "require.js"
+      ]
     },
     "requirejs-domready": {
-        "js": ["domReady.js"]
+      "js": [
+        "domReady.js"
+      ]
     }
   }
 }

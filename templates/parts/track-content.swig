@@ -2,11 +2,11 @@
     <div class="pure-u-1">
         <h1 class="icon-{{ section }} page-title">{{ title }}</h1>
     </div>
-    <div class="pure-u-1 pure-u-md-3-5">
+    <div class="pure-u-1 pure-u-md-11-24 pure-u-lg-3-5">
         <noscript>JavaScript est requis pour afficher la carte</noscript>
         <div class="track-map"></div>
     </div>
-    <div class="pure-u-1 pure-u-md-2-5 track-sidebar">
+    <div class="pure-u-1 pure-u-md-13-24 pure-u-lg-2-5 track-sidebar">
         <ul class="track-sidebar-tabs">
             <li class="track-sidebar-tabs-item">
                 <a href="#profile" class="track-sidebar-tabs-label is-tab-focused icon-profile">Profil</a>
@@ -24,7 +24,8 @@
 
         <div class="track-sidebar-panel is-panel-visible" id="profile">
             <h2 class="track-sidebar-panel-name icon-profile">Profil</h2>
-            <noscript>JavaScript est requis pour afficher le profil</noscript>
+
+            <div class="rickshaw_graph">{{ profile|safe }}</div>
         </div>
 
         <div class="track-sidebar-panel" id="description">

@@ -275,3 +275,7 @@ a {
     text-align: center;
     color: #a00;
 }
+
+.track-sidebar .rickshaw_graph {
+    margin-top: 1em;
+}

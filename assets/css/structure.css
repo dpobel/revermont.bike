@@ -180,7 +180,7 @@ body {
     }
 
     .track-sidebar .track-sidebar-panel {
-        padding-left: 1em;
+        padding-left: 10px;
     }
 
     .track-sidebar .track-data {
@@ -196,4 +196,8 @@ body {
     .is-track-app-initialized .track-sidebar .track-sidebar-panel {
         display: block;
     }
+}
+
+.track-map .rickshaw_graph {
+    margin-top: 1em;
 }

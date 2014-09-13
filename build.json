@@ -13,6 +13,19 @@
     "gpxcleaner": {
         "limit": 1000
     },
+    "gpxparser": {
+        "profile": {
+            "width": 500,
+            "height": 200,
+            "offsetMin": 30,
+            "offsetMax": 30,
+            "interpolation": "basis",
+            "stroke": true,
+            "strokeColor": "#5284E5",
+            "color": "lightblue",
+            "renderer": "area"
+        }
+    },
     "date": ["created", "updated"],
     "collections": {
         "treks": {

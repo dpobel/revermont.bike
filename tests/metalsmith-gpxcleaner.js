@@ -130,29 +130,16 @@ describe('Metalsmith gpxcleaner', function () {
                 spawn.restore();
             });
 
-            it('should leave small file alone', function (done) {
-                var files = {}, path = 'tracks/1999.gpx',
-                    fullpath = fixturesDir + path;
-
-                fs.readFile(fullpath, function (err, content) {
-                    files[path] = {contents: content};
-
-                    gpxcleaner()(files, false, function (err) {
-                        var doc = libxmljs.parseXmlString(files[path].contents);
-
-                        assert.equal(1999, doc.find('//gpx:ele', nsConfig).length);
-                        done();
-                    });
-                });
-            });
-
-            it('should call gpsbabel', function (done) {
+            function testGpsBabel(limit, localLimit, done) {
                 var files = {}, path = 'tracks/2001.gpx',
                     fullpath = fixturesDir + path,
                     stdinWriteStub, newContent, doc, newName = 'New GPX name';
 
                 fs.readFile(fullpath, function (err, content) {
                     files[path] = {contents: content};
+                    if ( localLimit ) {
+                        files[path].limit = localLimit;
+                    }
 
                     stdinWriteStub = sinon.stub(eventEmitter.stdin, "write", function (string, callback) {
                         assert.equal(
@@ -162,7 +149,7 @@ describe('Metalsmith gpxcleaner', function () {
                         callback();
                     });
 
-                    gpxcleaner()(files, false, function (err) {
+                    gpxcleaner(limit ? {limit: limit} : undefined)(files, false, function (err) {
                         var params, flags, simplifyOpt, newDoc;
 
                         assert.ok(spawn.calledOnce, "spawn should have been called once");
@@ -173,7 +160,14 @@ describe('Metalsmith gpxcleaner', function () {
 
                         assert.ok(Array.isArray(params));
                         params.forEach(function (param) {
-                            if ( param === 'simplify,count=2000' ) {
+                            var l = 2000;
+
+                            if ( localLimit ) {
+                                l = localLimit;
+                            } else if ( limit ) {
+                                l = limit;
+                            }
+                            if ( param === 'simplify,count=' + l ) {
                                 simplifyOpt = true;
                             }
                         });
@@ -207,6 +201,34 @@ describe('Metalsmith gpxcleaner', function () {
                     eventEmitter.stdout.emit('data', newContent.substr(10));
                     eventEmitter.emit('close');
                 });
+            }
+
+            it('should leave small file alone', function (done) {
+                var files = {}, path = 'tracks/1999.gpx',
+                    fullpath = fixturesDir + path;
+
+                fs.readFile(fullpath, function (err, content) {
+                    files[path] = {contents: content};
+
+                    gpxcleaner()(files, false, function (err) {
+                        var doc = libxmljs.parseXmlString(files[path].contents);
+
+                        assert.equal(1999, doc.find('//gpx:ele', nsConfig).length);
+                        done();
+                    });
+                });
+            });
+
+            it('should take the configured limit into account', function (done) {
+                testGpsBabel(500, undefined, done);
+            });
+
+            it('should take the limit in file', function (done) {
+                testGpsBabel(500, 200, done);
+            });
+
+            it('should call gpsbabel', function (done) {
+                testGpsBabel(undefined, undefined, done);
             });
 
             it('should handle stdin writing error', function (done) {

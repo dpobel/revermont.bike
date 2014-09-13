@@ -10,6 +10,9 @@
     "metadata": {
         "config": "config.json"
     },
+    "gpxcleaner": {
+        "limit": 1000
+    },
     "date": ["created", "updated"],
     "collections": {
         "treks": {

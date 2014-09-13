@@ -290,5 +290,65 @@ describe('Metalsmith gpx', function () {
             });
         });
 
+        it('should filter points based on the elevation', function (done) {
+            var files = {'tracks/test1.md': {'gpx': 'elevationminstep.gpx'}},
+                expectedElevations = [200, 205, 205, 208.2, 208.2];
+
+            gpx()(files, ms, function (err) {
+                var file = files['tracks/test1.md'],
+                    points = file.points;
+
+                assert.ok(typeof err === 'undefined');
+                assert.ok(Array.isArray(points));
+
+                assert.equal(expectedElevations.length, points.length);
+                expectedElevations.forEach(function (ele, i) {
+                    assert.equal(ele, points[i].ele);
+                });
+
+                done();
+            });
+        });
+
+        it('should filter points based on the elevation (config)', function (done) {
+            var files = {'tracks/test1.md': {'gpx': 'elevationminstep.gpx'}},
+                expectedElevations = [200, 205, 205, 208.2, 210];
+
+            gpx({elevationMinDiff: 1.5})(files, ms, function (err) {
+                var file = files['tracks/test1.md'],
+                    points = file.points;
+
+                assert.ok(typeof err === 'undefined');
+                assert.ok(Array.isArray(points));
+
+                assert.equal(expectedElevations.length, points.length);
+                expectedElevations.forEach(function (ele, i) {
+                    assert.equal(ele, points[i].ele);
+                });
+
+                done();
+            });
+        });
+
+        it('should filter points based on the elevation (local config)', function (done) {
+            var files = {'tracks/test1.md': {'gpx': 'elevationminstep.gpx', 'elevationMinDiff': 0.5}},
+                expectedElevations = [200, 205, 206, 208.2, 210];
+
+            gpx()(files, ms, function (err) {
+                var file = files['tracks/test1.md'],
+                    points = file.points;
+
+                assert.ok(typeof err === 'undefined');
+                assert.ok(Array.isArray(points));
+
+                assert.equal(expectedElevations.length, points.length);
+                expectedElevations.forEach(function (ele, i) {
+                    assert.equal(ele, points[i].ele);
+                });
+
+                done();
+            });
+        });
+
     });
 });

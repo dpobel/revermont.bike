@@ -25,7 +25,7 @@
         <div class="track-sidebar-panel is-panel-visible" id="profile">
             <h2 class="track-sidebar-panel-name icon-profile">Profil</h2>
 
-            <div class="rickshaw_graph">{{ profile|safe }}</div>
+            <div class="rickshaw_graph track-profile"><div class="track-profile-tooltip"><div class="track-profile-tooltip-info" data-tpl="Alt.:&nbsp;%alt%&nbsp;m"></div></div><div class="track-profile-chart">{{ profile|safe }}</div></div>
         </div>
 
         <div class="track-sidebar-panel" id="description">

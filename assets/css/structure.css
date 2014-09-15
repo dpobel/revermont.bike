@@ -198,6 +198,33 @@ body {
     }
 }
 
-.track-map .rickshaw_graph {
+.track-profile {
     margin-top: 1em;
+    position: relative;
+}
+
+.track-profile-tooltip {
+    display: none;
+    width: 1px;
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.track-profile-tooltip .track-profile-tooltip-info {
+    padding: 0.05em 0.2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.track-profile-tooltip .track-profile-tooltip-info.is-tooltip-on-left {
+    left: auto;
+    right: 1px; /* border */
+}
+
+.is-mouse-tracked .track-profile-tooltip {
+    display: block;
 }

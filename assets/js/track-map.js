@@ -46,7 +46,7 @@ define(['domReady', 'leaflet'], function (domReady, L) {
     }
 
     function _initMap() {
-        var layers, line,
+        var layers, line, marker, profile, tooltip, chart, info, infoTpl,
             start = {lat: track.points[0].lat, lon: track.points[0].lon};
 
         layers = {
@@ -80,9 +80,42 @@ define(['domReady', 'leaflet'], function (domReady, L) {
             weight: config.style.weight,
         });
         line.addTo(map);
-        L.marker(start, {
-            title: "Départ",
-        }).addTo(map);
+        marker = L.marker(start).addTo(map);
+
+        profile = doc.querySelector(config.profile);
+        tooltip = doc.querySelector(config.profileTooltip);
+        chart = doc.querySelector(config.profileChart);
+        info = doc.querySelector(config.profileTooltipInfo);
+        infoTpl = info.getAttribute('data-tpl');
+
+        profile.addEventListener('mouseover', function (e) {
+            profile.classList.add(config.classes.mouseTracked);
+        });
+
+        chart.addEventListener('mousemove', function (e) {
+            var chartWidth = parseFloat(this.clientWidth),
+                d = track.distance * e.layerX / chartWidth,
+                i, point;
+
+            if ( e.layerX > chartWidth/2 ) {
+                info.classList.add(config.classes.tooltipOnLeft);
+            } else {
+                info.classList.remove(config.classes.tooltipOnLeft);
+            }
+
+            for (i = 0; i != track.points.length; i++) {
+                point = track.points[i];
+                if ( point.dst >= d ) {
+                    tooltip.style.left = e.layerX + 'px';
+                    info.innerHTML = infoTpl.replace('%alt%', Math.round(point.ele));
+                    marker.setLatLng({lat: point.lat, lon: point.lon});
+                    if ( !map.getBounds().contains(marker.getLatLng()) ) {
+                        map.panTo(marker.getLatLng());
+                    }
+                    break;
+                }
+            }
+        }, false);
     }
 
     return {

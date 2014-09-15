@@ -279,3 +279,21 @@ a {
 .track-sidebar .rickshaw_graph {
     margin-top: 1em;
 }
+
+
+.track-profile-tooltip {
+    border-left: 1px solid #808080;
+}
+
+.track-profile-tooltip .track-profile-tooltip-info {
+    border: 1px solid #808080;
+    color: #808080;
+    border-left: 0;
+    font-size: 90%;
+    background: rgba(240, 240, 240, 0.7);
+}
+
+.track-profile-tooltip .track-profile-tooltip-info.is-tooltip-on-left {
+    border-right: 0;
+    border: 1px solid #808080;
+}

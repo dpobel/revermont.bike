@@ -15,9 +15,6 @@
                 <a href="#description" class="track-sidebar-tabs-label icon-description">Description</a>
             </li><!--
             --><li class="track-sidebar-tabs-item">
-                <a href="#infos" class="track-sidebar-tabs-label icon-data">Infos</a>
-            </li><!--
-            --><li class="track-sidebar-tabs-item">
                 <a href="#tools" class="track-sidebar-tabs-label icon-tools">Outils</a>
             </li>
         </ul>
@@ -26,16 +23,19 @@
             <h2 class="track-sidebar-panel-name icon-profile">Profil</h2>
 
             <div class="rickshaw_graph track-profile"><div class="track-profile-tooltip"><div class="track-profile-tooltip-info" data-tpl="Alt.:&nbsp;%alt%&nbsp;m"></div></div><div class="track-profile-chart">{{ profile|safe }}</div></div>
+            {% include "track-data.swig" %}
         </div>
 
         <div class="track-sidebar-panel" id="description">
             <h2 class="track-sidebar-panel-name icon-description">Description</h2>
             {{ contents|safe }}
-        </div>
 
-        <div class="track-sidebar-panel" id="infos">
-            <h2 class="track-sidebar-panel-name icon-info">Caractéristiques</h2>
-            {% include "track-data.swig" %}
+            <p>Mots-clés&nbsp;:</p>
+            <ul class="content-tags">
+            {% for tag in tags %}
+                <li class="content-tags-item icon-tag"><a href="{{ tagsList[tag].path|url }}">{{ tag }}</a></li>
+            {% endfor %}
+            </ul>
         </div>
 
         <div class="track-sidebar-panel" id="tools">

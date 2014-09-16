@@ -32,9 +32,11 @@ define(['domReady', 'leaflet'], function (domReady, L) {
         var layers;
 
         layers = {
-            "Noir et blanc": L.tileLayer('http://{s}.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, '
-                    + '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+            "IGN Scan express": L.tileLayer("http://wxs.ign.fr/" + config.ignApiKey
+                    + "/geoportail/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&"
+                    + "LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN-EXPRESS.CLASSIQUE&STYLE=normal&TILEMATRIXSET=PM&"
+                    + "TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&FORMAT=image%2Fjpeg", {
+                attribution: '&copy; <a href="http://www.ign.fr/">IGN</a>',
             }),
             "IGN Topo": L.tileLayer("http://wxs.ign.fr/" + config.ignApiKey
                     + "/geoportail/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&"
@@ -45,7 +47,7 @@ define(['domReady', 'leaflet'], function (domReady, L) {
         };
 
         map = L.map(doc.querySelector(config.selector.map), {
-            layers: [layers["Noir et blanc"]]
+            layers: [layers["IGN Scan express"]]
         });
         map.fitBounds(_getBounds());
         L.control.layers(layers, {}, {position: 'topleft'}).addTo(map);

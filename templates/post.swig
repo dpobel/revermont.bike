@@ -17,9 +17,9 @@
         {% endif %}
         {% if tags %}
             <p>Mots-clés&nbsp;:</p>
-            <ul class="blog-post-tags">
+            <ul class="content-tags">
             {% for tag in tags %}
-                <li class="blog-post-tags-item icon-tag"><a href="{{ tagsList[tag].path|url }}">{{ tag }}</a></li>
+                <li class="content-tags-item icon-tag"><a href="{{ tagsList[tag].path|url }}">{{ tag }}</a></li>
             {% endfor %}
             </ul>
         {% endif %}

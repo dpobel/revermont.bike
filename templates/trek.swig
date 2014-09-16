@@ -2,20 +2,12 @@
 
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
-{% block title %}{{ title }} &mdash; {% parent %}{% endblock %}
+{% block title %}{{ title }} - Randonnée VTT - {% parent %}{% endblock %}
 
 {% block content %}
-    <h1 class="icon-treks page-title">{{ title }}</h1>
-    <time>{{ created.format(config.dateFormat) }}</time>
+    {% include "parts/track-content.swig" %}
+{% endblock %}
 
-    {{ bounds|json }}
-
-    <br>
-    Loop: {{ loop }}
-    <br>
-    Elevation: {{ elevation|json }}
-    <br>
-    Distance: {{ distance }}km
-
-    {{ contents|raw }}
+{% block javascriptCode %}
+    {% include "parts/track-app.swig" %}
 {% endblock %}

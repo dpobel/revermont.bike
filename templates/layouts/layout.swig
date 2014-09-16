@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ "lib/leaflet/leaflet.css"|asset() }}">
     <link rel="stylesheet" href="{{ "css/structure.css"|asset() }}">
     <link rel="stylesheet" href="{{ "css/theme.css"|asset() }}">
+    <link rel="stylesheet" href="{{ "css/rickshaw/rickshaw.css"|asset() }}">
     <!--<![endif]-->
     <!--[if lt IE 9]>
     <script>(function(){var tags=['header','article','footer','nav', 'time', 'section', 'figure', 'abbr'];for(var i=0;i!=tags.length;i++) document.createElement(tags[i]);})();</script>
@@ -78,6 +79,7 @@
             "leaflet": "{{ "lib/leaflet/leaflet"|asset() }}",
             "domReady": "requirejs-domready/domReady",
             "globalMap": "global-map",
+            "trackMap": "track-map",
         },
     });
     {% block javascriptCode %}{% endblock %}

@@ -1,6 +1,7 @@
 /* global describe, it, beforeEach */
 var gpx = require('../lib/metalsmith/gpxparser'),
     assert = require('assert'),
+    libxmljs = require('libxmljs'),
     sinon = require('sinon');
 
 describe('Metalsmith gpx', function () {
@@ -286,6 +287,118 @@ describe('Metalsmith gpx', function () {
                 assert.equal(5.3176, points[1].lon);
                 assert.equal(240.2, points[1].ele);
 
+                done();
+            });
+        });
+
+        it('should filter points based on the elevation', function (done) {
+            var files = {'tracks/test1.md': {'gpx': 'elevationminstep.gpx'}},
+                expectedElevations = [200, 205, 205, 208.2, 208.2];
+
+            gpx()(files, ms, function (err) {
+                var file = files['tracks/test1.md'],
+                    points = file.points;
+
+                assert.ok(typeof err === 'undefined');
+                assert.ok(Array.isArray(points));
+
+                assert.equal(expectedElevations.length, points.length);
+                expectedElevations.forEach(function (ele, i) {
+                    assert.equal(ele, points[i].ele);
+                });
+
+                done();
+            });
+        });
+
+        it('should filter points based on the elevation (config)', function (done) {
+            var files = {'tracks/test1.md': {'gpx': 'elevationminstep.gpx'}},
+                expectedElevations = [200, 205, 205, 208.2, 210];
+
+            gpx({elevationMinDiff: 1.5})(files, ms, function (err) {
+                var file = files['tracks/test1.md'],
+                    points = file.points;
+
+                assert.ok(typeof err === 'undefined');
+                assert.ok(Array.isArray(points));
+
+                assert.equal(expectedElevations.length, points.length);
+                expectedElevations.forEach(function (ele, i) {
+                    assert.equal(ele, points[i].ele);
+                });
+
+                done();
+            });
+        });
+
+        it('should filter points based on the elevation (local config)', function (done) {
+            var files = {'tracks/test1.md': {'gpx': 'elevationminstep.gpx', 'elevationMinDiff': 0.5}},
+                expectedElevations = [200, 205, 206, 208.2, 210];
+
+            gpx()(files, ms, function (err) {
+                var file = files['tracks/test1.md'],
+                    points = file.points;
+
+                assert.ok(typeof err === 'undefined');
+                assert.ok(Array.isArray(points));
+
+                assert.equal(expectedElevations.length, points.length);
+                expectedElevations.forEach(function (ele, i) {
+                    assert.equal(ele, points[i].ele);
+                });
+
+                done();
+            });
+        });
+
+    });
+
+    describe('profile', function () {
+        it('should generate an SVG profile', function (done) {
+            var files = {'tracks/test1.md': {'gpx': 'test1.gpx'}};
+
+            gpx()(files, ms, function (err) {
+                var file = files['tracks/test1.md'], doc;
+
+                assert.ok(typeof file.profile === 'string');
+                doc = libxmljs.parseXmlString(file.profile);
+                assert.equal("svg", doc.root().name());
+                done();
+            });
+        });
+
+        it('should generate an SVG profile with the given size', function (done) {
+            var files = {'tracks/test1.md': {'gpx': 'test1.gpx'}},
+                opts = {profile: {width: 600, height: 400}};
+
+            gpx(opts)(files, ms, function (err) {
+                var doc = libxmljs.parseXmlString(files['tracks/test1.md'].profile),
+                    root = doc.root();
+
+                assert.equal(opts.profile.width, root.attr('width').value());
+                assert.equal(opts.profile.height, root.attr('height').value());
+                done();
+            });
+        });
+
+        it('should generate an SVG profile with the given style settings', function (done) {
+            var files = {'tracks/test1.md': {'gpx': 'test1.gpx'}},
+                opts = {
+                    profile: {
+                        color: '#f00',
+                        strokeColor: '#00f',
+                        stroke: true,
+                        renderer: "area",
+                    }
+                };
+
+            gpx(opts)(files, ms, function (err) {
+                var doc = libxmljs.parseXmlString(files['tracks/test1.md'].profile),
+                    area = doc.find('//path[@class="area" and @fill="' + opts.profile.color + '"]'),
+                    stroke = doc.find('//path[@fill="none" and @stroke="' + opts.profile.strokeColor + '"]');
+
+                assert.equal(1, area.length, "area");
+                assert.equal(1, stroke.length, "stroke");
                 done();
             });
         });

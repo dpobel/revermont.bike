@@ -174,6 +174,10 @@ body {
     padding: 0.3em 0.6em;
 }
 
+.track-sidebar .track-data {
+    margin-top:1em;
+}
+
 @media screen and (min-width: 48em) {
     .track-sidebar .track-sidebar-panel-name {
         display: none;
@@ -181,10 +185,6 @@ body {
 
     .track-sidebar .track-sidebar-panel {
         padding-left: 10px;
-    }
-
-    .track-sidebar .track-data {
-        margin-top:1em;
     }
 }
 

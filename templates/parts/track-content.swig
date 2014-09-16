@@ -43,7 +43,7 @@
             
             <p>
                 <a class="pure-button button-highlight icon-print" href="#pdf">Export PDF</a>
-                <a class="pure-button button-highlight icon-download" href="{{ path|url }}{{ gpx }}">Télécharger le fichier GPX</a>
+                <a class="pure-button button-highlight icon-download" href="{{ gpx }}">Télécharger le fichier GPX</a>
             </p>
         </div>
     </div>

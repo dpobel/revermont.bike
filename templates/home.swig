@@ -65,9 +65,18 @@
 
             <p><a href="{{ "posts"|url }}" class="pure-button button-highlight icon-blog">Le blog</a></p>
         </div>
-        <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-2 home-block home-block-meteo">
-            <h2 class="icon-meteo home-block-title">Météo dans le Revermont</h2>
+        <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-2 home-block home-block-forecast">
+            <h2 class="icon-{{ forecast.daily.icon }} home-block-title">Météo dans le Revermont</h2>
 
+            <div class="forecast pure-g">
+                <div class="pure-u-1-2 pure-u-md-1 pure-u-lg-1-2">
+                    {% include "parts/forecast-day.swig" with {day: forecast.daily.days[0], dayOffset: 0} %}
+                </div>
+                <div class="pure-u-1-2 pure-u-md-1 pure-u-lg-1-2">
+                    {% include "parts/forecast-day.swig" with {day: forecast.daily.days[1], dayOffset: 1} %}
+                </div>
+            </div>
+            <p><a href="{{ "meteo"|url }}" class="pure-button button-highlight icon-{{ forecast.daily.icon }}">Prévision météo à 8 jours dans le Revermont</a></p>
         </div>
     </div>
 {% endblock %}

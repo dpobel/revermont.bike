@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 var argv = require('minimist')(process.argv.slice(2), {
-        "string": ['destination', 'source'],
+        "string": ['destination', 'source', 'forecast'],
         "boolean": ['help', 'h'],
     }),
     source, destination,
@@ -23,14 +23,17 @@ var argv = require('minimist')(process.argv.slice(2), {
     gpxcleaner = require('./lib/metalsmith/gpxcleaner'),
     gpxparser = require('./lib/metalsmith/gpxparser'),
     paginateTag = require('./lib/metalsmith/paginate-tag.js'),
+    forecast = require('./lib/metalsmith/forecast.js'),
 
     pjson = require('./package.json'),
-    conf = require('./build.json');
+    conf = require('./build.json'),
+    forecastConf = conf.forecast;
 
 if ( argv.help || argv.h ) {
-    console.log('build.js [--source srcDir] [--destination destDir]');
+    console.log('build.js [--source srcDir] [--destination destDir] [--forecast-key apiKey]');
     console.log('--source srcDir: override the source directory defined in build.json');
     console.log('--destination destDir: override the destination directory defined in build.json');
+    console.log('--forecast apiKey: API for Forecast.io (if not provided, fake data are used)');
     process.exit(0);
 }
 
@@ -49,6 +52,9 @@ if ( argv.source ) {
 if ( argv.destination ) {
     destination = argv.destination;
 }
+if ( argv.forecast ) {
+    forecastConf.key = argv.forecast;
+}
 
 console.log();
 console.log('Starting to build ' + pjson.name);
@@ -57,6 +63,7 @@ console.log('- Destination: "' + __dirname + '/' + destination + '"');
 metalsmith(__dirname)
     .source(source)
     .use(tags(conf.tags))
+    .use(forecast(forecastConf))
     .use(fileMetadata(conf.fileMetadata))
     .use(gpxcleaner(conf.gpxcleaner))
     .use(gpxparser(conf.gpxparser))

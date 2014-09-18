@@ -2,10 +2,15 @@
 var gpx = require('../lib/metalsmith/gpxparser'),
     assert = require('assert'),
     libxmljs = require('libxmljs'),
-    sinon = require('sinon');
+    sinon = require('sinon'),
+    fs = require('fs');
 
-describe('Metalsmith gpx', function () {
+describe('Metalsmith gpxparser', function () {
     var ms;
+
+    function gpxFileContent(fileName) {
+        return fs.readFileSync(__dirname + '/fixtures/gpxparser/tracks/' + fileName);
+    }
 
     beforeEach(function () {
         ms = {source: function () { return __dirname + '/fixtures/gpxparser'; }};
@@ -36,23 +41,19 @@ describe('Metalsmith gpx', function () {
 
     describe('error handling', function () {
         it('should handle non existing gpx file', function (done) {
-            var files = {'tracks/testFile.md': {'gpx': 'doesnotexist.gpx'}},
-                spy = sinon.spy(ms, 'source');
+            var files = {'tracks/testFile.md': {'gpx': 'doesnotexist.gpx'}};
 
             gpx()(files, ms, function (err) {
                 assert.ok(err instanceof Error);
-                assert.ok(spy.called);
                 done();
             });
         });
 
         it('should handle invalid xml file', function (done) {
-            var files = {'tracks/testFile.md': {'gpx': 'invalid.gpx'}},
-                spy = sinon.spy(ms, 'source');
+            var files = {'tracks/testFile.md': {'gpx': 'invalid.gpx'}};
 
             gpx()(files, ms, function (err) {
                 assert.ok(err instanceof Error);
-                assert.ok(spy.called);
                 done();
             });
         });
@@ -60,7 +61,10 @@ describe('Metalsmith gpx', function () {
 
     describe('color', function () {
         it('should generate a color', function (done) {
-            var files = {'tracks/test1.md': {'gpx': 'test1.gpx'}};
+            var files = {
+                    'tracks/test1.md': {'gpx': 'test1.gpx'},
+                    'tracks/test1.gpx': {contents: gpxFileContent('test1.gpx')},
+                };
 
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'],
@@ -76,15 +80,16 @@ describe('Metalsmith gpx', function () {
 
     describe('parsing', function () {
         it('should parse a complete gpx file', function (done) {
-            var files = {'tracks/test1.md': {'gpx': 'test1.gpx'}},
-                spy = sinon.spy(ms, 'source');
+            var files = {
+                    'tracks/test1.md': {'gpx': 'test1.gpx'},
+                    'tracks/test1.gpx': {contents: gpxFileContent('test1.gpx')},
+                };
 
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'],
                     bounds = file.bounds;
 
                 assert.ok(typeof err === 'undefined');
-                assert.ok(spy.called);
 
                 assert.equal("Test 1", file.title);
                 assert.equal("2014-05-23T07:53:00Z", file.created);
@@ -105,15 +110,16 @@ describe('Metalsmith gpx', function () {
         });
 
         it('should ignore points without elevation', function (done) {
-            var files = {'tracks/test1.md': {'gpx': 'noele.gpx'}},
-                spy = sinon.spy(ms, 'source');
+            var files = {
+                    'tracks/test1.md': {'gpx': 'noele.gpx'},
+                    'tracks/noele.gpx': {contents: gpxFileContent('noele.gpx')},
+                };
 
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'],
                     bounds = file.bounds;
 
                 assert.ok(typeof err === 'undefined');
-                assert.ok(spy.called);
 
                 assert.equal("Test 1", file.title);
                 assert.equal("2014-05-23T07:53:00Z", file.created);
@@ -133,15 +139,16 @@ describe('Metalsmith gpx', function () {
 
 
         it('should handle a gpx without bounds', function (done) {
-            var files = {'tracks/test1.md': {'gpx': 'nobounds.gpx'}},
-                spy = sinon.spy(ms, 'source');
+            var files = {
+                    'tracks/test1.md': {'gpx': 'nobounds.gpx'},
+                    'tracks/nobounds.gpx': {contents: gpxFileContent('nobounds.gpx')},
+                };
 
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'],
                     bounds = file.bounds;
 
                 assert.ok(typeof err === 'undefined');
-                assert.ok(spy.called);
 
                 assert.equal("Test 1", file.title);
                 assert.equal("2014-05-23T07:53:00Z", file.created);
@@ -160,14 +167,15 @@ describe('Metalsmith gpx', function () {
         });
 
         it('should fallback to the metadata name if the track name is not set', function (done) {
-            var files = {'tracks/test1.md': {'gpx': 'metadataname.gpx'}},
-                spy = sinon.spy(ms, 'source');
+            var files = {
+                    'tracks/test1.md': {'gpx': 'metadataname.gpx'},
+                    'tracks/metadataname.gpx': {contents: gpxFileContent('metadataname.gpx')},
+                };
 
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'];
 
                 assert.ok(typeof err === 'undefined');
-                assert.ok(spy.called);
 
                 assert.equal("Metadata name", file.title);
                 done();
@@ -177,15 +185,14 @@ describe('Metalsmith gpx', function () {
         it('should keep the title if name is defined', function (done) {
             var title = 'no name?',
                 files = {
-                    'tracks/test1.md': {'title': title, 'gpx': 'noname.gpx'}
-                },
-                spy = sinon.spy(ms, 'source');
+                    'tracks/test1.md': {'title': title, 'gpx': 'noname.gpx'},
+                    'tracks/noname.gpx': {contents: gpxFileContent('noname.gpx')},
+                };
 
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'];
 
                 assert.ok(typeof err === 'undefined');
-                assert.ok(spy.called);
 
                 assert.equal(title, file.title);
                 done();
@@ -194,15 +201,14 @@ describe('Metalsmith gpx', function () {
 
         it('should keep the created property is time not defined', function (done) {
             var files = {
-                    'tracks/test1.md': {'gpx': 'notime.gpx'}
-                },
-                spy = sinon.spy(ms, 'source');
+                    'tracks/test1.md': {'gpx': 'notime.gpx'},
+                    'tracks/notime.gpx': {contents: gpxFileContent('notime.gpx')},
+                };
 
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'];
 
                 assert.ok(typeof err === 'undefined');
-                assert.ok(spy.called);
 
                 assert.ok(typeof file.title === 'undefined');
                 done();
@@ -211,15 +217,14 @@ describe('Metalsmith gpx', function () {
 
         it('should detect whether the track is a loop', function (done) {
             var files = {
-                    'tracks/test1.md': {'gpx': 'loop.gpx'}
-                },
-                spy = sinon.spy(ms, 'source');
+                    'tracks/test1.md': {'gpx': 'loop.gpx'},
+                    'tracks/loop.gpx': {contents: gpxFileContent('loop.gpx')},
+                };
 
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'];
 
                 assert.ok(typeof err === 'undefined');
-                assert.ok(spy.called);
 
                 assert.strictEqual(true, file.loop);
                 done();
@@ -228,15 +233,14 @@ describe('Metalsmith gpx', function () {
 
         it('should ignore points without elevation when detecting a loop', function (done) {
             var files = {
-                    'tracks/test1.md': {'gpx': 'loop_noele.gpx'}
-                },
-                spy = sinon.spy(ms, 'source');
+                    'tracks/test1.md': {'gpx': 'loop_noele.gpx'},
+                    'tracks/loop_noele.gpx': {contents: gpxFileContent('loop_noele.gpx')},
+                };
 
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'];
 
                 assert.ok(typeof err === 'undefined');
-                assert.ok(spy.called);
 
                 assert.strictEqual(true, file.loop);
                 done();
@@ -246,7 +250,10 @@ describe('Metalsmith gpx', function () {
 
     describe('points', function () {
         it('should provide the points with elevation', function (done) {
-            var files = {'tracks/test1.md': {'gpx': 'loop.gpx'}};
+            var files = {
+                    'tracks/test1.md': {'gpx': 'loop.gpx'},
+                    'tracks/loop.gpx': {contents: gpxFileContent('loop.gpx')},
+                };
 
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'],
@@ -269,7 +276,10 @@ describe('Metalsmith gpx', function () {
         });
 
         it('should ignore the points without elevation', function (done) {
-            var files = {'tracks/test1.md': {'gpx': 'loop_noele.gpx'}};
+            var files = {
+                    'tracks/test1.md': {'gpx': 'loop_noele.gpx'},
+                    'tracks/loop_noele.gpx': {contents: gpxFileContent('loop_noele.gpx')},
+                };
 
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'],
@@ -292,7 +302,10 @@ describe('Metalsmith gpx', function () {
         });
 
         it('should filter points based on the elevation', function (done) {
-            var files = {'tracks/test1.md': {'gpx': 'elevationminstep.gpx'}},
+            var files = {
+                    'tracks/test1.md': {'gpx': 'elevationminstep.gpx'},
+                    'tracks/elevationminstep.gpx': {contents: gpxFileContent('elevationminstep.gpx')},
+                },
                 expectedElevations = [200, 205, 205, 208.2, 208.2];
 
             gpx()(files, ms, function (err) {
@@ -312,7 +325,10 @@ describe('Metalsmith gpx', function () {
         });
 
         it('should filter points based on the elevation (config)', function (done) {
-            var files = {'tracks/test1.md': {'gpx': 'elevationminstep.gpx'}},
+            var files = {
+                    'tracks/test1.md': {'gpx': 'elevationminstep.gpx'},
+                    'tracks/elevationminstep.gpx': {contents: gpxFileContent('elevationminstep.gpx')},
+                },
                 expectedElevations = [200, 205, 205, 208.2, 210];
 
             gpx({elevationMinDiff: 1.5})(files, ms, function (err) {
@@ -332,7 +348,10 @@ describe('Metalsmith gpx', function () {
         });
 
         it('should filter points based on the elevation (local config)', function (done) {
-            var files = {'tracks/test1.md': {'gpx': 'elevationminstep.gpx', 'elevationMinDiff': 0.5}},
+            var files = {
+                    'tracks/test1.md': {'gpx': 'elevationminstep.gpx', 'elevationMinDiff': 0.5},
+                    'tracks/elevationminstep.gpx': {contents: gpxFileContent('elevationminstep.gpx')},
+                },
                 expectedElevations = [200, 205, 206, 208.2, 210];
 
             gpx()(files, ms, function (err) {
@@ -355,7 +374,10 @@ describe('Metalsmith gpx', function () {
 
     describe('profile', function () {
         it('should generate an SVG profile', function (done) {
-            var files = {'tracks/test1.md': {'gpx': 'test1.gpx'}};
+            var files = {
+                    'tracks/test1.md': {'gpx': 'test1.gpx'},
+                    'tracks/test1.gpx': {contents: gpxFileContent('test1.gpx')},
+                };
 
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'], doc;
@@ -368,7 +390,10 @@ describe('Metalsmith gpx', function () {
         });
 
         it('should generate an SVG profile with the given size', function (done) {
-            var files = {'tracks/test1.md': {'gpx': 'test1.gpx'}},
+            var files = {
+                    'tracks/test1.md': {'gpx': 'test1.gpx'},
+                    'tracks/test1.gpx': {contents: gpxFileContent('test1.gpx')},
+                },
                 opts = {profile: {width: 600, height: 400}};
 
             gpx(opts)(files, ms, function (err) {
@@ -382,7 +407,10 @@ describe('Metalsmith gpx', function () {
         });
 
         it('should generate an SVG profile with the given style settings', function (done) {
-            var files = {'tracks/test1.md': {'gpx': 'test1.gpx'}},
+            var files = {
+                    'tracks/test1.md': {'gpx': 'test1.gpx'},
+                    'tracks/test1.gpx': {contents: gpxFileContent('test1.gpx')},
+                },
                 opts = {
                     profile: {
                         color: '#f00',

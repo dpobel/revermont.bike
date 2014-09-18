@@ -150,7 +150,7 @@ describe('Metalsmith gpxcleaner', function () {
                     });
 
                     gpxcleaner(limit ? {limit: limit} : undefined)(files, false, function (err) {
-                        var params, flags, simplifyOpt, newDoc;
+                        var params, flags, simplifyOpt, newDoc, version11 = false;
 
                         assert.ok(spawn.calledOnce, "spawn should have been called once");
                         assert.ok(spawn.calledWith('gpsbabel'), "gpsbabel command should have been called");
@@ -170,9 +170,13 @@ describe('Metalsmith gpxcleaner', function () {
                             if ( param === 'simplify,count=' + l ) {
                                 simplifyOpt = true;
                             }
+                            if ( param === 'gpx,gpxver=1.1' ) {
+                                version11 = true;
+                            }
                         });
 
                         assert.ok(simplifyOpt, "The simplify option should have been passed");
+                        assert.ok(version11, "The version 1.1 should be forced on the CLI");
 
                         assert.ok(Array.isArray(flags.stdio));
                         assert.equal('pipe', flags.stdio[0], "stdin should set up to be used");

@@ -26,6 +26,9 @@
 {% for feed in feeds %}
     <link rel="alternate" type="application/rss+xml" href="{{ feed.path|url(true) }}" title="{{ feed.title }}">
 {% endfor %}
+    <link rel="apple-touch-icon-precomposed" href="/favicon-152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
     {% block meta %}{% endblock %}
 </head>
 <body class="{{ section }}">

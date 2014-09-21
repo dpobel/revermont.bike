@@ -119,10 +119,18 @@ define(['domReady', 'leaflet'], function (domReady, L) {
     }
 
     return {
-        init: function (data, conf) {
-            track = data;
+        init: function (dataUrl, conf) {
+            var req = new XMLHttpRequest();
+
             config = conf;
-            domReady(_initApp);
+            req.open('GET', dataUrl, true);
+            req.onreadystatechange = function (e) {
+                if ( req.readyState === 4 && req.status === 200 ) {
+                    track = JSON.parse(req.responseText);
+                    domReady(_initApp);
+                }
+            };
+            req.send(null);
         },
     };
 });

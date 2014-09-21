@@ -37,6 +37,32 @@ describe('Metalsmith gpxparser', function () {
         });
     });
 
+    it('should create the data.js entry', function (done) {
+        var files = {
+                'tracks/test1.md': {'gpx': 'test1.gpx'},
+                'tracks/test1.gpx': {contents: gpxFileContent('test1.gpx')},
+            };
+
+        gpx()(files, ms, function (err) {
+            var file = files['tracks/test1.md'],
+                data = files['tracks/data.js'],
+                dataContent;
+
+            assert.ok(typeof err === 'undefined');
+            assert.ok(typeof data === 'object');
+            assert.ok(data.template === false);
+            assert.ok(data.permalink === false);
+            dataContent = JSON.parse(data.contents);
+
+            assert.equal(file.title, dataContent.title);
+            assert.equal(file.distance, dataContent.distance);
+            assert.strictEqual(file.loop, dataContent.loop);
+            assert.deepEqual(file.elevation, dataContent.elevation);
+            assert.deepEqual(file.bounds, dataContent.bounds);
+            assert.deepEqual(file.points, dataContent.points);
+            done();
+        });
+    });
 
     describe('error handling', function () {
         it('should handle non existing gpx file', function (done) {

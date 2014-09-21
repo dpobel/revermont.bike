@@ -1,14 +1,5 @@
     require(['trackMap'], function (trackMap) {
-        var track = {
-                title: "{{ title|e('js') }}",
-                points: {{ points|json|safe }},
-                elevation: {{ elevation|json|safe }},
-                distance: {{ distance }},
-                bounds: {{ bounds|json|safe }},
-                color: "{{ color }}",
-                loop: {{ loop }},
-            };
-        trackMap.init(track, {
+        trackMap.init("{{ dataUrl|url(true) }}", {
             'ignApiKey': "{{ config.ignKey }}",
             'map': '.track-map',
             'container': '.track-app',

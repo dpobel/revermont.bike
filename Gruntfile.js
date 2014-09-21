@@ -6,7 +6,9 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         shell: {
             build: {
-                command: './build.js',
+                command: function () {
+                    return './build.js' + (grunt.option('forecast') ? ' --forecast ' + grunt.option('forecast') : '');
+                },
                 options: {
                     stdout: true,
                     stderr: true,

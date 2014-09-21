@@ -79,7 +79,11 @@ casper.test.begin('Track page', function suite(test) {
 
         casper.click('a[href="#profile"]');
         test.comment('Profile tab');
+
         assertTabIsVisible(test, 'Profil', '#profile');
+
+        test.assertExists('img.track-profile-chart', "The profile is displayed as an image");
+        test.assert(casper.resourceExists(/profile.png$/), "The profile has been loaded");
 
         data = casper.evaluate(function () {
             return __utils__.findAll('.track-data tbody tr');

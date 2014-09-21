@@ -20,6 +20,8 @@
     "grunt-mocha-istanbul": "^2.0.0",
     "grunt-mocha-test": "^0.11.0",
     "grunt-shell": "^1.1.1",
+    "imagemin": "^2.0.0",
+    "is-png": "^1.0.0",
     "jsdom": "^1.0.0-pre.6",
     "libxmljs": "^0.11.0",
     "lodash.clone": "^2.4.1",
@@ -40,6 +42,8 @@
     "minimatch": "^1.0.0",
     "minimist": "^1.1.0",
     "moment": "^2.8.2",
+    "phantomjs": "^1.9.9",
+    "png-size": "^0.1.0",
     "rickshaw": "https://github.com/dpobel/rickshaw/tarball/rb",
     "sinon": "^1.10.3",
     "swig": "^1.4.2"

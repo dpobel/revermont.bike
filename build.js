@@ -22,6 +22,7 @@ var argv = require('minimist')(process.argv.slice(2), {
     date = require('./lib/metalsmith/date'),
     gpxcleaner = require('./lib/metalsmith/gpxcleaner'),
     gpxparser = require('./lib/metalsmith/gpxparser'),
+    profile = require('./lib/metalsmith/profile'),
     paginateTag = require('./lib/metalsmith/paginate-tag.js'),
     forecast = require('./lib/metalsmith/forecast.js'),
 
@@ -66,7 +67,8 @@ metalsmith(__dirname)
     .use(forecast(forecastConf))
     .use(fileMetadata(conf.fileMetadata))
     .use(gpxcleaner(conf.gpxcleaner))
-    .use(gpxparser(conf.gpxparser))
+    .use(gpxparser())
+    .use(profile(conf.profile))
     .use(markdown())
     .use(include())
     .use(collections(conf.collections))

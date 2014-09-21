@@ -22,18 +22,16 @@
     "gpxcleaner": {
         "limit": 1000
     },
-    "gpxparser": {
-        "profile": {
-            "width": 500,
-            "height": 200,
-            "offsetMin": 20,
-            "offsetMax": 50,
-            "interpolation": "basis",
-            "stroke": true,
-            "strokeColor": "#5284E5",
-            "color": "lightblue",
-            "renderer": "area"
-        }
+    "profile": {
+        "width": 500,
+        "height": 200,
+        "offsetMin": 20,
+        "offsetMax": 50,
+        "interpolation": "basis",
+        "stroke": true,
+        "strokeColor": "#5284E5",
+        "color": "lightblue",
+        "renderer": "area"
     },
     "date": ["created", "updated"],
     "collections": {

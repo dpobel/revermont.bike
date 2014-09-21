@@ -1,7 +1,6 @@
 /* global describe, it, beforeEach */
 var gpx = require('../lib/metalsmith/gpxparser'),
     assert = require('assert'),
-    libxmljs = require('libxmljs'),
     sinon = require('sinon'),
     fs = require('fs');
 
@@ -366,67 +365,6 @@ describe('Metalsmith gpxparser', function () {
                     assert.equal(ele, points[i].ele);
                 });
 
-                done();
-            });
-        });
-
-    });
-
-    describe('profile', function () {
-        it('should generate an SVG profile', function (done) {
-            var files = {
-                    'tracks/test1.md': {'gpx': 'test1.gpx'},
-                    'tracks/test1.gpx': {contents: gpxFileContent('test1.gpx')},
-                };
-
-            gpx()(files, ms, function (err) {
-                var file = files['tracks/test1.md'], doc;
-
-                assert.ok(typeof file.profile === 'string');
-                doc = libxmljs.parseXmlString(file.profile);
-                assert.equal("svg", doc.root().name());
-                done();
-            });
-        });
-
-        it('should generate an SVG profile with the given size', function (done) {
-            var files = {
-                    'tracks/test1.md': {'gpx': 'test1.gpx'},
-                    'tracks/test1.gpx': {contents: gpxFileContent('test1.gpx')},
-                },
-                opts = {profile: {width: 600, height: 400}};
-
-            gpx(opts)(files, ms, function (err) {
-                var doc = libxmljs.parseXmlString(files['tracks/test1.md'].profile),
-                    root = doc.root();
-
-                assert.equal(opts.profile.width, root.attr('width').value());
-                assert.equal(opts.profile.height, root.attr('height').value());
-                done();
-            });
-        });
-
-        it('should generate an SVG profile with the given style settings', function (done) {
-            var files = {
-                    'tracks/test1.md': {'gpx': 'test1.gpx'},
-                    'tracks/test1.gpx': {contents: gpxFileContent('test1.gpx')},
-                },
-                opts = {
-                    profile: {
-                        color: '#f00',
-                        strokeColor: '#00f',
-                        stroke: true,
-                        renderer: "area",
-                    }
-                };
-
-            gpx(opts)(files, ms, function (err) {
-                var doc = libxmljs.parseXmlString(files['tracks/test1.md'].profile),
-                    area = doc.find('//path[@class="area" and @fill="' + opts.profile.color + '"]'),
-                    stroke = doc.find('//path[@fill="none" and @stroke="' + opts.profile.strokeColor + '"]');
-
-                assert.equal(1, area.length, "area");
-                assert.equal(1, stroke.length, "stroke");
                 done();
             });
         });

@@ -52,8 +52,8 @@ describe('Metalsmith gpxcleaner', function () {
             testRemoval('tracks/extensions.gpx', '//gpx:extensions', 0, done);
         });
 
-        it('should remove the "time" elements', function (done) {
-            testRemoval('tracks/time.gpx', '//gpx:time', 0, done);
+        it('should remove the "time" elements of the points', function (done) {
+            testRemoval('tracks/time.gpx', '//gpx:trkpt/gpx:time', 0, done);
         });
 
         it('should remove points without an "ele" element', function (done) {
@@ -133,7 +133,7 @@ describe('Metalsmith gpxcleaner', function () {
             function testGpsBabel(limit, localLimit, done) {
                 var files = {}, path = 'tracks/2001.gpx',
                     fullpath = fixturesDir + path,
-                    stdinWriteStub, newContent, doc, newName = 'New GPX name';
+                    stdinWriteStub, newContent;
 
                 fs.readFile(fullpath, function (err, content) {
                     files[path] = {contents: content};
@@ -189,17 +189,10 @@ describe('Metalsmith gpxcleaner', function () {
                             "contents property should contain a valid XML"
                         );
 
-                        assert.equal(
-                            newName, newDoc.get('//gpx:name', nsConfig).text(),
-                            "contents property should contain the result of gpsbabel"
-                        );
-
                         done();
                     });
 
-                    doc = libxmljs.parseXmlString(content.toString());
-                    doc.get('//gpx:name', nsConfig).text(newName);
-                    newContent = doc.toString();
+                    newContent = content.toString();
 
                     eventEmitter.stdout.emit('data', newContent.substr(0, 10));
                     eventEmitter.stdout.emit('data', newContent.substr(10));
@@ -284,6 +277,43 @@ describe('Metalsmith gpxcleaner', function () {
                     });
 
                     eventEmitter.emit('close', 1);
+                });
+            });
+
+            describe('workaround GPX 1.1 issues', function (done) {
+                it('should restore the metadata after calling gpsbabel', function (done) {
+                    var files = {}, path = 'tracks/metadata.gpx',
+                        fullpath = fixturesDir + path,
+                        fullpathNometa = fixturesDir + 'tracks/nometadata.gpx',
+                        stdinWriteStub;
+
+                    fs.readFile(fullpath, function (err, content) {
+                        files[path] = {contents: content};
+
+                        stdinWriteStub = sinon.stub(eventEmitter.stdin, "write", function (string, callback) {
+                            callback();
+                        });
+
+                        fs.readFile(fullpathNometa, function (err, noMetaContent) {
+                            gpxcleaner({limit: 1})(files, false, function (err) {
+                                var doc;
+
+                                assert.ok(spawn.calledOnce, "spawn should have been called once");
+                                assert.ok(spawn.calledWith('gpsbabel'), "gpsbabel command should have been called");
+                                doc = libxmljs.parseXmlString(files[path].contents);
+                                assert.equal(5, doc.get('//gpx:metadata', nsConfig).childNodes().length); // 4 + bounds
+                                assert.equal('Keep metadata even if gpsbabel removes them', doc.get('//gpx:name', nsConfig).text());
+                                assert.equal('2012-12-12', doc.get('//gpx:time', nsConfig).text());
+                                assert.equal('Description', doc.get('//gpx:desc', nsConfig).text());
+                                assert.equal('key', doc.get('//gpx:keywords', nsConfig).text());
+                                done();
+                            });
+
+                            eventEmitter.stdout.emit('data', noMetaContent);
+                            eventEmitter.emit('close');
+                        });
+
+                    });
                 });
             });
         });

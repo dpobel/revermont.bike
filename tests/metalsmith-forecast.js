@@ -23,7 +23,7 @@ describe('Metalsmith forecast', function () {
             }
         },
         forecastStub, metadata, files;
-    
+
     beforeEach(function () {
         metadata = {};
         files = {};

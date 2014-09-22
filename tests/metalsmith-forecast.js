@@ -15,7 +15,7 @@ describe('Metalsmith forecast', function () {
             lon: 5,
             url: 'weather_entry',
             title: "Weather!",
-            fixture: "../forecast.json",
+            fixture: __dirname + "/../forecast.json",
         },
         metalsmith = {
             metadata: function () {
@@ -23,7 +23,7 @@ describe('Metalsmith forecast', function () {
             }
         },
         forecastStub, metadata, files;
-    
+
     beforeEach(function () {
         metadata = {};
         files = {};

@@ -1,4 +1,4 @@
-/* global describe, it, before, before */
+/* global describe, it, before, beforeEach */
 var sinon = require('sinon'),
     assert = require('assert'),
     sassert = sinon.assert,
@@ -229,7 +229,7 @@ describe('Swig filters', function () {
         });
     });
 
-    describe('rssify', function () {
+    describe('rssify filter', function () {
         it('define the rssify filter', function () {
             var swig = {setFilter: function () {}},
                 spy = sinon.spy(swig, "setFilter");

@@ -2,6 +2,7 @@
 var sinon = require('sinon'),
     assert = require('assert'),
     sassert = sinon.assert,
+    moment = require('moment'),
     filter = require('../lib/swig/filters');
 
 describe('Swig filters', function () {
@@ -285,6 +286,130 @@ describe('Swig filters', function () {
                     expected = '<a href="' + baseUri + '/mont/myon">Mont Myon</a><a href="' + baseUri + '/mont/myon">Mont Myon</a><a href="' + baseUri + '/mont/myon">Mont Myon</a><img src="' + baseUri + '/mont/myon.jpg"><img src="' + baseUri + '/mont/myon.jpg">';
 
                 assert.equal(expected, rssifyFunc(html));
+            });
+        });
+    });
+
+    describe('autolink flter', function () {
+        it('define the autolink filter', function () {
+            var swig = {setFilter: function () {}},
+                spy = sinon.spy(swig, "setFilter");
+
+            spy.withArgs('autolink');
+            filter(swig, config);
+
+            sassert.calledOnce(spy.withArgs('autolink'));
+            sassert.calledWith(spy, 'autolink', sinon.match.func);
+        });
+
+        describe('behavior', function () {
+            var autolink,
+                swig = {setFilter: function (name, func) {
+                    if ( name === 'autolink' ) {
+                        autolink = func;
+                    }
+                }};
+
+            beforeEach(function () {
+                filter(swig, config);
+            });
+
+            it('should transform http links', function () {
+                var input = 'http://vtt.revermont.bike/',
+                    expected = '<a href="http://vtt.revermont.bike/">vtt.revermont.bike</a>';
+
+                assert.equal(expected, autolink(input));
+            });
+
+            it('should transform links without scheme', function () {
+                var input = 'vtt.revermont.bike/',
+                    expected = '<a href="http://vtt.revermont.bike/">vtt.revermont.bike</a>';
+
+                assert.equal(expected, autolink(input));
+            });
+
+            it('should ignore email address', function () {
+                var input = 'spamme@example.com',
+                    expected = input;
+
+                assert.equal(expected, autolink(input));
+            });
+        });
+    });
+
+    describe('nl2br filter', function () {
+        it('define the nl2br filter', function () {
+            var swig = {setFilter: function () {}},
+                spy = sinon.spy(swig, "setFilter");
+
+            spy.withArgs('nl2br');
+            filter(swig, config);
+
+            sassert.calledOnce(spy.withArgs('nl2br'));
+            sassert.calledWith(spy, 'nl2br', sinon.match.func);
+        });
+
+        describe('behavior', function () {
+            var nl2br,
+                swig = {setFilter: function (name, func) {
+                    if ( name === 'nl2br' ) {
+                        nl2br = func;
+                    }
+                }};
+
+            beforeEach(function () {
+                filter(swig, config);
+            });
+
+            it('should transform newline in br tag', function () {
+                var input = 'PJ Harvey\nGood fortune',
+                    expected = 'PJ Harvey<br>Good fortune';
+
+                assert.equal(expected, nl2br(input));
+            });
+
+            it('should limit the number of br tags', function () {
+                var input = 'PJ Harvey\n\n\n\n\n\nGood fortune',
+                    expected = 'PJ Harvey<br><br>Good fortune';
+
+                assert.equal(expected, nl2br(input));
+            });
+
+            it('should handle \r\n', function () {
+                var input = 'PJ Harvey\r\n\r\nGood fortune',
+                    expected = 'PJ Harvey<br><br>Good fortune';
+
+                assert.equal(expected, nl2br(input));
+            });
+        });
+    });
+
+    describe('parse_date filter', function () {
+        it('define the parse_date filter', function () {
+            var swig = {setFilter: function () {}},
+                spy = sinon.spy(swig, "setFilter");
+
+            spy.withArgs('parse_date');
+            filter(swig, config);
+
+            sassert.calledOnce(spy.withArgs('parse_date'));
+            sassert.calledWith(spy, 'parse_date', sinon.match.func);
+        });
+
+        describe('behavior', function () {
+            var parseDate,
+                swig = {setFilter: function (name, func) {
+                    if ( name === 'parse_date' ) {
+                        parseDate = func;
+                    }
+                }};
+
+            beforeEach(function () {
+                filter(swig, config);
+            });
+
+            it('should return a moment object', function () {
+                assert.ok(moment.isMoment(parseDate('2014-09-24T21:31:19.293Z')));
             });
         });
     });

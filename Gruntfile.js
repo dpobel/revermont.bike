@@ -7,7 +7,10 @@ module.exports = function(grunt) {
         shell: {
             build: {
                 command: function () {
-                    return './build.js' + (grunt.option('forecast') ? ' --forecast ' + grunt.option('forecast') : '');
+                    var forecast = (grunt.option('forecast') ? ' --forecast ' + grunt.option('forecast') : ''),
+                        pooleapp = (grunt.option('pooleapp') ? ' --pooleapp ' + grunt.option('pooleapp') : '');
+
+                    return './build.js' + forecast + pooleapp;
                 },
                 options: {
                     stdout: true,

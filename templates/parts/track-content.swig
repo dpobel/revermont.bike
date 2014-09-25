@@ -20,14 +20,14 @@
         </ul>
 
         <div class="track-sidebar-panel is-panel-visible" id="profile">
-            <h2 class="track-sidebar-panel-name icon-profile">Profil</h2>
+            <h2 class="page-subtitle icon-profile">Profil</h2>
 
             <div class="track-profile"><div class="track-profile-tooltip"><div class="track-profile-tooltip-info" data-tpl="Alt.:&nbsp;%alt%&nbsp;m"></div></div><img src="{{ profile|url(true) }}" class="track-profile-chart" alt="Profil altimétrique de {{ title }}" width="500" height="200"></div>
             {% include "track-data.swig" %}
         </div>
 
         <div class="track-sidebar-panel" id="description">
-            <h2 class="track-sidebar-panel-name icon-description">Description</h2>
+            <h2 class="page-subtitle icon-description">Description</h2>
             {{ contents|safe }}
 
             <p>Mots-clés&nbsp;:</p>
@@ -39,12 +39,15 @@
         </div>
 
         <div class="track-sidebar-panel" id="tools">
-            <h2 class="track-sidebar-panel-name icon-tools">Outils</h2>
+            <h2 class="page-subtitle icon-tools">Outils</h2>
             
             <p>
                 <a class="pure-button button-highlight icon-print" href="#pdf">Export PDF</a>
                 <a class="pure-button button-highlight icon-download" href="{{ gpx }}">Télécharger le fichier GPX</a>
             </p>
         </div>
+    </div>
+    <div class="pure-u-1">
+        {% include "comments.swig" %}
     </div>
 </article>

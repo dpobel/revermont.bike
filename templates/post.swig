@@ -9,6 +9,8 @@
         <div class="pure-u-1 pure-u-md-3-4 blog-post-content">
             <h1 class="icon-blog page-title">{{ title }}</h1>
             <div>{{ contents|safe }}</div>
+
+            {% include "parts/comments.swig" %}
         </div>
         <aside class="pure-u-1 pure-u-md-1-4 blog-post-meta">
             <p>Publié le <time>{{ created.format(config.dateFormat) }}</time></p>

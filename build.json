@@ -19,6 +19,14 @@
         "url": "meteo.html",
         "fixture": "forecast.json"
     },
+    "pooleApp": {
+        "forms": {
+            "comments": {
+                "identifier": "path",
+                "secret": "dev"
+            }
+        }
+    },
     "gpxcleaner": {
         "limit": 1000
     },
@@ -140,6 +148,11 @@
         "pattern": "a-propos.md"
     },{
         "metadata": {
+            "template": "page.swig"
+        },
+        "pattern": "thanks.md"
+    },{
+        "metadata": {
             "template": "forecast.swig"
         },
         "pattern": "meteo.html"
@@ -147,7 +160,8 @@
         "metadata": {
             "include": {
                 "copyright": "include/copyright.html",
-                "links": "include/links.html"
+                "links": "include/links.html",
+                "guidelines": "include/comment-guidelines.html"
             }
         },
         "pattern": "**"

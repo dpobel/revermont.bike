@@ -179,7 +179,7 @@ body {
 }
 
 @media screen and (min-width: 48em) {
-    .track-sidebar .track-sidebar-panel-name {
+    .track-sidebar .page-subtitle {
         display: none;
     }
 
@@ -297,4 +297,53 @@ body {
 
 .forecast-number, .forecast-summary, .forecast-rain {
     padding: 0 0.2em;
+}
+
+@media screen and (min-width: 64em) {
+    .comment-input-box {
+        box-sizing: border-box;
+        padding: 0 0.5em;
+    }
+}
+
+.comment-required {
+    font-weight: bold;
+}
+
+.comment-guidelines {
+    box-sizing: border-box;
+    margin: 0 auto 1em auto;
+    width: 85%;
+    padding: 0.6em 1em;
+}
+
+
+@media screen and (max-width: 48em) {
+    .comment-guidelines {
+        width: 95%;
+    }
+}
+
+.comment-guidelines ul {
+    padding: 0;
+    margin: 0 0 0 1em
+}
+
+.comment-button {
+    margin-top: 1em;
+}
+
+.comment {
+    margin-bottom: 1em;
+}
+
+.comment-info {
+    padding: 0.3em 0.4rem;
+    margin: 0 0 0.3em 0;
+}
+
+.comment-content {
+    line-height: 1.4em;
+    padding: 0 0.4rem;
+    margin: 0;
 }

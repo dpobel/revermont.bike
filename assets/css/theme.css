@@ -347,8 +347,9 @@ a {
 .icon-wind-direction {
     display: inline-block;
     -webkit-transform-origin: 50% 40%;
-      -moz--transform-origin: 50% 40%;
+       -moz-transform-origin: 50% 40%;
         -ms-transform-origin: 50% 40%;
+         -o-transform-origin: 50% 40%;
             transform-origin: 50% 40%;
 }
 

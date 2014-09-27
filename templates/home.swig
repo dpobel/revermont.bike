@@ -9,7 +9,10 @@
 {% endblock %}
 
 {% block content %}
-    {{ contents|safe }}
+<div itemscope itemtype="http://schema.org/WebSite">
+    <meta itemprop="url" content="{{ '/'|ext_url }}"/>
+    <meta itemprop="name" content="{{ config.title }}"/>
+    <div itemprop="description">{{ contents|safe }}</div>
     <div class="pure-g home-blocks">
         <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-2 home-block home-block-treks">
             <h2 class="icon-treks home-block-title">Dernières randonnées</h2>
@@ -79,6 +82,7 @@
             <p><a href="{{ "meteo"|url }}" class="pure-button button-highlight icon-{{ forecast.daily.icon }}">Prévision météo à 8 jours dans le Revermont</a></p>
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block meta %}

@@ -3,19 +3,18 @@
 
     {% if comments %}
         {% for comment in comments %}
-            <div class="comment">
+            <div class="comment" itemscope itemtype="http://schema.org/Comment">
                 <h3 class="comment-info">
-                    <strong>
                     {% if comment.url %}
-                        <a href="{{ comment.url }}" rel="nofollow">{{ comment.name }}</a>
+                        <strong><a href="{{ comment.url }}" rel="nofollow" itemprop="author">{{ comment.name }}</a></strong>
                     {% else %}
-                        {{ comment.name }}
+                        <strong itemprop="author">{{ comment.name }}</strong>
                     {% endif %}
                     </strong>
                     &ndash;
-                    <time>{{ comment.created|parse_date().format(config.dateFormat) }}</time>
+                    <time datetime="{{ comment.created|parse_date().format() }}" itemprop="dateCreated">{{ comment.created|parse_date().format(config.dateFormat) }}</time>
                 </h3>
-                <p class="comment-content">{{ comment.text|e|nl2br|autolink|safe }}</p>
+                <p class="comment-content" itemprop="text">{{ comment.text|e|nl2br|autolink|safe }}</p>
             </div>
         {% endfor %}
     {% else %}

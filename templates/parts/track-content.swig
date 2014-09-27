@@ -1,6 +1,6 @@
-<article class="pure-g track-app">
+<article class="pure-g track-app" itemscope itemtype="http://schema.org/Map">
     <div class="pure-u-1">
-        <h1 class="icon-{{ section }} page-title">{{ title }}</h1>
+        <h1 class="icon-{{ section }} page-title" itemprop="name">{{ title }}</h1>
     </div>
     <div class="pure-u-1 pure-u-md-11-24 pure-u-lg-3-5">
         <noscript>JavaScript est requis pour afficher la carte</noscript>
@@ -22,16 +22,16 @@
         <div class="track-sidebar-panel is-panel-visible" id="profile">
             <h2 class="page-subtitle icon-profile">Profil</h2>
 
-            <div class="track-profile"><div class="track-profile-tooltip"><div class="track-profile-tooltip-info" data-tpl="Alt.:&nbsp;%alt%&nbsp;m"></div></div><img src="{{ profile|url(true) }}" class="track-profile-chart" alt="Profil altimétrique de {{ title }}" width="500" height="200"></div>
+            <div class="track-profile"><div class="track-profile-tooltip"><div class="track-profile-tooltip-info" data-tpl="Alt.:&nbsp;%alt%&nbsp;m"></div></div><img src="{{ profile|url(true) }}" class="track-profile-chart" alt="Profil altimétrique de {{ title }}" width="500" height="200" itemprop="image"></div>
             {% include "track-data.swig" %}
         </div>
 
         <div class="track-sidebar-panel" id="description">
             <h2 class="page-subtitle icon-description">Description</h2>
-            {{ contents|safe }}
+            <div itemprop="text">{{ contents|safe }}</div>
 
             <p>Mots-clés&nbsp;:</p>
-            <ul class="content-tags">
+            <ul class="content-tags" itemprop="keywords">
             {% for tag in tags %}
                 <li class="content-tags-item icon-tag"><a href="{{ tagsList[tag].path|url }}">{{ tag }}</a></li>
             {% endfor %}

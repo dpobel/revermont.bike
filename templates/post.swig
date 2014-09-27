@@ -28,3 +28,13 @@
         </aside>
     </article>
 {% endblock %}
+
+{% block meta %}
+{% include "parts/twitter-card.swig" with {
+    type: "summary",
+    site: config.twitter,
+    creator: "@dpobel",
+    title: title,
+    description: contents|striptags|shorten(200)
+} %}
+{% endblock %}

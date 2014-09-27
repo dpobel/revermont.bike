@@ -5,14 +5,15 @@
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
 {% block content %}
-    <h1 class="icon-blog page-title">{{ title }}{% if pagination.num != 1 %} (Page {{ pagination.num }}){% endif %}</h1>
+    <div itemscope itemtype="http://schema.org/Blog">
+    <h1 class="icon-blog page-title"><span itemprop="name">{{ title }}</span>{% if pagination.num != 1 %} (Page {{ pagination.num }}){% endif %}</h1>
 
     <section>
         <ul>
         {% for post in pagination.files %}
-            <li>
-                <a href="{{ post.path|url }}">
-                    {{ post.title }}
+            <li itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+                <a href="{{ post.path|url }}" itemprop="url">
+                    <span itemprop="name">{{ post.title }}</span>
                 </a>
             </li>
         {% endfor %}
@@ -20,4 +21,5 @@
     </section>
 
     {% include "pagination.swig" with pagination %}
+    </div>
 {% endblock %}

@@ -413,4 +413,49 @@ describe('Swig filters', function () {
             });
         });
     });
+
+    describe('shorten filter', function () {
+        it('define the shorten filter', function () {
+            var swig = {setFilter: function () {}},
+                spy = sinon.spy(swig, "setFilter");
+
+            spy.withArgs('shorten');
+            filter(swig, config);
+
+            sassert.calledOnce(spy.withArgs('shorten'));
+            sassert.calledWith(spy, 'shorten', sinon.match.func);
+        });
+
+        describe('behavior', function () {
+            var shorten,
+                swig = {setFilter: function (name, func) {
+                    if ( name === 'shorten' ) {
+                        shorten = func;
+                    }
+                }};
+
+            beforeEach(function () {
+                filter(swig, config);
+            });
+
+            it('should keep intact too small string', function () {
+                var str = 'small';
+
+                assert.equal(str, shorten(str, 20));
+            });
+
+            it('should not produce string longer than the input', function () {
+                var str = 'small';
+
+                assert.equal(str, shorten(str, 5));
+            });
+
+            it('should shorten long string', function () {
+                var str = 'long string';
+
+                assert.equal('lo...', shorten(str, 5));
+            });
+        });
+    });
+
 });

@@ -1,7 +1,5 @@
 #! /bin/sh
 
-[ $? -ne 0 ] && exit 2
-
 SSH_CMD="ssh -i ssh/id_dsa -o 'StrictHostKeyChecking no'"
 
 if [ "$TRAVIS_PULL_REQUEST" = "false" ] ; then

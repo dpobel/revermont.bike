@@ -14,7 +14,7 @@ env:
         - secure: f/QL3+8AtdN5dpgq5HICBUqkloM3BCdSEP97FNAzlaOnBsl8NEY0py/hYUgG480qwaQYwGZizKEwHslW9bjwxgT+JGQSwj8oC8rDmPv5CQfnJ045fTCLZJG20330/8u882ByglPZudltiGxeIt0V3EOTBf7YnM7BS+jUucVHQZg=
 after_success:
     - grunt build --forecast $FORECAST --pooleapp $POOLEAPP
-    - ./deploy.sh
+    - "[ $? -eq 0 ] && ./deploy.sh"
 before_install:
     - openssl aes-256-cbc -K $encrypted_6174b5762871_key -iv $encrypted_6174b5762871_iv
       -in ssh/id_dsa.enc -out ssh/id_dsa -d

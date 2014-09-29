@@ -15,7 +15,7 @@
 {% block meta %}
 {% include "parts/twitter-card.swig" with {
     type: "summary_large_image",
-    site: config.twitter,
+    site: "@" + config.twitter,
     creator: "@dpobel",
     title: title,
     description: contents|striptags|shorten(200),

@@ -18,6 +18,10 @@ body {
     padding-bottom: 2em;
 }
 
+.site-footer {
+    padding-bottom: 1em;
+}
+
 .site-footer .site-footer-content {
     max-width: 1280px;
     margin: 0 auto;
@@ -26,6 +30,10 @@ body {
 .site-footer .site-footer-part {
     box-sizing: border-box;
     padding: 0 1em;
+}
+
+.site-footer .site-footer-part-title {
+    margin-bottom: 0.4em;
 }
 
 .home-banner {
@@ -346,4 +354,27 @@ body {
     line-height: 1.4em;
     padding: 0 0.4rem;
     margin: 0;
+}
+
+.social-networks-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-network {
+    margin-bottom: 0.3em;
+}
+
+.share {
+    list-style-type: none;
+    padding: 0;
+}
+
+.share-item {
+    display: inline-block;
+}
+
+.share-button {
+    padding-left: 0.3em;
 }

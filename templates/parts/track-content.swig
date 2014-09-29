@@ -42,9 +42,11 @@
             <h2 class="page-subtitle icon-tools">Outils</h2>
             
             <p>
-                <a class="pure-button button-highlight icon-print" href="#pdf">Export PDF</a>
                 <a class="pure-button button-highlight icon-download" href="{{ gpx }}">Télécharger le fichier GPX</a>
             </p>
+            <h3>Partager sur les réseaux sociaux</h3>
+
+            {% include "share.swig" with {url: path, text: title} %}
         </div>
     </div>
     <div class="pure-u-1">

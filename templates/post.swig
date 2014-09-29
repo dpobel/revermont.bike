@@ -18,13 +18,16 @@
             <p>Dernière mise à jour le<br><time datetime="{{ created.format() }}" itemprop="dateModified">{{ updated.format(config.dateFormat) }}</time></p>
         {% endif %}
         {% if tags %}
-            <p>Mots-clés&nbsp;:</p>
+            <h3>Mots-clés&nbsp;:</h3>
             <ul class="content-tags" itemprop="keywords">
             {% for tag in tags %}
                 <li class="content-tags-item icon-tag"><a href="{{ tagsList[tag].path|url }}">{{ tag }}</a></li>
             {% endfor %}
             </ul>
         {% endif %}
+
+            <h3>Partager sur les réseaux sociaux</h3>
+            {% include "parts/share.swig" with {url: path, text: title} %}
         </aside>
     </article>
 {% endblock %}
@@ -32,7 +35,7 @@
 {% block meta %}
 {% include "parts/twitter-card.swig" with {
     type: "summary",
-    site: config.twitter,
+    site: "@" + config.twitter,
     creator: "@dpobel",
     title: title,
     description: contents|striptags|shorten(200)

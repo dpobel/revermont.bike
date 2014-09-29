@@ -146,12 +146,17 @@
             "icon": "info"
         },
         "pattern": "a-propos.md"
-    },{
+    }, {
         "metadata": {
             "template": "page.swig"
         },
         "pattern": "thanks.md"
-    },{
+    }, {
+        "metadata": {
+            "template": "page.swig"
+        },
+        "pattern": "mentions-legales.md"
+    }, {
         "metadata": {
             "template": "forecast.swig"
         },

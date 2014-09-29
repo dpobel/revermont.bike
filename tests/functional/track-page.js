@@ -62,10 +62,6 @@ casper.test.begin('Track page', function suite(test) {
         assertTabIsVisible(test, 'Outils', '#tools');
 
         test.assertElementCount(
-            '#tools .icon-print', 1,
-            "A link to print the page is displayed"
-        );
-        test.assertElementCount(
             '#tools a[href="grillerin.gpx"]', 1,
             "A link to download the GPX file is displayed"
         );

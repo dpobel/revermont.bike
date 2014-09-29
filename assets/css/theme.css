@@ -124,6 +124,14 @@ noscript {
 .icon-comment:before {
     content: "\e61f";
 }
+.icon-twitter:before {
+    content: "\e60d";
+    color: #55ACEE;
+}
+.icon-gplus:before {
+    content: "\e60e";
+    color: #D73D32;
+}
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"],
@@ -384,4 +392,20 @@ a {
 .comment-info {
     background: #f5f5f5;
     color: #444;
+}
+
+.social-network-icon {
+    text-decoration: none;
+    font-size: 120%;
+}
+
+.social-network-icon:before {
+    font-size: 200%;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.share-button:before {
+    font-size: 160%;
+    vertical-align: sub;
 }

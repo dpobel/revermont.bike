@@ -15,8 +15,7 @@
     "pure": "0.5.0",
     "leaflet": "0.7.3",
     "requirejs": null,
-    "requirejs-domready": null,
-    "rickshaw": "~1.5.0"
+    "requirejs-domready": null
   },
   "exportsOverride": {
     "pure": {
@@ -25,9 +24,6 @@
         "grids-responsive.css",
         "grids-responsive-old-ie.css"
       ]
-    },
-    "rickshaw": {
-      "css": ["rickshaw.css"]
     },
     "leaflet": {
       "lib": "dist"

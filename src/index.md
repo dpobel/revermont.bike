@@ -2,9 +2,8 @@
 title: Revermont.bike
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis commodo
-augue, a faucibus dui placerat vitae. **Integer vitae** ultricies metus. Fusce
-suscipit eu odio ac accumsan. [Proin ipsum](/traces/) lacus, egestas vel ipsum a, egestas
-euismod dui. Nulla semper lacinia euismod. Nam in purus dui. Aliquam ultrices ut
-arcu euismod tempor. Fusce quis massa blandit, imperdiet sapien vitae,
-ullamcorper nisl. [Integer vestibulum](/posts/) eget nulla sed auctor.
+Bienvenue sur Revermont.bike! À la recherche d'idées de [randonnées VTT dans le
+Revermont](/randonnees/) et/ou de [single-tracks ludiques](/single-tracks/) pour la
+pratique du VTT&nbsp;? Alors ce site est le bon endroit ;-) Pour en savoir un
+peu plus sur ce site, la page [À propos](/a-propos/) est aussi un bon point de
+départ.

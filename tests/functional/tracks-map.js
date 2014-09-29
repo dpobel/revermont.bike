@@ -1,7 +1,7 @@
 /* global casper, __utils__ */
 casper.test.begin('Tracks global map page', function suite(test) {
     var viewport = {width: 1280, height: 1024},
-        url = 'http://127.0.0.1:9001/sentiers/';
+        url = 'http://127.0.0.1:9001/single-tracks/';
 
     function fetchTracksList(casper) {
         return casper.evaluate(function () {
@@ -27,12 +27,12 @@ casper.test.begin('Tracks global map page', function suite(test) {
 
     casper.then(function () {
         test.comment('Title and menu');
-        test.assertTitleMatch(/^Sentiers .*/, "The title starts with 'Sentiers'");
+        test.assertTitleMatch(/^Single tracks .*/, "The title starts with 'Single tracks'");
         test.assertElementCount('.site-menu .pure-menu-selected', 1, "One element is selected in the menu");
         test.assertEquals(
             this.fetchText('.site-menu .pure-menu-selected'),
-           "Sentiers",
-           "'Sentiers' is selected in the menu"
+           "Single tracks",
+           "'Single tracks' is selected in the menu"
         );
     });
 
@@ -51,8 +51,8 @@ casper.test.begin('Tracks global map page', function suite(test) {
         test.comment('Map and show map button initial state');
         test.assertVisible('.show-map', "The show map button is visible");
         test.assertEquals(
-            this.fetchText('.show-map'), "Voir tous les sentiers sur une carte",
-            "The shop map button is labelled with 'Voir tous les sentiers sur une carte'"
+            this.fetchText('.show-map'), "Voir tous les single tracks sur une carte",
+            "The shop map button is labelled with 'Voir tous les single-tracks sur une carte'"
         );
 
         test.assertEquals(mapBounds.width, viewport.width, "The map width is the viewport width");

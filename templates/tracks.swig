@@ -7,7 +7,7 @@
 {% block content %}
     <h1 class="icon-tracks page-title">{{ title }}</h1>
 
-    {% include "parts/map.swig" with {"label": "Voir tous les sentiers sur une carte"} %}
+    {% include "parts/map.swig" with {"label": "Voir tous les single tracks sur une carte"} %}
 
     <table class="pure-table pure-table-bordered pure-table-striped tracks-table">
     <thead>

@@ -1,7 +1,7 @@
 /* global casper, __utils__ */
 casper.test.begin('Track page', function suite(test) {
     var viewport = {width: 1280, height: 1024},
-        url = 'http://127.0.0.1:9001/sentiers/single-du-grillerin/';
+        url = 'http://127.0.0.1:9001/single-tracks/single-du-grillerin/';
 
     casper.start(url, function () {
         casper.viewport(viewport.width, viewport.height);
@@ -14,8 +14,8 @@ casper.test.begin('Track page', function suite(test) {
         test.assertElementCount('.site-menu .pure-menu-selected', 1, "One element is selected in the menu");
         test.assertEquals(
             this.fetchText('.site-menu .pure-menu-selected'),
-           "Sentiers",
-           "'Sentiers' is selected in the menu"
+           "Single tracks",
+           "'Single tracks' is selected in the menu"
         );
     });
 

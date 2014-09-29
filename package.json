@@ -44,6 +44,7 @@
     "minimatch": "^1.0.0",
     "minimist": "^1.1.0",
     "moment": "^2.8.2",
+    "moment-timezone": "^0.2.2",
     "nock": "^0.48.0",
     "phantomjs": "^1.9.9",
     "png-size": "^0.1.0",

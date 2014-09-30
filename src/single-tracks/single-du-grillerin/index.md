@@ -1,3 +1,0 @@
----
-gpx: grillerin.gpx
----

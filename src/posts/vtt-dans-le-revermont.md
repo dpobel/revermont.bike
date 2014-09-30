@@ -1,26 +1,50 @@
 ---
-title: Hello world!
-created: 2014-05-18 08:42
-updated: 2014-09-03 18:23
-tags: revermont, vtt, randonnée
+title: VTT dans le Revermont!
+created: 2014-09-30 07:51
+tags: revermont, vtt, randonnée, single track, carte
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a enim ligula. In
-aliquam orci fermentum nisi volutpat sagittis. Donec dictum imperdiet nunc quis
-accumsan. Maecenas vitae lacinia tortor. Morbi dictum, lectus ac ullamcorper
-vestibulum, purus nunc ultrices arcu, iaculis pretium magna ante sit amet nibh.
-Nam ac scelerisque libero. Quisque gravida congue ante quis pellentesque. Proin
-at sem nec diam egestas auctor a eget est. Aenean luctus nibh suscipit sem
-vestibulum, ac varius est luctus. Quisque tristique tellus sollicitudin, euismod
-elit sed, dictum erat. Cum sociis natoque penatibus et magnis dis parturient
-montes, nascetur ridiculus mus. Phasellus dapibus magna nibh, at blandit eros
-cursus consequat.
+Et voila&nbsp;! Après pas mal d'heures de conception et de développement ce
+projet voit enfin le jour. Bien sûr, il est loin [d'être
+terminé](https://github.com/dpobel/revermont.bike/issues) (et je doute qu'il le
+soit réellement un jour...) mais je pense avoir atteint un niveau minimale de qualité,
+de cohérence et de fonctionnalité qui permette de mettre en ligne cette version
+(appelons la *beta* histoire de jouer à la startup ;-)). Pendant que je parle
+technique, le lecteur un peu geek et curieux peut aussi consulter [le code
+source du site sur Github](https://github.com/dpobel/revermont.bike/), j'en
+reparlerai probablement mais sur [mon blog perso](http://damien.pobel.fr); ici
+place au **VTT dans le Revermont**&nbsp;!
 
-Proin cursus nisl et orci scelerisque, ac aliquam turpis malesuada. Mauris vitae
-quam lacinia, aliquam est pharetra, eleifend risus. Suspendisse potenti. Donec
-feugiat faucibus lectus, sed facilisis ex lobortis malesuada. Praesent in nunc
-quis urna ullamcorper interdum sed non sem. Aenean feugiat urna ultrices nibh
-tincidunt lobortis. Donec tincidunt nisl sit amet maximus vestibulum. In mollis
-nunc cursus, condimentum mi gravida, pellentesque massa. Vivamus feugiat congue
-enim eget finibus. Quisque in felis nulla. Sed elit sem, aliquet at efficitur a,
-finibus vel enim.
+Ce site s'adresse aux VTTétistes désireux de (re)découvrir le Revermont sur leur
+monture. À vrai dire, j'ai cette idée en tête depuis que je sais faire des sites
+web (quelque chose comme une quinzaine d'années...). Je suis originaire de
+Coligny (dans le Revermont donc!) et adolescent j'ai beaucoup roulé dans une
+zone située entre Montagna-le-Reconduit au nord, Treffort-Cuisiat au sud et le
+Suran à l'est. Les études, ma vie professionnelle et divers autres évènements
+m'ont éloigné à la fois géographiquement du Revermont et du VTT (malgré [une
+tentative de reprise à
+Montpellier](http://damien.pobel.fr/post/vtt-autour-de-montpellier-avec-philovelo)).
+J'ai voulu reprendre *sérieusement* cette année mais habitant maintenant dans la
+Dombes, mon terrain de jeu préférentiel s'est légèrement décalé vers le sud et il
+faut aussi dire qu'en plus de 10 ans, certains chemins ont bien changé. Si on
+ajoute à cela, la sous-représentation du Revermont dans les sites de partage de
+traces GPS, il m'a fallu un peu de temps pour reprendre mes marques et
+(re)découvrir des single tracks à la fois ludiques et techniques. L'ambition de
+ce site est donc de repartager *mes* découvertes&nbsp;!
+
+Bref, ce site propose donc 3 parties principales:
+
+1. [ce blog](/posts/) pour parler de VTT (dans le Revermont de préférence)
+2. la partie [randonnées](/randonnees/) qui propose des circuits complets;
+   l'idée étant de proposer des boucles qui allient beaux paysages et plaisir de
+   pilotage.
+3. Enfin, la partie [single tracks](/single-tracks/), comme son nom l'indique,
+   se concentre sur le *Graal* du VTTétiste à savoir les single tracks.
+
+Le site est encore un peu vide, mais j'espère pouvoir l'enrichir rapidement.
+
+Pour finir, bien que tout ne soit pas techniquement prêt, [j'accueillerai avec
+plaisir toute contribution externe](/contact/) que ce soit sous la forme d'un
+blog post, d'une idée de randonnée/single track ou d'une trace GPS complète.
+
+À bientôt sur les singles du Revermont&nbsp;!

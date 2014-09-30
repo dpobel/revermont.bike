@@ -1,7 +1,8 @@
 {
     "title": "Revermont.bike, Sentiers et randonnées VTT dans le Revermont",
     "shortTitle": "Revermont.bike",
-    "dateFormat": "LLL",
+    "dateFormat": "LL",
+    "dateTimeFormat": "LLL",
     "ignKey": "zclqfls6kti0070wwj6xqwrq",
     "tracksListSteps": 10,
     "twitter": "Revermont_Bike"

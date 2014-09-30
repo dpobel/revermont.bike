@@ -13,9 +13,9 @@
             {% include "parts/comments.swig" %}
         </div>
         <aside class="pure-u-1 pure-u-md-1-4 blog-post-meta">
-            <p>Publié le <time datetime="{{ created.format() }}" itemprop="dateCreated">{{ created.format(config.dateFormat) }}</time></p>
+            <p>Publié le <time datetime="{{ created.format() }}" itemprop="dateCreated">{{ created.format(config.dateTimeFormat) }}</time></p>
         {% if updated %}
-            <p>Dernière mise à jour le<br><time datetime="{{ created.format() }}" itemprop="dateModified">{{ updated.format(config.dateFormat) }}</time></p>
+            <p>Dernière mise à jour le<br><time datetime="{{ created.format() }}" itemprop="dateModified">{{ updated.format(config.dateTimeFormat) }}</time></p>
         {% endif %}
         {% if tags %}
             <h3>Mots-clés&nbsp;:</h3>

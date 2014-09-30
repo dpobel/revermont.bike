@@ -1,11 +1,11 @@
 {% extends "layouts/layout.swig" %}
 
-{% block title %}{{ title }} &mdash; {% parent %}{% endblock %}
+{% block title %}{{ long }} - {% parent %}{% endblock %}
 
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
 {% block content %}
-    <h1 class="icon-treks page-title">{{ title }}</h1>
+    <h1 class="icon-treks page-title">{{ long }}</h1>
 
     {% include "parts/map.swig" with {"label": "Voir toutes les randonnées sur une carte"} %}
 

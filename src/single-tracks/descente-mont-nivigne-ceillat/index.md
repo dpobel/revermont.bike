@@ -11,16 +11,16 @@ Nivigne](/tags/mont-nivigne/) offre un superbe descente surtout que le premier
 kilomètre n'est quasiment pas pentu.
 
 Le sentier débute par un pur single track vraiment technique avec quelques
-dévers un peu chaud par endroit. Après 1&nbsp;km, la pente s'accentue assez nettement
+dévers *un peu chaud* par endroit. Après 1&nbsp;km, la pente s'accentue assez nettement
 tout en restant aussi technique et sinueux. Il faut bien suivre le balisage vert
 et blanc, car il permet d'éviter quelques passages dangereux en s'éloignant
 parfois de la crête. Pour ne pas avoir à descendre du vélo
-pour descendre un gros rocher, il faudra néanmoins s'écarter de ce balisage un
+pour franchir un gros rocher, il faudra néanmoins s'écarter de ce balisage un
 court instant vers la gauche (vers 1,5&nbsp;km à partir du signal / 8:48 sur la
 vidéo) pour le retrouver rapidement. Après ce passage, le rythme s'accélère
 progressivement et le chemin s'élargit un peu tout en restant ponctué de
 passages techniques et la fin peut se faire à grande vitesse malgré quelques
-portions défoncées.
+portions défoncées et assez cassantes.
 
 (Vidéo par [Seb SJ](https://www.youtube.com/channel/UCCfAa3_JdQ66mtEuVCg2ykA),
 elle débute légèrement avant le Signal Nivigne)

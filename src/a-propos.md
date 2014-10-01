@@ -45,7 +45,7 @@ répertoriée sur le site sont plus que bienvenues&nbsp;!
 
 ## Quelques conseils
 
-Tous les chemins présentés sur ce site sont donnés à titre indicatifs et ne
+Tous les chemins présentés sur ce site sont donnés à titre indicatif et ne
 sauraient en aucun cas engager la responsibilité de leur auteur. Préparez
 soigneusement votre itinéraire, votre monture, portez un casque et tout devrait
 bien se passer ;-)

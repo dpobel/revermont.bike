@@ -15,7 +15,7 @@ source du site sur Github](https://github.com/dpobel/revermont.bike/), j'en
 reparlerai probablement mais sur [mon blog perso](http://damien.pobel.fr); ici
 place au **VTT dans le Revermont**&nbsp;!
 
-Ce site s'adresse aux VTTétistes désireux de (re)découvrir le Revermont sur leur
+Ce site s'adresse aux VTTétistes désireux(ses) de (re)découvrir le Revermont sur leur
 monture. À vrai dire, j'ai cette idée en tête depuis que je sais faire des sites
 web (quelque chose comme une quinzaine d'années...). Je suis originaire de
 Coligny (dans le Revermont donc!) et adolescent j'ai beaucoup roulé dans une

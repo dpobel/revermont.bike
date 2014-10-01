@@ -7,9 +7,9 @@ tags: revermont, vtt, randonnée, single track, carte
 Et voila&nbsp;! Après pas mal d'heures de conception et de développement ce
 projet voit enfin le jour. Bien sûr, il est loin [d'être
 terminé](https://github.com/dpobel/revermont.bike/issues) (et je doute qu'il le
-soit réellement un jour...) mais je pense avoir atteint un niveau minimale de qualité,
+soit réellement un jour...) mais je pense avoir atteint un niveau de qualité,
 de cohérence et de fonctionnalité qui permette de mettre en ligne cette version
-(appelons la *beta* histoire de jouer à la startup ;-)). Pendant que je parle
+(une *beta* histoire de jouer à la startup ;-)). Pendant que je parle
 technique, le lecteur un peu geek et curieux peut aussi consulter [le code
 source du site sur Github](https://github.com/dpobel/revermont.bike/), j'en
 reparlerai probablement mais sur [mon blog perso](http://damien.pobel.fr); ici

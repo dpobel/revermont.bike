@@ -139,6 +139,9 @@ noscript {
     content: "\e60e";
     color: #D73D32;
 }
+.icon-video:before {
+    content: "\e60c";
+}
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"],

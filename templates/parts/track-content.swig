@@ -2,11 +2,11 @@
     <div class="pure-u-1">
         <h1 class="icon-{{ section }} page-title" itemprop="name">{{ title }}</h1>
     </div>
-    <div class="pure-u-1 pure-u-md-11-24 pure-u-lg-3-5">
+    <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
         <noscript>JavaScript est requis pour afficher la carte</noscript>
         <div class="track-map"></div>
     </div>
-    <div class="pure-u-1 pure-u-md-13-24 pure-u-lg-2-5 track-sidebar">
+    <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5 track-sidebar">
         <ul class="track-sidebar-tabs">
             <li class="track-sidebar-tabs-item">
                 <a href="#profile" class="track-sidebar-tabs-label is-tab-focused icon-profile">Profil</a>
@@ -14,6 +14,11 @@
             --><li class="track-sidebar-tabs-item">
                 <a href="#description" class="track-sidebar-tabs-label icon-description">Description</a>
             </li><!--
+            {% if video %}
+            --><li class="track-sidebar-tabs-item">
+                <a href="#video" class="track-sidebar-tabs-label icon-video">Vidéo</a>
+            </li><!--
+            {% endif %}
             --><li class="track-sidebar-tabs-item">
                 <a href="#tools" class="track-sidebar-tabs-label icon-tools">Outils</a>
             </li>
@@ -37,6 +42,16 @@
             {% endfor %}
             </ul>
         </div>
+
+        {% if video %}
+        <div class="track-sidebar-panel" id="video">
+            <h2 class="page-subtitle icon-video">Vidéo</h2>
+
+            <div class="video-container">
+            {{ video|safe }}
+            </div>
+        </div>
+        {% endif %}
 
         <div class="track-sidebar-panel" id="tools">
             <h2 class="page-subtitle icon-tools">Outils</h2>

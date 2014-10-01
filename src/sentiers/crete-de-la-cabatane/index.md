@@ -1,3 +1,0 @@
----
-gpx: cabatane.gpx
----

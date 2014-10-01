@@ -47,7 +47,7 @@
             "pattern": "randonnees/**/index.html"
         },
         "tracks": {
-            "pattern": "sentiers/**/index.html"
+            "pattern": "single-tracks/**/index.html"
         },
         "posts": {
             "pattern": "posts/*.html"
@@ -57,7 +57,7 @@
             "limit": 5
         },
         "lastTracks": {
-            "pattern": "sentiers/**/index.html",
+            "pattern": "single-tracks/**/index.html",
             "limit": 5
         },
         "lastPosts": {
@@ -102,7 +102,7 @@
             "template": "tracks.swig",
             "icon": "tracks"
         },
-        "pattern": "sentiers.md"
+        "pattern": "single-tracks.md"
     }, {
         "metadata": {
             "section": "home",
@@ -120,12 +120,12 @@
             "section": "tracks",
             "template": "track.swig"
         },
-        "pattern": "sentiers/**/index.md"
+        "pattern": "single-tracks/**/index.md"
     }, {
         "metadata": {
             "limit": "150"
         },
-        "pattern": "sentiers/**/*.gpx"
+        "pattern": "single-tracks/**/*.gpx"
     }, {
         "metadata": {
             "section": "blog",
@@ -146,12 +146,17 @@
             "icon": "info"
         },
         "pattern": "a-propos.md"
-    },{
+    }, {
         "metadata": {
             "template": "page.swig"
         },
         "pattern": "thanks.md"
-    },{
+    }, {
+        "metadata": {
+            "template": "page.swig"
+        },
+        "pattern": "mentions-legales.md"
+    }, {
         "metadata": {
             "template": "forecast.swig"
         },

@@ -10,7 +10,7 @@
 
         <p>
             {{ forecast.daily.summary }}<br>
-            <em>Dernière mise à jour le <time>{{ updated.format(config.dateFormat) }}</time></em>
+            <em>Dernière mise à jour le <time>{{ updated.format(config.dateTimeFormat) }}</time></em>
         </p>
         <div class="forecast pure-g">
             {% for i,day in forecast.daily.days %}

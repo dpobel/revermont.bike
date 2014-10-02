@@ -7,8 +7,8 @@
         <div class="track-map"></div>
     </div>
     <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5 track-sidebar">
-        <ul class="track-sidebar-tabs">
-            <li class="track-sidebar-tabs-item">
+        <ul class="track-sidebar-tabs"><!--
+            --><li class="track-sidebar-tabs-item">
                 <a href="#profile" class="track-sidebar-tabs-label is-tab-focused icon-profile">Profil</a>
             </li><!--
             --><li class="track-sidebar-tabs-item">
@@ -19,16 +19,26 @@
                 <a href="#video" class="track-sidebar-tabs-label icon-video">Vidéo</a>
             </li><!--
             {% endif %}
+            {% if direction %}
             --><li class="track-sidebar-tabs-item">
-                <a href="#tools" class="track-sidebar-tabs-label icon-tools">Outils</a>
-            </li>
-        </ul>
+                <a href="#direction" class="track-sidebar-tabs-label icon-direction">S'y rendre</a>
+            </li><!--
+            {% endif %}
+        --></ul>
 
         <div class="track-sidebar-panel is-panel-visible" id="profile">
             <h2 class="page-subtitle icon-profile">Profil</h2>
 
             <div class="track-profile"><div class="track-profile-tooltip"><div class="track-profile-tooltip-info" data-tpl="Alt.:&nbsp;%alt%&nbsp;m"></div></div><img src="{{ profile|url(true) }}" class="track-profile-chart" alt="Profil altimétrique de {{ title }}" width="500" height="200" itemprop="image"></div>
             {% include "track-data.swig" %}
+
+            <p>
+                <a class="pure-button button-highlight icon-download" href="{{ gpx }}">Télécharger le fichier GPX</a>
+            </p>
+            <h3>Partager sur les réseaux sociaux</h3>
+
+            {% include "share.swig" with {url: path, text: title} %}
+
         </div>
 
         <div class="track-sidebar-panel" id="description">
@@ -47,22 +57,17 @@
         <div class="track-sidebar-panel" id="video">
             <h2 class="page-subtitle icon-video">Vidéo</h2>
 
-            <div class="video-container">
             {{ video|safe }}
-            </div>
         </div>
         {% endif %}
 
-        <div class="track-sidebar-panel" id="tools">
-            <h2 class="page-subtitle icon-tools">Outils</h2>
+        {% if direction %}
+        <div class="track-sidebar-panel" id="direction">
+            <h2 class="page-subtitle icon-direction">Comment s'y rendre&nbsp;?</h2>
             
-            <p>
-                <a class="pure-button button-highlight icon-download" href="{{ gpx }}">Télécharger le fichier GPX</a>
-            </p>
-            <h3>Partager sur les réseaux sociaux</h3>
-
-            {% include "share.swig" with {url: path, text: title} %}
+            {{ direction|safe }}
         </div>
+        {% endif %}
     </div>
     <div class="pure-u-1">
         {% include "comments.swig" %}

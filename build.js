@@ -26,6 +26,7 @@ var argv = require('minimist')(process.argv.slice(2), {
     profile = require('./lib/metalsmith/profile'),
     paginateTag = require('./lib/metalsmith/paginate-tag.js'),
     forecast = require('./lib/metalsmith/forecast.js'),
+    autoinclude = require('./lib/metalsmith/autoinclude.js'),
 
     nock = require('nock'),
     pjson = require('./package.json'),
@@ -84,6 +85,7 @@ metalsmith(__dirname)
     .use(profile(conf.profile))
     .use(markdown())
     .use(include())
+    .use(autoinclude())
     .use(collections(conf.collections))
     .use(paginate(conf.paginate))
     .use(paginateTag(conf.paginateTag))

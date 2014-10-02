@@ -43,6 +43,10 @@ casper.test.begin('Track page', function suite(test) {
     casper.then(function () {
         test.comment('Default tabs state');
         assertTabIsVisible(test, 'Profil', '#profile');
+        test.assertElementCount(
+            '#profile a[href="grillerin.gpx"]', 1,
+            "A link to download the GPX file is displayed"
+        );
     });
 
     casper.then(function () {
@@ -53,17 +57,6 @@ casper.test.begin('Track page', function suite(test) {
         test.assertElementCount(
             '#description .content-tags-item a', 2,
             "The tags are displayed"
-        );
-    });
-
-    casper.then(function () {
-        this.click('a[href="#tools"]');
-        test.comment('Tools tab');
-        assertTabIsVisible(test, 'Outils', '#tools');
-
-        test.assertElementCount(
-            '#tools a[href="grillerin.gpx"]', 1,
-            "A link to download the GPX file is displayed"
         );
     });
 
@@ -85,7 +78,7 @@ casper.test.begin('Track page', function suite(test) {
             return __utils__.findAll('.track-data tbody tr');
         });
 
-        test.assertEquals(data.length, 5, "The table displays 5 rows");
+        test.assertEquals(data.length, 3, "The table displays 3 rows");
 
         profileCoords = casper.evaluate(function () {
             var bounds = __utils__.getElementBounds('.track-profile-chart');

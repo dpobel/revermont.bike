@@ -142,6 +142,9 @@ noscript {
 .icon-video:before {
     content: "\e60c";
 }
+.icon-direction:before {
+    content: "\e602";
+}
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"],

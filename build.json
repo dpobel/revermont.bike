@@ -112,13 +112,15 @@
     }, {
         "metadata": {
             "section": "treks",
-            "template": "trek.swig"
+            "template": "trek.swig",
+            "autoinclude": ["video", "direction"]
         },
         "pattern": "randonnees/**/index.md"
     }, {
         "metadata": {
             "section": "tracks",
-            "template": "track.swig"
+            "template": "track.swig",
+            "autoinclude": ["video", "direction"]
         },
         "pattern": "single-tracks/**/index.md"
     }, {

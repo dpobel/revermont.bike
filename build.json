@@ -144,7 +144,6 @@
     }, {
         "metadata": {
             "section": "a-propos",
-            "template": "page.swig",
             "icon": "info"
         },
         "pattern": "a-propos.md"
@@ -152,12 +151,12 @@
         "metadata": {
             "template": "page.swig"
         },
-        "pattern": "thanks.md"
+        "pattern": "{thanks,mentions-legales,a-propos,send}.md"
     }, {
         "metadata": {
-            "template": "page.swig"
+            "template": "contact.swig"
         },
-        "pattern": "mentions-legales.md"
+        "pattern": "contact.md"
     }, {
         "metadata": {
             "template": "forecast.swig"

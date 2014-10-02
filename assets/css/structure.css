@@ -318,7 +318,7 @@ body {
     }
 }
 
-.comment-required {
+.form-input-required {
     font-weight: bold;
 }
 
@@ -341,7 +341,7 @@ body {
     margin: 0 0 0 1em
 }
 
-.comment-button {
+.form-button {
     margin-top: 1em;
 }
 
@@ -400,4 +400,15 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.contact-form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 48em) {
+    .contact-form {
+        width: 95%;;
+    }
 }

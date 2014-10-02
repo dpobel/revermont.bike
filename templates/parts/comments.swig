@@ -32,25 +32,25 @@
                 <input type="hidden" name="redirect_to" value="{{ 'thanks'|ext_url }}">
                 <input type="hidden" name="path" value="{{ path }}">
 
-                <label for="name" class="comment-required">Nom*&nbsp;:</label>
+                <label for="name" class="form-input-required">Nom*&nbsp;:</label>
                 <input type="text" name="name" id="name" class="pure-input-1" required>
             </div>
 
             <div class="pure-u-1 pure-u-lg-1-3 comment-input-box">
-                <label for"email" class="comment-required">Adresse e-mail*&nbsp;:</label>
+                <label for="email" class="form-input-required">Adresse e-mail*&nbsp;:</label>
                 <input type="email" name="email" id="email" class="pure-input-1" required>
             </div>
 
             <div class="pure-u-1 pure-u-lg-1-3 comment-input-box">
-                <label for"url">Site web&nbsp;:</label>
+                <label for="url">Site web&nbsp;:</label>
                 <input type="url" name="url" id="url" class="pure-input-1">
             </div>
 
             <div class="pure-u-1 comment-input-box">
-                <label for="text" class="comment-required">Texte*&nbsp;:</label>
+                <label for="text" class="form-input-required">Texte*&nbsp;:</label>
                 <textarea id="text" name="text" class="pure-input-1" rows="5" required></textarea>
             </div>
-            <div class="pure-u-1 comment-button">
+            <div class="pure-u-1 form-button">
                 <button class="pure-button button-highlight">Poster le commentaire</button>
             </div>
         </div>

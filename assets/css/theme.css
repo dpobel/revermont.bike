@@ -145,6 +145,9 @@ noscript {
 .icon-direction:before {
     content: "\e602";
 }
+.icon-contact:before {
+    content: "\e601";
+}
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"],
@@ -384,7 +387,7 @@ a {
 }
 
 
-.comment-button {
+.form-button {
     text-align: center;
 }
 

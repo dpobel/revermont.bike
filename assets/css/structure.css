@@ -41,14 +41,14 @@ body {
 }
 
 .home-banner .home-banner-title {
-    max-width: 1920px;
+    max-width: 1280px;
     margin: 0 auto;
     position: relative;
 }
 
 .home-banner .home-banner-text {
     box-sizing: border-box;
-    padding: 0.2em;
+    padding: 0.2em 0.4em;
     display: block;
     position: absolute;
     bottom: 0;

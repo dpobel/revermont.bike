@@ -93,4 +93,5 @@
     title: title,
     description: contents|striptags|shorten(200)
 } %}
+<meta name="google-site-verification" content="N0E1TuQgF7sr_Y_EsGFQAzGKDN1KAvNNb35GhpmFS1w" />
 {% endblock %}

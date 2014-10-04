@@ -29,7 +29,7 @@
         <div class="track-sidebar-panel is-panel-visible" id="profile">
             <h2 class="page-subtitle icon-profile">Profil</h2>
 
-            <div class="track-profile"><div class="track-profile-tooltip"><div class="track-profile-tooltip-info" data-tpl="Alt.:&nbsp;%alt%&nbsp;m"></div></div><img src="{{ profile|url(true) }}" class="track-profile-chart" alt="Profil altimétrique de {{ title }}" width="500" height="200" itemprop="image"></div>
+            <div class="track-profile"><div class="track-profile-tooltip"><div class="track-profile-tooltip-info" data-tpl="Alt.:&nbsp;%alt%&nbsp;m"></div></div><img src="{{ profile|url(true) }}" class="track-profile-chart" alt="Profil altimétrique de {{ title }}" itemprop="image"></div>
             {% include "track-data.swig" %}
 
             <p>

@@ -2,6 +2,11 @@ body {
     overflow-x: hidden;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .site-menu {
     max-width: 1280px;
     margin: 0 auto;

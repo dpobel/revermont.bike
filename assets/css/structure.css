@@ -118,7 +118,8 @@ img {
 }
 
 @media screen and (min-width: 48em) {
-    .blog-post .blog-post-meta {
+    .blog-post .blog-post-meta,
+    .blog .blog-sidebar {
         box-sizing: border-box;
         padding-left: 2em;
     }
@@ -421,4 +422,22 @@ img {
     .contact-form {
         width: 95%;;
     }
+}
+
+.blog-list-date {
+    float: right;
+}
+
+.tag-cloud {
+    margin: 0;
+    padding: 0;
+}
+
+.tag-cloud .tag {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.paginator {
+    text-align: center;
 }

@@ -50,7 +50,9 @@
             "pattern": "single-tracks/**/index.html"
         },
         "posts": {
-            "pattern": "posts/*.html"
+            "pattern": "posts/*.html",
+            "sortBy": "created",
+            "reverse": true
         },
         "lastTreks": {
             "pattern": "randonnees/**/index.html",
@@ -172,7 +174,8 @@
                 "copyright": "include/copyright.html",
                 "links": "include/links.html",
                 "guidelines": "include/comment-guidelines.html",
-                "social": "include/social.html"
+                "social": "include/social.html",
+                "blogsidebar": "include/blogsidebar.html"
             }
         },
         "pattern": "**"

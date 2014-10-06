@@ -281,7 +281,8 @@ a {
     border-bottom: 1px solid #cbcbcb;
 }
 
-.home-block-blog .home-block-blog-list {
+.home-block-blog .home-block-blog-list,
+.blog .blog-posts {
     list-style-type: square;
     list-style-position: inside;
     padding: 0 0 0 0.3em;
@@ -471,4 +472,18 @@ a {
 .share-button:before {
     font-size: 160%;
     vertical-align: sub;
+}
+
+.tag-cloud {
+    list-style-type: none;
+    font-size: 0.6em;
+}
+
+.tag-cloud a {
+    text-decoration: none;
+}
+
+.blog-list-date {
+    color: #888;
+    font-size: 85%;
 }

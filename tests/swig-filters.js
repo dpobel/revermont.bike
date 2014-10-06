@@ -458,4 +458,37 @@ describe('Swig filters', function () {
         });
     });
 
+    describe('round filter', function () {
+        it('define the round filter', function () {
+            var swig = {setFilter: function () {}},
+                spy = sinon.spy(swig, "setFilter");
+
+            spy.withArgs('round');
+            filter(swig, config);
+
+            sassert.calledOnce(spy.withArgs('round'));
+            sassert.calledWith(spy, 'round', sinon.match.func);
+        });
+
+        describe('behavior', function () {
+            var round,
+                swig = {setFilter: function (name, func) {
+                    if ( name === 'round' ) {
+                        round = func;
+                    }
+                }};
+
+            beforeEach(function () {
+                filter(swig, config);
+            });
+
+            it('should round float with the given number of decimals', function () {
+                assert.equal("3.14", round(Math.PI, 2));
+            });
+
+            it('should convert a string input to float', function () {
+                assert.equal("3.14", round(Math.PI.toString(), 2));
+            });
+        });
+    });
 });

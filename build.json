@@ -54,11 +54,15 @@
         },
         "lastTreks": {
             "pattern": "randonnees/**/index.html",
-            "limit": 5
+            "limit": 5,
+            "sortBY": "updated",
+            "reverse": true
         },
         "lastTracks": {
             "pattern": "single-tracks/**/index.html",
-            "limit": 5
+            "limit": 5,
+            "sortBY": "updated",
+            "reverse": true
         },
         "lastPosts": {
             "pattern": "posts/*.html",

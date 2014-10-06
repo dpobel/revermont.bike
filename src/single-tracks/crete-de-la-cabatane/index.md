@@ -11,8 +11,6 @@ Justices](/tags/col-des-justices/) à la [croix des
 Angoulures](/tags/croix-des-angoulures) (le sommet des *Esses de Treffort*). Il
 offre un superbe panorama et permet l'accès à la grotte du même nom.
 
-### Détails
-
 Le sentier commence par un court raidillon qu'il est relativement difficile de
 passer sur le vélo mais la pente s'adoucit très rapidement. La première partie
 est assez vallonnée avec quelques passages techniques et quelques bonnes
@@ -22,12 +20,3 @@ qui n'ont pas peur de lacher les freins et de parties plus techniques.
 
 **Attention&nbsp;:** ce chemin est assez fréquenté par les randonneurs
 pédestres!
-
-### Comment s'y rendre
-
-Le Col des Justices est accessible par différents chemins visibles sur la carte, les
-principaux:
-
-* depuis la croix des Angoulures par la large piste roulante
-* depuis Rosy par un chemin relativement roulant
-* depuis la crête du Revermont par le GR59

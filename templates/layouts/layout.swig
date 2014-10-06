@@ -64,14 +64,7 @@
             <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 site-footer-part social-networks">
                 <h2 class="site-footer-part-title">Réseaux sociaux</h2>
 
-                <ul class="social-networks-list">
-                    <li class="social-network">
-                        <a href="https://twitter.com/Revermont_Bike" class="social-network-icon icon-twitter">Twitter</a>
-                    </li>
-                    <li class="social-network">
-                        <a href="https://plus.google.com/107813370030366851762" rel="publisher" class="social-network-icon icon-gplus">Google+</a>
-                    </li>
-                </ul>
+                {{ social|safe }}
             </div>
             <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-3 site-footer-part copyright-notice">
                 {{ copyright|safe }}

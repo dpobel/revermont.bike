@@ -171,7 +171,8 @@
             "include": {
                 "copyright": "include/copyright.html",
                 "links": "include/links.html",
-                "guidelines": "include/comment-guidelines.html"
+                "guidelines": "include/comment-guidelines.html",
+                "social": "include/social.html"
             }
         },
         "pattern": "**"

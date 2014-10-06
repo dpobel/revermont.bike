@@ -118,8 +118,7 @@ img {
 }
 
 @media screen and (min-width: 48em) {
-    .blog-post .blog-post-meta,
-    .blog .blog-sidebar {
+    .sidebar {
         box-sizing: border-box;
         padding-left: 2em;
     }
@@ -424,7 +423,7 @@ img {
     }
 }
 
-.blog-list-date {
+.item-list-date {
     float: right;
 }
 

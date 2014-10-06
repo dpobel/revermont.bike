@@ -282,7 +282,7 @@ a {
 }
 
 .home-block-blog .home-block-blog-list,
-.blog .blog-posts {
+.item-list {
     list-style-type: square;
     list-style-position: inside;
     padding: 0 0 0 0.3em;
@@ -483,7 +483,11 @@ a {
     text-decoration: none;
 }
 
-.blog-list-date {
+.item-list-date {
     color: #888;
     font-size: 85%;
+}
+
+.tag-page .item-list {
+    list-style-type: none;
 }

@@ -15,7 +15,8 @@
     "pure": "0.5.0",
     "leaflet": "0.7.3",
     "requirejs": null,
-    "requirejs-domready": null
+    "requirejs-domready": null,
+    "leaflet.fullscreen": "https://github.com/Leaflet/Leaflet.fullscreen.git#~0.0.3"
   },
   "exportsOverride": {
     "pure": {
@@ -26,6 +27,9 @@
       ]
     },
     "leaflet": {
+      "lib": "dist"
+    },
+    "leaflet.fullscreen": {
       "lib": "dist"
     },
     "requirejs": {

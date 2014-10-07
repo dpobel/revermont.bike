@@ -37,7 +37,7 @@ describe('Metalsmith profile', function () {
             profilePath = fileDir + 'profile.png',
             files = {};
         
-        this.timeout(5000);
+        this.timeout(10000);
         files[filePath] = {
             points: [
                 {dst: 0, ele: 200},

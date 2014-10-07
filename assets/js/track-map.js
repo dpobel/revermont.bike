@@ -1,5 +1,5 @@
 /* global define */
-define(['domReady', 'leaflet'], function (domReady, L) {
+define(['domReady', 'leaflet', 'leaflet.fullscreen'], function (domReady, L) {
     "use strict";
 
     var config, map, track,
@@ -66,6 +66,7 @@ define(['domReady', 'leaflet'], function (domReady, L) {
 
         map = L.map(doc.querySelector(config.map), {
             layers: [layers["IGN Scan express"]],
+            fullscreenControl: true,
         });
         map.fitBounds(_getBounds());
         L.control.layers(layers, {}, {position: 'topleft'}).addTo(map);

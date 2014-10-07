@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ "css/pure/pure.css"|asset() }}">
     <link rel="stylesheet" href="{{ "css/pure/grids-responsive-old-ie.css"|asset() }}">
     <link rel="stylesheet" href="{{ "lib/leaflet/leaflet.css"|asset() }}">
+    <link rel="stylesheet" href="{{ "lib/leaflet.fullscreen/leaflet.fullscreen.css"|asset() }}">
     <link rel="stylesheet" href="{{ "css/structure.css"|asset() }}">
     <link rel="stylesheet" href="{{ "css/theme.css"|asset() }}">
     <![endif]-->
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="{{ "css/pure/pure.css"|asset() }}">
     <link rel="stylesheet" href="{{ "css/pure/grids-responsive.css"|asset() }}">
     <link rel="stylesheet" href="{{ "lib/leaflet/leaflet.css"|asset() }}">
+    <link rel="stylesheet" href="{{ "lib/leaflet.fullscreen/leaflet.fullscreen.css"|asset() }}">
     <link rel="stylesheet" href="{{ "css/structure.css"|asset() }}">
     <link rel="stylesheet" href="{{ "css/theme.css"|asset() }}">
     <!--<![endif]-->
@@ -80,6 +82,7 @@
             "tracks": "{{ "single-tracks/data"|url(true) }}",
             "treks": "{{ "randonnees/data"|url(true) }}",
             "leaflet": "{{ "lib/leaflet/leaflet"|asset() }}",
+            "leaflet.fullscreen": "{{ "lib/leaflet.fullscreen/Leaflet.fullscreen"|asset() }}",
             "domReady": "requirejs-domready/domReady",
             "globalMap": "global-map",
             "trackMap": "track-map",

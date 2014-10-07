@@ -1,6 +1,7 @@
 {
   "name": "Revermont.bike",
   "version": "0.0.1",
+  "repository": "git://github.com/dpobel/revermont.bike.git",
   "description": "",
   "main": "build.js",
   "scripts": {

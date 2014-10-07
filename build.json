@@ -157,7 +157,7 @@
         "metadata": {
             "template": "page.swig"
         },
-        "pattern": "{thanks,mentions-legales,a-propos,send}.md"
+        "pattern": "{thanks,mentions-legales,a-propos,send,glossaire}.md"
     }, {
         "metadata": {
             "template": "contact.swig"

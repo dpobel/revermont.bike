@@ -17,10 +17,14 @@ Comme son nom l'indique, la partie [Randonnées](/randonnees/) présente des
 boucles réalisables à VTT alors que la partie [Single tracks](/single-tracks/)
 liste des portions de sentier parfois non répertoriées sur les cartes de l'IGN.
 Dans les deux cas, l'accent est mis sur l'aspect ludique et sur la découverte du
-Revermont. Les pages randonnée et sentier fournissent chacune une carte
+Revermont. Les pages *randonnée* et *sentier* fournissent chacune une carte
 interactive, un profil altimétrique, les caractéristiques principales, une
 description détaillée et la possibilité de télécharger un fichier GPX pour les
 heureux possesseurs d'un GPS de randonnée.
+
+Ce site utilise quelques termes spécifiques au VTT, en cas de doute sur l'un
+d'eux, [la page glossaire](/glossaire/) liste les plus couramment employés tout
+au long de ces pages.
 
 ## Le Revermont&nbsp;?
 

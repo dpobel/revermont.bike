@@ -491,3 +491,8 @@ a {
 .tag-page .item-list {
     list-style-type: none;
 }
+
+.glossary-term {
+    font-weight: bold;
+    font-size: 110%;
+}

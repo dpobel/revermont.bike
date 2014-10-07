@@ -7,4 +7,4 @@ sous licence [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/fr/).
 
 Les prévisions météo sont fournies par [Forecast](http://forecast.io).
 
-[Mentions légales](/mentions-legales/) &ndash; [Contact](/contact/)
+[Glossaire](/glossaire/) &ndash; [Mentions légales](/mentions-legales/) &ndash; [Contact](/contact/)

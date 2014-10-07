@@ -2,12 +2,19 @@
 title: Glossaire de Revermont.bike
 ---
 
-Comme tout domaine, le VTT possède son propre jargon. Voici quelques termes et
-leur définition couramment employés dans les pages de ce site&nbsp;:
+Comme tout domaine, le VTT possède son propre jargon. Voici la définition de
+quelques termes couramment employés dans les pages de ce site&nbsp;:
 
 <dl class="glossary">
 <dt id="denivele" class="glossary-term">Dénivelé (cumulé)</dt>
-<dd></dd>
+<dd>Le denivelé cumulé est la somme des différences d'altitude sur tout le
+parcours. Le dénivelé cumulé est calculé en positif pour les montées (souvent
+abrégé en **D+**) et en négatif pour les descente (abrégé en **D-**). Sur un
+circuit en boucle, ces deux valeurs ont une valeur absolue identique (aux
+incertitudes de mesure et de calcul prêt) alors que sur un parcours linéaire,
+elle peuvent être radicalement différent. Par exemple, [la descente du Mont
+Nivigne](/single-tracks/descente-mont-nivigne-ceillat/) a un dénivélé positif
+quasi nul et un dénivelé négatif de plus de 300 mètres.</dd>
 <dt id="gpx" class="glossary-term">GPX</dt>
 <dd>GPX est un format de fichier ouvert et relativement universel permettant
 l'échange de données destinées au GPS. Pour chaque randonnée et single-track, ce
@@ -26,7 +33,7 @@ sur une région spécifique. Il existe par exemple le **GRP Tour du Revermont**.
 *tout suspendu* et *tout rigide*.</dd>
 <dt id="single" class="glossary-term">Single-tracks</dt>
 <dd>Un single-track ou **monotrace** en français est un chemin étroit
-(litéralement avec une *une seule trace*). Avec un peu de bagage technique, ces
+(litéralement avec *une seule trace*). Avec un peu de bagage technique, ces
 chemins sont extrêment agréables à rouler et sont en général très recherchés des
 VTTistes.</dd>
 </dl>

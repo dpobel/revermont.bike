@@ -1,4 +1,5 @@
 {% set tags = tagsList|sort %}
+{% set totalPosts = collections.posts.length + collections.treks.length + collections.tracks.length %}
 <ul class="tag-cloud">
 {% for keyword in tags -%}
     {% set info = tagsList[keyword] %}

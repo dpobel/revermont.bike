@@ -24,7 +24,7 @@
         {{ blogsidebar|safe }}
 
         <h3>Tag cloud</h3>
-        {% include "parts/cloud.swig" with {totalPosts: collections.posts.length, tagsList: tagsList} %}
+        {% include "parts/cloud.swig" %}
     </aside>
 
     {% include "pagination.swig" with pagination %}

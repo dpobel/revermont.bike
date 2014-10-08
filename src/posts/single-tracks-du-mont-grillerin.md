@@ -41,11 +41,12 @@ peine&nbsp;!
 
 Pour la descente, [le single du Grillerin
 nord](/single-tracks/single-du-grillerin-nord/) et [le single du Grillerin
-ouest](/single-tracks/single-du-grillerin-ouest/) sont toutes indiquées.  J'ai
+ouest](/single-tracks/single-du-grillerin-ouest/) sont tout indiqués. J'ai
 une nette préférence pour la version ouest, mais tout dépend de la suite de la
 sortie. La version nord oriente naturellement vers le nord (le col des
 Justices ou Treffort par exemple), alors qu'en prenant à l'ouest, on s'oriente
-plus vers Meillonnas (à moins d'aimer de vouloir faire un peu de route).
+plus vers Meillonnas (à moins de vouloir faire un peu de route vers Treffort ou
+la croix des Angoulures).
 
 Dans tous les cas, les single tracks du Mont Grillerin sont vraiment à
 découvrir et font partie des *classiques* du Revermont.

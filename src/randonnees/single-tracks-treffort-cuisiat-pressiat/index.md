@@ -1,6 +1,7 @@
 ---
 gpx: single.gpx
 updated: 2014-10-01
+created: 2014-10-01
 tags: treffort-cuisiat, single track, pressiat, crête, col des justices, cabatane, grillerin, croix des angoulures, esses de treffort, grotte des fées, lomont
 ---
 

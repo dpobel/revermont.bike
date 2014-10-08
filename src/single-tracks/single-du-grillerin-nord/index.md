@@ -2,6 +2,7 @@
 gpx: grillerin.gpx
 tags: grillerin, single track, treffort-cuisiat, esses de treffort, croix des angoulures
 updated: 2014-10-08
+created: 2014-10-08 10:00
 ---
 
 Tout comme [la version ouest](/single-tracks/single-du-grillerin-ouest/) (le premier

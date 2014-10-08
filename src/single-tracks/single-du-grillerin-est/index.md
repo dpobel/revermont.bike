@@ -2,9 +2,10 @@
 gpx: grillerin.gpx
 tags: grillerin, single track, treffort-cuisiat, croix des angoulures, montmerle, esses de treffort
 updated: 2014-10-08
+created: 2014-10-08 08:00
 ---
 
-Le sentier débute sous le pylone électrique quasiment au
+Le sentier débute sous le pylône électrique quasiment au
 sommet du Grillerin. Il permet d'atteindre la croix des Angoulures (sommet des
 *esses de Treffort*) par un single track assez court et technique (surtout au début).
 La partie single track se termine en arrivant sur le large chemin qui relie la

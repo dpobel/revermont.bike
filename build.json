@@ -44,10 +44,14 @@
     "date": ["created", "updated"],
     "collections": {
         "treks": {
-            "pattern": "randonnees/**/index.html"
+            "pattern": "randonnees/**/index.html",
+            "sortBy": "created",
+            "reverse": true
         },
         "tracks": {
-            "pattern": "single-tracks/**/index.html"
+            "pattern": "single-tracks/**/index.html",
+            "sortBy": "created",
+            "reverse": true
         },
         "posts": {
             "pattern": "posts/*.html",
@@ -57,13 +61,13 @@
         "lastTreks": {
             "pattern": "randonnees/**/index.html",
             "limit": 5,
-            "sortBY": "updated",
+            "sortBy": "updated",
             "reverse": true
         },
         "lastTracks": {
             "pattern": "single-tracks/**/index.html",
             "limit": 5,
-            "sortBY": "updated",
+            "sortBy": "updated",
             "reverse": true
         },
         "lastPosts": {

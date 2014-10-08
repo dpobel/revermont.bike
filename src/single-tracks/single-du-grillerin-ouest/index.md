@@ -2,6 +2,7 @@
 gpx: grillerin.gpx
 tags: grillerin, single track, treffort-cuisiat, esses de treffort, gr59
 updated: 2014-10-08
+created: 2014-10-08 12:00
 ---
 
 Le premier kilomètre de ce sentier est commun avec [la version

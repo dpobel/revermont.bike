@@ -224,9 +224,9 @@ describe('Metalsmith gpxparser', function () {
             });
         });
 
-        it('should keep the created property is time not defined', function (done) {
+        it('should keep the created property if time not defined', function (done) {
             var files = {
-                    'tracks/test1.md': {'gpx': 'notime.gpx'},
+                    'tracks/test1.md': {'gpx': 'notime.gpx', 'created': '2014'},
                     'tracks/notime.gpx': {contents: gpxFileContent('notime.gpx')},
                 };
 
@@ -235,7 +235,23 @@ describe('Metalsmith gpxparser', function () {
 
                 assert.ok(typeof err === 'undefined');
 
-                assert.ok(typeof file.title === 'undefined');
+                assert.equal('2014', file.created);
+                done();
+            });
+        });
+
+        it('should not overwrite the created property', function (done) {
+            var files = {
+                    'tracks/test1.md': {'gpx': 'time.gpx', 'created': '2014'},
+                    'tracks/time.gpx': {contents: gpxFileContent('test1.gpx')},
+                };
+
+            gpx()(files, ms, function (err) {
+                var file = files['tracks/test1.md'];
+
+                assert.ok(typeof err === 'undefined');
+
+                assert.equal('2014', file.created);
                 done();
             });
         });

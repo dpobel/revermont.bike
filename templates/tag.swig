@@ -14,7 +14,7 @@
                 <a href="{{ post.path|url }}">
                     {{ post.title }}
                 </a>
-                <time datetime="{{ post.created.format() }}" class="item-list-date">{{ post.created.format(config.dateTimeFormat) }}</time>
+                <time datetime="{{ post.created.format() }}" class="item-list-date">{{ post.created.format(config.dateFormat) }}</time>
             </li>
         {% endfor %}
         </ul>

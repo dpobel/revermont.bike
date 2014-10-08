@@ -7,7 +7,7 @@
 {% block content %}
     <article>
         <h1 class="icon-{{ icon }} page-title">{{ title }}</h1>
-        <div>{{ contents|safe }}</div>
+        <div class="contents">{{ contents|safe }}</div>
         {% if created %}
         <footer>
             Publié le <time>{{ created.format(config.dateFormat) }}</time>

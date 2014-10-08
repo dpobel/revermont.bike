@@ -1,5 +1,6 @@
 ---
 gpx: cabatane.gpx
+created: 2014-09-30
 updated: 2014-09-30
 type: Profil descendant
 inverted: Pas très intéressant (très raide)

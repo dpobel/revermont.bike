@@ -28,7 +28,7 @@
         {{ blogsidebar|safe }}
 
         <h3>Tag cloud</h3>
-        {% include "parts/cloud.swig" with {totalPosts: posts.length, tagsList: tagsList} %}
+        {% include "parts/cloud.swig" %}
 
         <h3>Partager sur les réseaux sociaux</h3>
         {% include "parts/share.swig" with {url: path, text: "Blog de " + config.shortTitle } %}

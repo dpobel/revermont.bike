@@ -8,7 +8,7 @@
     <article class="pure-g blog-post" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="pure-u-1 pure-u-md-3-4 blog-post-content">
             <h1 class="icon-blog page-title" itemprop="name">{{ title }}</h1>
-            <div itemprop="articleBody">{{ contents|safe }}</div>
+            <div itemprop="articleBody" class="contents">{{ contents|safe }}</div>
 
             {% include "parts/comments.swig" %}
         </div>

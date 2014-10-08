@@ -1,6 +1,7 @@
 ---
 gpx: nivigne.gpx
 updated: 2014-10-01
+created: 2014-10-01
 type: Profil descendant
 tags: mont nivigne, descente, single track, crête
 ---

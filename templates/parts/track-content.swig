@@ -43,7 +43,7 @@
 
         <div class="track-sidebar-panel" id="description">
             <h2 class="page-subtitle icon-description">Description</h2>
-            <div itemprop="text">{{ contents|safe }}</div>
+            <div itemprop="text" class="contents">{{ contents|safe }}</div>
 
             <p>Mots-clés&nbsp;:</p>
             <ul class="content-tags" itemprop="keywords">
@@ -65,7 +65,7 @@
         <div class="track-sidebar-panel" id="direction">
             <h2 class="page-subtitle icon-direction">Comment s'y rendre&nbsp;?</h2>
             
-            {{ direction|safe }}
+            <div class="contents">{{ direction|safe }}</div>
         </div>
         {% endif %}
     </div>

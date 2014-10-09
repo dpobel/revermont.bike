@@ -443,7 +443,7 @@ img {
 }
 
 @media screen and (min-width: 48em) {
-    .tag-page .contents {
+    .tag-page .pure-u-md-2-5 {
         box-sizing: border-box;
         padding-left: 1em;
     }

@@ -9,7 +9,7 @@ Le premier kilomètre de ce sentier est commun avec [la version
 nord](/single-tracks/single-du-grillerin-nord/). Il débute
 par un court portage pour franchir une zone rocailleuse juste après le pylône
 électrique se situant quasiment au sommet du Mont Grillerin. Ensuite, le single
-track suit la crête du Mont Grillerin, d'abord en serpentant entre les buis puis
+track suit la crête du Mont de Grillerin, d'abord en serpentant entre les buis puis
 entre les pins. Après ce premier kilomètre ludique et peu pentu vient une
 portion plus à découvert et rocailleuse à nouveau dans les buis. Après, la pente
 s'accentue et le chemin devient plus technique avec une alternance de zones

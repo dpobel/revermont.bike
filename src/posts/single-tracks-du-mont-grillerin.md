@@ -1,14 +1,14 @@
 ---
-title: Par où aborder le Mont Grillerin?
+title: Par où aborder le Mont de Grillerin?
 tags: grillerin, single track, treffort-cuisiat, meillonnas, gr59, col des justices
 created: 2014-10-08 18:28
 ---
 
 <img
 src="/assets/img/carte-mont-grillerin.png" alt="Carte du Mont Grillerin" class="img-left">
-En regardant **le Mont Grillerin** sur la carte IGN, cette petite colline ne semble
+En regardant **le Mont de Grillerin** sur la carte IGN, cette petite colline ne semble
 pas offrir beaucoup de choix en terme de sentiers praticables à VTT. Pourtant
-sur le terrain, la situation est un peu différente et le Mont Grillerin se
+sur le terrain, la situation est un peu différente et le Mont de Grillerin se
 révèle être en fait un super spot&nbsp;!
 
 Pour commencer, le chemin pourtant indiqué comme balisé qui part quasiment du
@@ -26,7 +26,7 @@ de ces deux sentiers est identique)&nbsp;:
 
 Avant de pouvoir descendre, il faut commencer par monter. L'option la plus
 évidente est d'emprunter le chemin qui part du GR59 vers le nord. Ce
-chemin sert d'accès aux pylônes situés sur le Mont Grillerin, il est
+chemin sert d'accès aux pylônes situés sur le Mont de Grillerin, il est
 balisé, il traverse un champ et à l'exception du franchissement de deux
 clôtures, la montée se fait entièrement sur le vélo. Comme indiqué sur la carte
 IGN, ce chemin offre un joli panorama et malgré la pente, la traversée de ce
@@ -49,5 +49,5 @@ exemple), alors qu'en prenant à l'ouest, on s'oriente plus vers Meillonnas (à
 moins de vouloir faire un peu de route vers Treffort ou
 la croix des Angoulures).
 
-Dans tous les cas, les single tracks du Mont Grillerin sont vraiment à
+Dans tous les cas, les single tracks du Mont de Grillerin sont vraiment à
 découvrir et font partie des *classiques* du Revermont.

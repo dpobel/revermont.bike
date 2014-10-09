@@ -5,7 +5,8 @@
     "assets": "assets",
     "source": "src",
     "ignore": [
-        "**/*.json"
+        "**/*.json",
+        "include/**"
     ],
     "metadata": {
         "config": "config.json"
@@ -88,15 +89,19 @@
         "handle": "tags",
         "path": "tags",
         "template": "tag.swig",
-        "sortBy": "date",
+        "sortBy": "created",
         "reverse": true
+    },
+    "enrichTags": {
+        "ext": "md",
+        "basePath": "include/taginfo"
     },
     "paginate": {
         "perPage": 10,
         "pageSeparator": "/"
     },
     "paginateTag": {
-        "perPage": 10
+        "perPage": 30
     },
     "templateEngine": "swig",
     "fileMetadata": [{

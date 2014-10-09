@@ -27,6 +27,7 @@ var argv = require('minimist')(process.argv.slice(2), {
     paginateTag = require('./lib/metalsmith/paginate-tag.js'),
     forecast = require('./lib/metalsmith/forecast.js'),
     autoinclude = require('./lib/metalsmith/autoinclude.js'),
+    enrichTags = require('./lib/metalsmith/enrich-tags.js'),
 
     nock = require('nock'),
     pjson = require('./package.json'),
@@ -77,7 +78,9 @@ console.log('- Source: "' + __dirname + '/' + source + '"');
 console.log('- Destination: "' + __dirname + '/' + destination + '"');
 metalsmith(__dirname)
     .source(source)
+    .use(date(conf.date))
     .use(tags(conf.tags))
+    .use(enrichTags(conf.enrichTags))
     .use(forecast(forecastConf))
     .use(fileMetadata(conf.fileMetadata))
     .use(gpxcleaner(conf.gpxcleaner))
@@ -92,7 +95,6 @@ metalsmith(__dirname)
     .use(permalinks({relative: false}))
     .use(metadata(conf.metadata))
     .use(pooleApp(pooleAppConf))
-    .use(date(conf.date))
     .use(buildDate())
     .use(templates(conf.templateEngine))
     .use(ignore(conf.ignore))

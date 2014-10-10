@@ -1,6 +1,6 @@
 {% extends "layouts/layout.swig" %}
 
-{% block title %}{{ title }} / Blog &mdash; {% parent %}{% endblock %}
+{% block title %}{{ title }} / Blog VTT dans le Revermont - {% parent %}{% endblock %}
 
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
@@ -33,6 +33,7 @@
 {% endblock %}
 
 {% block meta %}
+{% parent %}
 {% include "parts/twitter-card.swig" with {
     type: "summary",
     site: "@" + config.twitter,

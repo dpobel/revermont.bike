@@ -30,7 +30,11 @@
     <link rel="apple-touch-icon-precomposed" href="/favicon-152.png">
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="/favicon-144.png">
-    {% block meta %}{% endblock %}
+{% block meta %}
+    {% if metaDescription or contents %}
+    <meta name="description" content="{% if metaDescription %}{{ metaDescription }}{% else %}{{ contents|striptags|shorten(150) }}{% endif %}">
+    {% endif %}
+{% endblock %}
 </head>
 <body class="{{ section }}">
     {% block menu %}
@@ -41,7 +45,7 @@
                         <a href="/" class="back-home icon-mtb site-menu-link">{{ config.shortTitle }}</a>
                     </li>
                     {% for item in menu %}
-                    <li{% if selected == item.section %} class="pure-menu-selected"{% endif %}><a href="{{ item.path|url }}" class="icon-{{ item.icon }} site-menu-link">{{ item.title }}</a></li>
+                    <li{% if selected == item.section %} class="pure-menu-selected"{% endif %}><a href="{{ item.path|url }}" class="icon-{{ item.icon }} site-menu-link"{% if item.long %} title="{{ item.long }}"{% endif %}>{{ item.title }}</a></li>
                     {% endfor %}
                 </ul>
             </nav>

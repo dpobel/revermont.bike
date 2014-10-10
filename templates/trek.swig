@@ -13,6 +13,7 @@
 {% endblock %}
 
 {% block meta %}
+{% parent %}
 {% include "parts/twitter-card.swig" with {
     type: "summary_large_image",
     site: config.twitter,

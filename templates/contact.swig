@@ -2,7 +2,7 @@
 
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
-{% block title %}{{ title }} &mdash; {% parent %}{% endblock %}
+{% block title %}{{ title }} - {% parent %}{% endblock %}
 
 {% block content %}
     <article>

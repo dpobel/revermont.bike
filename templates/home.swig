@@ -15,7 +15,7 @@
     <div itemprop="description">{{ contents|safe }}</div>
     <div class="pure-g home-blocks">
         <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-2 home-block home-block-treks">
-            <h2 class="icon-treks home-block-title">Dernières randonnées</h2>
+            <h2 class="icon-treks home-block-title">Derniers circuits VTT</h2>
             <table class="pure-table pure-table-bordered pure-table-striped tracks-table">
             <thead>
                 <tr>
@@ -33,7 +33,7 @@
             {% endfor %}
             </table>
 
-            <p><a href="{{ "randonnees"|url }}" class="pure-button button-highlight icon-treks">Toutes les randonnées</a></p>
+            <p><a href="{{ "randonnees"|url }}" class="pure-button button-highlight icon-treks">Les traces GPS des circuits VTT</a></p>
         </div>
         <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-2 home-block home-block-tracks">
             <h2 class="icon-tracks home-block-title">Derniers single tracks</h2>
@@ -54,7 +54,7 @@
             {% endfor %}
             </table>
 
-            <p><a href="{{ "single-tracks"|url }}" class="pure-button button-highlight icon-tracks">Tous les single tracks</a></p>
+            <p><a href="{{ "single-tracks"|url }}" class="pure-button button-highlight icon-tracks">Les traces GPS des single tracks</a></p>
         </div>
         <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-2 home-block home-block-blog">
             <h2 class="icon-blog home-block-title">Derniers billets de blog</h2>
@@ -86,12 +86,13 @@
 {% endblock %}
 
 {% block meta %}
+{% parent %}
 {% include "parts/twitter-card.swig" with {
     type: "summary",
     site: "@" + config.twitter,
     creator: "@dpobel",
     title: title,
-    description: contents|striptags|shorten(200)
+    description: metaDescription
 } %}
 <meta name="google-site-verification" content="N0E1TuQgF7sr_Y_EsGFQAzGKDN1KAvNNb35GhpmFS1w" />
 {% endblock %}

@@ -1,7 +1,7 @@
 ---
 title: VTT dans le Revermont!
 created: 2014-09-30 07:51
-tags: revermont, vtt, randonnée, single track, carte
+tags: revermont, vtt, randonnée, single track, carte, coligny, treffort-cuisiat, montagna-le-reconduit
 ---
 
 Et voila&nbsp;! Après pas mal d'heures de conception et de développement ce
@@ -18,8 +18,8 @@ place au **VTT dans le Revermont**&nbsp;!
 Ce site s'adresse aux VTTétistes désireux(ses) de (re)découvrir le Revermont sur leur
 monture. À vrai dire, j'ai cette idée en tête depuis que je sais faire des sites
 web (quelque chose comme une quinzaine d'années...). Je suis originaire de
-Coligny (dans le Revermont donc!) et adolescent j'ai beaucoup roulé dans une
-zone située entre Montagna-le-Reconduit au nord, Treffort-Cuisiat au sud et le
+[Coligny](/tags/coligny/) (dans le Revermont donc!) et adolescent j'ai beaucoup roulé dans une
+zone située entre [Montagna-le-Reconduit](/tags/montagna-le-reconduit) au nord, [Treffort-Cuisiat](/tags/treffort-cuisiat) au sud et le
 Suran à l'est. Les études, ma vie professionnelle et divers autres évènements
 m'ont éloigné à la fois géographiquement du Revermont et du VTT (malgré [une
 tentative de reprise à
@@ -35,10 +35,10 @@ ce site est donc de repartager *mes* découvertes&nbsp;!
 Bref, ce site propose donc 3 parties principales:
 
 1. [ce blog](/posts/) pour parler de VTT (dans le Revermont de préférence)
-2. la partie [randonnées](/randonnees/) qui propose des circuits complets;
-   l'idée étant de proposer des boucles qui allient beaux paysages et plaisir de
+2. la partie [Circuits VTT](/randonnees/) qui propose des parcours complets;
+   l'idée étant de proposer des randonnées qui allient beaux paysages et plaisir de
    pilotage.
-3. Enfin, la partie [single tracks](/single-tracks/), comme son nom l'indique,
+3. Enfin, la partie [Single tracks](/single-tracks/), comme son nom l'indique,
    se concentre sur le *Graal* du VTTétiste à savoir les single tracks.
 
 Le site est encore un peu vide, mais j'espère pouvoir l'enrichir rapidement.

@@ -86,6 +86,7 @@
             "domReady": "requirejs-domready/domReady",
             "globalMap": "global-map",
             "trackMap": "track-map",
+            "tagMap": "tag-map",
         },
     });
     {% block javascriptCode %}{% endblock %}

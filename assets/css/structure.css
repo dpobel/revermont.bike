@@ -437,6 +437,22 @@ img {
     margin-right: 4px;
 }
 
+.tag-page .contents {
+    overflow: hidden;
+    margin-top: -1em;
+}
+
+@media screen and (min-width: 48em) {
+    .tag-page .pure-u-md-2-5 {
+        box-sizing: border-box;
+        padding-left: 1em;
+    }
+}
+
+.map-tag {
+    height: 300px;
+}
+
 .paginator {
     text-align: center;
 }

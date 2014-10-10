@@ -6,6 +6,7 @@
 
 {% block content %}
     <h1 class="icon-tracks page-title">{{ long }}</h1>
+    <div class="contents">{{ contents|safe }}</div>
 
     {% include "parts/map.swig" with {"label": "Voir tous les single tracks sur une carte"} %}
 

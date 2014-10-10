@@ -17,17 +17,18 @@ Nivigne](/single-tracks/descente-mont-nivigne-ceillat/) a un dénivélé positif
 quasi nul et un dénivelé négatif de plus de 300 mètres.</dd>
 <dt id="gpx" class="glossary-term">GPX</dt>
 <dd>GPX est un format de fichier ouvert et relativement universel permettant
-l'échange de données destinées au GPS. Pour chaque randonnée et single-track, ce
-site propose un fichier GPX.</dd>
+l'échange de données destinées au GPS. Les [circuits VTT](/randonnees/) et les
+[single tracks](/single-tracks/) de ce site sont tous accompagnés d'un fichier
+GPX.</dd>
 <dt id="gr" class="glossary-term">GR</dt>
 <dd>Circuit de Grande Randonnée balisé par la fédération française de la
 randonnée pédestre. Un GR s'étend généralement sur plusieurs centaines de
 kilomètres et est balisé en rouge et blanc. Le Revermont est notamment traversé
-par le GR9 et le GR59.</dd>
+par le [GR9](/tags/gr9/) et le [GR59](/tags/gr59/).</dd>
 <dt id="grp" class="glossary-term">GRP</dt>
 <dd>Pour Grande Randonnée de Pays. Tout comme les GR, ce sont des circuits de
 randonnée pédestre, balisés en rouge et jaune qui a l'inverse des GR sont centrés
-sur une région spécifique. Il existe par exemple le **GRP Tour du Revermont**.</dd>
+sur une région spécifique. Il existe par exemple le [GRP Tour du Revermont](/tags/grp-tour-du-revermont).</dd>
 <dt id="sr" class="glossary-term">Semi rigide</dt>
 <dd>**Hard tail** en anglais, VTT uniquement suspendu à l'avant par opposition à
 *tout suspendu* et *tout rigide*.</dd>
@@ -35,5 +36,6 @@ sur une région spécifique. Il existe par exemple le **GRP Tour du Revermont**.
 <dd>Un single-track ou **monotrace** en français est un chemin étroit
 (litéralement avec *une seule trace*). Avec un peu de bagage technique, ces
 chemins sont extrêment agréables à rouler et sont en général très recherchés des
-VTTistes.</dd>
+VTTistes. Voila pourquoi une section de ce site est dédiée aux
+[single tracks du Revermont](/single-tracks/) ;-).</dd>
 </dl>

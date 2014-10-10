@@ -6,6 +6,7 @@
 
 {% block content %}
     <h1 class="icon-treks page-title">{{ long }}</h1>
+    <div class="contents">{{ contents|safe }}</div>
 
     {% include "parts/map.swig" with {"label": "Voir toutes les randonnées sur une carte"} %}
 

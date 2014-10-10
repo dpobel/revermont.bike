@@ -41,7 +41,7 @@
                         <a href="/" class="back-home icon-mtb site-menu-link">{{ config.shortTitle }}</a>
                     </li>
                     {% for item in menu %}
-                    <li{% if selected == item.section %} class="pure-menu-selected"{% endif %}><a href="{{ item.path|url }}" class="icon-{{ item.icon }} site-menu-link">{{ item.title }}</a></li>
+                    <li{% if selected == item.section %} class="pure-menu-selected"{% endif %}><a href="{{ item.path|url }}" class="icon-{{ item.icon }} site-menu-link"{% if item.long %} title="{{ item.long }}"{% endif %}>{{ item.title }}</a></li>
                     {% endfor %}
                 </ul>
             </nav>

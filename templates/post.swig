@@ -33,6 +33,7 @@
 {% endblock %}
 
 {% block meta %}
+{% parent %}
 {% include "parts/twitter-card.swig" with {
     type: "summary",
     site: "@" + config.twitter,

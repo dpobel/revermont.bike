@@ -1,5 +1,6 @@
 ---
 title: Glossaire de Revermont.bike
+metaDescription: Définitions de quelques termes du jargon du VTT employés sur Revermont.bike
 ---
 
 Comme tout domaine, le VTT possède son propre jargon. Voici la définition de

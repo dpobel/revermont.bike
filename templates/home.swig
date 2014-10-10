@@ -86,12 +86,13 @@
 {% endblock %}
 
 {% block meta %}
+{% parent %}
 {% include "parts/twitter-card.swig" with {
     type: "summary",
     site: "@" + config.twitter,
     creator: "@dpobel",
     title: title,
-    description: contents|striptags|shorten(200)
+    description: metaDescription
 } %}
 <meta name="google-site-verification" content="N0E1TuQgF7sr_Y_EsGFQAzGKDN1KAvNNb35GhpmFS1w" />
 {% endblock %}

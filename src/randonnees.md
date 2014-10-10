@@ -4,6 +4,7 @@ long: Circuits de randonnées VTT dans le Revermont
 section: treks
 collection: menu
 priority: 20
+metaDescription: Sélection de traces GPS de randonnées VTT dans le Revermont
 ---
 
 Voici une sélection de traces GPS de parcours VTT à faire dans le Revermont.

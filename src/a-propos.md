@@ -5,6 +5,7 @@ section: a-propos
 collection: menu
 priority: 0
 icon: info
+metaDescription: À propos du site VTT.Revermont.bike
 ---
 
 ## Ce site

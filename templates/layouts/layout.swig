@@ -30,7 +30,11 @@
     <link rel="apple-touch-icon-precomposed" href="/favicon-152.png">
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="/favicon-144.png">
-    {% block meta %}{% endblock %}
+{% block meta %}
+    {% if metaDescription or contents %}
+    <meta name="description" content="{% if metaDescription %}{{ metaDescription }}{% else %}{{ contents|striptags|shorten(150) }}{% endif %}">
+    {% endif %}
+{% endblock %}
 </head>
 <body class="{{ section }}">
     {% block menu %}

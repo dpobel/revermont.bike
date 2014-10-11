@@ -6,16 +6,16 @@
 <trk>
     <trkseg>
         <trkpt lat="46.324224" lon="5.386054">
-            <ele>290</ele>
+            <ele>290.0</ele>
         </trkpt>
         <trkpt lat="46.324222" lon="5.386101">
-            <ele>300</ele>
+            <ele>300.0</ele>
         </trkpt>
         <trkpt lat="46.324222" lon="5.386101">
-            <ele>290</ele>
+            <ele>290.0</ele>
         </trkpt>
         <trkpt lat="46.324222" lon="5.386101">
-            <ele>300</ele>
+            <ele>300.0</ele>
         </trkpt>
         <trkpt lat="46.324222" lon="5.386101">
             <ele>297.0</ele>
@@ -30,16 +30,16 @@
             <ele>293.9</ele>
         </trkpt>
         <trkpt lat="46.324222" lon="5.386101">
-            <ele>290</ele>
+            <ele>290.0</ele>
         </trkpt>
         <trkpt lat="46.324222" lon="5.386101">
-            <ele>300</ele>
+            <ele>300.0</ele>
         </trkpt>
         <trkpt lat="46.324222" lon="5.386101">
-            <ele>290</ele>
+            <ele>290.0</ele>
         </trkpt>
         <trkpt lat="46.324222" lon="5.386101">
-            <ele>300</ele>
+            <ele>300.0</ele>
         </trkpt>
     </trkseg>
 </trk>

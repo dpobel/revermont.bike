@@ -109,6 +109,23 @@ describe('Metalsmith gpxcleaner', function () {
                     });
                 });
             });
+
+            it('should round elevations for non convoluated points', function (done) {
+                var files = {}, path = 'tracks/round_convolution.gpx',
+                    fullpath = fixturesDir + path;
+
+                fs.readFile(fullpath, function (err, content) {
+                    files[path] = {contents: content};
+
+                    gpxcleaner()(files, false, function (err) {
+                        var doc = libxmljs.parseXmlString(files[path].contents),
+                            elevations = doc.find('//gpx:ele', nsConfig);
+
+                        assert.equal("240.0", elevations[0].text());
+                        done();
+                    });
+                });
+            });
         });
 
         describe('gpsbabel call', function () {

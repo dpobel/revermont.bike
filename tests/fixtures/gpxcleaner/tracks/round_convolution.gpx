@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.topografix.com/GPX/Private/TopoGrafix/0/1 http://www.topografix.com/GPX/Private/TopoGrafix/0/1/topografix.xsd">
+<metadata>
+    <name>Convolution</name>
+</metadata>
+<trk>
+    <trkseg>
+        <trkpt lat="46.324224" lon="5.386054">
+            <ele>290.00000000002</ele>
+        </trkpt>
+    </trkseg>
+</trk>
+</gpx>

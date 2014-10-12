@@ -148,6 +148,9 @@ noscript {
 .icon-contact:before {
     content: "\e601";
 }
+.icon-link:before {
+    content: "\e627";
+}
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"],
@@ -495,4 +498,9 @@ a {
 .glossary-term {
     font-weight: bold;
     font-size: 110%;
+}
+
+.links .contents ul {
+    list-style-type: square;
+    padding: 0;
 }

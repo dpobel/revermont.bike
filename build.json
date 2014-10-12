@@ -166,7 +166,7 @@
         "metadata": {
             "template": "page.swig"
         },
-        "pattern": "{thanks,mentions-legales,a-propos,send,glossaire}.md"
+        "pattern": "{thanks,mentions-legales,a-propos,send,glossaire,liens}.md"
     }, {
         "metadata": {
             "template": "contact.swig"

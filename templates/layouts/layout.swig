@@ -79,22 +79,17 @@
     </footer>
     {% endblock %}
 
-    <script data-main="{{ "js/enabled.js"|asset() }}" src="{{ "js/requirejs/require.js"|asset() }}"></script>
+    <script src="{{ "js/domready/ready.js"|asset() }}"></script>
+    <script src="{{ "lib/leaflet/leaflet.js"|asset() }}"></script>
+    <script src="{{ "lib/leaflet.fullscreen/Leaflet.fullscreen.js"|asset() }}"></script>
+
+    <script src="{{ "js/global-map.js"|asset() }}"></script>
+    <script src="{{ "js/track-map.js"|asset() }}"></script>
+    <script src="{{ "js/tag-map.js"|asset() }}"></script>
     <script>
-    requirejs.config({
-        paths: {
-            "leaflet": "{{ "lib/leaflet/leaflet"|asset() }}",
-            "leaflet.fullscreen": "{{ "lib/leaflet.fullscreen/Leaflet.fullscreen"|asset() }}",
-            "domReady": "requirejs-domready/domReady",
-            "globalMap": "global-map",
-            "trackMap": "track-map",
-            "tagMap": "tag-map",
-        },
-        shim: {
-            "leaflet.fullscreen": ["leaflet"],
-        },
-    });
+    (function(doc){doc.body.classList.add('js-enabled');})(document);
     {% block javascriptCode %}{% endblock %}
+
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

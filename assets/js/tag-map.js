@@ -1,9 +1,10 @@
-/* global define */
-define(['domReady', 'leaflet', 'leaflet.fullscreen'], function (domReady, L) {
+/* global domready, L */
+(function (global, domReady, L) {
     "use strict";
 
     var config, map,
-        doc = window.document;
+        RB = global.RB = global.RB || {},
+        doc = global.document;
 
     function _init() {
         var layers;
@@ -38,10 +39,8 @@ define(['domReady', 'leaflet', 'leaflet.fullscreen'], function (domReady, L) {
         L.control.layers(layers, {}, {position: 'topleft'}).addTo(map);
     }
 
-    return {
-        init: function (conf) {
-            config = conf;
-            domReady(_init);
-        },
+    RB.tagMap = function (conf) {
+        config = conf;
+        domReady(_init);
     };
-});
+})(window, domready, L);

@@ -1,9 +1,10 @@
-/* global define */
-define(['domReady', 'leaflet'], function (domReady, L) {
+/* global domready, L */
+(function (global, domReady, L) {
     "use strict";
 
     var config, map, tracks,
-        doc = window.document;
+        RB = global.RB = global.RB || {},
+        doc = global.document;
 
     function _showMap(e) {
         doc.body.classList.add(config.classes.displayed);
@@ -80,19 +81,17 @@ define(['domReady', 'leaflet'], function (domReady, L) {
         _initMap();
     }
 
-    return {
-        init: function (dataUrl, conf) {
-            var req = new XMLHttpRequest();
+    RB.globalMap = function (dataUrl, conf) {
+        var req = new XMLHttpRequest();
 
-            config = conf;
-            req.open('GET', dataUrl, true);
-            req.onreadystatechange = function (e) {
-                if ( req.readyState === 4 && req.status === 200 ) {
-                    tracks = JSON.parse(req.responseText);
-                    domReady(_init);
-                }
-            };
-            req.send(null);
-        },
+        config = conf;
+        req.open('GET', dataUrl, true);
+        req.onreadystatechange = function (e) {
+            if ( req.readyState === 4 && req.status === 200 ) {
+                tracks = JSON.parse(req.responseText);
+                domReady(_init);
+            }
+        };
+        req.send(null);
     };
-});
+})(window, domready, L);

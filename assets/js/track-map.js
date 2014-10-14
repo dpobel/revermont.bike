@@ -1,9 +1,10 @@
-/* global define */
-define(['domReady', 'leaflet', 'leaflet.fullscreen'], function (domReady, L) {
+/* global domready, L */
+(function (global, domReady, L) {
     "use strict";
 
     var config, map, track,
-        doc = window.document;
+        RB = window.RB = window.RB || {},
+        doc = global.document;
 
     function _getBounds() {
         var bounds = track.bounds;
@@ -119,19 +120,17 @@ define(['domReady', 'leaflet', 'leaflet.fullscreen'], function (domReady, L) {
         }, false);
     }
 
-    return {
-        init: function (dataUrl, conf) {
-            var req = new XMLHttpRequest();
+    RB.trackMap = function (dataUrl, conf) {
+        var req = new XMLHttpRequest();
 
-            config = conf;
-            req.open('GET', dataUrl, true);
-            req.onreadystatechange = function (e) {
-                if ( req.readyState === 4 && req.status === 200 ) {
-                    track = JSON.parse(req.responseText);
-                    domReady(_initApp);
-                }
-            };
-            req.send(null);
-        },
+        config = conf;
+        req.open('GET', dataUrl, true);
+        req.onreadystatechange = function (e) {
+            if ( req.readyState === 4 && req.status === 200 ) {
+                track = JSON.parse(req.responseText);
+                domReady(_initApp);
+            }
+        };
+        req.send(null);
     };
-});
+})(window, domready, L);

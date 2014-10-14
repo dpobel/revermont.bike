@@ -29,7 +29,7 @@
     "imagemin-pngquant": "^2.0.0",
     "imagemin-svgo": "^2.0.0",
     "is-png": "^1.0.0",
-    "jsdom": "^1.0.0-pre.6",
+    "jsdom": "1.0.2",
     "libxmljs": "^0.11.0",
     "lodash.clone": "^2.4.1",
     "lodash.toarray": "^2.4.1",

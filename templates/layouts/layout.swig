@@ -83,8 +83,6 @@
     <script>
     requirejs.config({
         paths: {
-            "tracks": "{{ "single-tracks/data"|url(true) }}",
-            "treks": "{{ "randonnees/data"|url(true) }}",
             "leaflet": "{{ "lib/leaflet/leaflet"|asset() }}",
             "leaflet.fullscreen": "{{ "lib/leaflet.fullscreen/Leaflet.fullscreen"|asset() }}",
             "domReady": "requirejs-domready/domReady",

@@ -33,8 +33,8 @@
 {% endblock %}
 
 {% block javascriptCode %}
-    require(['globalMap', 'treks'], function (globalMap, treks) {
-        globalMap.init(treks, {
+    require(['globalMap'], function (globalMap) {
+        globalMap.init("{{ "randonnees/data.js"|url(true) }}", {
             'ignApiKey': "{{ config.ignKey }}",
             'selector': {
                 'showMap': '.show-map',

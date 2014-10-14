@@ -33,8 +33,8 @@
 {% endblock %}
 
 {% block javascriptCode %}
-    require(['globalMap', 'tracks'], function (globalMap, tracks) {
-        globalMap.init(tracks, {
+    require(['globalMap'], function (globalMap) {
+        globalMap.init("{{ "single-tracks/data.js"|url(true) }}", {
             'ignApiKey': "{{ config.ignKey }}",
             'selector': {
                 'showMap': '.show-map',

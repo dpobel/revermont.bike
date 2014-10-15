@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 var argv = require('minimist')(process.argv.slice(2), {
-        "string": ['destination', 'source', 'forecast', 'pooleapp'],
+        "string": ['destination', 'source', 'forecast', 'pooleapp', 'revision'],
         "boolean": ['help', 'h'],
     }),
     source, destination,
@@ -19,6 +19,7 @@ var argv = require('minimist')(process.argv.slice(2), {
     tags = require('metalsmith-tags'),
     buildDate = require('metalsmith-build-date'),
     pooleApp = require('metalsmith-pooleapp'),
+    define = require('metalsmith-define'),
 
     date = require('./lib/metalsmith/date'),
     gpxcleaner = require('./lib/metalsmith/gpxcleaner'),
@@ -28,17 +29,21 @@ var argv = require('minimist')(process.argv.slice(2), {
     forecast = require('./lib/metalsmith/forecast.js'),
     autoinclude = require('./lib/metalsmith/autoinclude.js'),
     enrichTags = require('./lib/metalsmith/enrich-tags.js'),
+    concat = require('./lib/metalsmith/concat.js'),
 
     nock = require('nock'),
     pjson = require('./package.json'),
     conf = require('./build.json'),
     pooleAppConf = conf.pooleApp,
-    forecastConf = conf.forecast;
+    forecastConf = conf.forecast,
+    jsFile = conf.assets + '/code.js',
+    cssFile = conf.assets + '/style.css';
 
 if ( argv.help || argv.h ) {
     console.log('build.js [--source srcDir] [--destination destDir] [--forecast-key apiKey]');
     console.log('--source srcDir: override the source directory defined in build.json');
     console.log('--destination destDir: override the destination directory defined in build.json');
+    console.log('--revision assetRev: asset revision to use while building asset filename');
     console.log('--forecast apiKey: API for Forecast.io (if not provided, fake data are used)');
     console.log('--pooleapp apiSecret: API secret for PooleApp');
     process.exit(0);
@@ -71,6 +76,10 @@ if ( argv.pooleapp ) {
         .get('/data/' + pooleAppConf.forms.comments.secret + '.json')
         .reply(200, JSON.stringify({sessions: []}));
 }
+if ( argv.revision ) {
+    jsFile = conf.assets + '/code-' + argv.revision + '.js';
+    cssFile = conf.assets + '/style-' + argv.revision + '.css';
+}
 
 console.log();
 console.log('Starting to build ' + pjson.name);
@@ -96,12 +105,25 @@ metalsmith(__dirname)
     .use(metadata(conf.metadata))
     .use(pooleApp(pooleAppConf))
     .use(buildDate())
-    .use(templates(conf.templateEngine))
-    .use(ignore(conf.ignore))
     .use(assets({
         source: conf.assets,
         destination: conf.assets
     }))
+    .use(concat({
+        files: conf.concat.css,
+        css: true,
+        output: cssFile,
+    }))
+    .use(concat({
+        files: conf.concat.js,
+        output: jsFile,
+    }))
+    .use(define({
+        jsFile: jsFile,
+        cssFile: cssFile,
+    }))
+    .use(templates(conf.templateEngine))
+    .use(ignore(conf.ignore))
     .destination(destination)
     .build(function (error, res) {
         if ( error ) {

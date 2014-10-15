@@ -4,6 +4,24 @@
     "destination": "web",
     "assets": "assets",
     "source": "src",
+    "concat": {
+        "css": [
+            "assets/css/pure/pure.css",
+            "assets/css/pure/grids-responsive.css",
+            "assets/lib/leaflet/leaflet.css",
+            "assets/lib/leaflet.fullscreen/leaflet.fullscreen.css",
+            "assets/css/structure.css",
+            "assets/css/theme.css"
+        ],
+        "js": [
+            "assets/js/domready/ready.js",
+            "assets/lib/leaflet/leaflet.js",
+            "assets/lib/leaflet.fullscreen/Leaflet.fullscreen.js",
+            "assets/js/global-map.js",
+            "assets/js/track-map.js",
+            "assets/js/tag-map.js"
+        ]
+    },
     "ignore": [
         "**/*.json",
         "include/**"

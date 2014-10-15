@@ -5,22 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{{ config.title }}{% endblock %}</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="{{ "css/pure/pure.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "css/pure/grids-responsive-old-ie.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "lib/leaflet/leaflet.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "lib/leaflet.fullscreen/leaflet.fullscreen.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "css/structure.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "css/theme.css"|asset() }}">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="{{ "css/pure/pure.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "css/pure/grids-responsive.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "lib/leaflet/leaflet.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "lib/leaflet.fullscreen/leaflet.fullscreen.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "css/structure.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "css/theme.css"|asset() }}">
-    <!--<![endif]-->
+    <link rel="stylesheet" href="{{ cssFile|url(true) }}">
     <!--[if lt IE 9]>
     <script>(function(){var tags=['header','article','footer','nav', 'time', 'section', 'figure', 'abbr'];for(var i=0;i!=tags.length;i++) document.createElement(tags[i]);})();</script>
     <![endif]-->
@@ -79,15 +64,12 @@
     </footer>
     {% endblock %}
 
-    <script src="{{ "js/domready/ready.js"|asset() }}"></script>
-    <script src="{{ "lib/leaflet/leaflet.js"|asset() }}"></script>
-    <script src="{{ "lib/leaflet.fullscreen/Leaflet.fullscreen.js"|asset() }}"></script>
-
-    <script src="{{ "js/global-map.js"|asset() }}"></script>
-    <script src="{{ "js/track-map.js"|asset() }}"></script>
-    <script src="{{ "js/tag-map.js"|asset() }}"></script>
+    <script src="{{ jsFile|url(true) }}"></script>
     <script>
-    (function(doc){doc.body.classList.add('js-enabled');})(document);
+    (function(doc){
+        doc.body.classList.add('js-enabled');
+        L.Icon.Default.imagePath = "{{ config.leafletDefaultImagePath|asset()|e('js') }}";
+    })(document);
     {% block javascriptCode %}{% endblock %}
 
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

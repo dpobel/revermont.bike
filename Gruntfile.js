@@ -8,9 +8,10 @@ module.exports = function(grunt) {
             build: {
                 command: function () {
                     var forecast = (grunt.option('forecast') ? ' --forecast ' + grunt.option('forecast') : ''),
-                        pooleapp = (grunt.option('pooleapp') ? ' --pooleapp ' + grunt.option('pooleapp') : '');
+                        pooleapp = (grunt.option('pooleapp') ? ' --pooleapp ' + grunt.option('pooleapp') : ''),
+                        revision = (grunt.option('revision') ? ' --revision ' + grunt.option('revision') : '');
 
-                    return './build.js' + forecast + pooleapp;
+                    return './build.js' + forecast + pooleapp + revision;
                 },
                 options: {
                     stdout: true,
@@ -30,18 +31,11 @@ module.exports = function(grunt) {
         bower: {
             install: {
                 options: {
-                    targetDir: build.destination + '/' + build.assets,
+                    targetDir: build.assets,
                     layout: 'byType',
                     verbose: true,
                 },
             },
-            test: {
-                options: {
-                    targetDir: fnTest + '/web/' + build.assets,
-                    layout: 'byType',
-                    verbose: true,
-                },
-            }
         },
         watch: {
             options: {
@@ -103,8 +97,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-casper');
 
-    grunt.registerTask('build', ['shell:build', 'bower:install']);
-    grunt.registerTask('build-test', ['shell:build-test', 'bower:test']);
+    grunt.registerTask('build', ['bower:install', 'shell:build']);
+    grunt.registerTask('build-test', ['bower:install', 'shell:build-test']);
     grunt.registerTask('functional-test', ['build-test', 'connect', 'casper:test']);
     grunt.registerTask('unit-test', ['mochaTest']);
     grunt.registerTask('test', ['unit-test', 'functional-test']);

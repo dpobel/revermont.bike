@@ -47,7 +47,7 @@ vallonné et qui se prête donc particulièrement bien à la pratique du VTT.
 Pour être honnête, je suis loin de connaître *tout* le Revermont, étant
 originaire de Coligny et habitant maintenant dans la Dombes je penche plutôt
 vers le sud-est, mais toutes suggestions et/ou contributions sur des zones non
-répertoriée sur le site sont plus que bienvenues&nbsp;!
+répertoriées sur le site sont plus que bienvenues&nbsp;!
 
 ## Quelques conseils
 

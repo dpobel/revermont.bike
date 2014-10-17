@@ -1,6 +1,9 @@
 module.exports = function(grunt) {
     var build = require('./build.json'),
-        fnTest = 'tests/functional';
+        fnTest = 'tests/functional',
+        curlConfig = {};
+
+    curlConfig[build.assets + '/font.css'] = "http://fonts.googleapis.com/css?family=Open+Sans:400,700";
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -8,9 +11,10 @@ module.exports = function(grunt) {
             build: {
                 command: function () {
                     var forecast = (grunt.option('forecast') ? ' --forecast ' + grunt.option('forecast') : ''),
-                        pooleapp = (grunt.option('pooleapp') ? ' --pooleapp ' + grunt.option('pooleapp') : '');
+                        pooleapp = (grunt.option('pooleapp') ? ' --pooleapp ' + grunt.option('pooleapp') : ''),
+                        revision = (grunt.option('revision') ? ' --revision ' + grunt.option('revision') : '');
 
-                    return './build.js' + forecast + pooleapp;
+                    return './build.js' + forecast + pooleapp + revision;
                 },
                 options: {
                     stdout: true,
@@ -30,19 +34,13 @@ module.exports = function(grunt) {
         bower: {
             install: {
                 options: {
-                    targetDir: build.destination + '/' + build.assets,
+                    targetDir: build.assets,
                     layout: 'byType',
                     verbose: true,
                 },
             },
-            test: {
-                options: {
-                    targetDir: fnTest + '/web/' + build.assets,
-                    layout: 'byType',
-                    verbose: true,
-                },
-            }
         },
+        curl: curlConfig,
         watch: {
             options: {
                 atBegin: true
@@ -102,9 +100,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-bower-task');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-casper');
+    grunt.loadNpmTasks('grunt-curl');
 
-    grunt.registerTask('build', ['shell:build', 'bower:install']);
-    grunt.registerTask('build-test', ['shell:build-test', 'bower:test']);
+    grunt.registerTask('build', ['curl', 'bower:install', 'shell:build']);
+    grunt.registerTask('build-test', ['curl', 'bower:install', 'shell:build-test']);
     grunt.registerTask('functional-test', ['build-test', 'connect', 'casper:test']);
     grunt.registerTask('unit-test', ['mochaTest']);
     grunt.registerTask('test', ['unit-test', 'functional-test']);

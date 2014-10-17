@@ -50,15 +50,13 @@
 
 {% block javascriptCode %}
 {% if latlon %}
-    require(['tagMap'], function (tagMap) {
-        tagMap.init({
-            'ignApiKey': "{{ config.ignKey }}",
-            'popup': {% if popup %}true{% else %}false{% endif %},
-            'title': {{ title|json|safe }},
-            'point': {{ latlon|json|safe }},
-            'map': '.map-tag',
-            'zoom': {% if zoom %}{{ zoom }}{% else %}10{% endif %},
-        });
+    RB.tagMap({
+        'ignApiKey': "{{ config.ignKey }}",
+        'popup': {% if popup %}true{% else %}false{% endif %},
+        'title': {{ title|json|safe }},
+        'point': {{ latlon|json|safe }},
+        'map': '.map-tag',
+        'zoom': {% if zoom %}{{ zoom }}{% else %}10{% endif %},
     });
 {% endif %}
 {% endblock %}

@@ -33,22 +33,20 @@
 {% endblock %}
 
 {% block javascriptCode %}
-    require(['globalMap', 'treks'], function (globalMap, treks) {
-        globalMap.init(treks, {
-            'ignApiKey': "{{ config.ignKey }}",
-            'selector': {
-                'showMap': '.show-map',
-                'hideMap': '.back-list',
-                'map': '.global-map',
-                'mapContainer': '.map-container',
-            },
-            'classes': {
-                'displayed': 'global-map-displayed'
-            },
-            'style': {
-                'pathOpacity': 1,
-                'weight': 8,
-            }
-        });
+    RB.globalMap("{{ "randonnees/data.js"|url(true) }}", {
+        'ignApiKey': "{{ config.ignKey }}",
+        'selector': {
+            'showMap': '.show-map',
+            'hideMap': '.back-list',
+            'map': '.global-map',
+            'mapContainer': '.map-container',
+        },
+        'classes': {
+            'displayed': 'global-map-displayed'
+        },
+        'style': {
+            'pathOpacity': 1,
+            'weight': 8,
+        }
     });
 {% endblock %}

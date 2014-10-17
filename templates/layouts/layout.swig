@@ -4,23 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{{ config.title }}{% endblock %}</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="{{ "css/pure/pure.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "css/pure/grids-responsive-old-ie.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "lib/leaflet/leaflet.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "lib/leaflet.fullscreen/leaflet.fullscreen.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "css/structure.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "css/theme.css"|asset() }}">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="{{ "css/pure/pure.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "css/pure/grids-responsive.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "lib/leaflet/leaflet.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "lib/leaflet.fullscreen/leaflet.fullscreen.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "css/structure.css"|asset() }}">
-    <link rel="stylesheet" href="{{ "css/theme.css"|asset() }}">
-    <!--<![endif]-->
+    <link rel="stylesheet" href="{{ cssFile|url(true) }}">
     <!--[if lt IE 9]>
     <script>(function(){var tags=['header','article','footer','nav', 'time', 'section', 'figure', 'abbr'];for(var i=0;i!=tags.length;i++) document.createElement(tags[i]);})();</script>
     <![endif]-->
@@ -79,21 +63,14 @@
     </footer>
     {% endblock %}
 
-    <script data-main="{{ "js/enabled.js"|asset() }}" src="{{ "js/requirejs/require.js"|asset() }}"></script>
+    <script src="{{ jsFile|url(true) }}"></script>
     <script>
-    requirejs.config({
-        paths: {
-            "tracks": "{{ "single-tracks/data"|url(true) }}",
-            "treks": "{{ "randonnees/data"|url(true) }}",
-            "leaflet": "{{ "lib/leaflet/leaflet"|asset() }}",
-            "leaflet.fullscreen": "{{ "lib/leaflet.fullscreen/Leaflet.fullscreen"|asset() }}",
-            "domReady": "requirejs-domready/domReady",
-            "globalMap": "global-map",
-            "trackMap": "track-map",
-            "tagMap": "tag-map",
-        },
-    });
+    (function(doc){
+        doc.body.classList.add('js-enabled');
+        L.Icon.Default.imagePath = "{{ config.leafletDefaultImagePath|asset()|e('js') }}";
+    })(document);
     {% block javascriptCode %}{% endblock %}
+
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

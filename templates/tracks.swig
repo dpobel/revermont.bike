@@ -33,22 +33,20 @@
 {% endblock %}
 
 {% block javascriptCode %}
-    require(['globalMap', 'tracks'], function (globalMap, tracks) {
-        globalMap.init(tracks, {
-            'ignApiKey': "{{ config.ignKey }}",
-            'selector': {
-                'showMap': '.show-map',
-                'hideMap': '.back-list',
-                'map': '.global-map',
-                'mapContainer': '.map-container',
-            },
-            'classes': {
-                'displayed': 'global-map-displayed'
-            },
-            'style': {
-                'pathOpacity': 1,
-                'weight': 8,
-            }
-        });
+    RB.globalMap("{{ "single-tracks/data.js"|url(true) }}", {
+        'ignApiKey': "{{ config.ignKey }}",
+        'selector': {
+            'showMap': '.show-map',
+            'hideMap': '.back-list',
+            'map': '.global-map',
+            'mapContainer': '.map-container',
+        },
+        'classes': {
+            'displayed': 'global-map-displayed'
+        },
+        'style': {
+            'pathOpacity': 1,
+            'weight': 8,
+        }
     });
 {% endblock %}

@@ -14,9 +14,8 @@
   "dependencies": {
     "pure": "0.5.0",
     "leaflet": "0.7.3",
-    "requirejs": null,
-    "requirejs-domready": null,
-    "leaflet.fullscreen": "https://github.com/Leaflet/Leaflet.fullscreen.git#~0.0.3"
+    "leaflet.fullscreen": "https://github.com/Leaflet/Leaflet.fullscreen.git#~0.0.3",
+    "domready": "~1.0.7"
   },
   "exportsOverride": {
     "pure": {
@@ -32,15 +31,8 @@
     "leaflet.fullscreen": {
       "lib": "dist"
     },
-    "requirejs": {
-      "js": [
-        "require.js"
-      ]
-    },
-    "requirejs-domready": {
-      "js": [
-        "domReady.js"
-      ]
+    "domready": {
+      "js": ["ready.js"]
     }
   }
 }

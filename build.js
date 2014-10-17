@@ -21,6 +21,7 @@ var argv = require('minimist')(process.argv.slice(2), {
     pooleApp = require('metalsmith-pooleapp'),
     define = require('metalsmith-define'),
     cleanCss = require('metalsmith-clean-css'),
+    uglify = require('metalsmith-uglify'),
 
     date = require('./lib/metalsmith/date'),
     gpxcleaner = require('./lib/metalsmith/gpxcleaner'),
@@ -125,6 +126,10 @@ metalsmith(__dirname)
     .use(concat({
         files: conf.concat.js,
         output: jsFile,
+    }))
+    .use(uglify({
+        filter: jsFile,
+        concat: jsFile
     }))
     .use(define({
         jsFile: jsFile,

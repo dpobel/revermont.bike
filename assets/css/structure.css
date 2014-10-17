@@ -387,6 +387,7 @@ img {
 
 .share-item {
     display: inline-block;
+    margin-right: 0.3em;
 }
 
 .share-button {

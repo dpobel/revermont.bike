@@ -6,6 +6,7 @@
     "source": "src",
     "concat": {
         "css": [
+            "assets/font.css",
             "assets/css/pure/pure.css",
             "assets/css/pure/grids-responsive.css",
             "assets/lib/leaflet/leaflet.css",

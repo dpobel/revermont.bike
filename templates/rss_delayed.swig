@@ -4,7 +4,9 @@
     {% include "parts/rss_meta.swig" %}
 
     {% for obj in collections[exportCollection] %}
-        {% include "parts/rss_item.swig" %}
+        {% if obj.created|is_before(100, 'h') %}
+            {% include "parts/rss_item.swig" %}
+        {% endif %}
     {% endfor %}
     </channel>
 </rss>

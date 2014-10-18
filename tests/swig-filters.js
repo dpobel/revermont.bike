@@ -491,4 +491,38 @@ describe('Swig filters', function () {
             });
         });
     });
+
+    describe('is_before filter', function () {
+        it('define the is_before filter', function () {
+            var swig = {setFilter: function () {}},
+                spy = sinon.spy(swig, "setFilter");
+
+            spy.withArgs('is_before');
+            filter(swig, config);
+
+            sassert.calledOnce(spy.withArgs('is_before'));
+            sassert.calledWith(spy, 'is_before', sinon.match.func);
+        });
+
+        describe('behavior', function () {
+            var isBefore,
+                swig = {setFilter: function (name, func) {
+                    if ( name === 'is_before' ) {
+                        isBefore = func;
+                    }
+                }};
+
+            beforeEach(function () {
+                filter(swig, config);
+            });
+
+            it('should compare the dates (in the past)', function () {
+                assert.ok(isBefore("1981-11-12", 1, "d"));
+            });
+
+            it('should compare the dates (in the future)', function () {
+                assert.ok(!isBefore(moment().add(1, "d"), 1, "h"));
+            });
+        });
+    });
 });

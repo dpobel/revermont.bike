@@ -1,0 +1,7 @@
+---
+permalink: false
+template: rss_delayed.swig
+title: Les derniers sentiers sur Revermont.bike
+exportCollection: lastTracks
+path: sentiers_delayed.xml
+---

@@ -97,7 +97,7 @@
             "reverse": true
         },
         "feeds": {
-            "pattern": "*.xml"
+            "pattern": "{posts,randonnees,single-tracks}.xml"
         },
         "menu": {
             "sortBy": "priority",

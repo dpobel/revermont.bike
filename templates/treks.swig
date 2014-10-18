@@ -20,6 +20,7 @@
             <th><abbr title="Altitude minimale">Alt. min</abbr></th>
         </tr>
     </thead>
+    {% set max = 0 %}
     {% for trek in treks %}
     <tr>
         <td><a href="{{ trek.path|url }}">{{ trek.title }}</a></td>
@@ -27,13 +28,16 @@
         <td>{% if trek.loop %}±{{ trek.elevation.gain }}{% else %}+{{ trek.elevation.gain }}/-{{ trek.elevation.loss}}{% endif %}&nbsp;m</td>
         <td>{{ trek.elevation.max }}&nbsp;m</td>
         <td>{{ trek.elevation.min }}&nbsp;m</td>
+        {% if trek.updated.unix() > max %}
+            {% set max = trek.updated.unix() %}
+        {% endif %}
     </tr>
     {% endfor %}
     </table>
 {% endblock %}
 
 {% block javascriptCode %}
-    RB.globalMap("{{ "randonnees/data.js"|url(true) }}", {
+    RB.globalMap("{{ "randonnees/data.js"|url(true) }}?{{ max }}", {
         'ignApiKey': "{{ config.ignKey }}",
         'selector': {
             'showMap': '.show-map',

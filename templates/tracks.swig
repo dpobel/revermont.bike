@@ -20,6 +20,7 @@
             <th><abbr title="Altitude minimale">Alt. min</abbr></th>
         </tr>
     </thead>
+    {% set max = 0 %}
     {% for track in tracks %}
     <tr>
         <td><a href="{{ track.path|url }}">{{ track.title }}</a></td>
@@ -27,13 +28,16 @@
         <td>{% if track.loop %}±{{ track.elevation.gain }}{% else %}+{{ track.elevation.gain }}/-{{ track.elevation.loss}}{% endif %}&nbsp;m</td>
         <td>{{ track.elevation.max }}&nbsp;m</td>
         <td>{{ track.elevation.min }}&nbsp;m</td>
+        {% if track.updated.unix() > max %}
+            {% set max = track.updated.unix() %}
+        {% endif %}
     </tr>
     {% endfor %}
     </table>
 {% endblock %}
 
 {% block javascriptCode %}
-    RB.globalMap("{{ "single-tracks/data.js"|url(true) }}", {
+    RB.globalMap("{{ "single-tracks/data.js"|url(true) }}?{{ max }}", {
         'ignApiKey': "{{ config.ignKey }}",
         'selector': {
             'showMap': '.show-map',

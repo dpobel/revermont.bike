@@ -18,6 +18,7 @@
             "assets/js/domready/ready.js",
             "assets/lib/leaflet/leaflet.js",
             "assets/lib/leaflet.fullscreen/Leaflet.fullscreen.js",
+            "assets/js/layers.js",
             "assets/js/global-map.js",
             "assets/js/track-map.js",
             "assets/js/tag-map.js"

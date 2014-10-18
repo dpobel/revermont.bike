@@ -1,6 +1,7 @@
 /* global describe, it, beforeEach */
 var gpx = require('../lib/metalsmith/gpxparser'),
     assert = require('assert'),
+    moment = require('moment'),
     sinon = require('sinon'),
     fs = require('fs');
 
@@ -38,14 +39,15 @@ describe('Metalsmith gpxparser', function () {
     });
 
     it('should create the data.js entry', function (done) {
-        var files = {
-                'tracks/test1.md': {'gpx': 'test1.gpx'},
+        var date = '2012-01-05',
+            files = {
+                'tracks/test1.md': {'gpx': 'test1.gpx', updated: date},
                 'tracks/test1.gpx': {contents: gpxFileContent('test1.gpx')},
             };
 
         gpx()(files, ms, function (err) {
             var file = files['tracks/test1.md'],
-                data = files['tracks/data.js'],
+                data = files['tracks/data-' + moment(date).unix() + '.js'],
                 dataContent;
 
             assert.ok(typeof err === 'undefined');

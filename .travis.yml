@@ -8,7 +8,7 @@ before_script:
     - sudo apt-get update -qq
     - sudo apt-get install gpsbabel
     - npm install -g grunt-cli
-    - export REV=`git log --pretty=%h -1`
+    - export REV=`git log --pretty=%h -1 assets`
 env:
     global:
         - secure: UWcxESu8CGdVT+Jxm3FkYYHRu07L2NIkkf5jTfguYEhrXpzgX+E9d7MR9b8jHpLjsVhXMB8hf6ncI6xUHTUGEPk0bI3+8Ut8edFle+OoFu6NkcZAYF3gvp0bBkAxzT8tZGk/6xLwUn8LhJeGOTaCYoc9DFz9jw9t120Et1Jmmqs=

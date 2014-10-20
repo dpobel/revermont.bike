@@ -30,7 +30,7 @@ employés tout au long de ces pages.
 
 ## Le Revermont&nbsp;?
 
-Mais au fait, c'est quoi le Revermont&nbsp;? D'après [la page
+Mais au fait, [c'est quoi le Revermont](/tags/revermont/)&nbsp;? D'après [la page
 Wikipédia](http://fr.wikipedia.org/wiki/Revermont)&nbsp;:
 
 > Région naturelle de reliefs calcaires située au nord de la région Rhône-Alpes

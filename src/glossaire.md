@@ -26,6 +26,8 @@ GPX.</dd>
 randonnée pédestre. Un GR s'étend généralement sur plusieurs centaines de
 kilomètres et est balisé en rouge et blanc. Le Revermont est notamment traversé
 par le [GR9](/tags/gr9/) et le [GR59](/tags/gr59/).</dd>
+<dt id="revermont">Revermont</dt>
+<dd>Voir [Revermont](/tags/revermont/)</dd>
 <dt id="grp" class="glossary-term">GRP</dt>
 <dd>Pour Grande Randonnée de Pays. Tout comme les GR, ce sont des circuits de
 randonnée pédestre, balisés en rouge et jaune qui a l'inverse des GR sont centrés
@@ -34,9 +36,6 @@ sur une région spécifique. Il existe par exemple le [GRP Tour du Revermont](/t
 <dd>**Hard tail** en anglais, VTT uniquement suspendu à l'avant par opposition à
 *tout suspendu* et *tout rigide*.</dd>
 <dt id="single" class="glossary-term">Single-tracks</dt>
-<dd>Un single-track ou **monotrace** en français est un chemin étroit
-(litéralement avec *une seule trace*). Avec un peu de bagage technique, ces
-chemins sont extrêment agréables à rouler et sont en général très recherchés des
-VTTistes. Voila pourquoi une section de ce site est dédiée aux
+<dd>Voir [Single track](/tags/single-track/) et tous les exemples dans les
 [single tracks du Revermont](/single-tracks/) ;-).</dd>
 </dl>

@@ -2,3 +2,7 @@ web/
 bower_components/
 node_modules/
 coverage/
+assets/css/pure/
+assets/font.css
+assets/js/domready/
+assets/lib/

@@ -21,7 +21,11 @@
             "IGN Topo": L.tileLayer(
                 layerUrl(ignApiKey, "GEOGRAPHICALGRIDSYSTEMS.MAPS"),
                 attr
-            )
+            ),
+            "Photos aériennes": L.tileLayer(
+                layerUrl(ignApiKey, "ORTHOIMAGERY.ORTHOPHOTOS"),
+                attr
+            ),
         };
     };
 })(window, L);

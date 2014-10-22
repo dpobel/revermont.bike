@@ -3,7 +3,7 @@
     "use strict";
 
     var RB = global.RB = global.RB || {},
-        attr = '&copy; <a href="http://www.ign.fr/">IGN</a>';
+        attr = {attribution: '&copy; <a href="http://www.ign.fr/">IGN</a>'};
 
     function layerUrl(key, layer) {
         return "http://wxs.ign.fr/" + key

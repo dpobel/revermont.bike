@@ -43,6 +43,7 @@
 
         <div class="track-sidebar-panel" id="description">
             <h2 class="page-subtitle icon-description">Description</h2>
+            <img itemprop="image" alt="Carte" src="{{ screenshot.filename }}" hidden>
             <div itemprop="text" class="contents">{{ contents|safe }}</div>
 
             <p>Mots-clés&nbsp;:</p>

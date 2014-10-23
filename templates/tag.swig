@@ -52,6 +52,7 @@
 {% if latlon %}
     RB.tagMap({
         'ignApiKey': "{{ config.ignKey }}",
+        'layerReadyClass': "{{ screenshot.layerReadyClass }}",
         'popup': {% if popup %}true{% else %}false{% endif %},
         'title': {{ title|json|safe }},
         'point': {{ latlon|json|safe }},

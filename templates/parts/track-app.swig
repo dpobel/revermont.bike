@@ -1,6 +1,7 @@
 RB.trackMap("{{ dataUrl|url(true) }}", {
     'ignApiKey': "{{ config.ignKey }}",
     'map': '.track-map',
+    'layerReadyClass': "{{ screenshot.layerReadyClass }}",
     'container': '.track-app',
     'sidebar': '.track-sidebar',
     'profile': '.track-profile',

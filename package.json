@@ -12,6 +12,8 @@
   "devDependencies": {
     "async": "^0.9.0",
     "autolinker": "^0.11.2",
+    "casperjs": "^1.1.0-beta3",
+    "cheerio": "^0.17.0",
     "color-generator": "^0.1.0",
     "forecastio": "^0.2.0",
     "grunt": "^0.4.5",

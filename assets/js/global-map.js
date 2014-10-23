@@ -33,10 +33,10 @@
         var layers = RB.layers(config.ignApiKey, L);
 
         map = L.map(doc.querySelector(config.selector.map), {
-            layers: [layers["IGN Scan express"]]
+            layers: [layers.defaultLayer]
         });
         map.fitBounds(_getBounds());
-        L.control.layers(layers, {}, {position: 'topleft'}).addTo(map);
+        L.control.layers(layers.layers, {}, {position: 'topleft'}).addTo(map);
 
         Object.keys(tracks).forEach(function (name) {
             var track = tracks[name],

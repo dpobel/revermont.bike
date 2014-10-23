@@ -20,6 +20,6 @@
     creator: "@dpobel",
     title: title,
     description: contents|striptags|shorten(200),
-    src: profile,
+    src: path + '/' + screenshot.filename,
 } %}
 {% endblock %}

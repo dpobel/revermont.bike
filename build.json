@@ -208,5 +208,21 @@
             }
         },
         "pattern": "**"
-    }]
+    }],
+    "screenshot": {
+        "viewport": {
+            "width": 400,
+            "height": 445
+        },
+        "host": "127.0.0.1",
+        "base": "/",
+        "port": 10001,
+        "selector": ".track-map,.map-tag",
+        "format": "jpg",
+        "filename": "map.jpg",
+        "concurrency": 2,
+        "urlHash": "simplified-map",
+        "layerReadyClass": "default-layer-loaded",
+        "transitionWaitTime": 500
+    }
 }

@@ -135,6 +135,7 @@ metalsmith(__dirname)
     .use(define({
         jsFile: jsFile,
         cssFile: cssFile,
+        screenshot: conf.screenshot,
     }))
     .use(templates(conf.templateEngine))
     .use(ignore(conf.ignore))

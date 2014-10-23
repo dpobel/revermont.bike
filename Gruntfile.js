@@ -22,6 +22,16 @@ module.exports = function(grunt) {
                     failOnError: true
                 }
             },
+            screenshots: {
+                command: function () {
+                    return './screenshots.js';
+                },
+                options: {
+                    stdout: true,
+                    stderr: true,
+                    failOnError: true
+                }
+            },
             "build-test": {
                 command: './build.js --source ' + fnTest + '/src --destination ' + fnTest + '/web',
                 options: {
@@ -81,6 +91,12 @@ module.exports = function(grunt) {
                     port: 9001,
                     base: fnTest + '/web',
                 },
+            },
+            screenshots: {
+                options: {
+                    port: build.screenshot.port,
+                    base: build.destination
+                }
             }
         },
         casper: {
@@ -102,11 +118,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-casper');
     grunt.loadNpmTasks('grunt-curl');
 
-    grunt.registerTask('build', ['curl', 'bower:install', 'shell:build']);
+    grunt.registerTask('build', ['curl', 'bower:install', 'shell:build', 'screenshots']);
     grunt.registerTask('build-test', ['curl', 'bower:install', 'shell:build-test']);
     grunt.registerTask('functional-test', ['build-test', 'connect', 'casper:test']);
     grunt.registerTask('unit-test', ['mochaTest']);
     grunt.registerTask('test', ['unit-test', 'functional-test']);
     grunt.registerTask('coverage', ['mocha_istanbul']);
+    grunt.registerTask('screenshots', ['connect:screenshots', 'shell:screenshots']);
     grunt.registerTask('default', ['build']);
 };

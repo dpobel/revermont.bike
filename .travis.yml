@@ -4,10 +4,11 @@ branches:
         - master
 node_js:
     - '0.10'
+install:
+    - sudo npm install -g npm@2
 before_script:
     - sudo apt-get update -qq
     - sudo apt-get install gpsbabel
-    - sudo npm install -g npm@2
     - npm install -g grunt-cli
     - export REV=`git log --pretty=%h -1 assets`
 env:

@@ -1,5 +1,4 @@
-/* global L */
-(function (global, L) {
+(function (global) {
     "use strict";
 
     var RB = global.RB = global.RB || {},
@@ -12,20 +11,29 @@
             + "TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&FORMAT=image%2Fjpeg";
     }
 
-    RB.layers = function (ignApiKey) {
-        return {
-            "IGN Scan express": L.tileLayer(
-                layerUrl(ignApiKey, "GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN-EXPRESS.CLASSIQUE"),
-                attr
-            ),
-            "IGN Topo": L.tileLayer(
-                layerUrl(ignApiKey, "GEOGRAPHICALGRIDSYSTEMS.MAPS"),
-                attr
-            ),
-            "Photos aériennes": L.tileLayer(
-                layerUrl(ignApiKey, "ORTHOIMAGERY.ORTHOPHOTOS"),
-                attr
-            ),
-        };
+    RB.layers = function (ignApiKey, L, layerReadyClass) {
+        var res = {
+                layers: {
+                    "IGN Scan express": L.tileLayer(
+                        layerUrl(ignApiKey, "GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN-EXPRESS.CLASSIQUE"),
+                        attr
+                    ),
+                    "IGN Topo": L.tileLayer(
+                        layerUrl(ignApiKey, "GEOGRAPHICALGRIDSYSTEMS.MAPS"),
+                        attr
+                    ),
+                    "Photos aériennes": L.tileLayer(
+                        layerUrl(ignApiKey, "ORTHOIMAGERY.ORTHOPHOTOS"),
+                        attr
+                    ),
+                },
+            };
+        res.defaultLayer = res.layers["IGN Scan express"];
+        if ( layerReadyClass ) {
+            res.defaultLayer.on('load', function () {
+                global.document.body.classList.add(layerReadyClass);
+            });
+        }
+        return res;
     };
-})(window, L);
+})(window);

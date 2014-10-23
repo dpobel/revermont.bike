@@ -4,7 +4,8 @@
 
     var config, map, track,
         RB = window.RB = window.RB || {},
-        doc = global.document;
+        doc = global.document,
+        simplified = (doc.location.hash === '#simplified-map');
 
     function _getBounds() {
         var bounds = track.bounds;
@@ -50,13 +51,17 @@
         var layers, line, marker, profile, tooltip, chart, info, infoTpl,
             start = {lat: track.points[0].lat, lon: track.points[0].lon};
 
-        layers = RB.layers(config.ignApiKey, L);
+        layers = RB.layers(config.ignApiKey, L, config.layerReadyClass);
         map = L.map(doc.querySelector(config.map), {
-            layers: [layers["IGN Scan express"]],
-            fullscreenControl: true,
+            layers: [layers.defaultLayer],
+            fullscreenControl: !simplified,
+            zoomControl: !simplified,
+            attributionControl: !simplified,
         });
         map.fitBounds(_getBounds());
-        L.control.layers(layers, {}, {position: 'topleft'}).addTo(map);
+        if ( !simplified ) {
+            L.control.layers(layers.layers, {}, {position: 'topleft'}).addTo(map);
+        }
 
         if ( map.getZoom() > config.maxAutoZoom ) {
             map.setZoom(config.maxAutoZoom, {animated: true});

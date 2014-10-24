@@ -10,7 +10,8 @@ Le col des Justices tire sont nom du fait qu'au moyen âge, c'est l'endroit où
 justice](http://fr.wiktionary.org/wiki/bois_de_justice).
 
 De nos jours, cet endroit est véritablement un carrefour pour les randonneurs.
-Situé entre [Treffort-Cuisiat](/tags/col-des-justices/) et Chavannes sur Suran,
+Situé entre [Treffort-Cuisiat](/tags/col-des-justices/) et [Chavannes sur
+Suran](/tags/chavannes-sur-suran/),
 ce lieu n'est pas particulièrement beau mais il donne à accès à plusieurs
 superbes sentiers. Depuis le col des Justices, il est possible de monter sur [la
 crête de Lomont](/tags/lomont/) ([GR59](/single-tracks/gr59/)), de descendre sur

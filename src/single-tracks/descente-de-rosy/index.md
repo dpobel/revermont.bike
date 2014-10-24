@@ -23,6 +23,6 @@ src="/photos/rosy-nivigne-lomont/rosy_750.jpg" alt="Vue sur Rosy, le Mont
 Nivigne et la crête de Lomont"></a>
 
 La descente est d'abord très raide avant de devenir plus sinueuse. Tout au long
-de celle-ci, se trouvent quelques modules aménagées qui la rendent
+de celle-ci, se trouvent quelques modules aménagés qui la rendent
 vraiment fun, mais il est toujours possible d'éviter ces modules pour ceux qui
 préfèrent rouler *naturel*.

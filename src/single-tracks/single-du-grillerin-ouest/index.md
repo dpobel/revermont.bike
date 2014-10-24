@@ -1,6 +1,6 @@
 ---
 gpx: grillerin.gpx
-tags: grillerin, single track, treffort-cuisiat, esses de treffort, gr59
+tags: grillerin, single track, treffort-cuisiat, esses de treffort, gr59, vidéo
 updated: 2014-10-08
 created: 2014-10-08 12:00
 ---

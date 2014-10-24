@@ -1,6 +1,6 @@
 ---
 gpx: rosy.gpx
-tags: rosy, col des justices, chavannes-sur-suran, cabatane, single track
+tags: rosy, col des justices, chavannes-sur-suran, cabatane, single track, vidéo
 created: 2014-10-11
 updated: 2014-10-11
 ---

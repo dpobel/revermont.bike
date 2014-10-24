@@ -4,7 +4,7 @@ created: 2014-09-30
 updated: 2014-09-30
 type: Profil descendant
 inverted: Pas très intéressant (très raide)
-tags: single track, treffort-cuisiat, crête, col des justices, croix des angoulures, esses de treffort, cabatane
+tags: single track, treffort-cuisiat, crête, col des justices, croix des angoulures, esses de treffort, cabatane, vidéo
 ---
 
 Le sentier de la crête de la Cabatane permet de relier [le Col des

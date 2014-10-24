@@ -5,6 +5,7 @@
     <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
         <noscript>JavaScript est requis pour afficher la carte</noscript>
         <div class="track-map"></div>
+        <img itemprop="image" alt="Carte" src="{{ screenshot.filename }}" hidden>
     </div>
     <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5 track-sidebar">
         <ul class="track-sidebar-tabs"><!--
@@ -43,7 +44,6 @@
 
         <div class="track-sidebar-panel" id="description">
             <h2 class="page-subtitle icon-description">Description</h2>
-            <img itemprop="image" alt="Carte" src="{{ screenshot.filename }}" hidden>
             <div itemprop="text" class="contents">{{ contents|safe }}</div>
 
             <p>Mots-clés&nbsp;:</p>

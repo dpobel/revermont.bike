@@ -1,6 +1,6 @@
 ---
 title: Bilan de la Trans-Revermont 2014
-tags: randonnée organisée, revermont, simandre-sur-suran
+tags: randonnée organisée, revermont, simandre-sur-suran, single track, fat bike
 created: 2014-10-27 08:50
 ---
 
@@ -10,7 +10,7 @@ Revermont](http://vtt-bourg-revermont.fr/) et autant le dire tout de suite
 c'était vraiment une super randonnée organisée&nbsp;!
 
 J'ai en particulier adoré le parcours de cette Trans-Revermont 2014. Un vrai
-parcours de VTT mêlant beaux paysages (encore plus quand on joue à cache-cache
+parcours de VTT au départ de Simandre-sur-Suran mêlant beaux paysages (encore plus quand on joue à cache-cache
 avec le brouillard), parties physiques, zones techniques et single-tracks funs
 tout en restant relativement accessible. Pour une randonnée organisée, où
 parfois les parcours sont un peu aseptisés, c'est une vraie réussite. Avec
@@ -26,7 +26,7 @@ matinal.
 
 <a href="/assets/img/specialized-fatboy.jpg"><img
 src="/assets/img/specialized-fatboy_350.jpg" alt="Specialized Fatboy"
-class="img-left img-light"></a>
+class="img-left"></a>
 
 Au niveau des curiosités, pendant un moment, j'ai tenté de suivre un gars sur un
 [Specialized
@@ -34,7 +34,7 @@ Fatboy](http://www.specialized.com/fr/fr/bikes/mountain/fatboy/fatboy). Ce vélo
 atypique était le centre de toutes les curiosités et clairement, avec un truc
 pareil, il est impossible de passer inaperçu :-)
 
-À l'arrêt, cet engin est un impressionnant et il paraît un peu *pateau* mais sur
+À l'arrêt, cet engin est un impressionnant et il paraît un peu *pataud* mais sur
 les chemins ça a l'air vraiment rigolo à piloter. J'aurais bien envie d'essayer
 une sortie avec un vélo de ce genre, il faudrait que je vois si on peut louer ce
 type d'engin dans les parages...
@@ -44,4 +44,4 @@ type d'engin dans les parages...
 Bref, **cette Trans-Revermont 2014 était super**, je réserve d'ores et déjà mon
 dimanche fin octobre 2015 pour la prochaine édition, en espèrant que le temps
 soit aussi clément que cette année et en espèrant aussi être plus en forme, car
-là j'ai mal partout :-)
+là j'ai mal un peu partout :-)

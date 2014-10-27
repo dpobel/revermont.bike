@@ -1,6 +1,7 @@
 ---
 title: Trans-Revermont VTT 2014
 created: 2014-10-13 22:13
+updated: 2014-10-27 08:50
 tags: revermont, vtt, évènement, randonnée organisée, simandre-sur-suran
 ---
 <a href="http://vtt-bourg-revermont.fr/pages/vtt_bourg_evenements.php"><img
@@ -32,3 +33,7 @@ D'autant plus  que c'est un coin du Revermont que je connais assez mal, ce sera
 une excellente occasion de [répertorier de nouveaux single
 tracks](/single-tracks/) et d'élargir un peu la zone géographique couverte en
 espèrant que le temps soit clément le 26 octobre.
+
+**Mise à jour du 27/10/2014&nbsp;:** [Compte
+rendu](/posts/bilan-trans-revermont-2014/) et [parcours de cette
+Trans-Revermont 2014](/randonnees/trans-revermont-2014/) sont disponibles.

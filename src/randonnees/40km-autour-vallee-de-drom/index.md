@@ -1,6 +1,6 @@
 ---
 gpx: jasseron.gpx
-tags: jasseron, meillonnas, grillerin, rosy, dhuys, montmerle, drom, ramasse, observatoire
+tags: jasseron, meillonnas, grillerin, rosy, dhuys, montmerle, drom, ramasse, observatoire, col de la pérouse, valuisant
 created: 2014-10-18
 updated: 2014-10-18
 ---

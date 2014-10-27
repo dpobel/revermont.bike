@@ -11,42 +11,6 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/
 </metadata>
 <trk>
 <trkseg>
-<trkpt lat="46.221335" lon="5.421052">
-<ele>396.5</ele>
-<time>2014-10-26T07:40:22.783Z</time>
-</trkpt>
-<trkpt lat="46.221338" lon="5.421023">
-<ele>375.2</ele>
-<time>2014-10-26T07:41:12.918Z</time>
-</trkpt>
-<trkpt lat="46.221288" lon="5.421219">
-<ele>371.4</ele>
-<time>2014-10-26T07:41:13.943Z</time>
-</trkpt>
-<trkpt lat="46.221311" lon="5.42111">
-<ele>360.9</ele>
-<time>2014-10-26T07:41:55.908Z</time>
-</trkpt>
-<trkpt lat="46.221311" lon="5.421077">
-<ele>360.7</ele>
-<time>2014-10-26T07:41:56.892Z</time>
-</trkpt>
-<trkpt lat="46.221294" lon="5.420967">
-<ele>360.6</ele>
-<time>2014-10-26T07:41:59.926Z</time>
-</trkpt>
-<trkpt lat="46.221287" lon="5.420931">
-<ele>361.4</ele>
-<time>2014-10-26T07:42:00.918Z</time>
-</trkpt>
-<trkpt lat="46.221243" lon="5.420827">
-<ele>362.3</ele>
-<time>2014-10-26T07:42:06.907Z</time>
-</trkpt>
-<trkpt lat="46.221232" lon="5.420827">
-<ele>362.9</ele>
-<time>2014-10-26T07:42:07.926Z</time>
-</trkpt>
 <trkpt lat="46.221249" lon="5.420723">
 <ele>364.4</ele>
 <time>2014-10-26T07:42:11.951Z</time>
@@ -3862,14 +3826,6 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/
 <trkpt lat="46.211835" lon="5.423318">
 <ele>513.1</ele>
 <time>2014-10-26T08:16:39.175Z</time>
-</trkpt>
-<trkpt lat="46.211885" lon="5.423246">
-<ele>513.5</ele>
-<time>2014-10-26T08:16:41.115Z</time>
-</trkpt>
-<trkpt lat="46.211913" lon="5.423197">
-<ele>514.2</ele>
-<time>2014-10-26T08:16:42.116Z</time>
 </trkpt>
 <trkpt lat="46.211926" lon="5.423107">
 <ele>512.4</ele>
@@ -30830,70 +30786,6 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/
 <trkpt lat="46.221236" lon="5.420774">
 <ele>355.3</ele>
 <time>2014-10-26T12:08:20.405Z</time>
-</trkpt>
-<trkpt lat="46.221213" lon="5.420825">
-<ele>354.7</ele>
-<time>2014-10-26T12:08:21.371Z</time>
-</trkpt>
-<trkpt lat="46.221182" lon="5.420864">
-<ele>355.1</ele>
-<time>2014-10-26T12:08:22.414Z</time>
-</trkpt>
-<trkpt lat="46.22113" lon="5.42091">
-<ele>354.2</ele>
-<time>2014-10-26T12:08:23.457Z</time>
-</trkpt>
-<trkpt lat="46.221085" lon="5.420933">
-<ele>353.3</ele>
-<time>2014-10-26T12:08:24.405Z</time>
-</trkpt>
-<trkpt lat="46.221044" lon="5.42096">
-<ele>351.6</ele>
-<time>2014-10-26T12:08:25.420Z</time>
-</trkpt>
-<trkpt lat="46.221001" lon="5.421055">
-<ele>352.2</ele>
-<time>2014-10-26T12:08:27.387Z</time>
-</trkpt>
-<trkpt lat="46.220997" lon="5.421102">
-<ele>352.4</ele>
-<time>2014-10-26T12:08:28.378Z</time>
-</trkpt>
-<trkpt lat="46.221031" lon="5.421219">
-<ele>352.4</ele>
-<time>2014-10-26T12:08:31.387Z</time>
-</trkpt>
-<trkpt lat="46.221064" lon="5.421239">
-<ele>353</ele>
-<time>2014-10-26T12:08:32.375Z</time>
-</trkpt>
-<trkpt lat="46.221108" lon="5.421246">
-<ele>353.1</ele>
-<time>2014-10-26T12:08:33.378Z</time>
-</trkpt>
-<trkpt lat="46.221155" lon="5.421272">
-<ele>353.2</ele>
-<time>2014-10-26T12:08:34.399Z</time>
-</trkpt>
-<trkpt lat="46.221224" lon="5.421299">
-<ele>352.8</ele>
-<time>2014-10-26T12:08:36.379Z</time>
-</trkpt>
-<trkpt lat="46.22126" lon="5.421314">
-<ele>352.2</ele>
-<time>2014-10-26T12:08:37.387Z</time>
-</trkpt>
-<trkpt lat="46.221328" lon="5.421323">
-<ele>352.1</ele>
-<time>2014-10-26T12:08:39.326Z</time>
-</trkpt>
-<trkpt lat="46.221356" lon="5.421312">
-<ele>351</ele>
-<time>2014-10-26T12:08:40.352Z</time>
-</trkpt>
-<trkpt lat="46.221399" lon="5.421201">
-<ele>352.7</ele>
-<time>2014-10-26T12:10:02.327Z</time>
 </trkpt>
 </trkseg>
 </trk>

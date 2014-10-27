@@ -17,5 +17,5 @@ descente entre l'Observatoire et Jasseron.
 
 La quasi totalité du parcours se fait sur le vélo à l'exception d'une partie
 extrêment raide peu après Jasseron sur le Mont de Sanciat en direction de
-Meillonnas où il vaut mieux avoir de très bonne chaussures et de quelques courts
+Meillonnas où il vaut mieux avoir de très bonnes chaussures et de quelques courts
 passages sur le sentier de la Grillière.

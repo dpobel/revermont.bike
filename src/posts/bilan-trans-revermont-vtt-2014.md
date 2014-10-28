@@ -34,7 +34,7 @@ Fatboy](http://www.specialized.com/fr/fr/bikes/mountain/fatboy/fatboy). Ce vélo
 atypique était le centre de toutes les curiosités et clairement, avec un truc
 pareil, il est impossible de passer inaperçu :-)
 
-À l'arrêt, cet engin est un impressionnant et il paraît un peu *pataud* mais sur
+À l'arrêt, cet engin est impressionnant et il paraît un peu *pataud* mais sur
 les chemins ça a l'air vraiment rigolo à piloter. J'aurais bien envie d'essayer
 une sortie avec un vélo de ce genre, il faudrait que je vois si on peut louer ce
 type d'engin dans les parages...

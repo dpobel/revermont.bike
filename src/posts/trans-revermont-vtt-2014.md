@@ -35,5 +35,5 @@ tracks](/single-tracks/) et d'élargir un peu la zone géographique couverte en
 espèrant que le temps soit clément le 26 octobre.
 
 **Mise à jour du 27/10/2014&nbsp;:** [Compte
-rendu](/posts/bilan-trans-revermont-2014/) et [parcours de cette
+rendu](/posts/bilan-trans-revermont-vtt-2014/) et [parcours de cette
 Trans-Revermont 2014](/randonnees/trans-revermont-2014/) sont disponibles.

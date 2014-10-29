@@ -14,4 +14,4 @@ règnait sur le Revermont.
 Coligny se trouve à la pointe nord du [GRP Tour du
 Revermont](/tags/grp-tour-du-revermont/). Son point culminant, le plateau de
 Vergongeat, est connu pour sa fête des jonquilles au mois de mars et est
-traversé par le GRP Tour du Revermont le [GR59](/tags/gr59/).
+traversé par le GRP Tour du Revermont et le [GR59](/tags/gr59/).

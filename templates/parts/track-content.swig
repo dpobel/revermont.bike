@@ -46,12 +46,14 @@
             <h2 class="page-subtitle icon-description">Description</h2>
             <div itemprop="text" class="contents">{{ contents|safe }}</div>
 
+            {% if tags %}
             <p>Mots-clés&nbsp;:</p>
             <ul class="content-tags" itemprop="keywords">
             {% for tag in tags %}
                 <li class="content-tags-item icon-tag"><a href="{{ tagsList[tag].path|url }}">{{ tag }}</a></li>
             {% endfor %}
             </ul>
+            {% endif %}
         </div>
 
         {% if video %}

@@ -153,6 +153,13 @@
         "pattern": "randonnees/**/index.md"
     }, {
         "metadata": {
+            "section": "treks",
+            "template": "trek.swig",
+            "autoinclude": ["video", "direction"]
+        },
+        "pattern": "sandbox/**/index.md"
+    }, {
+        "metadata": {
             "section": "tracks",
             "template": "track.swig",
             "autoinclude": ["video", "direction"]

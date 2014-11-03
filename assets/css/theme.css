@@ -525,3 +525,17 @@ a {
 .img-light {
     border: 1px solid #888;
 }
+
+.with-caption {
+    border: 1px solid #aaa;
+    font-size: 0.9em;
+    background: #eee;
+}
+
+.with-caption img {
+    display: block;
+}
+
+.with-caption figcaption {
+    padding: 0.2em 0.4em;
+}

@@ -12,6 +12,11 @@ img {
     margin-right: 1em;
 }
 
+.message {
+    padding: 0.5em;
+    margin: 1em;
+}
+
 .site-menu {
     max-width: 1280px;
     margin: 0 auto;

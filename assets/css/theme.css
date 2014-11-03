@@ -151,6 +151,9 @@ noscript {
 .icon-link:before {
     content: "\e627";
 }
+.icon-warning:before {
+    content: "\e609";
+}
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"],
@@ -170,6 +173,20 @@ a {
     background: #508d09;
     padding: 0.6em 0.8em 0.6em 0.8em;
     border-radius: 3px;
+}
+
+.warning {
+    border: 3px solid #ff8400;
+    border-radius: 3px;
+    background: #fff8f1;
+}
+
+.warning:before {
+    font-size: 4.5em;
+    padding-top: 0.2em;
+    color: #ff8400;
+    display: block;
+    float: left;
 }
 
 .site-menu .back-home {

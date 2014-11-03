@@ -1,5 +1,5 @@
 ---
-gpx: chamois.gpx
+gpx: renversee.gpx
 tags: treffort-cuisiat, lomont, crête, enduro, dévers, gr59
 created: 2014-11-03
 type: Descente enduro engagée
@@ -12,8 +12,9 @@ modules aménagés qu'il n'est pas toujours évident de franchir (ou d'éviter).
 **Un bon bagage technique est requis.**
 </div>
 
-Cette piste part de la crête entre Treffort et Cuisiat un peu avant les ruines
-de Lomont en venant du Col des Justices. Le départ est marqué par deux rondins
+Cette piste part de la crête entre Treffort et Cuisiat un peu avant [les ruines
+de Lomont](/tags/lomont/) en venant du [Col des
+Justices](/tags/col-des-justices/). Le départ est marqué par deux rondins
 couchés dans la direction du sentier.
 
 Peu après le départ, on croise un chemin, ensuite la piste enchaîne quelques

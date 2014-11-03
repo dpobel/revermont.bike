@@ -15,4 +15,4 @@ Les descentes de cette sortie sont décrites individuellement&nbsp;:
   mollard](/single-tracks/angoulures-gros-mollard/)
 * [La piste *Judge Dread* (Terres
   Caussales)](/single-tracks/judge-dread-terres-caussales/)
-* [La piste aux Chamois (Cuisiat)](/single-tracks/pistes-aux-chamois-cuisiat/)
+* [La renversée (Cuisiat)](/single-tracks/renversee-cuisiat/)

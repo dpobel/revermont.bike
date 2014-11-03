@@ -31,7 +31,7 @@ d'enseignements&nbsp;:
   elle est plus dure que mon tibia...). Une version un peu plus accessible par
   un single track un peu plus haut est possible, à voir;
 * shaper01 aime ... bon OK j'arrête :-)
-* [La piste aux Chamois](/single-tracks/pistes-aux-chamois-cuisiat/) a elle aussi quelques bon dévers, mais est relativement
+* [La renversée](/single-tracks/renversee-cuisiat/) a elle aussi quelques bon dévers, mais est relativement
   accessible, il va falloir néanmoins marquer un peu des tous petits morceaux
   pour éviter les passages les plus chauds (deux en particulier) pour le commun
   des mortels.

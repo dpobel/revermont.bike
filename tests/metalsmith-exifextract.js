@@ -25,7 +25,9 @@ describe('Metalsmith exifextract', function () {
     });
 
     describe('exif data', function () {
-        var load, file, files, exifData, date;
+        var load, file, files, exifData, date,
+            format = "YYYY:MM:DD HH:mm:ss";
+
 
         beforeEach(function () {
             load = sinon.stub(exif.ExifImage.prototype, "loadImage");
@@ -34,7 +36,7 @@ describe('Metalsmith exifextract', function () {
                 'dir/subdir/file': file,
                 'dir/subdir/photo.jpg': {"contents": "image blob"},
             };
-            date = '2014-10-30';
+            date = '2014:10:30 11:12:13';
             exifData = {
                 gps: {
                     GPSLatitude: [45, 30, 1800],
@@ -99,8 +101,8 @@ describe('Metalsmith exifextract', function () {
 
             msExif()(files, metalsmith, function (err) {
                 assert.ok(typeof err === 'undefined');
-                assert.equal(date, file.created);
-                assert.equal(date, file.updated);
+                assert.equal(date, file.created.format(format));
+                assert.equal(date, file.updated.format(format));
             });
         });
 
@@ -112,7 +114,7 @@ describe('Metalsmith exifextract', function () {
             msExif()(files, metalsmith, function (err) {
                 assert.ok(typeof err === 'undefined');
                 assert.equal(existing, file.created);
-                assert.equal(date, file.updated);
+                assert.equal(date, file.updated.format(format));
             });
         });
 
@@ -124,7 +126,7 @@ describe('Metalsmith exifextract', function () {
             msExif()(files, metalsmith, function (err) {
                 assert.ok(typeof err === 'undefined');
                 assert.equal(existing, file.updated);
-                assert.equal(date, file.created);
+                assert.equal(date, file.created.format(format));
             });
         });
 

@@ -33,6 +33,9 @@ var argv = require('minimist')(process.argv.slice(2), {
     autoinclude = require('./lib/metalsmith/autoinclude.js'),
     enrichTags = require('./lib/metalsmith/enrich-tags.js'),
     concat = require('./lib/metalsmith/concat.js'),
+    exifExtract = require('./lib/metalsmith/exifextract.js'),
+    photoVariation = require('./lib/metalsmith/photovariation.js'),
+    collectionsMaxDate = require('./lib/metalsmith/collections-maxdate.js'),
 
     nock = require('nock'),
     pjson = require('./package.json'),
@@ -98,10 +101,16 @@ metalsmith(__dirname)
     .use(gpxcleaner(conf.gpxcleaner))
     .use(gpxparser())
     .use(profile(conf.profile))
+    .use(exifExtract())
+    .use(photoVariation(conf.photoVariation))
     .use(markdown())
     .use(include())
     .use(autoinclude())
     .use(collections(conf.collections))
+    .use(collectionsMaxDate({
+        collections: conf.collectionsMaxDate,
+        dateProperties: conf.date,
+    }))
     .use(paginate(conf.paginate))
     .use(paginateTag(conf.paginateTag))
     .use(permalinks({relative: false}))

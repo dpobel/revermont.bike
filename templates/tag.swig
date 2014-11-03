@@ -58,6 +58,7 @@
         'point': {{ latlon|json|safe }},
         'map': '.map-tag',
         'zoom': {% if zoom %}{{ zoom }}{% else %}10{% endif %},
+        'photosUrl': "{{ "photos/data.js"|url(true) }}?{{ photos.metadata.maxDate }}"
     });
 {% endif %}
 {% endblock %}

@@ -466,3 +466,52 @@ img {
 .contents ol, .contents ul {
     list-style-position: inside;
 }
+
+.photo-map {
+    height: 300px;
+}
+
+.photo-main-column {
+    text-align: center;
+    box-sizing: border-box;
+    padding-right: 1em;
+}
+
+.photo-next {
+    text-align: right;
+}
+
+.photo-previous {
+    text-align: left;
+}
+
+.awesome-marker .map-icon {
+    margin: 0.4em 0 0 0;
+}
+
+.awesome-marker .map-icon:before {
+    padding: 0;
+}
+
+.photo-map-popup {
+    display: block;
+}
+
+.gallery-photo {
+    box-sizing: border-box;
+    overflow: hidden;
+    border-bottom: 0.5em solid #fff;
+    border-left: 0.5em solid #fff;
+}
+
+.gallery-photo img {
+    max-width: none;
+}
+
+.gallery-photo-first {
+    border-left: 0;
+}
+
+.gallery-photo-link {
+    display: block;
+}

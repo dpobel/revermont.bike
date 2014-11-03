@@ -154,6 +154,9 @@ noscript {
 .icon-warning:before {
     content: "\e609";
 }
+.icon-photo:before {
+    content: "\e612";
+}
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"],
@@ -539,4 +542,12 @@ a {
 .with-caption figcaption {
     padding: 0.2em 0.4em;
     line-height: 1.3em;
+}
+
+.photo-nav-title {
+    font-size: 1em;
+}
+
+.awesome-marker .map-icon {
+    font-size: 1.1em;
 }

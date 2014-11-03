@@ -39,6 +39,7 @@
 {% block javascriptCode %}
     RB.globalMap("{{ "randonnees/data.js"|url(true) }}?{{ max }}", {
         'ignApiKey': "{{ config.ignKey }}",
+        'photosUrl': "{{ "photos/data.js"|url(true) }}?{{ photos.metadata.maxDate }}",
         'selector': {
             'showMap': '.show-map',
             'hideMap': '.back-list',

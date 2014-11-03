@@ -26,6 +26,7 @@
                     .addTo(map);
             }
             L.control.layers(layers.layers, {}, {position: 'topleft'}).addTo(map);
+            RB.photos(config.photosUrl, map);
         }
     }
 

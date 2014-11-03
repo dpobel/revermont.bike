@@ -57,7 +57,7 @@ module.exports = function(grunt) {
             },
             build: {
                 files: ['src/**', 'templates/**', 'build.*', 'bower.json', 'lib/**', 'assets/**'],
-                tasks: ["build"]
+                tasks: ["build-local"]
             },
             "unit-test": {
                 files: ['lib/**', 'tests/**'],
@@ -119,6 +119,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-curl');
 
     grunt.registerTask('build', ['curl', 'bower:install', 'shell:build', 'screenshots']);
+    grunt.registerTask('build-local', ['bower:install', 'shell:build']);
     grunt.registerTask('build-test', ['curl', 'bower:install', 'shell:build-test']);
     grunt.registerTask('functional-test', ['build-test', 'connect', 'casper:test']);
     grunt.registerTask('unit-test', ['mochaTest']);

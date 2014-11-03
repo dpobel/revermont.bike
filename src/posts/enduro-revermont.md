@@ -14,7 +14,7 @@ VeloVert.com](http://forum.velovert.com/topic/58392-le-forum-de-lain-du-bugey-du
 évoquant des traces typées *enduro* du côté de
 [Treffort-Cuisiat](/tags/treffort-cuisiat/) ma curiosité a été piquée et je me
 suis retrouvé à faire une sortie découverte de ces pistes en compagnie de
-[shaper01](http://forum.velovert.com/user/163562-sphaper01/).  shaper01 est un
+[shaper01](http://forum.velovert.com/user/163562-sphaper01/). shaper01 est un
 vrai enduriste (il a notamment participé à quelques [Enduro World
 Series](http://www.enduroworldseries.com/)) et dès
 que ça commence à descendre, ça se voit tout de suite; en fait on était tous les
@@ -29,7 +29,8 @@ d'enseignements&nbsp;:
 * shaper01 aime les dévers, moi nettement moins;
 * [La piste *Judge Dread*](/single-tracks/judge-dread-terres-caussales/) m'a permis de goûter à la caillasse du Revermont (et
   elle est plus dure que mon tibia...). Une version un peu plus accessible par
-  un single track un peu plus haut est possible, à voir;
+  un single track un peu plus haut est possible, il faudra que j'aille étudier
+  cette option;
 * shaper01 aime ... bon OK j'arrête :-)
 * [La renversée](/single-tracks/renversee-cuisiat/) a elle aussi quelques bon dévers, mais est relativement
   accessible, il va falloir néanmoins marquer un peu des tous petits morceaux

@@ -115,7 +115,7 @@
             "reverse": true
         }
     },
-    "collectionsMaxDate": ["photos"],
+    "collectionsMaxDate": ["photos", "tracks", "treks"],
     "tags": {
         "handle": "tags",
         "path": "tags",

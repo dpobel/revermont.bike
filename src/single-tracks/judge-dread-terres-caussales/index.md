@@ -20,7 +20,7 @@ superbe), au niveau d'une ancienne clôture, il faut quitter la trace principale
 pour passer de l'autre côté des poteaux. Le single plonge alors dans la pente
 dans la caillasse avec des épingles pour finalement arriver sur chemin un peu
 plus large après avoir descendu une petite barre rocheuse. Dès que ce chemin
-commence à remonter, il faut prendre à droite pour continuer sur sentier avec
+commence à remonter, il faut prendre à gauche pour continuer sur un sentier avec
 beaucoup de dévers. À une intersection après une petite marche sur un rocher, il
 faut prendre à droite pour terminer par une partie un peu plus facile (mais avec
 quelques modules) et ludique.

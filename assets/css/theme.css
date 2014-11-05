@@ -538,4 +538,5 @@ a {
 
 .with-caption figcaption {
     padding: 0.2em 0.4em;
+    line-height: 1.3em;
 }

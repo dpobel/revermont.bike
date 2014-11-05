@@ -5,9 +5,10 @@ created: 2014-11-03 08:41
 ---
 
 <figure class="img-left with-caption">
-    <img src="/assets/img/enduro-vtt.jpg" alt="Enduro VTT">
-    <figcaption>Photo par [pietro&p](https://www.flickr.com/photos/pietrop/)
-sous licence [CC BY-NC 2.0](https://creativecommons.org/licenses/by-nc/2.0/)</figcaption>
+    <a href="/photos/shaper01-descente-cuisiat/shaper01-enduro.jpg">
+    <img src="/photos/shaper01-descente-cuisiat/shaper01-enduro_480.jpg" alt="Session enduro en descendant vers Cuisiat">
+    </a>
+    <figcaption>shaper01 en pleine session enduro en descendant vers Cuisiat<br>(&copy; shaper01)</figcaption>
 </figure>
 Après quelques discussions sur [le forum de l'Ain, du Bugey et du Revermont sur
 VeloVert.com](http://forum.velovert.com/topic/58392-le-forum-de-lain-du-bugey-du-revermont/)

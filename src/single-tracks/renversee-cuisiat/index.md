@@ -2,6 +2,7 @@
 gpx: renversee.gpx
 tags: treffort-cuisiat, lomont, crête, enduro, dévers, gr59
 created: 2014-11-03
+updated: 2014-11-03
 type: Descente enduro engagée
 ---
 

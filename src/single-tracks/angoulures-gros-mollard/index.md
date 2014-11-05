@@ -2,6 +2,7 @@
 gpx: angoulures.gpx
 tags: treffort-cuisiat, cabatane, dévers, croix des angoulures, esses de treffort, single-track
 created: 2014-11-03 08:42
+updated: 2014-11-03 08:42
 ---
 
 Cette piste part de [la croix des Angoulures](/tags/croix-des-angoulures/) pour

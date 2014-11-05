@@ -22,7 +22,7 @@
             {% endif %}
             {% if direction %}
             --><li class="track-sidebar-tabs-item">
-                <a href="#direction" class="track-sidebar-tabs-label icon-direction">S'y rendre</a>
+                <a href="#direction" class="track-sidebar-tabs-label icon-direction">Avant/Après</a>
             </li><!--
             {% endif %}
         --></ul>

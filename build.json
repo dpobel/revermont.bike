@@ -190,14 +190,14 @@
         "pattern": "posts.md"
     }, {
         "metadata": {
-            "section": "photos",
+            "section": "photo",
             "icon": "photo",
             "template": "photos.swig"
         },
         "pattern": "photos.md"
     }, {
         "metadata": {
-            "section": "photos",
+            "section": "photo",
             "template": "photo.swig"
         },
         "pattern": "photos/**/index.md"

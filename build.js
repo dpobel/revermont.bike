@@ -29,6 +29,7 @@ var argv = require('minimist')(process.argv.slice(2), {
     gpxparser = require('./lib/metalsmith/gpxparser'),
     profile = require('./lib/metalsmith/profile'),
     paginateTag = require('./lib/metalsmith/paginate-tag.js'),
+    tagStruct = require('./lib/metalsmith/tag-struct.js'),
     forecast = require('./lib/metalsmith/forecast.js'),
     autoinclude = require('./lib/metalsmith/autoinclude.js'),
     enrichTags = require('./lib/metalsmith/enrich-tags.js'),
@@ -112,6 +113,7 @@ metalsmith(__dirname)
         dateProperties: conf.date,
     }))
     .use(paginate(conf.paginate))
+    .use(tagStruct())
     .use(paginateTag(conf.paginateTag))
     .use(permalinks({relative: false}))
     .use(metadata(conf.metadata))

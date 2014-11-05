@@ -56,3 +56,15 @@ RB.photoMap({
 });
 {% endif %}
 {% endblock %}
+
+{% block meta %}
+{% parent %}
+{% include "parts/twitter-card.swig" with {
+    type: "photo",
+    site: "@" + config.twitter,
+    creator: "@dpobel",
+    title: title,
+    description: contents|striptags|shorten(200),
+    src: variations.full.fullpath
+} %}
+{% endblock %}

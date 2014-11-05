@@ -24,3 +24,20 @@
         elements: '.gallery-photo',
     });
 {% endblock %}
+
+{% block meta %}
+{% parent %}
+{% include "parts/twitter-card.swig" with {
+    type: "gallery",
+    site: "@" + config.twitter,
+    creator: "@dpobel",
+    title: long,
+    description: contents|striptags|shorten(200),
+    images: [
+        photos[0].variations.full.fullpath,
+        photos[1].variations.full.fullpath,
+        photos[2].variations.full.fullpath,
+        photos[3].variations.full.fullpath
+    ]
+} %}
+{% endblock %}

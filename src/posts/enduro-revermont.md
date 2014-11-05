@@ -38,7 +38,7 @@ d'enseignements&nbsp;:
   pour éviter les passages les plus chauds (deux en particulier) pour le commun
   des mortels.
 
-Bref, du (très) technique a tous les étages. Attention néanmoins, ces deux dernières
+Bref, du (très) technique à tous les étages. Attention néanmoins&nbsp;: ces deux dernières
 pistes nécessitent un bon bagage technique et certains modules y ont été
 aménagés (comme dans [la descente de Rosy](/single-tracks/descente-de-rosy/) par
 exemple). Dans les passages les plus engagés, il faut savoir rester humble face

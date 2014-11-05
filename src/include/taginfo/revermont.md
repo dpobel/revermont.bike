@@ -14,5 +14,6 @@ Wikipédia](http://fr.wikipedia.org/wiki/Revermont)&nbsp;:
 > vallée du Suran puis jusqu'à la vallée de l'Ain.
 
 Le Revermont est donc un territoire vaste et vallonné, parfait pour [les
-randonnée VTT](/randonnees/)&nbsp;!
+randonnée VTT](/randonnees/) et même avec [de bons spots
+d'enduro](/posts/enduro-revermont/)&nbsp;!
 

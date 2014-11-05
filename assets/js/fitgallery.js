@@ -15,8 +15,13 @@
     }
 
     function fitRow(offset, rowWidth, elements) {
-        elements.forEach(function (element) {
-            element.style.width = Math.round(element.offsetWidth - offset * element.offsetWidth/rowWidth) + 'px';
+        var last = elements.length - 1;
+        elements.forEach(function (element, i) {
+            var width = Math.round(element.offsetWidth - offset * element.offsetWidth/rowWidth);
+            if ( i === last ) {
+                width--;
+            }
+            element.style.width = width + 'px';
         });
     }
 

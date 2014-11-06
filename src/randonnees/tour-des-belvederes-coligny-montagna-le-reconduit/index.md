@@ -1,6 +1,6 @@
 ---
 gpx: belvederes.gpx
-tags: coligny, montagna-le-reconduit, andelot, gr59, gr9, l'aubépin, belvédère, grp tour du revermont, salavre
+tags: coligny, montagna-le-reconduit, andelot, gr59, gr9, l'aubépin, belvédère, grp tour du revermont, salavre, vergongeat
 updated: 2014-10-04
 created: 2014-10-04
 ---

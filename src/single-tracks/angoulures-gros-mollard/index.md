@@ -1,6 +1,6 @@
 ---
 gpx: angoulures.gpx
-tags: treffort-cuisiat, cabatane, dévers, croix des angoulures, esses de treffort, single-track
+tags: treffort-cuisiat, cabatane, dévers, croix des angoulures, esses de treffort, single track
 created: 2014-11-03 08:42
 updated: 2014-11-03 08:42
 ---

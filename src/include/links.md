@@ -6,4 +6,4 @@ partial: true
 * [MTBBox.com&nbsp;: Annuaire VTT](http://www.mtbbox.com/)
 
 
-[Quelques autres liens](/liens/).
+[D'autres liens VTT](/liens/)

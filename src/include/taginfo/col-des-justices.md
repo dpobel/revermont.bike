@@ -5,7 +5,7 @@ popup: false
 zoom: 13
 ---
 
-Le col des Justices tire sont nom du fait qu'au moyen âge, c'est l'endroit où
+Le col des Justices tire son nom du fait qu'au moyen âge, c'est l'endroit où
 étaient installés [les bois de
 justice](http://fr.wiktionary.org/wiki/bois_de_justice).
 

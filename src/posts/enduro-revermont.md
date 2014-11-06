@@ -2,6 +2,7 @@
 title: Sortie "Rallye Enduro VTT" dans le Revermont
 tags: enduro, revermont, treffort-cuisiat, dévers
 created: 2014-11-05 21:41
+updated: 2014-11-06 22:44
 ---
 
 <figure class="img-left with-caption">
@@ -48,3 +49,8 @@ En tout cas, un grand merci encore à shaper01 pour cette sortie découverte
 extrêment sympathique qui montre que notre cher Revermont propose tout ce qu'il
 faut pour le VTT même *engagé*. Maintenant, je vais aller bosser ma technique et
 y'a du boulot :-)
+
+Edit du 06/11/2014&nbps;: shaper01 me fait remarquer que beaucoup de dévers ont
+été/sont/seront remodelés et que mon résumé ne doit pas effrayé personne&nbsp;!
+En fait, le meilleur moyen de se faire une idée est encore d'essayer de rouler
+sur ces pistes.

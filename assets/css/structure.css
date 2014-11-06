@@ -26,6 +26,34 @@ img {
     padding: 0.4em 1em;
 }
 
+.site-menu .menu-text {
+    display: none;
+    padding-left: 0.3em;
+}
+
+.site-menu [class^="icon-"]:before, [class*=" icon-"]:before {
+    padding: 0;
+}
+
+.site-menu .icon-treks .menu-text,
+.site-menu .icon-tracks .menu-text {
+    display: inline-block;
+}
+
+
+@media screen and (min-width: 35.5em) {
+    .site-menu .icon-blog .menu-text {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .site-menu .icon-info .menu-text,
+    .site-menu .icon-photo .menu-text {
+        display: inline-block;
+    }
+}
+
 .site-main .site-main-content {
     overflow: hidden;
     max-width: 1280px;

@@ -265,7 +265,7 @@ describe('Metalsmith photovariation', function () {
                     assert.equal(path, imageObj.path);
 
                     assert.ok(resize.calledWithExactly(null, height));
-                    assert.ok(crop.calledWithExactly(width, height, 30, 0));
+                    assert.ok(crop.calledWithExactly(width, height, 5, 0));
 
                     assert.ok(typeof file.variations[variationName] === 'object');
                     assert.equal('photo_' + variationName + '.jpg', file.variations[variationName].name);

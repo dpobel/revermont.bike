@@ -534,6 +534,7 @@ img {
 
 .gallery-photo img {
     max-width: none;
+    display: block;
 }
 
 .gallery-photo-first {

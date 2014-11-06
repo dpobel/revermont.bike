@@ -5,7 +5,7 @@ created: 2014-11-05 21:41
 ---
 
 <figure class="img-left with-caption">
-    <a href="/photos/shaper01-descente-cuisiat/shaper01-enduro.jpg">
+    <a href="/photos/shaper01-descente-cuisiat/">
     <img src="/photos/shaper01-descente-cuisiat/shaper01-enduro_480.jpg" alt="Session enduro en descendant vers Cuisiat">
     </a>
     <figcaption>shaper01 en pleine session enduro en descendant vers Cuisiat<br>(&copy; shaper01)</figcaption>

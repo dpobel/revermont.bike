@@ -31,8 +31,12 @@ img {
     padding-left: 0.3em;
 }
 
-.site-menu [class^="icon-"]:before, [class*=" icon-"]:before {
+.site-menu [class^="icon-"]:before, .site-menu [class*=" icon-"]:before {
     padding: 0;
+}
+
+.site-menu .icon-mtb:before {
+    padding: 0 0 0 0.3em;
 }
 
 .site-menu .icon-treks .menu-text,

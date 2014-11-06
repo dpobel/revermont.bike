@@ -50,5 +50,5 @@ extrêment sympathique qui montre que notre cher Revermont propose tout ce qu'il
 faut pour le VTT même *engagé*. Maintenant, je vais aller bosser ma technique et
 y'a du boulot :-)
 
-Edit du 06/11/2014&nbps;: shaper01 me fait remarquer que beaucoup de dévers ont
+**Edit du 06/11/2014&nbsp;:** shaper01 me fait remarquer que beaucoup de dévers ont
 été/sont/seront remodelés et que mon post ne doit effrayé personne.

@@ -18,6 +18,7 @@ describe('Metalsmith collections maxdate', function () {
         files = [
             {created: maxDate, updated: epoch},
             {created: epoch, updated: middle},
+            {created: "not_a_moment_object"},
             {},
         ];
 

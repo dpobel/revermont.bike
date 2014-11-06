@@ -51,6 +51,4 @@ faut pour le VTT même *engagé*. Maintenant, je vais aller bosser ma technique 
 y'a du boulot :-)
 
 Edit du 06/11/2014&nbps;: shaper01 me fait remarquer que beaucoup de dévers ont
-été/sont/seront remodelés et que mon résumé ne doit pas effrayé personne&nbsp;!
-En fait, le meilleur moyen de se faire une idée est encore d'essayer de rouler
-sur ces pistes.
+été/sont/seront remodelés et que mon post ne doit effrayé personne.

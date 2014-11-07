@@ -455,6 +455,18 @@ describe('Swig filters', function () {
 
                 assert.equal('lo...', shorten(str, 5));
             });
+
+            it('should simplify the string', function () {
+                var str = "    bla\n\nbla\t and that";
+
+                assert.equal("bla bla and that", shorten(str, 14));
+            });
+
+            it('should simplify the string and shorten', function () {
+                var str = "    bla\n\nbla\t and that";
+
+                assert.equal("bla bla...", shorten(str, 10));
+            });
         });
     });
 

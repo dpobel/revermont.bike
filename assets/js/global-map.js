@@ -36,6 +36,7 @@
             layers: [layers.defaultLayer]
         });
         map.fitBounds(_getBounds());
+        RB.photos(config.photosUrl, map);
         L.control.layers(layers.layers, {}, {position: 'topleft'}).addTo(map);
 
         Object.keys(tracks).forEach(function (name) {

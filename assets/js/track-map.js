@@ -67,6 +67,8 @@
             map.setZoom(config.maxAutoZoom, {animated: true});
         }
 
+        RB.photos(config.photosUrl, map);
+
         line = L.polyline(track.points, {
             color: config.style.color,
             opacity: config.style.pathOpacity,

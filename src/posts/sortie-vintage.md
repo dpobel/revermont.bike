@@ -4,7 +4,7 @@ created: 2014-10-05 23:01
 tags: sunn, coligny, randonnée, semi-rigide, 29 pouces, 26 pouces, gr59
 ---
 
-<a href="/photos/sunn-montagna-le-reconduit/sunn.jpg"><img
+<a href="/photos/sunn-montagna-le-reconduit/"><img
 src="/photos/sunn-montagna-le-reconduit/sunn_480.jpg" alt="Sunn Xircuit au
 belvédère de Montagna le Reconduit" class="img-left"></a>
 

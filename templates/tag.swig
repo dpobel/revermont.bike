@@ -21,9 +21,19 @@
             {% endif %}
             <div class="contents pure-u-1{% if latlon %} pure-u-md-2-5{% endif %}">{{ contents|safe }}</div>
         </article>
-
-        <h2>Au sujet de &laquo;&nbsp;{% if title %}{{ title }}{% else %}{{ tag }}{% endif %}&nbsp;&raquo;</h2>
         {% endif %}
+
+        {% if pagination.num == 1 and photos.length %}
+        <h2>Photos de &laquo;&nbsp;{% if title %}{{ title }}{% else %}{{ tag }}{% endif %}&nbsp;&raquo;</h2>
+        <div class="pure-g gallery">
+            {% for photo in photos %}
+                {% include "parts/photo_gallery.swig" with {photo: photo} %}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if posts.length %}
+        <h2>Au sujet de &laquo;&nbsp;{% if title %}{{ title }}{% else %}{{ tag }}{% endif %}&nbsp;&raquo;</h2>
 
         <ul class="item-list">
         {% for post in pagination.files %}
@@ -35,6 +45,7 @@
             </li>
         {% endfor %}
         </ul>
+        {% endif %}
 
         {% include "pagination.swig" with pagination %}
     </section>
@@ -58,6 +69,13 @@
         'point': {{ latlon|json|safe }},
         'map': '.map-tag',
         'zoom': {% if zoom %}{{ zoom }}{% else %}10{% endif %},
+        'photosUrl': "{{ "photos/data.js"|url(true) }}?{{ photos.metadata.maxDate }}"
+    });
+{% endif %}
+{% if pagination.num == 1 and photos.length %}
+    RB.fitGallery({
+        container: '.gallery',
+        elements: '.gallery-photo',
     });
 {% endif %}
 {% endblock %}

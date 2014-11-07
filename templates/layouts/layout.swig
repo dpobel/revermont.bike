@@ -26,10 +26,10 @@
             <nav class="site-menu pure-menu pure-menu-open pure-menu-horizontal">
                 <ul>
                     <li{% if section == "home" %} class="pure-menu-selected"{% endif %}>
-                        <a href="/" class="back-home icon-mtb site-menu-link">{{ config.shortTitle }}</a>
+                        <a href="/" class="back-home icon-mtb site-menu-link"><span class="menu-text">{{ config.shortTitle }}</span></a>
                     </li>
                     {% for item in menu %}
-                    <li{% if selected == item.section %} class="pure-menu-selected"{% endif %}><a href="{{ item.path|url }}" class="icon-{{ item.icon }} site-menu-link"{% if item.long %} title="{{ item.long }}"{% endif %}>{{ item.title }}</a></li>
+                    <li{% if selected == item.section %} class="pure-menu-selected"{% endif %}><a href="{{ item.path|url }}" class="icon-{{ item.icon }} site-menu-link"{% if item.long %} title="{{ item.long }}"{% endif %}><span class="menu-text">{{ item.title }}</span></a></li>
                     {% endfor %}
                 </ul>
             </nav>

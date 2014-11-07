@@ -1,0 +1,1 @@
+<a href="{{ path|url }}" title="{{ title }}"><img src="{{ variations.map.fullpath|url(true) }}" alt="{{ title }}" width="{{ variations.map.width }}" height="{{ variations.map.height }}" class="photo-map-popup"></a>

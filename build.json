@@ -11,6 +11,7 @@
             "assets/css/pure/grids-responsive.css",
             "assets/lib/leaflet/leaflet.css",
             "assets/lib/leaflet.fullscreen/leaflet.fullscreen.css",
+            "assets/lib/leaflet.awesome-markers/leaflet.awesome-markers.css",
             "assets/css/structure.css",
             "assets/css/theme.css"
         ],
@@ -18,10 +19,14 @@
             "assets/js/domready/ready.js",
             "assets/lib/leaflet/leaflet.js",
             "assets/lib/leaflet.fullscreen/Leaflet.fullscreen.js",
+            "assets/lib/leaflet.awesome-markers/leaflet.awesome-markers.js",
             "assets/js/layers.js",
+            "assets/js/photos.js",
             "assets/js/global-map.js",
             "assets/js/track-map.js",
-            "assets/js/tag-map.js"
+            "assets/js/tag-map.js",
+            "assets/js/photo-map.js",
+            "assets/js/fitgallery.js"
         ]
     },
     "ignore": [
@@ -79,6 +84,11 @@
             "sortBy": "created",
             "reverse": true
         },
+        "photos": {
+            "pattern": "photos/**/index.html",
+            "sortBy": "created",
+            "reverse": true
+        },
         "lastTreks": {
             "pattern": "randonnees/**/index.html",
             "limit": 5,
@@ -105,6 +115,7 @@
             "reverse": true
         }
     },
+    "collectionsMaxDate": ["photos", "tracks", "treks"],
     "tags": {
         "handle": "tags",
         "path": "tags",
@@ -117,7 +128,7 @@
         "basePath": "include/taginfo"
     },
     "paginate": {
-        "perPage": 10,
+        "perPage": 20,
         "pageSeparator": "/"
     },
     "paginateTag": {
@@ -179,6 +190,19 @@
         "pattern": "posts.md"
     }, {
         "metadata": {
+            "section": "photo",
+            "icon": "photo",
+            "template": "photos.swig"
+        },
+        "pattern": "photos.md"
+    }, {
+        "metadata": {
+            "section": "photo",
+            "template": "photo.swig"
+        },
+        "pattern": "photos/**/index.md"
+    }, {
+        "metadata": {
             "section": "blog",
             "template": "post.swig"
         },
@@ -231,5 +255,22 @@
         "urlHash": "simplified-map",
         "layerReadyClass": "default-layer-loaded",
         "transitionWaitTime": 500
+    },
+    "photoVariation": {
+        "variations": {
+            "nav": {
+                "width": 100,
+                "height": 100
+            },
+            "full": {
+                "width": 760
+            },
+            "map": {
+                "width": 180
+            },
+            "list": {
+                "height": 160
+            }
+        }
     }
 }

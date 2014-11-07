@@ -26,6 +26,38 @@ img {
     padding: 0.4em 1em;
 }
 
+.site-menu .menu-text {
+    display: none;
+    padding-left: 0.3em;
+}
+
+.site-menu [class^="icon-"]:before, .site-menu [class*=" icon-"]:before {
+    padding: 0;
+}
+
+.site-menu .icon-mtb:before {
+    padding: 0 0 0 0.3em;
+}
+
+.site-menu .icon-treks .menu-text,
+.site-menu .icon-tracks .menu-text {
+    display: inline-block;
+}
+
+
+@media screen and (min-width: 35.5em) {
+    .site-menu .icon-blog .menu-text {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .site-menu .icon-info .menu-text,
+    .site-menu .icon-photo .menu-text {
+        display: inline-block;
+    }
+}
+
 .site-main .site-main-content {
     overflow: hidden;
     max-width: 1280px;
@@ -465,4 +497,54 @@ img {
 
 .contents ol, .contents ul {
     list-style-position: inside;
+}
+
+.photo-map {
+    height: 300px;
+}
+
+.photo-main-column {
+    text-align: center;
+    box-sizing: border-box;
+    padding-right: 1em;
+}
+
+.photo-next {
+    text-align: right;
+}
+
+.photo-previous {
+    text-align: left;
+}
+
+.awesome-marker .map-icon {
+    margin: 0.4em 0 0 0;
+}
+
+.awesome-marker .map-icon:before {
+    padding: 0;
+}
+
+.photo-map-popup {
+    display: block;
+}
+
+.gallery-photo {
+    box-sizing: border-box;
+    overflow: hidden;
+    border-bottom: 0.5em solid #fff;
+    border-left: 0.5em solid #fff;
+}
+
+.gallery-photo img {
+    max-width: none;
+    display: block;
+}
+
+.gallery-photo-first {
+    border-left: 0;
+}
+
+.gallery-photo-link {
+    display: block;
 }

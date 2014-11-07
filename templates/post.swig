@@ -15,15 +15,11 @@
         <aside class="pure-u-1 pure-u-md-1-4 sidebar">
             <p>Publié le <time datetime="{{ created.format() }}" itemprop="dateCreated">{{ created.format(config.dateTimeFormat) }}</time></p>
         {% if updated %}
-            <p>Dernière mise à jour le<br><time datetime="{{ created.format() }}" itemprop="dateModified">{{ updated.format(config.dateTimeFormat) }}</time></p>
+            <p>Dernière mise à jour le<br><time datetime="{{ updated.format() }}" itemprop="dateModified">{{ updated.format(config.dateTimeFormat) }}</time></p>
         {% endif %}
         {% if tags %}
             <h3>Mots-clés&nbsp;:</h3>
-            <ul class="content-tags" itemprop="keywords">
-            {% for tag in tags %}
-                <li class="content-tags-item icon-tag"><a href="{{ tagsList[tag].path|url }}">{{ tag }}</a></li>
-            {% endfor %}
-            </ul>
+            {% include "parts/keywords.swig" with {tags: tags} %}
         {% endif %}
 
             <h3>Partager sur les réseaux sociaux</h3>

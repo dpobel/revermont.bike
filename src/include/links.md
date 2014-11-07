@@ -6,4 +6,4 @@ partial: true
 * [MTBBox.com&nbsp;: Annuaire VTT](http://www.mtbbox.com/)
 
 
-[D'autres liens VTT](/liens/)
+[D'autres liens autour du VTT, du Revermont, ...](/liens/)

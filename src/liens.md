@@ -4,6 +4,10 @@ section: links
 icon: link
 ---
 
+Voici quelques liens plus ou moins en rapport avec le VTT, le Revermont, l'Ain,
+le Jura, ... Pour apparaître ici, n'hésitez pas à utiliser [le formulaire de
+contact](/contact/), je suis aussi ouvert à différentes formes de partenariat.
+
 ## Du VTT à proximité
 
 * [Randonnées VTT en Franche Comté](http://www.randonnee-vtt.fr/) propose des

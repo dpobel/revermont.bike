@@ -455,6 +455,18 @@ describe('Swig filters', function () {
 
                 assert.equal('lo...', shorten(str, 5));
             });
+
+            it('should simplify the string', function () {
+                var str = "    bla\n\nbla\t and that";
+
+                assert.equal("bla bla and that", shorten(str, 14));
+            });
+
+            it('should simplify the string and shorten', function () {
+                var str = "    bla\n\nbla\t and that";
+
+                assert.equal("bla bla...", shorten(str, 10));
+            });
         });
     });
 
@@ -524,5 +536,50 @@ describe('Swig filters', function () {
                 assert.ok(!isBefore(moment().add(1, "d"), 1, "h"));
             });
         });
+    });
+
+    describe('extract_image filter', function () {
+        it('define the extract_image filter', function () {
+            var swig = {setFilter: function () {}},
+                spy = sinon.spy(swig, "setFilter");
+
+            spy.withArgs('extract_image');
+            filter(swig, config);
+
+            sassert.calledOnce(spy.withArgs('extract_image'));
+            sassert.calledWith(spy, 'extract_image', sinon.match.func);
+        });
+
+        describe('behavior', function () {
+            var extract,
+                swig = {setFilter: function (name, func) {
+                    if ( name === 'extract_image' ) {
+                        extract = func;
+                    }
+                }};
+
+            beforeEach(function () {
+                filter(swig, config);
+            });
+
+            it('should return null if no image is found', function () {
+                var html = '<p>Lorem ipsum</p>';
+
+                assert.strictEqual(null, extract(html));
+            });
+
+            it('should return the image src', function () {
+                var html = '<p><img src="img_src.jpg" alt=""></p>';
+
+                assert.equal("img_src.jpg", extract(html));
+            });
+
+            it('should return the first image src', function () {
+                var html = '<p><img src="img_src.jpg" alt=""><img src="img_src2.jpg" alt=""></p>';
+
+                assert.equal("img_src.jpg", extract(html));
+            });
+        });
+
     });
 });

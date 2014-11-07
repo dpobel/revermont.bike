@@ -35,6 +35,7 @@
     site: "@" + config.twitter,
     creator: "@dpobel",
     title: title,
-    description: contents|striptags|shorten(200)
+    description: contents|striptags|shorten(200),
+    src: contents|extract_image()
 } %}
 {% endblock %}

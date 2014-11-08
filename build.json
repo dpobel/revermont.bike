@@ -107,6 +107,12 @@
             "sortBy": "created",
             "reverse": true
         },
+        "lastPhotos": {
+            "pattern": "photos/**/index.html",
+            "limit": 10,
+            "sortBy": "created",
+            "reverse": true
+        },
         "feeds": {
             "pattern": "{posts,randonnees,single-tracks}.xml"
         },

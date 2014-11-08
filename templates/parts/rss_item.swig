@@ -9,4 +9,7 @@
     <description>
         {{ obj.contents|rssify}}
     </description>
+    {% for tag in obj.tags -%}
+    <category domain="{{ tagsList[tag].path|ext_url }}">{{ tag }}</category>
+    {%- endfor %}
 </item>

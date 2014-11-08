@@ -23,7 +23,7 @@ describe('Metalsmith photovariation', function () {
         var file = {'photo': 'photo.jpg'},
             files = {
                 'dir/sub/dir/file1': file,
-                'dir/sub/dir/photo.jpg': {'contents': new Buffer("")},
+                'dir/sub/dir/photo.jpg': {'contents': new Buffer("test")},
             };
 
         describe('error handling', function () {
@@ -69,6 +69,7 @@ describe('Metalsmith photovariation', function () {
                     assert.equal('dir/sub/dir/photo.jpg', file.variations.original.fullpath);
                     assert.equal(foundSize.width, file.variations.original.width);
                     assert.equal(foundSize.height, file.variations.original.height);
+                    assert.equal(4, file.variations.original.size);
                     done();
                 });
             });
@@ -79,7 +80,7 @@ describe('Metalsmith photovariation', function () {
         var file = {'photo': 'photo.jpg'},
             files = {
                 'dir/sub/dir/file1': file,
-                'dir/sub/dir/photo.jpg': {'contents': new Buffer("")},
+                'dir/sub/dir/photo.jpg': {'contents': new Buffer("test")},
             },
             size, resize, toBuffer,
             originalSize = {'width': 420, 'height': 4242},
@@ -129,7 +130,7 @@ describe('Metalsmith photovariation', function () {
             });
 
             it('should create a new image resized by width', function (done) {
-                var imageContents = new Buffer("");
+                var imageContents = new Buffer("test");
 
                 variationSize.width = width;
                 variationSize.height = 120;
@@ -149,6 +150,7 @@ describe('Metalsmith photovariation', function () {
                     assert.equal(path, file.variations[variationName].fullpath);
                     assert.equal(variationSize.width, file.variations[variationName].width);
                     assert.equal(variationSize.height, file.variations[variationName].height);
+                    assert.equal(4, file.variations[variationName].size);
                     done();
                 });
             });
@@ -173,7 +175,7 @@ describe('Metalsmith photovariation', function () {
             });
 
             it('should create a new image resized by height', function (done) {
-                var imageContents = new Buffer("");
+                var imageContents = new Buffer("test");
 
                 variationSize.width = 120;
                 variationSize.height = height;
@@ -193,6 +195,7 @@ describe('Metalsmith photovariation', function () {
                     assert.equal(path, file.variations[variationName].fullpath);
                     assert.equal(variationSize.width, file.variations[variationName].width);
                     assert.equal(variationSize.height, file.variations[variationName].height);
+                    assert.equal(4, file.variations[variationName].size);
                     done();
                 });
             });
@@ -216,7 +219,7 @@ describe('Metalsmith photovariation', function () {
             });
 
             it('should resize by width and crop', function (done) {
-                var imageContents = new Buffer("");
+                var imageContents = new Buffer("test");
 
                 originalSize.width = 500;
                 originalSize.height = 600;
@@ -241,13 +244,14 @@ describe('Metalsmith photovariation', function () {
                     assert.equal(path, file.variations[variationName].fullpath);
                     assert.equal(variationSize.width, file.variations[variationName].width);
                     assert.equal(variationSize.height, file.variations[variationName].height);
+                    assert.equal(4, file.variations[variationName].size);
                     done();
                 });
 
             });
 
             it('should resize by height and crop', function (done) {
-                var imageContents = new Buffer("");
+                var imageContents = new Buffer("test");
 
                 originalSize.width = 600;
                 originalSize.height = 400;
@@ -272,12 +276,13 @@ describe('Metalsmith photovariation', function () {
                     assert.equal(path, file.variations[variationName].fullpath);
                     assert.equal(variationSize.width, file.variations[variationName].width);
                     assert.equal(variationSize.height, file.variations[variationName].height);
+                    assert.equal(4, file.variations[variationName].size);
                     done();
                 });
             });
 
             it('should resize by width', function (done) {
-                var imageContents = new Buffer("");
+                var imageContents = new Buffer("test");
 
                 originalSize.width = 500;
                 originalSize.height = 400;
@@ -302,6 +307,7 @@ describe('Metalsmith photovariation', function () {
                     assert.equal(path, file.variations[variationName].fullpath);
                     assert.equal(variationSize.width, file.variations[variationName].width);
                     assert.equal(variationSize.height, file.variations[variationName].height);
+                    assert.equal(4, file.variations[variationName].size);
                     done();
                 });
 

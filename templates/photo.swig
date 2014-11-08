@@ -37,6 +37,9 @@
                 <p>Date&nbsp;: <time datetime="{{ created.format() }}" itemprop="dateCreated">{{ created.format(config.dateTimeFormat) }}</time></p>
                 {% endif %}
                 {% include "parts/keywords.swig" with {tags: tags} %}
+
+                <h3>Partager sur les réseaux sociaux</h3>
+{% include "parts/share.swig" with {url: path, text: "Blog de " + config.shortTitle } %}
             </div>
 
         </div>

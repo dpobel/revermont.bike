@@ -23,11 +23,11 @@ noscript {
 
 @font-face {
     font-family: 'icomoon';
-    src:url('/assets/fonts/icomoon.eot?-1xzxcv');
-    src:url('/assets/fonts/icomoon.eot?#iefix-1xzxcv') format('embedded-opentype'),
-        url('/assets/fonts/icomoon.woff?-1xzxcv') format('woff'),
-        url('/assets/fonts/icomoon.ttf?-1xzxcv') format('truetype'),
-        url('/assets/fonts/icomoon.svg?-1xzxcv#icomoon') format('svg');
+    src:url('/assets/fonts/icomoon.eot?-2xzxcv');
+    src:url('/assets/fonts/icomoon.eot?#iefix-2xzxcv') format('embedded-opentype'),
+        url('/assets/fonts/icomoon.woff?-2xzxcv') format('woff'),
+        url('/assets/fonts/icomoon.ttf?-2xzxcv') format('truetype'),
+        url('/assets/fonts/icomoon.svg?-2xzxcv#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -134,6 +134,10 @@ noscript {
 .icon-twitter:before {
     content: "\e60d";
     color: #55ACEE;
+}
+.icon-facebook:before {
+    content: "\e628";
+    color: #4862A3;
 }
 .icon-gplus:before {
     content: "\e60e";

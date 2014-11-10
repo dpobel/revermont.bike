@@ -496,9 +496,16 @@ a {
     vertical-align: middle;
 }
 
+.share-button {
+    text-decoration: none;
+}
+
 .share-button:before {
-    font-size: 160%;
-    vertical-align: sub;
+    font-size: 300%;
+}
+
+.share-button .share-text {
+    display: none;
 }
 
 .tag-cloud {

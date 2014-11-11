@@ -19,3 +19,8 @@ frameborder="0" allowfullscreen></iframe>
 (Vidéo par [Fabrice
 Lacombe](https://www.youtube.com/channel/UCKcMEkVB442Uzd-6fp4ZkQQ), sans la
 partie montante également)
+
+Voir également le billet [La Cabatane de haut en
+bas](/posts/cabatane-haut-en-bas/) pour une vidéo de la crête de la Cabatane
+avec une partie de [la descente des Angoulures par le Gros
+Mollard]((/single-tracks/angoulures-gros-mollard/).

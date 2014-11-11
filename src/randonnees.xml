@@ -4,4 +4,5 @@ template: rss.swig
 title: Les dernières randonnées sur Revermont.bike
 exportCollection: lastTreks
 path: randonnees.xml
+description: Les dernières randonnées VTT dans le Revermont publiées sur http://vtt.revermont.bike/randonnees/
 ---

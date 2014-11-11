@@ -4,4 +4,5 @@ template: rss.swig
 title: Les derniers posts sur Revermont.bike
 exportCollection: lastPosts
 path: posts.xml
+description: Les derniers billets sur le VTT dans le Revermont publiés sur http://vtt.revermont.bike/posts/
 ---

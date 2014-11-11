@@ -4,4 +4,5 @@ template: rss.swig
 title: Les dernières photos du Revermont
 exportCollection: lastPhotos
 path: photos.xml
+description: Les dernières photos du Revermont publiées sur http://vtt.revermont.bike/photos/
 ---

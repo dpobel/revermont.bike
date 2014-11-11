@@ -1,6 +1,6 @@
 {% extends "layouts/layout.swig" %}
 
-{% block title %}{{ title }} / Blog VTT dans le Revermont - {% parent %}{% endblock %}
+{% block title %}{{ title }} / Blog VTT dans le Revermont{% endblock %}
 
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 

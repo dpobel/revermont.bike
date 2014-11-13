@@ -17,6 +17,7 @@
         });
         RB.photos(config.photosUrl, map);
         L.control.layers(layers.layers, {}, {position: 'topleft'}).addTo(map);
+        L.control.scale({imperial: false}).addTo(map);
     }
 
     RB.photoMap = function (conf) {

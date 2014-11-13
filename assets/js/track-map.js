@@ -61,6 +61,7 @@
         map.fitBounds(_getBounds());
         if ( !simplified ) {
             L.control.layers(layers.layers, {}, {position: 'topleft'}).addTo(map);
+            L.control.scale({imperial: false}).addTo(map);
         }
 
         if ( map.getZoom() > config.maxAutoZoom ) {

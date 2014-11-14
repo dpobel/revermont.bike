@@ -10,6 +10,10 @@ contact](/contact/), je suis aussi ouvert à différentes formes de partenariat.
 
 ## Du VTT à proximité
 
+* [Lyon Topos VTT](http://lyontoposvtt.free.fr/) propose d'excellents topos VTT
+  et des traces GPS [autour de
+  Lyon](http://lyontoposvtt.free.fr/lyonnais-topos.htm) et notamment [dans le
+  Revermont et dans le Bugey](http://lyontoposvtt.free.fr/topos-rhone-alpes.htm).
 * [Randonnées VTT en Franche Comté](http://www.randonnee-vtt.fr/) propose des
   parcours VTT avec traces GPS, photos, profil... de nombreux circuits
   principalement autour de Besançon, dans la vallée de Loue et dans le Jura.

@@ -5,12 +5,12 @@
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
 {% block content %}
-<div>
-    <h1 class="icon-photo page-title">{{ title }}</h1>
+<div itemprop="mainContentOfPage" itemscope itemtype="http://www.schema.org/ImageObject" >
+    <h1 class="icon-photo page-title" itemprop="name">{{ title }}</h1>
 
     <section class="pure-g">
         <div class="pure-u-1 pure-u-md-3-5 pure-u-lg-3-5 photo-main-column">
-            <a href="{{ variations.original.fullpath|url(true) }}">
+            <a href="{{ variations.original.fullpath|url(true) }}" itemprop="contentUrl">
                 <img src="{{ variations.full.fullpath|url(true) }}" alt="{{ title }}">
             </a>
             <nav class="pure-g">
@@ -28,7 +28,13 @@
         </div>
         <div class="pure-u-1 pure-u-md-2-5 pure-u-lg-2-5">
             {% if latlon %}
-            <div class="photo-map"></div>
+            <div itemprop="contentLocation" itemscope itemtype="http://www.schema.org/Place">
+                <div class="photo-map"></div>
+                <div itemprop="geo" itemscope itemtype="http://www.schema.org/GeoCoordinates">
+                    <meta itemprop="latitude" content="{{ latlon[0] }}">
+                    <meta itemprop="longitude" content="{{ latlon[1] }}">
+                </div>
+            </div>
             {% endif %}
             <div class="photo-content">
                 <div itemprop="text" class="contents">{{ contents|safe }}</div>

@@ -1,11 +1,13 @@
 {% extends "layouts/layout.swig" %}
 
+{% block pageItemType %}http://www.schema.org/ContactPage{% endblock %}
+
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
 {% block title %}{{ title }} - {% parent %}{% endblock %}
 
 {% block content %}
-    <article>
+    <article itemprop="mainContentOfPage">
         <h1 class="icon-contact page-title">{{ title }}</h1>
         <div>{{ contents|safe }}</div>
 

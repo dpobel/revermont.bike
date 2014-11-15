@@ -2,6 +2,7 @@
 title: Quelques liens
 section: links
 icon: link
+pageItemType: http://www.schema.org/CollectionPage
 ---
 
 Voici quelques liens plus ou moins en rapport avec le VTT, le Revermont, l'Ain,

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" itemtype="{% block pageItemType %}{% if pageItemType %}{{ pageItemType }}{% else %}http://www.schema.org/WebPage{% endif %}{% endblock %}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,13 +23,13 @@
 <body class="{{ section }}">
     {% block menu %}
         <header class="site-header">
-            <nav class="site-menu pure-menu pure-menu-open pure-menu-horizontal">
+            <nav itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="site-menu pure-menu pure-menu-open pure-menu-horizontal">
                 <ul>
                     <li{% if section == "home" %} class="pure-menu-selected"{% endif %}>
-                        <a href="/" class="back-home icon-mtb site-menu-link"><span class="menu-text">{{ config.shortTitle }}</span></a>
+                        <a href="/" class="back-home icon-mtb site-menu-link" itemprop="url"><span class="menu-text" itemprop="name">{{ config.shortTitle }}</span></a>
                     </li>
                     {% for item in menu %}
-                    <li{% if selected == item.section %} class="pure-menu-selected"{% endif %}><a href="{{ item.path|url }}" class="icon-{{ item.icon }} site-menu-link"{% if item.long %} title="{{ item.long }}"{% endif %}><span class="menu-text">{{ item.title }}</span></a></li>
+                    <li{% if selected == item.section %} class="pure-menu-selected"{% endif %}><a href="{{ item.path|url }}" class="icon-{{ item.icon }} site-menu-link"{% if item.long %} title="{{ item.long }}"{% endif %} itemprop="url"><span class="menu-text" itemprop="name">{{ item.title }}</span></a></li>
                     {% endfor %}
                 </ul>
             </nav>
@@ -45,7 +45,7 @@
     </section>
 
     {% block footer %}
-    <footer class="site-footer">
+    <footer class="site-footer" itemscope itemtype="http://www.schema.org/WPFooter">
         <div class="site-footer-content pure-g">
             <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 site-footer-part friends-link">
                 <h2 class="site-footer-part-title">Quelques liens</h2>

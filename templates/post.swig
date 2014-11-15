@@ -1,11 +1,13 @@
 {% extends "layouts/layout.swig" %}
 
+{% block pageItemType %}http://www.schema.org/ItemPage{% endblock %}
+
 {% block title %}{{ title }} / Blog VTT dans le Revermont{% endblock %}
 
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
 {% block content %}
-    <article class="pure-g blog-post" itemscope itemtype="http://schema.org/BlogPosting">
+    <article class="pure-g blog-post" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="pure-u-1 pure-u-md-3-4 blog-post-content">
             <h1 class="icon-blog page-title" itemprop="name">{{ title }}</h1>
             <div itemprop="articleBody" class="contents">{{ contents|safe }}</div>

@@ -1,10 +1,13 @@
 {% extends "layouts/layout.swig" %}
 
+{% block pageItemType %}http://www.schema.org/CollectionPage{% endblock %}
+
 {% block title %}{{ long }} - {% parent %}{% endblock %}
 
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
 {% block content %}
+<div itemprop="mainContentOfPage">
     <h1 class="icon-treks page-title">{{ long }}</h1>
     <div class="contents">{{ contents|safe }}</div>
 
@@ -30,6 +33,7 @@
     </tr>
     {% endfor %}
     </table>
+</div>
 {% endblock %}
 
 {% block javascriptCode %}

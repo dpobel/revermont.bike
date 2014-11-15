@@ -1,12 +1,14 @@
 {% extends "layouts/layout.swig" %}
 
+{% block pageItemType %}http://www.schema.org/ItemPage{% endblock %}
+
 {% block title %}{% if title %}{{ title }}{% else %}{{ tag }}{% endif %}{% if pagination.num != 1 %} (Page {{ pagination.num }}){% endif %} - {% parent %}{% endblock %}
 
 {% block content %}
-<div class="pure-g tag-page">
+<div class="pure-g tag-page" itemprop="mainContentOfPage" itemscope itemtype="{% if latlon %}http://www.schema.org/Place{% else %}http://www.schema.org/Article{% endif %}">
     <div class="pure-u-1 pure-u-md-3-4">
     <h1 class="icon-tag page-title">{% if title -%}
-        {{ title }}
+        <span itemprop="name">{{ title }}</span>
     {%- else -%}
         Pages tagguées &laquo;&nbsp;{{ tag }}&nbsp;&raquo;
     {%- endif %}
@@ -19,13 +21,20 @@
             {% if latlon %}
             <div class="map-tag pure-u-1 pure-u-md-3-5"></div>
             {% endif %}
-            <div class="contents pure-u-1{% if latlon %} pure-u-md-2-5{% endif %}">{{ contents|safe }}</div>
+            <div itemprop="description" class="contents pure-u-1{% if latlon %} pure-u-md-2-5{% endif %}">{{ contents|safe }}</div>
         </article>
+        {% endif %}
+
+        {% if latlon %}
+        <div itemscope itemprop="geo" itemtype="http://www.schema.org/GeoCoordinates">
+            <meta itemprop="latitude" content="{{ latlon[0] }}">
+            <meta itemprop="longitude" content="{{ latlon[1] }}">
+        </div>
         {% endif %}
 
         {% if pagination.num == 1 and photos.length %}
         <h2>Photos de &laquo;&nbsp;{% if title %}{{ title }}{% else %}{{ tag }}{% endif %}&nbsp;&raquo;</h2>
-        <div class="pure-g gallery">
+        <div class="pure-g gallery" itemprop="photo">
             {% for photo in photos %}
                 {% include "parts/photo_gallery.swig" with {photo: photo} %}
             {% endfor %}
@@ -51,8 +60,6 @@
     </section>
     </div>
     <aside class="pure-u-1 pure-u-md-1-4 sidebar">
-        {{ blogsidebar|safe }}
-
         <h3>Tag cloud</h3>
         {% include "parts/cloud.swig" %}
     </aside>

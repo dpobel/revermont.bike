@@ -5,7 +5,7 @@
 {% block title %}{{ title }} - {% parent %}{% endblock %}
 
 {% block content %}
-    <article>
+    <article itemprop="mainContentOfPage">
         <h1 class="icon-{{ forecast.daily.icon }} page-title">{{ title }}</h1>
 
         <p>

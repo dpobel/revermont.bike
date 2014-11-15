@@ -1,4 +1,4 @@
-<article class="pure-g track-app" itemscope itemtype="http://schema.org/Map">
+<article class="pure-g track-app" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Map">
     <div class="pure-u-1">
         <h1 class="icon-{{ section }} page-title" itemprop="name">{{ title }}</h1>
     </div>

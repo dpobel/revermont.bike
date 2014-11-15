@@ -1,11 +1,13 @@
 {% extends "layouts/layout.swig" %}
 
+{% block pageItemType %}http://www.schema.org/ImageGallery{% endblock %}
+
 {% block title %}{{ long }}{% if pagination.num != 1 %} (Page {{ pagination.num }}){% endif %} - {% parent %}{% endblock %}
 
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
 {% block content %}
-<div>
+<div itemprop="mainContentOfPage">
     <h1 class="icon-photo page-title">{{ long }}{% if pagination.num != 1 %} (Page {{ pagination.num }}){% endif %}</h1>
 
     <section class="pure-g gallery">

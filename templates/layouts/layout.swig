@@ -14,6 +14,7 @@
     <link rel="apple-touch-icon-precomposed" href="/favicon-152.png">
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msvalidate.01" content="DCA917AFCECD9243CC4D36322008A26F" />
 {% block meta %}
     {% if metaDescription or contents %}
     <meta name="description" content="{% if metaDescription %}{{ metaDescription }}{% else %}{{ contents|striptags|shorten(150) }}{% endif %}">

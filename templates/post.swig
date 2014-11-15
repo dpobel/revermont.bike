@@ -24,6 +24,8 @@
 
             <h3>Partager sur les réseaux sociaux</h3>
             {% include "parts/share.swig" with {url: path, text: title} %}
+
+            {{ blogsidebar|safe }}
         </aside>
     </article>
 {% endblock %}

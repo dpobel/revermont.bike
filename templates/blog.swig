@@ -14,7 +14,7 @@
     <section>
         <ul class="item-list">
         {% for post in pagination.files %}
-            <li itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+            <li itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
                 <a href="{{ post.path|url }}" itemprop="url">
                     <span itemprop="name">{{ post.title }}</span>
                 </a>

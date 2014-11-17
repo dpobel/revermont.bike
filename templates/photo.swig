@@ -1,6 +1,6 @@
 {% extends "layouts/layout.swig" %}
 
-{% block title %}{{ title }}{% if pagination.num != 1 %} (Page {{ pagination.num }}){% endif %} - {% parent %}{% endblock %}
+{% block title %}{{ title }} - Photos - {% parent %}{% endblock %}
 
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 

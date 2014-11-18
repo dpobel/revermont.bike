@@ -2,7 +2,7 @@
 
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
-{% block title %}{{ title }} - Sentier VTT - {% parent %}{% endblock %}
+{% block title %}{{ title }} - Single track pour le VTT dans le Revermont{% endblock %}
 
 {% block content %}
     {% include "parts/track-content.swig" %}

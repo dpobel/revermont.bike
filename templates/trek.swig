@@ -2,7 +2,7 @@
 
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
-{% block title %}{{ title }} - Randonnée VTT - {% parent %}{% endblock %}
+{% block title %}{{ title }} - Randonnée VTT dans le Revermont{% endblock %}
 
 {% block content %}
     {% include "parts/track-content.swig" %}

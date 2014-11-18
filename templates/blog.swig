@@ -2,7 +2,7 @@
 
 {% block pageItemType %}http://www.schema.org/CollectionPage{% endblock %}
 
-{% block title %}{{ long }}{% if pagination.num != 1 %} (Page {{ pagination.num }}){% endif %} - {% parent %}{% endblock %}
+{% block title %}{{ long }}{% if pagination.num != 1 %} (Page {{ pagination.num }}){% endif %}{% endblock %}
 
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 

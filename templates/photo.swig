@@ -1,6 +1,6 @@
 {% extends "layouts/layout.swig" %}
 
-{% block title %}{{ title }} - Photos - {% parent %}{% endblock %}
+{% block title %}{{ title }} - Photos du Revermont, VTT, paysages, ...{% endblock %}
 
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 

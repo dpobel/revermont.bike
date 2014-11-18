@@ -29,11 +29,11 @@
     <aside class="pure-u-1 pure-u-md-1-4 sidebar">
         {{ blogsidebar|safe }}
 
-        <h3>Tag cloud</h3>
-        {% include "parts/cloud.swig" %}
-
         <h3>Partager sur les réseaux sociaux</h3>
         {% include "parts/share.swig" with {url: path, text: "Blog de " + config.shortTitle } %}
+
+        <h3>Tag cloud</h3>
+        {% include "parts/cloud.swig" %}
     </aside>
 </div>
 {% endblock %}

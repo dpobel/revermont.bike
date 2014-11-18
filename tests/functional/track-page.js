@@ -10,7 +10,7 @@ casper.test.begin('Track page', function suite(test) {
     casper.then(function () {
         test.comment('Title and menu');
         test.assertTitleMatch(/^Single du Grillerin .*/, "The title starts with 'Single du Grillerin'");
-        test.assertTitleMatch(/^.*Sentier VTT.*/, "The title contains 'Sentier VTT'");
+        test.assertTitleMatch(/^.*Single track pour le VTT.*/, "The title contains 'Single track pour le VTT'");
         test.assertElementCount('.site-menu .pure-menu-selected', 1, "One element is selected in the menu");
         test.assertEquals(
             this.fetchText('.site-menu .pure-menu-selected'),

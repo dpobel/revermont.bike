@@ -2,7 +2,7 @@
     <h2 class="page-subtitle icon-comment">Commentaires</h2>
 
     {% if comments %}
-        {% for comment in comments %}
+        {% for comment in comments|reverse %}
             <div class="comment" itemscope itemtype="http://schema.org/Comment">
                 <h3 class="comment-info">
                     {% if comment.url %}

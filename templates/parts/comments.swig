@@ -14,6 +14,7 @@
                     &ndash;
                     <time datetime="{{ comment.created|parse_date().format() }}" itemprop="dateCreated">{{ comment.created|parse_date().format(config.dateFormat) }}</time>
                 </h3>
+                <meta itemprop="about" content="{{ path|ext_url }}">
                 <p class="comment-content" itemprop="text">{{ comment.text|e|nl2br|autolink|safe }}</p>
             </div>
         {% endfor %}

@@ -1,6 +1,6 @@
 ---
 title: Et si on roulait du côté de Meillonnas?
-tags: treffort-cuisiat, meillonnas, jasseron, grotte des fées, grillère, liaison, revermont, single track
+tags: treffort-cuisiat, meillonnas, grotte des fées, grillère, liaison, revermont, single track
 created: 2014-11-20 09:45
 ---
 

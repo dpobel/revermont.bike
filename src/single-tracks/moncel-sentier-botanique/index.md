@@ -2,7 +2,7 @@
 gpx: moncel.gpx
 updated: 2014-10-23
 created: 2014-10-23
-tags: treffort-cuisiat, moncel
+tags: treffort-cuisiat, moncel, liaison
 ---
 
 Ce sentier relie Treffort à Cuisiat en contournant Moncel par le sud puis par

@@ -7,5 +7,7 @@ created: 2014-08-30 16:24
 ---
 
 [La Grotte des Fées](/tags/grotte-des-fées/) n'est pas répertoriée sur les
-cartes IGN, pourtant le panorama a cet endroit est superbe, le début d'une
-descente sympathique pour le VTT n'est pas loin.
+cartes IGN, pourtant le panorama à cet endroit est superbe. Ce belvédère est
+accessible en empruntant [la descente de la Grotte des
+Fées](/single-tracks/descente-grotte-des-fees/), une superbe descente à la fois
+rapide et technique&nbsp;!

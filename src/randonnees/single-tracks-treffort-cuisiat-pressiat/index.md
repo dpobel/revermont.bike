@@ -9,8 +9,9 @@ Cette randonnée au départ de Cuisiat est plutôt physique et nerveuse avec
 presque 1000&nbsp;m de dénivelé pour environ 27&nbsp;km. Le tracé relie quelques
 uns des plus beaux single-tracks dans les environs de Treffort-Cuisiat avec
 notamment [la Crête de la Cabatane](/single-tracks/crete-de-la-cabatane/), [le
-single du Grillerin](/single-tracks/single-du-grillerin-ouest/), la descente
-de la grotte des Fées entre Meillonnas et Treffort ou [la liaison Treffort
+single du Grillerin](/single-tracks/single-du-grillerin-ouest/), [la descente
+de la grotte des Fées entre Meillonnas et
+Treffort](/single-tracks/descente-grotte-des-fees/) ou [la liaison Treffort
 Cuisiat par Moncel](/single-tracks/moncel-sentier-botanique/). Elle offre aussi la
 possibilité de profiter du panorama à proximité des ruines de la maison forte de
 Lomont, de la grotte de la Cabatane ou au sommet du Mont Grillerin.

@@ -16,7 +16,7 @@
     </h1>
 
     <section>
-        {% if pagination.num == 1 and contents %}
+        {% if pagination.num == 1 %}
         <article class="pure-g">
             {% if latlon %}
             <div class="map-tag pure-u-1 pure-u-md-3-5"></div>
@@ -75,6 +75,7 @@
         'ignApiKey': "{{ config.ignKey }}",
         'layerReadyClass': "{{ screenshot.layerReadyClass }}",
         'popup': {% if popup %}true{% else %}false{% endif %},
+        'popupContent': {{ popupContent|json|safe }},
         'title': {{ title|json|safe }},
         'point': {{ latlon|json|safe }},
         'map': '.map-tag',

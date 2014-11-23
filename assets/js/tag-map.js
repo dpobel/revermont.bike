@@ -21,7 +21,7 @@
         if ( !simplified ) {
             if ( config.popup ) {
                 L.popup()
-                    .setContent(config.title)
+                    .setContent(config.popupContent ? config.popupContent : config.title)
                     .setLatLng(config.point)
                     .addTo(map);
             }

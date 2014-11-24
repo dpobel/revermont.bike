@@ -1,7 +1,7 @@
 ---
 title: Sortie VTT "vintage"
 created: 2014-10-05 23:01
-tags: sunn, coligny, randonnée, semi-rigide, 29 pouces, 26 pouces, gr59
+tags: sunn, coligny, randonnée, semi-rigide, 29 pouces, 26 pouces, gr59, jura
 ---
 
 <a href="/photos/sunn-montagna-le-reconduit/"><img

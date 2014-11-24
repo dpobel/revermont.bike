@@ -19,9 +19,11 @@
         {% if pagination.num == 1 %}
         <article class="pure-g">
             {% if latlon %}
-            <div class="map-tag pure-u-1 pure-u-md-3-5"></div>
+            <div class="map-tag pure-u-1{% if contents %} pure-u-md-3-5{% endif %}"></div>
             {% endif %}
+            {% if contents %}
             <div itemprop="description" class="contents pure-u-1{% if latlon %} pure-u-md-2-5{% endif %}">{{ contents|safe }}</div>
+            {% endif %}
         </article>
         {% endif %}
 

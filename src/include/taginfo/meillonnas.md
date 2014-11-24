@@ -5,7 +5,8 @@ popup: false
 zoom: 13
 ---
 
-Meillonnas est un village à cheval entre la Bresse et le Revermont situé entre
+Meillonnas est un village à cheval entre la Bresse et le
+[Revermont](/tags/revermont/) situé entre
 [Treffort-Cuisiat](/tags/treffort-cuisiat/) au nord et
 [Jasseron](/tags/jasseron/) au sud. Il est
 surtout connu pour ses faïences. Sa partie est offre de nombreux sentiers

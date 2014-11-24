@@ -8,4 +8,4 @@ zoom: 14
 La Grotte des Fées est un petite grotte située sur la commune de
 [Meillonnas](/tags/meillonnas/). Des fouilles ont permis d'y découvrir des
 sépultures préhistoriques, des silex et des os travaillés. Cet endroit offre un
-panorama superbe sur Treffort et sur le Revermont environnant.
+panorama superbe sur [Treffort](/tags/treffort-cuisiat/) et sur le [Revermont](/tags/revermont/) environnant.

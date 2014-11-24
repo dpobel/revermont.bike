@@ -46,7 +46,7 @@ exemple). Dans les passages les plus engagés, il faut savoir rester humble face
 à ces traces et ne pas hésiter à renoncer si on le sent pas.
 
 En tout cas, un grand merci encore à shaper01 pour cette sortie découverte
-extrêment sympathique qui montre que notre cher Revermont propose tout ce qu'il
+extrêment sympathique qui montre que notre cher [Revermont](/tags/revermont/) propose tout ce qu'il
 faut pour le VTT même *engagé*. Maintenant, je vais aller bosser ma technique et
 y'a du boulot :-)
 

@@ -5,7 +5,7 @@ popup: false
 zoom: 13
 ---
 
-Treffort-Cuisiat est une commune du Revermont située entre
+Treffort-Cuisiat est une commune du [Revermont](/tags/revermont/) située entre
 [Coligny](/tags/coligny/) et [Jasseron](/tags/jasseron/). Il s'agit probablement de l'un des plus
 beaux villages du Revermont. Il est traversé par de nombreux sentiers de
 randonnée dont notamment le [Tour du Revermont](/tags/grp-tour-du-revermont/) et

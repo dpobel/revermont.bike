@@ -50,4 +50,4 @@ moins de vouloir faire un peu de route vers Treffort ou
 la croix des Angoulures).
 
 Dans tous les cas, les single tracks du Mont de Grillerin sont vraiment à
-découvrir et font partie des *classiques* du Revermont.
+découvrir et font partie des *classiques* du [Revermont](/tags/revermont/).

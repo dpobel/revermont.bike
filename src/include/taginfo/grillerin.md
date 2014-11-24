@@ -5,7 +5,7 @@ popup: true
 zoom: 13
 ---
 
-Le Mont de Grillerin est un sommet du Revermont situé entre les communes de
+Le Mont de Grillerin est un sommet du [Revermont](/tags/revermont/) situé entre les communes de
 [Treffort-Cuisiat](/tags/treffort-cuisiat/) et de
 [Meillonnas](/tags/meillonnas/) culminant à 538 mètres d'altitude. Pour la
 pratique du VTT, il offre plusieurs [single tracks](/tags/single-track)

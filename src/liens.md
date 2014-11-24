@@ -5,7 +5,8 @@ icon: link
 pageItemType: http://www.schema.org/CollectionPage
 ---
 
-Voici quelques liens plus ou moins en rapport avec le VTT, le Revermont, l'Ain,
+Voici quelques liens plus ou moins en rapport avec le VTT, le
+[Revermont](/tags/revermont/), l'Ain,
 le Jura, ... Pour apparaître ici, n'hésitez pas à utiliser [le formulaire de
 contact](/contact/), je suis aussi ouvert à différentes formes de partenariat.
 

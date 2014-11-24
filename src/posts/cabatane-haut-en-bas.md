@@ -27,6 +27,6 @@ frameborder="0" allowfullscreen></iframe>
 </div>
 
 Finalement, ces 12 minutes et 40 secondes sont assez réprésentatives du VTT dans
-le Revermont&nbsp;: [de beaux panoramas](/tags/panorama/), un soupçon de pistes
+le [Revermont](/tags/revermont/)&nbsp;: [de beaux panoramas](/tags/panorama/), un soupçon de pistes
 parfois cassantes et surtout des singles en crête et en sous-bois ludiques et
 parfois très techniques&nbsp;!

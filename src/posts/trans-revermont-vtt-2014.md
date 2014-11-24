@@ -29,7 +29,7 @@ des années précédentes sont disponibles sur Openrunner, par exemple&nbsp;:
 Même si l'affiche indique que les parcours sont renouvelés, ils permettent
 d'avoir une certaine idée de ce qui attend les participants et personnellement, ils me
 donnent plutôt envie d'aller poser mes roues du coté de Simandre-sur-Suran.
-D'autant plus  que c'est un coin du Revermont que je connais assez mal, ce sera
+D'autant plus  que c'est un coin du [Revermont](/tags/revermont/) que je connais assez mal, ce sera
 une excellente occasion de [répertorier de nouveaux single
 tracks](/single-tracks/) et d'élargir un peu la zone géographique couverte en
 espèrant que le temps soit clément le 26 octobre.

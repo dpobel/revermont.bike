@@ -35,7 +35,7 @@ sur une région spécifique. Il existe par exemple le [GRP Tour du Revermont](/t
 <dt id="sr" class="glossary-term">Semi rigide</dt>
 <dd>**Hard tail** en anglais, VTT uniquement suspendu à l'avant par opposition à
 *tout suspendu* et *tout rigide*.</dd>
-<dt id="single" class="glossary-term">Single-tracks</dt>
+<dt id="single" class="glossary-term">Single-tracks ou single ou monotrace</dt>
 <dd>Voir [Single track](/tags/single-track/) et tous les exemples dans les
 [single tracks du Revermont](/single-tracks/) ;-).</dd>
 </dl>

@@ -8,7 +8,8 @@
         simplified = (doc.location.hash === '#simplified-map');
 
     function _init() {
-        var layers = RB.layers(config.ignApiKey, L, config.layerReadyClass);
+        var layers = RB.layers(config.ignApiKey, L, config.layerReadyClass),
+            layersControl;
 
         map = L.map(doc.querySelector(config.map), {
             zoom: config.zoom,
@@ -25,9 +26,9 @@
                     .setLatLng(config.point)
                     .addTo(map);
             }
-            L.control.layers(layers.layers, {}, {position: 'topleft'}).addTo(map);
+            layersControl = L.control.layers(layers.layers, {}, {position: 'topleft'}).addTo(map);
             L.control.scale({imperial: false}).addTo(map);
-            RB.photos(config.photosUrl, map);
+            RB.photos(config.photosUrl, map, layersControl);
         }
     }
 

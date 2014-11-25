@@ -7,7 +7,8 @@
         doc = global.document;
 
     function _init() {
-        var layers = RB.layers(config.ignApiKey, L);
+        var layers = RB.layers(config.ignApiKey, L),
+            layersControl;
 
         map = L.map(doc.querySelector(config.map), {
             zoom: config.zoom,
@@ -15,9 +16,9 @@
             layers: [layers.defaultLayer],
             fullscreenControl: true,
         });
-        RB.photos(config.photosUrl, map);
-        L.control.layers(layers.layers, {}, {position: 'topleft'}).addTo(map);
+        layersControl = L.control.layers(layers.layers, {}, {position: 'topleft'}).addTo(map);
         L.control.scale({imperial: false}).addTo(map);
+        RB.photos(config.photosUrl, map, layersControl);
     }
 
     RB.photoMap = function (conf) {

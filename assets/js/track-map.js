@@ -49,7 +49,8 @@
 
     function _initMap() {
         var layers, line, marker, profile, tooltip, chart, info, infoTpl,
-            start = {lat: track.points[0].lat, lon: track.points[0].lon};
+            start = {lat: track.points[0].lat, lon: track.points[0].lon},
+            layersControl;
 
         layers = RB.layers(config.ignApiKey, L, config.layerReadyClass);
         map = L.map(doc.querySelector(config.map), {
@@ -60,15 +61,14 @@
         });
         map.fitBounds(_getBounds());
         if ( !simplified ) {
-            L.control.layers(layers.layers, {}, {position: 'topleft'}).addTo(map);
+            layersControl = L.control.layers(layers.layers, {}, {position: 'topleft'}).addTo(map);
             L.control.scale({imperial: false}).addTo(map);
         }
 
         if ( map.getZoom() > config.maxAutoZoom ) {
             map.setZoom(config.maxAutoZoom, {animated: true});
         }
-
-        RB.photos(config.photosUrl, map);
+        RB.photos(config.photosUrl, map, layersControl);
 
         line = L.polyline(track.points, {
             color: config.style.color,

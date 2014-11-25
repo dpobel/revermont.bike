@@ -4,7 +4,9 @@
 
     var RB = global.RB = global.RB || {};
 
-    function addPhotos(photos, map) {
+    function addPhotos(photos, map, layersControl) {
+        var photosLayer = L.layerGroup();
+
         photos.forEach(function (photo) {
             var marker;
 
@@ -22,20 +24,24 @@
                     markerColor: 'red',
                     extraClasses: 'map-icon',
                 })
-            }).addTo(map);
+            }).addTo(photosLayer);
             marker.on('click', function () {
                 map.openPopup(photo.popup, photo.latlon);
             });
         });
+        photosLayer.addTo(map);
+        if ( layersControl ) {
+            layersControl.addOverlay(photosLayer, "Photos");
+        }
     }
 
-    RB.photos = function (dataUrl, map) {
+    RB.photos = function (dataUrl, map, layersControl) {
         var req = new XMLHttpRequest();
 
         req.open('GET', dataUrl, true);
         req.onreadystatechange = function (e) {
             if ( req.readyState === 4 && req.status === 200 ) {
-                addPhotos(JSON.parse(req.responseText), map);
+                addPhotos(JSON.parse(req.responseText), map, layersControl);
             }
         };
         req.send(null);

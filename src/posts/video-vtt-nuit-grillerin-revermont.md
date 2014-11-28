@@ -21,3 +21,6 @@ frameborder="0" allowfullscreen></iframe>
 Et voila, maintenant j'ai envie de m'essayer aux sorties de nuit, va falloir
 ajouter la frontale et l'éclairage sur le vélo sur la liste des accessoires
 manquants ;-)
+
+<img src="/single-tracks/single-du-grillerin-nord/map.jpg" hidden alt="Carte du
+single du Grillerin nord">

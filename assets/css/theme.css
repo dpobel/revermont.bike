@@ -339,6 +339,25 @@ a {
     list-style-type: square;
 }
 
+.breadcrumb {
+    font-size: 90%;
+    background: #efefef;
+    color: #888;
+}
+
+.breadcrumb .bc-list {
+    list-style-type: none;
+}
+
+.breadcrumb .bc-item:after {
+    content: "»";
+    padding: 0 0.6em;
+}
+
+.breadcrumb .bc-item:last-of-type:after {
+    content: "";
+}
+
 .global-map {
     display: block;
     -webkit-transform: translateX(100%);

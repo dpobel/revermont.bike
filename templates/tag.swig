@@ -4,6 +4,24 @@
 
 {% block title %}{% if title %}{{ title }}{% else %}{{ tag }}{% endif %}{% if pagination.num != 1 %} (Page {{ pagination.num }}){% endif %} - {% parent %}{% endblock %}
 
+{% block breadcrumb %}
+    {% if title %}
+    {% include "parts/breadcrumb.swig" with {
+        struct: [
+            {path: "/", name: "VTT dans le Revermont"},
+            {path: false, name: title},
+        ]
+    } %}
+    {% else %}
+    {% include "parts/breadcrumb.swig" with {
+        struct: [
+            {path: "/", name: "VTT dans le Revermont"},
+            {path: false, name: tag},
+        ]
+    } %}
+    {% endif %}
+{% endblock %}
+
 {% block content %}
 <div class="pure-g tag-page" itemprop="mainContentOfPage" itemscope itemtype="{% if latlon %}http://www.schema.org/Place{% else %}http://www.schema.org/Article{% endif %}">
     <div class="pure-u-1 pure-u-md-3-4">

@@ -4,6 +4,16 @@
 
 {% block title %}{{ title }} - Single track pour le VTT dans le Revermont{% endblock %}
 
+{% block breadcrumb %}
+    {% include "parts/breadcrumb.swig" with {
+        struct: [
+            {path: "/", name: "VTT dans le Revermont"},
+            {path: "/single-tracks/", name: "Single tracks"},
+            {path: false, name: title},
+        ]
+    } %}
+{% endblock %}
+
 {% block content %}
     {% include "parts/track-content.swig" %}
 {% endblock %}

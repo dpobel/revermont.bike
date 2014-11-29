@@ -38,6 +38,7 @@
 
     {% block pageTitle %}{% endblock %}
 
+    {% block breadcrumb %}{% endblock %}
     <section class="site-main">
         <div class="site-main-content">
         {% block content %}{% endblock %}

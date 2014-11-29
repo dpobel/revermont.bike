@@ -4,6 +4,15 @@
 
 {% block title %}{{ title }} - {% parent %}{% endblock %}
 
+{% block breadcrumb %}
+    {% include "parts/breadcrumb.swig" with {
+        struct: [
+            {path: "/", name: "VTT dans le Revermont"},
+            {path: false, name: title},
+        ]
+    } %}
+{% endblock %}
+
 {% block content %}
     <article>
         <h1 class="icon-{{ icon }} page-title">{{ title }}</h1>

@@ -6,6 +6,16 @@
 
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
+{% block breadcrumb %}
+    {% include "parts/breadcrumb.swig" with {
+        struct: [
+            {path: "/", name: "VTT dans le Revermont"},
+            {path: "/posts/", name: "Blog"},
+            {path: false, name: title},
+        ]
+    } %}
+{% endblock %}
+
 {% block content %}
     <article class="pure-g blog-post" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="pure-u-1 pure-u-md-3-4 blog-post-content">

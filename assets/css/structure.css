@@ -114,6 +114,28 @@ img {
     display: block;
 }
 
+.breadcrumb {
+    display: none;
+}
+
+@media screen and (min-width: 48em) {
+    .breadcrumb {
+        padding: 0.2em 0;
+        display: block;
+    }
+
+    .breadcrumb .bc-list {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .breadcrumb .bc-item {
+        display: inline-block;
+        padding: 0;
+    }
+}
+
 .global-map {
     position: absolute;
     width: 100%;

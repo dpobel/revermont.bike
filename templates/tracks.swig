@@ -6,6 +6,15 @@
 
 {% block menu %}{% set selected = section %}{% parent %}{% endblock %}
 
+{% block breadcrumb %}
+    {% include "parts/breadcrumb.swig" with {
+        struct: [
+            {path: "/", name: "VTT dans le Revermont"},
+            {path: false, name: title},
+        ]
+    } %}
+{% endblock %}
+
 {% block content %}
 <div itemprop="mainContentOfPage">
     <h1 class="icon-tracks page-title">{{ long }}</h1>

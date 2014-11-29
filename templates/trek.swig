@@ -4,6 +4,16 @@
 
 {% block title %}{{ title }} - Randonnée VTT dans le Revermont{% endblock %}
 
+{% block breadcrumb %}
+    {% include "parts/breadcrumb.swig" with {
+        struct: [
+            {path: "/", name: "VTT dans le Revermont"},
+            {path: "/randonnees/", name: "Circuits de randonnées"},
+            {path: false, name: title},
+        ]
+    } %}
+{% endblock %}
+
 {% block content %}
     {% include "parts/track-content.swig" %}
 {% endblock %}

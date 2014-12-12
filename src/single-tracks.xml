@@ -3,6 +3,6 @@ permalink: false
 template: rss.swig
 title: Les derniers sentiers sur Revermont.bike
 exportCollection: lastTracks
-path: sentiers.xml
+path: single-tracks.xml
 description: Les derniers single tracks pour le VTT dans le Revermont publiées sur http://vtt.revermont.bike/single-tracks/
 ---

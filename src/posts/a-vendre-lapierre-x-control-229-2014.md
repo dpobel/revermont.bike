@@ -36,7 +36,7 @@ par rapport au montage d'origine, il a subi quelques modifications&nbsp;:
 * porte bidon
 * compteur Fuxon F6 6 fonctions
 
-Il est visible à St Paul de Varax, pour toute question, vous pouvez utiliser [le
+Il est visible à [St Paul de Varax (à proximité de Bourg-en-Bresse dans l'Ain)](https://goo.gl/maps/Tw8WH), pour toute question, vous pouvez utiliser [le
 formulaire de contact](/contact/) ou me contacter *via* [l'annonce sur Le bon
 coin](http://www.leboncoin.fr/sports_hobbies/754700228.htm) ou [celle sur
 Velovert.com](http://www.velovert.com/annonce/419598/velo-complet-lapierre-x-control-229-7c7c27c7c).

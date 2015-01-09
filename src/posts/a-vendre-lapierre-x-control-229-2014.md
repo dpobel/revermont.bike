@@ -5,7 +5,7 @@ created: 2015-01-09 15:03
 ---
 
 <figure class="img-left with-caption">
-    <a href="/assets/img/lapierre-x-control-229-2014_960.jpg"><img src="/assets/img/lapierre-x-control-229-2014_400.jpg"
+    <a href="/assets/img/lapierre-x-control-229-2014.jpg"><img src="/assets/img/lapierre-x-control-229-2014_400.jpg"
         alt="Lapierre X-Control 229"></a>
     <figcaption>Lapierre X-Control 229 de 2014</figcaption>
 </figure>

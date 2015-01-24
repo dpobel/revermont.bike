@@ -7,7 +7,8 @@ created: 2015-01-09 15:03
 <figure class="img-left with-caption">
     <a href="/assets/img/lapierre-x-control-229-2014.jpg"><img src="/assets/img/lapierre-x-control-229-2014_400.jpg"
         alt="Lapierre X-Control 229"></a>
-    <figcaption>Lapierre X-Control 229 de 2014</figcaption>
+    <figcaption>Lapierre X-Control 229 de 2014 (<a
+href="/assets/img/lapierre-x-control-face-229-2014.jpg">Photo de face</a>)</figcaption>
 </figure>
 
 Je vends mon **Lapierre X-Control 229 pour 1100&nbsp;€**. Je l'ai acheté neuf en
@@ -36,7 +37,9 @@ par rapport au montage d'origine, il a subi quelques modifications&nbsp;:
 * porte bidon
 * compteur Fuxon F6 6 fonctions
 
-Il est visible à [St Paul de Varax (à proximité de Bourg-en-Bresse dans l'Ain)](https://goo.gl/maps/Tw8WH), pour toute question, vous pouvez utiliser [le
+Il est visible à [St Paul de Varax (à proximité de Bourg-en-Bresse dans
+l'Ain)](https://goo.gl/maps/Tw8WH) et je peux également le transporter
+facilement sur Lyon en semaine. Pour toute question, vous pouvez utiliser [le
 formulaire de contact](/contact/) ou me contacter *via* [l'annonce sur Le bon
 coin](http://www.leboncoin.fr/velos/755240826.htm), [celle sur
 Velovert.com](http://www.velovert.com/annonce/419598/velo-complet-lapierre-x-control-229-7c7c27c7c)

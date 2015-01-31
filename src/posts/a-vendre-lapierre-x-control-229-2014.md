@@ -11,7 +11,7 @@ created: 2015-01-09 15:03
 href="/assets/img/lapierre-x-control-face-229-2014.jpg">Photo de face</a>)</figcaption>
 </figure>
 
-Je vends mon **Lapierre X-Control 229 pour 1100&nbsp;€**. Je l'ai acheté neuf en
+Je vends mon **Lapierre X-Control 229 pour 1000&nbsp;€**. Je l'ai acheté neuf en
 mars 2014 à 1600&nbsp;€ et il a environ 830&nbsp;km. Il est en très bon état,
 parfaitement utilisable tel quel.
 

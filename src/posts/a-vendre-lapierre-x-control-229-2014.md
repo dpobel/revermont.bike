@@ -1,5 +1,5 @@
 ---
-title: "À vendre: VTT tout suspendu Lapierre X-Control 229 de 2014"
+title: "VTT tout suspendu Lapierre X-Control 229 de 2014"
 tags: lapierre, 29 pouces, matériel
 created: 2015-01-31 17:03
 ---
@@ -11,7 +11,7 @@ created: 2015-01-31 17:03
 href="/assets/img/lapierre-x-control-face-229-2014.jpg">Photo de face</a>)</figcaption>
 </figure>
 
-Je vends mon **Lapierre X-Control 229 pour 1000&nbsp;€**. Je l'ai acheté neuf en
+~~Je vends mon **Lapierre X-Control 229 pour 1000&nbsp;€**~~ **Il est VENDU**. Je l'ai acheté neuf en
 mars 2014 à 1600&nbsp;€ et il a environ 830&nbsp;km. Il est en très bon état,
 parfaitement utilisable tel quel.
 
@@ -36,16 +36,6 @@ par rapport au montage d'origine, il a subi quelques modifications&nbsp;:
 * pédales plates à picots
 * porte bidon
 * compteur Fuxon F6 6 fonctions
-
-Il est visible à [St Paul de Varax (à proximité de Bourg-en-Bresse dans
-l'Ain)](https://goo.gl/maps/Tw8WH) et je peux également le transporter
-facilement sur Lyon ou dans le nord du département de l'Ain du côté de Coligny.
-Pour toute question, vous pouvez utiliser [le formulaire de contact](/contact/)
-ou me contacter *via* [l'annonce sur Le bon
-coin](http://www.leboncoin.fr/velos/755240826.htm), [celle sur
-Velovert.com](http://www.velovert.com/annonce/419598/velo-complet-lapierre-x-control-229-7c7c27c7c)
-ou [celle sur Troc
-Vélo](http://www.troc-velo.com/velo-vtt-cross-country-lapierre-x-control-229-1-1-1282075.htm).
 
 ## Autres photos
 

@@ -44,7 +44,7 @@
 
             <div class="pure-u-1 pure-u-lg-1-2 comment-input-box">
                 <label for="nospam" class="form-input-required">Question anti-spam, écrivez le chiffre 2 en toutes lettres*&nbsp;:</label>
-                <input type="text" name="nospam" id="nospam" class="pure-input-1">
+                <input type="text" name="nospam" id="nospam" class="pure-input-1" required>
             </div>
 
             <div class="pure-u-1 pure-u-lg-1-2 comment-input-box">

@@ -29,7 +29,7 @@
             {{ guidelines|safe }}
         </div>
         <div class="pure-g">
-            <div class="pure-u-1 pure-u-lg-1-3 comment-input-box">
+            <div class="pure-u-1 pure-u-lg-1-2 comment-input-box">
                 <input type="hidden" name="redirect_to" value="{{ 'thanks'|ext_url }}">
                 <input type="hidden" name="path" value="{{ path }}">
 
@@ -37,12 +37,17 @@
                 <input type="text" name="name" id="name" class="pure-input-1" required>
             </div>
 
-            <div class="pure-u-1 pure-u-lg-1-3 comment-input-box">
+            <div class="pure-u-1 pure-u-lg-1-2 comment-input-box">
                 <label for="email" class="form-input-required">Adresse e-mail*&nbsp;:</label>
                 <input type="email" name="email" id="email" class="pure-input-1" required>
             </div>
 
-            <div class="pure-u-1 pure-u-lg-1-3 comment-input-box">
+            <div class="pure-u-1 pure-u-lg-1-2 comment-input-box">
+                <label for="nospam" class="form-input-required">Question anti-spam, écrivez le chiffre 2 en toutes lettres*&nbsp;:</label>
+                <input type="text" name="nospam" id="nospam" class="pure-input-1">
+            </div>
+
+            <div class="pure-u-1 pure-u-lg-1-2 comment-input-box">
                 <label for="url">Site web&nbsp;:</label>
                 <input type="url" name="url" id="url" class="pure-input-1">
             </div>

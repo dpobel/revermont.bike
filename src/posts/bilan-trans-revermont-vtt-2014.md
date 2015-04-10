@@ -1,6 +1,6 @@
 ---
 title: Bilan de la Trans-Revermont 2014
-tags: randonnée organisée, revermont, simandre-sur-suran, single track, fat bike
+tags: randonnée organisée, revermont, simandre-sur-suran, single track, fat bike, specialized
 created: 2014-10-27 08:50
 ---
 

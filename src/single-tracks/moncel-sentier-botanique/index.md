@@ -13,7 +13,7 @@ de la même distance avec un peu plus de dénivelé.
 
 La montée se fait d'abord sur un chemin assez large et roulant qui se retrécit
 lorsqu'on atteint le virage à la pointe sud du sentier sur la carte. À partir de ce point, on se
-trouve à flanc de colline dans une combe, c'est un endroit vraiment agréable à
+trouve [à flanc de colline dans une combe](/photos/sentier-botannique-de-moncel-direction-treffort/), c'est un endroit vraiment agréable à
 rouler sans grosse difficulté. Après avoir franchi 2 clôtures, la descente
 s'amorce. Malgré quelques passages assez cassants et quelques rochers (qu'il vaut
 mieux éviter :)), cette descente est très rapide et ludique. Le sentier alterne

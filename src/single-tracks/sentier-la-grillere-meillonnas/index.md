@@ -6,7 +6,8 @@ updated: 2014-11-19 17:58
 ---
 
 Comme souvent, ce [single track](/tags/single-track/) à profil descendant
-commence par une courte montée en lisière de bois après avoir franchi une
+commence par une courte montée [en lisière de
+bois](/photos/ambiance-jurassienne/) après avoir franchi une
 clôture par un passage plutôt bien aménagé (ce n'est pas si courant&nbsp;!).
 Après environ 400 mètres de montée, qui se font sur le vélo sans trop de soucis,
 une nouvelle clôture est à franchir; elle marque la fin de la montée et le début

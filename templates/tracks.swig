@@ -16,7 +16,6 @@
 {% endblock %}
 
 {% block content %}
-<div itemprop="mainContentOfPage">
     <h1 class="icon-tracks page-title">{{ long }}</h1>
     <div class="contents">{{ contents|safe }}</div>
 
@@ -42,7 +41,6 @@
     </tr>
     {% endfor %}
     </table>
-</div>
 {% endblock %}
 
 {% block javascriptCode %}

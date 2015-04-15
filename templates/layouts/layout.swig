@@ -40,7 +40,7 @@
 
     {% block breadcrumb %}{% endblock %}
     <section class="site-main">
-        <div class="site-main-content">
+        <div class="site-main-content" itemprop="mainContentOfPage">
         {% block content %}{% endblock %}
         </div>
     </section>

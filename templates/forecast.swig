@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block content %}
-    <article itemprop="mainContentOfPage">
+    <article>
         <h1 class="icon-{{ forecast.daily.icon }} page-title">{{ title }}</h1>
 
         <p>

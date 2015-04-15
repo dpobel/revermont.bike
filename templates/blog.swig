@@ -16,8 +16,8 @@
 {% endblock %}
 
 {% block content %}
-<div class="pure-g blog">
-    <div itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog" class="pure-u-1 pure-u-md-3-4">
+<div class="pure-g blog" itemscope itemtype="http://schema.org/Blog">
+    <div class="pure-u-1 pure-u-md-3-4">
     <h1 class="icon-blog page-title"><span itemprop="name">{{ long }}</span>{% if pagination.num != 1 %} (Page {{ pagination.num }}){% endif %}</h1>
 
     <section>

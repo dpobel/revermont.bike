@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block content %}
-<div itemprop="mainContentOfPage" itemscope itemtype="http://www.schema.org/ImageObject" >
+<div itemscope itemtype="http://www.schema.org/ImageObject" >
     <h1 class="icon-photo page-title" itemprop="name">{{ title }}</h1>
 
     <section class="pure-g">

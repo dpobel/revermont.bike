@@ -23,7 +23,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="pure-g tag-page" itemprop="mainContentOfPage" itemscope itemtype="{% if latlon %}http://www.schema.org/Place{% else %}http://www.schema.org/Article{% endif %}">
+<div class="pure-g tag-page" itemscope itemtype="{% if latlon %}http://www.schema.org/Place{% else %}http://www.schema.org/Article{% endif %}">
     <div class="pure-u-1 pure-u-md-3-4">
     <h1 class="icon-tag page-title">{% if title -%}
         <span itemprop="name">{{ title }}</span>

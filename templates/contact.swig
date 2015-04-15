@@ -16,7 +16,7 @@
 {% endblock %}
 
 {% block content %}
-    <article itemprop="mainContentOfPage">
+    <article>
         <h1 class="icon-contact page-title">{{ title }}</h1>
         <div>{{ contents|safe }}</div>
 

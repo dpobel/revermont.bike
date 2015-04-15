@@ -10,7 +10,7 @@
     {% include "parts/breadcrumb.swig" with {
         struct: [
             {path: "/", name: "VTT dans le Revermont"},
-            {path: false, name: title},
+            {path: false, name: title, current: path},
         ]
     } %}
 {% endblock %}

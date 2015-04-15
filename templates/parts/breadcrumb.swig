@@ -5,6 +5,9 @@
             {% if item.path %}
                 <a href="{{ item.path|url }}" itemprop="url"><span itemprop="title">{{ item.name }}</span></a>
             {% else %}
+                {% if item.current %}
+                    <meta itemprop="url" content="{{ item.current|url }}"/>
+                {% endif %}
                 <span itemprop="title">{{ item.name }}</span>
             {% endif %}
         </li>

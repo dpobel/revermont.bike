@@ -9,7 +9,7 @@
         struct: [
             {path: "/", name: "VTT dans le Revermont"},
             {path: "/randonnees/", name: "Circuits de randonnées"},
-            {path: false, name: title},
+            {path: false, name: title, current: path},
         ]
     } %}
 {% endblock %}

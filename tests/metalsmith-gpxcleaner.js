@@ -332,6 +332,42 @@ describe('Metalsmith gpxcleaner', function () {
 
                     });
                 });
+
+                it('should remove the metadata time if none was set in the original file', function (done) {
+                    var files = {}, path = 'tracks/metadata_notime.gpx',
+                        fullpath = fixturesDir + path,
+                        fullpathNometa = fixturesDir + 'tracks/timemetadata.gpx',
+                        stdinWriteStub;
+
+                    fs.readFile(fullpath, function (err, content) {
+                        files[path] = {contents: content};
+
+                        stdinWriteStub = sinon.stub(eventEmitter.stdin, "write", function (string, callback) {
+                            callback();
+                        });
+
+                        fs.readFile(fullpathNometa, function (err, noMetaContent) {
+                            gpxcleaner({limit: 1})(files, false, function (err) {
+                                var doc;
+
+                                assert.ok(spawn.calledOnce, "spawn should have been called once");
+                                assert.ok(spawn.calledWith('gpsbabel'), "gpsbabel command should have been called");
+                                doc = libxmljs.parseXmlString(files[path].contents);
+                                assert.equal(4, doc.get('//gpx:metadata', nsConfig).childNodes().length); // 3 + bounds
+                                assert.equal('Keep metadata even if gpsbabel removes them', doc.get('//gpx:name', nsConfig).text());
+                                assert.equal(null, doc.get('//gpx:metadata/gpx:time', nsConfig));
+                                assert.equal('Description', doc.get('//gpx:desc', nsConfig).text());
+                                assert.equal('key', doc.get('//gpx:keywords', nsConfig).text());
+                                done();
+                            });
+
+                            eventEmitter.stdout.emit('data', noMetaContent);
+                            eventEmitter.emit('close');
+                        });
+
+                    });
+                });
+
             });
         });
     });

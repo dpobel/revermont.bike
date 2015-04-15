@@ -1,4 +1,4 @@
-<nav class="breadcrumb">
+<nav class="breadcrumb" itemprop="breadcrumb">
     <ul class="bc-list">
     {% for item in struct %}
         <li class="bc-item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">

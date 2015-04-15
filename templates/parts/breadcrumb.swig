@@ -3,10 +3,10 @@
     {% for item in struct %}
         <li class="bc-item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
             {% if item.path %}
-                <a href="{{ item.path|url }}" itemprop="url"><span itemprop="title">{{ item.name }}</span></a>
+                <a href="{{ item.path|ext_url }}" itemprop="url"><span itemprop="title">{{ item.name }}</span></a>
             {% else %}
                 {% if item.current %}
-                    <meta itemprop="url" content="{{ item.current|url }}"/>
+                    <meta itemprop="url" content="{{ item.current|ext_url }}"/>
                 {% endif %}
                 <span itemprop="title">{{ item.name }}</span>
             {% endif %}

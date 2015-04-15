@@ -11,13 +11,13 @@
         struct: [
             {path: "/", name: "VTT dans le Revermont"},
             {path: "/posts/", name: "Blog"},
-            {path: false, name: title},
+            {path: false, name: title, current: path},
         ]
     } %}
 {% endblock %}
 
 {% block content %}
-    <article class="pure-g blog-post" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/BlogPosting">
+    <article class="pure-g blog-post" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="pure-u-1 pure-u-md-3-4 blog-post-content">
             <h1 class="icon-blog page-title" itemprop="name">{{ title }}</h1>
             <div itemprop="articleBody" class="contents">{{ contents|safe }}</div>

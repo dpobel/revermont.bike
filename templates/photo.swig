@@ -9,13 +9,13 @@
         struct: [
             {path: "/", name: "VTT dans le Revermont"},
             {path: "/photos/", name: "Photos"},
-            {path: false, name: title},
+            {path: false, name: title, current: path},
         ]
     } %}
 {% endblock %}
 
 {% block content %}
-<div itemprop="mainContentOfPage" itemscope itemtype="http://www.schema.org/ImageObject" >
+<div itemscope itemtype="http://www.schema.org/ImageObject" >
     <h1 class="icon-photo page-title" itemprop="name">{{ title }}</h1>
 
     <section class="pure-g">

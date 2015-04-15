@@ -10,13 +10,12 @@
     {% include "parts/breadcrumb.swig" with {
         struct: [
             {path: "/", name: "VTT dans le Revermont"},
-            {path: false, name: title},
+            {path: false, name: title, current: path},
         ]
     } %}
 {% endblock %}
 
 {% block content %}
-<div itemprop="mainContentOfPage">
     <h1 class="icon-tracks page-title">{{ long }}</h1>
     <div class="contents">{{ contents|safe }}</div>
 
@@ -42,7 +41,6 @@
     </tr>
     {% endfor %}
     </table>
-</div>
 {% endblock %}
 
 {% block javascriptCode %}

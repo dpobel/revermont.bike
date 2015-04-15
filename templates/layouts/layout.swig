@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}{{ config.title }}{% endblock %}</title>
+    <title itemprop="name">{% block title %}{{ config.title }}{% endblock %}</title>
     <link rel="stylesheet" href="{{ cssFile|url(true) }}">
     <!--[if lt IE 9]>
     <script>(function(){var tags=['header','article','footer','nav', 'time', 'section', 'figure', 'abbr'];for(var i=0;i!=tags.length;i++) document.createElement(tags[i]);})();</script>
@@ -16,7 +16,7 @@
     <meta name="msapplication-TileImage" content="/favicon-144.png">
 {% block meta %}
     {% if metaDescription or contents %}
-    <meta name="description" content="{% if metaDescription %}{{ metaDescription }}{% else %}{{ contents|striptags|shorten(150) }}{% endif %}">
+    <meta name="description" itemprop="description" content="{% if metaDescription %}{{ metaDescription }}{% else %}{{ contents|striptags|shorten(150) }}{% endif %}">
     {% endif %}
 {% endblock %}
 </head>
@@ -40,7 +40,7 @@
 
     {% block breadcrumb %}{% endblock %}
     <section class="site-main">
-        <div class="site-main-content">
+        <div class="site-main-content" itemprop="mainContentOfPage">
         {% block content %}{% endblock %}
         </div>
     </section>

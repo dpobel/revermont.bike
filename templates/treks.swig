@@ -58,7 +58,7 @@
         },
         'style': {
             'pathOpacity': 1,
-            'weight': 8,
+            'weight': 5,
         }
     });
 {% endblock %}

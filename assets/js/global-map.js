@@ -49,6 +49,7 @@
                     weight: config.style.weight,
                 });
             line.on('click', function (e) {
+                line.bringToFront();
                 L.popup()
                     .setLatLng(e.latlng)
                     .setContent(track.description)

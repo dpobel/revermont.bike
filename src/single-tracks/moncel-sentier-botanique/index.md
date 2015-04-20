@@ -17,8 +17,8 @@ trouve à flanc de colline dans une combe, c'est un endroit vraiment agréable �
 rouler sans grosse difficulté. Après avoir franchi 2 clôtures, la descente
 s'amorce. Malgré quelques passages assez cassants et quelques rochers (qu'il vaut
 mieux éviter :)), cette descente est très rapide et ludique. Le sentier alterne
-partie champêtre, single track à découvert mais très étroit et zones plus
-couvertes (buis, mousse et feuilles mortes).
+partie champêtre, single track à découvert mais très étroit et [zones plus
+couvertes](/photos/moncel-direction-cuisiat/) (buis, mousse et feuilles mortes).
 
 **Attention**: au milieu d'une zone très rapide en sous bois, arrêt obligatoire
 pour ouvrir (et refermer!) une barrière!

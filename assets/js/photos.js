@@ -4,7 +4,11 @@
 
     var RB = global.RB = global.RB || {};
 
-    function addPhotos(photos, map, layersControl) {
+    function compLatLon (ll1, ll2) {
+        return (ll1[0] === ll2[0] && ll1[1] === ll2[1]);
+    }
+
+    function addPhotos(photos, map, centerLatLon, layersControl) {
         var photosLayer = L.layerGroup();
 
         photos.forEach(function (photo) {
@@ -21,7 +25,7 @@
                 icon: L.AwesomeMarkers.icon({
                     icon: 'photo',
                     prefix: 'icon',
-                    markerColor: 'red',
+                    markerColor: compLatLon(centerLatLon, photo.latlon) ? 'blue' : 'red',
                     extraClasses: 'map-icon',
                 })
             }).addTo(photosLayer);
@@ -35,13 +39,13 @@
         }
     }
 
-    RB.photos = function (dataUrl, map, layersControl) {
+    RB.photos = function (dataUrl, map, centerLatLon, layersControl) {
         var req = new XMLHttpRequest();
 
         req.open('GET', dataUrl, true);
         req.onreadystatechange = function (e) {
             if ( req.readyState === 4 && req.status === 200 ) {
-                addPhotos(JSON.parse(req.responseText), map, layersControl);
+                addPhotos(JSON.parse(req.responseText), map, centerLatLon, layersControl);
             }
         };
         req.send(null);

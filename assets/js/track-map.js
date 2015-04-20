@@ -68,7 +68,7 @@
         if ( map.getZoom() > config.maxAutoZoom ) {
             map.setZoom(config.maxAutoZoom, {animated: true});
         }
-        RB.photos(config.photosUrl, map, layersControl);
+        RB.photos(config.photosUrl, map, [], layersControl);
 
         line = L.polyline(track.points, {
             color: config.style.color,

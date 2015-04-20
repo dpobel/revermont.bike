@@ -21,6 +21,6 @@ RB.trackMap("{{ dataUrl|url(true) }}", {
     'style': {
         'color': '#0033ff',
         'pathOpacity': 0.6,
-        'weight': 6,
+        'weight': 5,
     }
 });

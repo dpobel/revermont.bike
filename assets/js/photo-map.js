@@ -18,7 +18,7 @@
         });
         layersControl = L.control.layers(layers.layers, {}, {position: 'topleft'}).addTo(map);
         L.control.scale({imperial: false}).addTo(map);
-        RB.photos(config.photosUrl, map, layersControl);
+        RB.photos(config.photosUrl, map, config.latlon, layersControl);
     }
 
     RB.photoMap = function (conf) {

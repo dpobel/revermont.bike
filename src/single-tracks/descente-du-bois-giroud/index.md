@@ -2,6 +2,7 @@
 gpx: descente-bois-giroud-jasseron.gpx
 tags: jasseron, single track, les combes, gr59
 created: 2015-04-20 08:23
+updated: 2015-04-21 14:02
 ---
 
 Ce sentier part du "sommet" du Mont Curtet à proximité du hameau Les Combes en

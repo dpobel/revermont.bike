@@ -23,13 +23,13 @@
 <body class="{{ section }}">
     {% block menu %}
         <header class="site-header">
-            <nav itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="site-menu pure-menu pure-menu-open pure-menu-horizontal">
+            <nav itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="site-menu">
                 <ul>
-                    <li{% if section == "home" %} class="pure-menu-selected"{% endif %}>
+                    <li{% if section == "home" %} class="site-menu-selected"{% endif %}>
                         <a href="/" class="back-home icon-mtb site-menu-link" itemprop="url"><span class="menu-text" itemprop="name">{{ config.shortTitle }}</span></a>
                     </li>
                     {% for item in menu %}
-                    <li{% if selected == item.section %} class="pure-menu-selected"{% endif %}><a href="{{ item.path|url }}" class="icon-{{ item.icon }} site-menu-link"{% if item.long %} title="{{ item.long }}"{% endif %} itemprop="url"><span class="menu-text" itemprop="name">{{ item.title }}</span></a></li>
+                    <li{% if selected == item.section %} class="site-menu-selected"{% endif %}><a href="{{ item.path|url }}" class="icon-{{ item.icon }} site-menu-link"{% if item.long %} title="{{ item.long }}"{% endif %} itemprop="url"><span class="menu-text" itemprop="name">{{ item.title }}</span></a></li>
                     {% endfor %}
                 </ul>
             </nav>

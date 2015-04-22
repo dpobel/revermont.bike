@@ -204,7 +204,7 @@ a {
     text-transform: uppercase;
 }
 
-.site-menu .pure-menu-selected {
+.site-menu .site-menu-selected {
     background: #6a686b;
 }
 
@@ -214,9 +214,10 @@ a {
 
 .site-header .site-menu li a {
     color: #ccc;
+    text-decoration: none;
 }
 
-.site-header .site-menu .pure-menu-selected a {
+.site-header .site-menu .site-menu-selected a {
     color: #fff;
 }
 

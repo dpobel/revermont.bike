@@ -28,9 +28,9 @@ casper.test.begin('Tracks global map page', function suite(test) {
     casper.then(function () {
         test.comment('Title and menu');
         test.assertTitle('Single tracks dans le Revermont', "The title is 'Single tracks dans le Revermont'");
-        test.assertElementCount('.site-menu .pure-menu-selected', 1, "One element is selected in the menu");
+        test.assertElementCount('.site-menu .site-menu-selected', 1, "One element is selected in the menu");
         test.assertEquals(
-            this.fetchText('.site-menu .pure-menu-selected'),
+            this.fetchText('.site-menu .site-menu-selected'),
            "Single tracks",
            "'Single tracks' is selected in the menu"
         );

@@ -11,9 +11,9 @@ casper.test.begin('Track page', function suite(test) {
         test.comment('Title and menu');
         test.assertTitleMatch(/^Single du Grillerin .*/, "The title starts with 'Single du Grillerin'");
         test.assertTitleMatch(/^.*Single track pour le VTT.*/, "The title contains 'Single track pour le VTT'");
-        test.assertElementCount('.site-menu .pure-menu-selected', 1, "One element is selected in the menu");
+        test.assertElementCount('.site-menu .site-menu-selected', 1, "One element is selected in the menu");
         test.assertEquals(
-            this.fetchText('.site-menu .pure-menu-selected'),
+            this.fetchText('.site-menu .site-menu-selected'),
            "Single tracks",
            "'Single tracks' is selected in the menu"
         );

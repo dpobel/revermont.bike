@@ -22,7 +22,18 @@ img {
     margin: 0 auto;
 }
 
+.site-menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+.site-menu li {
+    display: inline-block;
+    list-style-type: none;
+}
+
 .site-menu .site-menu-link {
+    display: block;
     padding: 0.4em 1em;
 }
 

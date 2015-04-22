@@ -1,9 +1,6 @@
 module.exports = function(grunt) {
     var build = require('./build.json'),
-        fnTest = 'tests/functional',
-        curlConfig = {};
-
-    curlConfig[build.assets + '/font.css'] = "http://fonts.googleapis.com/css?family=Open+Sans:400,700";
+        fnTest = 'tests/functional';
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -50,7 +47,6 @@ module.exports = function(grunt) {
                 },
             },
         },
-        curl: curlConfig,
         watch: {
             options: {
                 atBegin: true
@@ -116,11 +112,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-bower-task');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-casper');
-    grunt.loadNpmTasks('grunt-curl');
 
-    grunt.registerTask('build', ['curl', 'bower:install', 'shell:build', 'screenshots']);
+    grunt.registerTask('build', ['bower:install', 'shell:build', 'screenshots']);
     grunt.registerTask('build-local', ['bower:install', 'shell:build']);
-    grunt.registerTask('build-test', ['curl', 'bower:install', 'shell:build-test']);
+    grunt.registerTask('build-test', ['bower:install', 'shell:build-test']);
     grunt.registerTask('functional-test', ['build-test', 'connect', 'casper:test']);
     grunt.registerTask('unit-test', ['mochaTest']);
     grunt.registerTask('test', ['unit-test', 'functional-test']);

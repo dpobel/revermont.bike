@@ -169,7 +169,7 @@ noscript {
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"],
 .leaflet-container{
-    font-family:'Open Sans', Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6em;
     font-size: inherit;
 }

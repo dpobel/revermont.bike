@@ -13,5 +13,7 @@ quasiment droit dans la pente.  Cette première section est rapide et roulante.
 Un peu plus bas, à une intersection, il faut prendre la trace de gauche pour
 enchaîner sur une partie moins pentue, plus sinueuse mais toujours aussi
 amusante. Un peu plus loin, la pente s'accentue à nouveau avant d'emprunter une
-épingle à droite et terminer par une portion plus cassante et encombrée avant d'arriver à
+épingle à droite et terminer par une portion plus cassante et encombrée commune
+avec la fin de [la descente Les Combes à Jasseron par le Bois
+Giroud](/single-tracks/descente-combes-jasseron-bois-giroud/) avant d'arriver à
 proximité de la sortie de Jasseron au lieu-dit Tire-Male.

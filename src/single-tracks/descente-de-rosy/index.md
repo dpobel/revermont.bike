@@ -2,14 +2,16 @@
 gpx: rosy.gpx
 tags: rosy, col des justices, chavannes-sur-suran, cabatane, single track, vidéo
 created: 2014-10-11
-updated: 2014-10-11
+updated: 2015-05-22
 ---
 
 Ce sentier permet de relier le [Col des Justices](/tags/col-des-justices/) à
 [Rosy](/tags/rosy/) (un hameau de [Chavannes sur
 Suran](/tags/chavannes-sur-suran/)) au pied du [Mont
 Nivigne](/tags/mont-nivigne/) par un single track d'abord en montée puis *via*
-une descente légèrement aménagée.
+une descente légèrement aménagée. [D'après un commentaire sur
+Facebook](https://www.facebook.com/permalink.php?story_fbid=1508408892741701&id=1508396026076321&comment_id=1575182536064336&offset=0&total_comments=1&comment_tracking={%22tn%22%3A%22R%22}),
+elle se nomme la "NicoTwoBen" en hommage à ces créateurs.
 
 Comme pour [la crête de Cabatane](/single-tracks/crete-de-la-cabatane/), le
 chemin débute du Col des Justices par un bon raidillon difficile à passer sur le

@@ -75,6 +75,7 @@ if ( argv.forecast ) {
     forecastConf.key = argv.forecast;
 }
 if ( argv.pooleapp ) {
+    nock.enableNetConnect();
     pooleAppConf.forms.comments.secret = argv.pooleapp;
 } else {
     // no PooleApp secret, we configure nock to reply

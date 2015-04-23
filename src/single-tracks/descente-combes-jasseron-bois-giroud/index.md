@@ -1,6 +1,6 @@
 ---
 gpx: combes-jasseron.gpx
-tags: jasseron, single track, les combes 
+tags: jasseron, single track, les combes, vidéo
 created: 2015-04-20 09:59
 updated: 2015-04-22 09:11
 ---

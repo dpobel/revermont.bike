@@ -1,6 +1,6 @@
 ---
 gpx: descente-bois-giroud-jasseron.gpx
-tags: jasseron, single track, les combes, gr59
+tags: jasseron, single track, les combes, gr59, vidéo
 created: 2015-04-20 08:23
 updated: 2015-04-21 14:02
 ---

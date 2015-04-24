@@ -11,9 +11,13 @@
             + "TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&FORMAT=image%2Fjpeg";
     }
 
-    RB.layers = function (ignApiKey, L, layerReadyClass) {
+    RB.layers = function (ignApiKey, L, defaultLayer, layerReadyClass) {
         var res = {
                 layers: {
+                    "Fond neutre": L.tileLayer(
+                        'http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+                        {attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}
+                    ),
                     "IGN Scan express": L.tileLayer(
                         layerUrl(ignApiKey, "GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN-EXPRESS.CLASSIQUE"),
                         attr
@@ -28,7 +32,10 @@
                     ),
                 },
             };
-        res.defaultLayer = res.layers["IGN Scan express"];
+        if ( !defaultLayer || !res.layers[defaultLayer] ) {
+            defaultLayer = "IGN Scan express";
+        }
+        res.defaultLayer = defaultLayer && res.layers[defaultLayer];
         if ( layerReadyClass ) {
             res.defaultLayer.on('load', function () {
                 global.document.body.classList.add(layerReadyClass);

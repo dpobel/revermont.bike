@@ -30,7 +30,7 @@
     }
 
     function _initMap() {
-        var layers = RB.layers(config.ignApiKey, L),
+        var layers = RB.layers(config.ignApiKey, L, "Fond neutre"),
             layersControl;
 
         map = L.map(doc.querySelector(config.selector.map), {

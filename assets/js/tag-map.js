@@ -8,7 +8,7 @@
         simplified = (doc.location.hash === '#simplified-map');
 
     function _init() {
-        var layers = RB.layers(config.ignApiKey, L, config.layerReadyClass),
+        var layers = RB.layers(config.ignApiKey, L, "IGN Scan express", config.layerReadyClass),
             layersControl;
 
         map = L.map(doc.querySelector(config.map), {

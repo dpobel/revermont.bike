@@ -52,7 +52,7 @@
             start = {lat: track.points[0].lat, lon: track.points[0].lon},
             layersControl;
 
-        layers = RB.layers(config.ignApiKey, L, config.layerReadyClass);
+        layers = RB.layers(config.ignApiKey, L, "IGN Scan express", config.layerReadyClass);
         map = L.map(doc.querySelector(config.map), {
             layers: [layers.defaultLayer],
             fullscreenControl: !simplified,

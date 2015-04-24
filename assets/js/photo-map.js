@@ -7,7 +7,7 @@
         doc = global.document;
 
     function _init() {
-        var layers = RB.layers(config.ignApiKey, L),
+        var layers = RB.layers(config.ignApiKey, L, "IGN Scan express"),
             layersControl;
 
         map = L.map(doc.querySelector(config.map), {

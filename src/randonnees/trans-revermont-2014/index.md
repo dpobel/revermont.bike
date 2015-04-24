@@ -15,7 +15,7 @@ C'est un superbe parcours avec énormément de single-tracks et pas mal de chemi
 non mentionnés sur les cartes IGN.
 
 Dans sa première partie, le circuit fait des zigzags à partir de
-Simandre-sur-Suran vers Grand Corent et Cormorand. Ensuite, cap sur Ramasse pour
+Simandre-sur-Suran vers Grand-Corent et Cormorand. Ensuite, cap sur Ramasse pour
 aller faire une boucle absolument géniale du coté des Conches, de l'observatoire
 et du col de la Pérouse. La redescente se fait quasiment à 100% sur des single
 tracks ludiques. Enfin dans sa troisième partie, on longe la Montagne de

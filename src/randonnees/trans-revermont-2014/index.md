@@ -1,6 +1,6 @@
 ---
 gpx: trans-revermont-2014.gpx
-tags: randonnée organisée, revermont, simandre-sur-suran, grand corent, ramasse, conches, villereversure, cormorand, col de la pérouse, valuisant, observatoire
+tags: randonnée organisée, revermont, simandre-sur-suran, grand corent, ramasse, conches, villereversure, cormorand, col de la pérouse, valuisant, observatoire, conches
 created: 2014-10-26
 updated: 2014-10-26
 ---

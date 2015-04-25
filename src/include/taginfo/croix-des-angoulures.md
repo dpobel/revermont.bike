@@ -1,5 +1,5 @@
 ---
-latlon: [46.275743, 5.393909]
+latlon: [46.259729, 5.38346]
 title: Croix des Angoulures
 popup: true
 zoom: 13

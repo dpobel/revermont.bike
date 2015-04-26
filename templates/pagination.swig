@@ -1,5 +1,5 @@
 {% if pagination.total > 1 %}
-    <ul class="pure-paginator paginator">
+    <ul class="paginator">
         <li><a class="pure-button prev" href="{{ pagination.prev.path|url }}"{% if not pagination.prev %} disabled="disabled"{% endif %}>&#171;</a></li>
         {% for page, object in pagination.pages %}
         <li><a class="pure-button{% if pagination.num == page %} pure-button-active{% endif %}" href="{{ object.path|url }}">{{ page }}</a></li>

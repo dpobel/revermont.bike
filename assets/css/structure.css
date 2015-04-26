@@ -530,6 +530,12 @@ figure {
 
 .paginator {
     text-align: center;
+    list-style-type: none;
+}
+
+
+.paginator li {
+    display: inline-block;
 }
 
 .contents ol, .contents ul {

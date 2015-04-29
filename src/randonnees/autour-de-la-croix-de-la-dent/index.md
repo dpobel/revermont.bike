@@ -10,9 +10,10 @@ Dent](/photos/croix-de-la-dent/) sans jamais l'atteindre. À partir de Journans,
 la trace commence par prendre la direction du Nord par le GR59 jusqu'à
 Sénissiat. Peu après Sénissiat, débute alors une belle portion de single-tracks
 alternant dévers en sous-bois et crête plus dégagée avant de plonger dans la
-forêt de Bohas et rejoindre Rignat. Après avoir traversé Rignat, une nouvelle
-portion de single-track absolument magnifique débute jusqu'à un bref passage par
-un large chemin dans le Bois du Vieurdin. Un nouveau monotrace en montée se
+forêt de Bohas et rejoindre Rignat. Après avoir traversé Rignat, [une nouvelle
+portion de single-track absolument
+magnifique](/photos/single-track-en-sous-bois/) débute jusqu'à un bref passage
+par un large chemin dans le Bois du Vieurdin. Un nouveau monotrace en montée se
 présente alors jusqu'à Plamont au dessus de Gravelles et après avoir franchi un
 champ et ses clôtures, une superbe descente étroite et technique dans un premier
 temps et plus rapide ensuite amène à proximité de Soblay. Le circuit se termine

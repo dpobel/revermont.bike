@@ -20,9 +20,6 @@ var argv = require('minimist')(process.argv.slice(2), {
     buildDate = require('metalsmith-build-date'),
     pooleApp = require('metalsmith-pooleapp'),
     define = require('metalsmith-define'),
-    cleanCss = require('metalsmith-clean-css'),
-    uglify = require('metalsmith-uglify'),
-    htmlMinifier = require('metalsmith-html-minifier'),
 
     date = require('./lib/metalsmith/date'),
     gpxcleaner = require('./lib/metalsmith/gpxcleaner'),
@@ -129,20 +126,9 @@ metalsmith(__dirname)
         css: true,
         output: cssFile,
     }))
-    .use(cleanCss({
-        files: cssFile,
-        cleanCSS: {
-            keepSpecialComments: 0,
-            noRebase: true,
-        }
-    }))
     .use(concat({
         files: conf.concat.js,
         output: jsFile,
-    }))
-    .use(uglify({
-        filter: jsFile,
-        concat: jsFile
     }))
     .use(define({
         jsFile: jsFile,
@@ -151,7 +137,6 @@ metalsmith(__dirname)
     }))
     .use(templates(conf.templateEngine))
     .use(ignore(conf.ignore))
-    .use(htmlMinifier())
     .destination(destination)
     .build(function (error, res) {
         if ( error ) {

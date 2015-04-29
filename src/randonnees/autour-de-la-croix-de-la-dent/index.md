@@ -2,7 +2,7 @@
 gpx: trace.gpx
 updated: 2015-04-29
 created: 2015-04-26
-tags: journans, rignat, sénissiat, gravelles, st-martin-du-mont, croix de la dent, gr59, grp tour du revermont
+tags: journans, rignat, sénissiat, gravelles, st-martin-du-mont, croix de la dent, gr59, grp tour du revermont, vidéo
 ---
 
 Comme son nom l'indique, cette randonnée VTT tourne autour de [la Croix de la

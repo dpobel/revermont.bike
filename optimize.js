@@ -9,6 +9,7 @@ var argv = require('minimist')(process.argv.slice(2), {
     cleanCss = require('metalsmith-clean-css'),
     uglify = require('metalsmith-uglify'),
     htmlMinifier = require('metalsmith-html-minifier'),
+    imagemin = require('metalsmith-imagemin'),
 
     pjson = require('./package.json'),
     conf = require('./build.json'),
@@ -35,6 +36,9 @@ console.log('- Destination: "' + __dirname + '/' + destination + '"');
 metalsmith(__dirname)
     .source(source)
     .clean(false)
+    .use(imagemin({
+        optimizeLevel: 9,
+    }))
     .use(cleanCss({
         files: cssFile,
         cleanCSS: {

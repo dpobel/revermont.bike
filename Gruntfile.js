@@ -19,6 +19,26 @@ module.exports = function(grunt) {
                     failOnError: true
                 }
             },
+            optimize: {
+                command: function () {
+                    var revision = (grunt.option('revision') ? ' --revision ' + grunt.option('revision') : '');
+
+                    return './optimize.js' + revision;
+                },
+                options: {
+                    stdout: true,
+                    stderr: true,
+                    failOnError: true
+                }
+            },
+            cache: {
+                command: './cache.js',
+                options: {
+                    stdout: true,
+                    stderr: true,
+                    failOnError: true
+                },
+            },
             screenshots: {
                 command: function () {
                     return './screenshots.js';
@@ -113,8 +133,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-casper');
 
-    grunt.registerTask('build', ['bower:install', 'shell:build', 'screenshots']);
-    grunt.registerTask('build-local', ['bower:install', 'shell:build']);
+    grunt.registerTask('build', ['bower:install', 'shell:build', 'screenshots', 'shell:optimize']);
+    grunt.registerTask('build-local', ['bower:install', 'shell:cache', 'shell:build']);
     grunt.registerTask('build-test', ['bower:install', 'shell:build-test']);
     grunt.registerTask('functional-test', ['build-test', 'connect', 'casper:test']);
     grunt.registerTask('unit-test', ['mochaTest']);

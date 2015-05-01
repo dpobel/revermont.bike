@@ -4,6 +4,7 @@
     "destination": "web",
     "assets": "assets",
     "source": "src",
+    "cache": "cache",
     "concat": {
         "css": [
             "assets/css/pure/pure.css",
@@ -30,7 +31,8 @@
     },
     "ignore": [
         "**/*.json",
-        "include/**"
+        "include/**",
+        ".keep"
     ],
     "metadata": {
         "config": "config.json"

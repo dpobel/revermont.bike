@@ -77,11 +77,7 @@ describe('Metalsmith photovariation', function () {
     });
 
     describe('configured variations', function () {
-        var file = {'photo': 'photo.jpg'},
-            files = {
-                'dir/sub/dir/file1': file,
-                'dir/sub/dir/photo.jpg': {'contents': new Buffer("test")},
-            },
+        var file = {'photo': 'photo.jpg'}, files,
             size, resize, toBuffer,
             originalSize = {'width': 420, 'height': 4242},
             variationSize = {"width": 0, 'height': 0};
@@ -93,6 +89,10 @@ describe('Metalsmith photovariation', function () {
             size = sinon.stub(gm.prototype, "size");
             size.onCall(0).yields(false, originalSize);
             size.onCall(1).yields(false, variationSize);
+            files = {
+                'dir/sub/dir/file1': file,
+                'dir/sub/dir/photo.jpg': {'contents': new Buffer("test")},
+            };
         });
 
         afterEach(function () {
@@ -108,6 +108,23 @@ describe('Metalsmith photovariation', function () {
                     assert.ok(err instanceof Error);
                     done();
                 });
+            });
+        });
+
+        describe('cache', function () {
+            it('should reuse the existing file', function (done) {
+                var variationName = 'cache',
+                    width = 50,
+                    conf = {variations: {}};
+
+                conf.variations[variationName] = {'width': width};
+
+                files['dir/sub/dir/photo_cache.jpg'] = {'contents': new Buffer("test")};
+                msVariation(conf)(files, metalsmith, function (err) {
+                    assert.ok(typeof err === 'undefined');
+                    done();
+                });
+
             });
         });
 

@@ -16,6 +16,7 @@ var argv = require('minimist')(process.argv.slice(2), {
     include = require('metalsmith-include'),
     paginate = require('metalsmith-paginate'),
     assets = require('metalsmith-assets'),
+    copy = require('metalsmith-assets'),
     tags = require('metalsmith-tags'),
     buildDate = require('metalsmith-build-date'),
     pooleApp = require('metalsmith-pooleapp'),
@@ -101,6 +102,10 @@ metalsmith(__dirname)
     .use(gpxparser())
     .use(profile(conf.profile))
     .use(exifExtract())
+    .use(copy({
+        source: conf.cache,
+        destination: ".",
+    }))
     .use(photoVariation(conf.photoVariation))
     .use(markdown())
     .use(include())

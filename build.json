@@ -16,6 +16,7 @@
             "assets/css/theme.css"
         ],
         "js": [
+            "assets/classlist/index.js",
             "assets/js/domready/ready.js",
             "assets/lib/leaflet/leaflet.js",
             "assets/lib/leaflet.fullscreen/Leaflet.fullscreen.js",

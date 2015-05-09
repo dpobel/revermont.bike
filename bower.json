@@ -16,7 +16,8 @@
     "leaflet": "0.7.3",
     "leaflet.fullscreen": "https://github.com/Leaflet/Leaflet.fullscreen.git#~0.0.3",
     "domready": "~1.0.7",
-    "leaflet.awesome-markers": "https://github.com/lvoogdt/Leaflet.awesome-markers.git#2.0/develop"
+    "leaflet.awesome-markers": "https://github.com/lvoogdt/Leaflet.awesome-markers.git#2.0/develop",
+    "classlist": "https://gist.githubusercontent.com/devongovett/1381839/raw/2d0a0c75c63b88581927052d8644011c2f1825f6/gistfile1.js"
   },
   "exportsOverride": {
     "pure": {

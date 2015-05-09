@@ -26,7 +26,8 @@
             "assets/js/track-map.js",
             "assets/js/tag-map.js",
             "assets/js/photo-map.js",
-            "assets/js/fitgallery.js"
+            "assets/js/fitgallery.js",
+            "assets/js/poi-map.js"
         ]
     },
     "ignore": [

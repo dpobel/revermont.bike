@@ -2,7 +2,7 @@
 gpx: trace.gpx
 tags: single track, dévers, montfort, pressiat, gué, ruisseau
 created: 2015-05-11 17:59
-updated: 2015-05-11 17:59
+updated: 2015-05-18 13:48
 ---
 
 Ce sentier relie [la Chapelle de Montfort](/photos/chapelle-de-montfort/) au

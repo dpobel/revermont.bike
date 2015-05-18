@@ -2,7 +2,7 @@
 gpx: rosy.gpx
 tags: rosy, col des justices, chavannes-sur-suran, cabatane, single track, vidéo
 created: 2014-10-11
-updated: 2015-05-22
+updated: 2015-04-22
 ---
 
 Ce sentier permet de relier le [Col des Justices](/tags/col-des-justices/) à

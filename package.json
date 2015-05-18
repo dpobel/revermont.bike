@@ -48,7 +48,7 @@
     "metalsmith-filemetadata": "0.0.4",
     "metalsmith-html-minifier": "^1.0.2",
     "metalsmith-ignore": "^0.1.2",
-    "metalsmith-imagemin": "^1.0.0",
+    "metalsmith-imagemin": "https://github.com/dpobel/metalsmith-imagemin/tarball/imagemin_nomore_pngquant",
     "metalsmith-include": "0.0.1",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-metadata": "0.0.1",

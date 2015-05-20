@@ -6,4 +6,4 @@ created: 2014-11-08 12:08
 photo: sevron-chemin.jpg
 ---
 
-Oui oui c'est un bien un chemin :-)
+Oui oui c'est un vrai chemin à moins que le Sevron ne soit le chemin ?

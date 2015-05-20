@@ -20,7 +20,7 @@ prendre tout à gauche un véritable single track qui monte en pente régulière
 tout début de la descente, un belvédère propose une superbe vue sur le Mont
 Nivigne, le Château de Rosy et [la Crête de Lomont](/tags/lomont/).
 
-<a href="/photos/rosy-nivigne-lomont/rosy.jpg"><img
+<a href="/photos/rosy-nivigne-lomont/"><img
 src="/photos/rosy-nivigne-lomont/rosy_750.jpg" alt="Vue sur Rosy, le Mont
 Nivigne et la crête de Lomont"></a>
 

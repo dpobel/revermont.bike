@@ -16,6 +16,10 @@ figure {
     margin-right: 1em;
 }
 
+.data-table {
+    width: 100%;
+}
+
 .message {
     padding: 0.5em;
     margin: 1em;

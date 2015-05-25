@@ -16,6 +16,10 @@ figure {
     margin-right: 1em;
 }
 
+.img-center {
+    text-align: center;
+}
+
 .data-table {
     width: 100%;
 }

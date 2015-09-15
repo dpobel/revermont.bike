@@ -1,6 +1,6 @@
 ---
 title: Sortie "Rallye Enduro VTT" dans le Revermont
-tags: enduro, revermont, treffort-cuisiat, dévers
+tags: enduro, revermont, treffort-cuisiat, dévers, forum, velovert
 created: 2014-11-05 21:41
 updated: 2014-11-06 22:44
 ---

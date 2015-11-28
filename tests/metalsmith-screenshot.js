@@ -27,7 +27,7 @@ describe('Metalsmith screenshot', function () {
                 cb();
             });
         msShot(opts)({}, metalsmith, function (err) {
-            assert.ok(typeof err === 'undefined');
+            assert.ifError(err);
             assert.equal(opts.concurrency, parallelLimit.args[0][1]);
             parallelLimit.restore();
             done();
@@ -41,7 +41,7 @@ describe('Metalsmith screenshot', function () {
             };
 
         msShot(opts)(files, metalsmith, function (err) {
-            assert.ok(typeof err === 'undefined');
+            assert.ifError(err);
             assert.ok(typeof files.file1 === 'undefined');
             assert.ok(typeof files.file2 === 'undefined');
             done();
@@ -88,7 +88,7 @@ describe('Metalsmith screenshot', function () {
                     opts.transitionWaitTime,
                 ], exec.args[0][1]);
 
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
                 assert.ok(typeof files.file1 === 'undefined');
                 assert.ok(typeof files.file2 === 'undefined');
 

@@ -13,7 +13,7 @@ describe('Metalsmith photovariation', function () {
             };
 
         msVariation()(files, metalsmith, function (err) {
-            assert.ok(typeof err === 'undefined');
+            assert.ifError(err);
             assert.equal(0, Object.keys(files.file1).length);
             done();
         });
@@ -63,7 +63,7 @@ describe('Metalsmith photovariation', function () {
             it('should add the original variation with the size of the image', function (done) {
                 size.yields(false, foundSize);
                 msVariation()(files, metalsmith, function (err) {
-                    assert.ok(typeof err === 'undefined');
+                    assert.ifError(err);
                     assert.ok(typeof file.variations.original === 'object');
                     assert.equal(file.photo, file.variations.original.name);
                     assert.equal('dir/sub/dir/photo.jpg', file.variations.original.fullpath);
@@ -121,7 +121,7 @@ describe('Metalsmith photovariation', function () {
 
                 files['dir/sub/dir/photo_cache.jpg'] = {'contents': new Buffer("test")};
                 msVariation(conf)(files, metalsmith, function (err) {
-                    assert.ok(typeof err === 'undefined');
+                    assert.ifError(err);
                     done();
                 });
 
@@ -157,7 +157,7 @@ describe('Metalsmith photovariation', function () {
                     var path = 'dir/sub/dir/photo_' + variationName + '.jpg',
                         imageObj = files[path];
 
-                    assert.ok(typeof err === 'undefined');
+                    assert.ifError(err);
                     assert.ok(typeof imageObj === 'object');
                     assert.strictEqual(imageContents, imageObj.contents);
                     assert.equal(path, imageObj.path);
@@ -202,7 +202,7 @@ describe('Metalsmith photovariation', function () {
                     var path = 'dir/sub/dir/photo_' + variationName + '.jpg',
                         imageObj = files[path];
 
-                    assert.ok(typeof err === 'undefined');
+                    assert.ifError(err);
                     assert.ok(typeof imageObj === 'object');
                     assert.strictEqual(imageContents, imageObj.contents);
                     assert.equal(path, imageObj.path);
@@ -248,7 +248,7 @@ describe('Metalsmith photovariation', function () {
                     var path = 'dir/sub/dir/photo_' + variationName + '.jpg',
                         imageObj = files[path];
 
-                    assert.ok(typeof err === 'undefined');
+                    assert.ifError(err);
                     assert.ok(typeof imageObj === 'object');
                     assert.strictEqual(imageContents, imageObj.contents);
                     assert.equal(path, imageObj.path);
@@ -280,7 +280,7 @@ describe('Metalsmith photovariation', function () {
                     var path = 'dir/sub/dir/photo_' + variationName + '.jpg',
                         imageObj = files[path];
 
-                    assert.ok(typeof err === 'undefined');
+                    assert.ifError(err);
                     assert.ok(typeof imageObj === 'object');
                     assert.strictEqual(imageContents, imageObj.contents);
                     assert.equal(path, imageObj.path);
@@ -311,7 +311,7 @@ describe('Metalsmith photovariation', function () {
                     var path = 'dir/sub/dir/photo_' + variationName + '.jpg',
                         imageObj = files[path];
 
-                    assert.ok(typeof err === 'undefined');
+                    assert.ifError(err);
                     assert.ok(typeof imageObj === 'object');
                     assert.strictEqual(imageContents, imageObj.contents);
                     assert.equal(path, imageObj.path);

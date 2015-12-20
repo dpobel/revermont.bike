@@ -24,7 +24,7 @@ describe('Metalsmith profile', function () {
             };
 
         msProfile(conf)(files, metalsmith, function (err) {
-            assert.ok(typeof err === 'undefined');
+            assert.ifError(err);
             assert.strictEqual(nopoints, files.nopoints);
             assert.equal(1, Object.keys(files).length);
             done();

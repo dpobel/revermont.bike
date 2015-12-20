@@ -22,7 +22,7 @@ describe('Metalsmith gpxparser', function () {
             spy = sinon.spy(ms, 'source');
 
         gpx()(files, ms, function (err) {
-            assert.ok(typeof err === 'undefined');
+            assert.ifError(err);
             assert.equal(
                 0, Object.keys(files.testFile1).length,
                 "files.testFile should be intact"
@@ -50,7 +50,7 @@ describe('Metalsmith gpxparser', function () {
                 data = files['tracks/data-' + moment(date).unix() + '.js'],
                 dataContent;
 
-            assert.ok(typeof err === 'undefined');
+            assert.ifError(err);
             assert.ok(typeof data === 'object');
             assert.ok(data.template === false);
             assert.ok(data.permalink === false);
@@ -97,7 +97,7 @@ describe('Metalsmith gpxparser', function () {
                 var file = files['tracks/test1.md'],
                     color = file.color;
 
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
                 assert.ok(typeof color === 'string');
                 assert.ok(color.match(/^#[0-9A-F]{6}$/i));
                 done();
@@ -116,7 +116,7 @@ describe('Metalsmith gpxparser', function () {
                 var file = files['tracks/test1.md'],
                     bounds = file.bounds;
 
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
 
                 assert.equal("Test 1", file.title);
                 assert.equal("2014-05-23T07:53:00Z", file.created);
@@ -146,7 +146,7 @@ describe('Metalsmith gpxparser', function () {
                 var file = files['tracks/test1.md'],
                     bounds = file.bounds;
 
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
 
                 assert.equal("Test 1", file.title);
                 assert.equal("2014-05-23T07:53:00Z", file.created);
@@ -175,7 +175,7 @@ describe('Metalsmith gpxparser', function () {
                 var file = files['tracks/test1.md'],
                     bounds = file.bounds;
 
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
 
                 assert.equal("Test 1", file.title);
                 assert.equal("2014-05-23T07:53:00Z", file.created);
@@ -202,7 +202,7 @@ describe('Metalsmith gpxparser', function () {
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'];
 
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
 
                 assert.equal("Metadata name", file.title);
                 done();
@@ -219,7 +219,7 @@ describe('Metalsmith gpxparser', function () {
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'];
 
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
 
                 assert.equal(title, file.title);
                 done();
@@ -235,7 +235,7 @@ describe('Metalsmith gpxparser', function () {
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'];
 
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
 
                 assert.equal('2014', file.created);
                 done();
@@ -251,7 +251,7 @@ describe('Metalsmith gpxparser', function () {
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'];
 
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
 
                 assert.equal('2014', file.created);
                 done();
@@ -267,7 +267,7 @@ describe('Metalsmith gpxparser', function () {
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'];
 
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
 
                 assert.strictEqual(true, file.loop);
                 done();
@@ -283,7 +283,7 @@ describe('Metalsmith gpxparser', function () {
             gpx()(files, ms, function (err) {
                 var file = files['tracks/test1.md'];
 
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
 
                 assert.strictEqual(true, file.loop);
                 done();
@@ -302,7 +302,7 @@ describe('Metalsmith gpxparser', function () {
                 var file = files['tracks/test1.md'],
                     points = file.points;
 
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
                 assert.ok(Array.isArray(points));
 
                 assert.equal(2, points.length);
@@ -328,7 +328,7 @@ describe('Metalsmith gpxparser', function () {
                 var file = files['tracks/test1.md'],
                     points = file.points;
 
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
                 assert.ok(Array.isArray(points));
 
                 assert.equal(2, points.length);
@@ -355,7 +355,7 @@ describe('Metalsmith gpxparser', function () {
                 var file = files['tracks/test1.md'],
                     points = file.points;
 
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
                 assert.ok(Array.isArray(points));
 
                 assert.equal(expectedElevations.length, points.length);
@@ -378,7 +378,7 @@ describe('Metalsmith gpxparser', function () {
                 var file = files['tracks/test1.md'],
                     points = file.points;
 
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
                 assert.ok(Array.isArray(points));
 
                 assert.equal(expectedElevations.length, points.length);
@@ -401,7 +401,7 @@ describe('Metalsmith gpxparser', function () {
                 var file = files['tracks/test1.md'],
                     points = file.points;
 
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
                 assert.ok(Array.isArray(points));
 
                 assert.equal(expectedElevations.length, points.length);

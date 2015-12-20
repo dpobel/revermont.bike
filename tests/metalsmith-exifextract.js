@@ -19,7 +19,7 @@ describe('Metalsmith exifextract', function () {
 
         msExif()(files, metalsmith, function (err) {
             assert.equal(0, metadata.geoimages.length);
-            assert.ok(typeof err === 'undefined');
+            assert.ifError(err);
             done();
         });
     });
@@ -59,7 +59,7 @@ describe('Metalsmith exifextract', function () {
             load.yields(false, exifData);
 
             msExif()(files, metalsmith, function (err) {
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
                 assert.ok(typeof file.latlon === 'undefined');
                 assert.equal(0, metadata.geoimages.length);
             });
@@ -71,7 +71,7 @@ describe('Metalsmith exifextract', function () {
             load.yields(false, exifData);
 
             msExif()(files, metalsmith, function (err) {
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
                 assert.ok(Array.isArray(file.latlon));
                 assert.equal(46, file.latlon[0]);
                 assert.equal(50, file.latlon[1]);
@@ -87,7 +87,7 @@ describe('Metalsmith exifextract', function () {
             load.yields(false, exifData);
 
             msExif()(files, metalsmith, function (err) {
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
                 assert.ok(Array.isArray(file.latlon));
                 assert.equal(lat, file.latlon[0]);
                 assert.equal(lon, file.latlon[1]);
@@ -100,7 +100,7 @@ describe('Metalsmith exifextract', function () {
             load.yields(false, exifData);
 
             msExif()(files, metalsmith, function (err) {
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
                 assert.equal(date, file.created.format(format));
                 assert.equal(date, file.updated.format(format));
             });
@@ -112,7 +112,7 @@ describe('Metalsmith exifextract', function () {
             file.created = existing;
             load.yields(false, exifData);
             msExif()(files, metalsmith, function (err) {
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
                 assert.equal(existing, file.created);
                 assert.equal(date, file.updated.format(format));
             });
@@ -124,7 +124,7 @@ describe('Metalsmith exifextract', function () {
             file.updated = existing;
             load.yields(false, exifData);
             msExif()(files, metalsmith, function (err) {
-                assert.ok(typeof err === 'undefined');
+                assert.ifError(err);
                 assert.equal(existing, file.updated);
                 assert.equal(date, file.created.format(format));
             });

@@ -1,4 +1,4 @@
 ---
 permalink: false
-template: export_photos.js.swig
+layout: export_photos.js.swig
 ---

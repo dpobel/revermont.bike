@@ -1,6 +1,6 @@
 ---
 permalink: false
-template: rss.swig
+layout: rss.swig
 title: Les dernières photos du Revermont
 exportCollection: lastPhotos
 path: photos.xml

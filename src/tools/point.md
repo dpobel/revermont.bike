@@ -1,4 +1,4 @@
 ---
 title: POI
-template: poi.swig
+layout: poi.swig
 ---

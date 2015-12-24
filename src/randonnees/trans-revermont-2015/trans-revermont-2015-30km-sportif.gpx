@@ -7,14 +7,9 @@ xmlns:topografix="http://www.topografix.com/GPX/Private/TopoGrafix/0/1"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.topografix.com/GPX/Private/TopoGrafix/0/1 http://www.topografix.com/GPX/Private/TopoGrafix/0/1/topografix.xsd">
 <metadata>
-<name><![CDATA[Trans Revermont 2015]]></name>
-<desc><![CDATA[]]></desc>
+<name>Trans-Revermont 2015 (parcours "sportif", 30km)</name>
 </metadata>
 <trk>
-<name><![CDATA[Trans Revermont 2015]]></name>
-<desc><![CDATA[]]></desc>
-<type><![CDATA[cyclisme]]></type>
-<extensions><topografix:color>c0c0c0</topografix:color></extensions>
 <trkseg>
 <trkpt lat="46.221234" lon="5.420842">
 <ele>367.7</ele>

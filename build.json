@@ -129,7 +129,7 @@
     "tags": {
         "handle": "tags",
         "path": "tags",
-        "template": "tag.swig",
+        "layout": "tag.swig",
         "sortBy": "created",
         "reverse": true
     },
@@ -148,41 +148,41 @@
     "fileMetadata": [{
         "metadata": {
             "section": "treks",
-            "template": "treks.swig",
+            "layout": "treks.swig",
             "icon": "treks"
         },
         "pattern": "randonnees.md"
     }, {
         "metadata": {
             "section": "tracks",
-            "template": "tracks.swig",
+            "layout": "tracks.swig",
             "icon": "tracks"
         },
         "pattern": "single-tracks.md"
     }, {
         "metadata": {
             "section": "home",
-            "template": "home.swig"
+            "layout": "home.swig"
         },
         "pattern": "index.md"
     }, {
         "metadata": {
             "section": "treks",
-            "template": "trek.swig",
+            "layout": "trek.swig",
             "autoinclude": ["video", "direction"]
         },
         "pattern": "randonnees/**/index.md"
     }, {
         "metadata": {
             "section": "treks",
-            "template": "trek.swig",
+            "layout": "trek.swig",
             "autoinclude": ["video", "direction"]
         },
         "pattern": "sandbox/**/index.md"
     }, {
         "metadata": {
             "section": "tracks",
-            "template": "track.swig",
+            "layout": "track.swig",
             "autoinclude": ["video", "direction"]
         },
         "pattern": "single-tracks/**/index.md"
@@ -195,26 +195,26 @@
         "metadata": {
             "section": "blog",
             "icon": "blog",
-            "template": "blog.swig"
+            "layout": "blog.swig"
         },
         "pattern": "posts.md"
     }, {
         "metadata": {
             "section": "photo",
             "icon": "photo",
-            "template": "photos.swig"
+            "layout": "photos.swig"
         },
         "pattern": "photos.md"
     }, {
         "metadata": {
             "section": "photo",
-            "template": "photo.swig"
+            "layout": "photo.swig"
         },
         "pattern": "photos/**/index.md"
     }, {
         "metadata": {
             "section": "blog",
-            "template": "post.swig"
+            "layout": "post.swig"
         },
         "pattern": "posts/*.md"
     }, {
@@ -225,17 +225,17 @@
         "pattern": "a-propos.md"
     }, {
         "metadata": {
-            "template": "page.swig"
+            "layout": "page.swig"
         },
         "pattern": "{thanks,mentions-legales,a-propos,send,glossaire,liens}.md"
     }, {
         "metadata": {
-            "template": "contact.swig"
+            "layout": "contact.swig"
         },
         "pattern": "contact.md"
     }, {
         "metadata": {
-            "template": "forecast.swig"
+            "layout": "forecast.swig"
         },
         "pattern": "meteo.html"
     }, {

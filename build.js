@@ -7,7 +7,7 @@ var argv = require('minimist')(process.argv.slice(2), {
     source, destination,
     metalsmith = require('metalsmith'),
     markdown = require('metalsmith-markdown'),
-    templates = require('metalsmith-templates'),
+    layouts = require('metalsmith-layouts'),
     permalinks = require('metalsmith-permalinks'),
     metadata = require('metalsmith-metadata'),
     collections = require('metalsmith-collections'),
@@ -140,7 +140,10 @@ metalsmith(__dirname)
         cssFile: cssFile,
         screenshot: conf.screenshot,
     }))
-    .use(templates(conf.templateEngine))
+    .use(layouts({
+        engine: conf.templateEngine,
+        directory: "templates",
+    }))
     .use(ignore(conf.ignore))
     .destination(destination)
     .build(function (error, res) {

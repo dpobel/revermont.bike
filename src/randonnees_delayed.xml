@@ -1,6 +1,6 @@
 ---
 permalink: false
-template: rss_delayed.swig
+layout: rss_delayed.swig
 title: Les dernières randonnées sur Revermont.bike
 exportCollection: lastTreks
 path: randonnees_delayed.xml

@@ -50,7 +50,6 @@ if ( argv.help || argv.h ) {
     console.log('--destination destDir: override the destination directory defined in build.json');
     console.log('--revision assetRev: asset revision to use while building asset filename');
     console.log('--forecast apiKey: API for Forecast.io (if not provided, fake data are used)');
-    console.log('--pooleapp apiSecret: API secret for PooleApp');
     process.exit(0);
 }
 
@@ -72,16 +71,13 @@ if ( argv.destination ) {
 if ( argv.forecast ) {
     forecastConf.key = argv.forecast;
 }
-if ( argv.pooleapp ) {
-    nock.enableNetConnect();
-    pooleAppConf.forms.comments.secret = argv.pooleapp;
-} else {
-    // no PooleApp secret, we configure nock to reply
-    // with an empty structure
-    nock('http://pooleapp.com/')
-        .get('/data/' + pooleAppConf.forms.comments.secret + '.json')
-        .reply(200, JSON.stringify({sessions: []}));
-}
+// PooleApp is dead, mocking it for now...
+// TODO fix that correctly
+// See https://github.com/dpobel/revermont.bike/issues/173
+nock('http://pooleapp.com/')
+    .get('/data/' + pooleAppConf.forms.comments.secret + '.json')
+    .reply(200, JSON.stringify({sessions: []}));
+
 if ( argv.revision ) {
     jsFile = conf.assets + '/code-' + argv.revision + '.js';
     cssFile = conf.assets + '/style-' + argv.revision + '.css';

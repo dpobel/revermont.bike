@@ -16,7 +16,7 @@ env:
         - PATH="node_modules/.bin:$PATH"
 script:
     - "grunt test"
-    - "grunt build --forecast $FORECAST --pooleapp $POOLEAPP --revision $REV && ./deploy.sh"
+    - "grunt build --forecast $FORECAST --revision $REV && ./deploy.sh"
 before_install:
     - sudo apt-get update -qq
     - sudo apt-get -y install gpsbabel graphicsmagick g++-4.8

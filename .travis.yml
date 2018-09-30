@@ -6,7 +6,7 @@ branches:
 node_js:
     - '4'
 before_script:
-    - npm install -g grunt-cli
+    - npm install -g grunt-cli@1.0.0
     - export REV=`git log --pretty=%h -1 assets`
 env:
     global:

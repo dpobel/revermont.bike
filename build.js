@@ -35,7 +35,6 @@ var argv = require('minimist')(process.argv.slice(2), {
     photoVariation = require('./lib/metalsmith/photovariation.js'),
     collectionsMaxDate = require('./lib/metalsmith/collections-maxdate.js'),
 
-    nock = require('nock'),
     pjson = require('./package.json'),
     conf = require('./build.json'),
     forecastConf = conf.forecast,

@@ -16,7 +16,6 @@
     "cheerio": "^0.19.0",
     "color-generator": "^0.1.0",
     "exif": "^0.4.0",
-    "filtrex": "^0.5.4",
     "forecastio": "^0.2.0",
     "gm": "^1.17.0",
     "grunt": "^0.4.5",
@@ -63,15 +62,12 @@
     "mocha": "^2.3.4",
     "moment": "^2.8.4",
     "moment-timezone": "^0.4.1",
-    "nock": "^3.3.2",
     "phantomjs": "^1.9.12",
     "png-size": "^0.1.0",
     "rework": "^1.0.1",
     "rework-plugin-url": "^1.0.1",
     "rickshaw": "https://github.com/dpobel/rickshaw/tarball/rb_updated",
     "sinon": "^1.12.1",
-    "string-template": "^0.2.0",
-    "superagent": "^1.4.0",
     "swig": "^1.4.2"
   }
 }

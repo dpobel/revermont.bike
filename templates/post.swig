@@ -21,8 +21,6 @@
         <div class="pure-u-1 pure-u-md-3-4 blog-post-content">
             <h1 class="icon-blog page-title" itemprop="name">{{ title }}</h1>
             <div itemprop="articleBody" class="contents">{{ contents|safe }}</div>
-
-            {% include "parts/comments.swig" %}
         </div>
         <aside class="pure-u-1 pure-u-md-1-4 sidebar">
             <p>Publié le <time datetime="{{ created.format() }}" itemprop="dateCreated">{{ created.format(config.dateTimeFormat) }}</time></p>

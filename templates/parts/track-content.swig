@@ -68,7 +68,4 @@
         </div>
         {% endif %}
     </div>
-    <div class="pure-u-1">
-        {% include "comments.swig" %}
-    </div>
 </article>

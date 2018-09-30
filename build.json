@@ -48,15 +48,6 @@
         "url": "meteo.html",
         "fixture": "forecast.json"
     },
-    "pooleApp": {
-        "forms": {
-            "comments": {
-                "identifier": "path",
-                "secret": "dev",
-                "filter": "created < \"2015\" or nospam == \"deux\""
-            }
-        }
-    },
     "gpxcleaner": {
         "limit": 1000
     },

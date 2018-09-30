@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 var argv = require('minimist')(process.argv.slice(2), {
-        "string": ['destination', 'source', 'forecast', 'pooleapp', 'revision'],
+        "string": ['destination', 'source', 'forecast', 'revision'],
         "boolean": ['help', 'h'],
     }),
     source, destination,
@@ -19,7 +19,6 @@ var argv = require('minimist')(process.argv.slice(2), {
     copy = require('metalsmith-assets'),
     tags = require('metalsmith-tags'),
     buildDate = require('metalsmith-build-date'),
-    pooleApp = require('metalsmith-pooleapp'),
     define = require('metalsmith-define'),
 
     date = require('./lib/metalsmith/date'),
@@ -39,7 +38,6 @@ var argv = require('minimist')(process.argv.slice(2), {
     nock = require('nock'),
     pjson = require('./package.json'),
     conf = require('./build.json'),
-    pooleAppConf = conf.pooleApp,
     forecastConf = conf.forecast,
     jsFile = conf.assets + '/code.js',
     cssFile = conf.assets + '/style.css';
@@ -71,12 +69,6 @@ if ( argv.destination ) {
 if ( argv.forecast ) {
     forecastConf.key = argv.forecast;
 }
-// PooleApp is dead, mocking it for now...
-// TODO fix that correctly
-// See https://github.com/dpobel/revermont.bike/issues/173
-nock('http://pooleapp.com/')
-    .get('/data/' + pooleAppConf.forms.comments.secret + '.json')
-    .reply(200, JSON.stringify({sessions: []}));
 
 if ( argv.revision ) {
     jsFile = conf.assets + '/code-' + argv.revision + '.js';
@@ -116,7 +108,6 @@ metalsmith(__dirname)
     .use(paginateTag(conf.paginateTag))
     .use(permalinks({relative: false}))
     .use(metadata(conf.metadata))
-    .use(pooleApp(pooleAppConf))
     .use(buildDate())
     .use(assets({
         source: conf.assets,

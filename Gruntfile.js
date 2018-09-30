@@ -8,10 +8,9 @@ module.exports = function(grunt) {
             build: {
                 command: function () {
                     var forecast = (grunt.option('forecast') ? ' --forecast ' + grunt.option('forecast') : ''),
-                        pooleapp = (grunt.option('pooleapp') ? ' --pooleapp ' + grunt.option('pooleapp') : ''),
                         revision = (grunt.option('revision') ? ' --revision ' + grunt.option('revision') : '');
 
-                    return './build.js' + forecast + pooleapp + revision;
+                    return './build.js' + forecast + revision;
                 },
                 options: {
                     stdout: true,

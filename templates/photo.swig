@@ -60,8 +60,6 @@
 
         </div>
     </section>
-
-    {% include "parts/comments.swig" %}
 </div>
 {% endblock %}
 

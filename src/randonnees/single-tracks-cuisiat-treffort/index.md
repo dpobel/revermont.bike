@@ -18,12 +18,13 @@ Cabatane](/single-tracks/crete-de-la-cabatane/), puis [le single du Grillerin
 version nord](/single-tracks/single-du-grillerin-nord/) (en montée) et ensuite
 [le single du Grillerin version
 ouest](/single-tracks/single-du-grillerin-ouest/) pour rejoindre à nouveau le
-GR59. Après avoir suivi la large piste sur 1,5&nbsp;km environ, il faut traverser une clôture
-sur la droite pour plonger dans la combe sur un single track rapide.
-Après une très légère remontée, il faut quasiment faire demi-tour pour grimper
-sur une trace pleine de racines et très humide par endroit. On arrive à nouveau
-à une barrière facile à franchir puis au pied d'un pylone électrique et ensuite
-à une intersection avec une large piste.
+GR59. Après avoir suivi la large piste sur 1,5&nbsp;km environ, il faut
+traverser une clôture sur la droite pour [plonger dans la combe sur un single
+track rapide](/photos/sentier-combe-grillerin-plantaglay/).  Après une très
+légère remontée, il faut quasiment faire demi-tour pour grimper sur une trace
+pleine de racines et très humide par endroit. On arrive à nouveau à une barrière
+facile à franchir puis au pied d'un pylone électrique et ensuite à une
+intersection avec une large piste.
 
 En prenant, à gauche, le circuit fait une petite boucle pour aller emprunter le
 début du [sentier de la

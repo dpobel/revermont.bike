@@ -63,6 +63,7 @@ module.exports = function(grunt) {
                     targetDir: build.assets,
                     layout: 'byType',
                     verbose: true,
+                    copy: true,
                 },
             },
         },

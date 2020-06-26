@@ -2,7 +2,7 @@ dist: trusty
 language: node_js
 branches:
     only:
-        - master
+        - main
 node_js:
     - '4'
 before_script:
